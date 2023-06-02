@@ -1,0 +1,1232 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+             xmlns:uc="clr-namespace:I2MS2.UserControls" 
+             xmlns:localdata="clr-namespace:I2MS2.Models"
+             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="I2MS2.UserControls.RightSideControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="945" d:DesignWidth="395">
+    <Grid>
+        
+        <Grid.Resources>
+            <uc:GetPropertyHeightConverter x:Key="_GetPropertyHeightConverter"/>
+            <uc:GetPropertyHeightConverter2 x:Key="_GetPropertyHeightConverter2"/>
+            <uc:GetPropertyVisibilityConverter x:Key="_GetPropertyVisibilityConverter"/>
+        </Grid.Resources>
+        <Border  Background="{StaticResource _brushDarkGray2}" Opacity="0.8" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.5"/>
+            </Border.Effect>
+            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+        </Border>
+
+        <TabControl Margin="3,3,3,3" Style="{DynamicResource I2MS_TabControlStyle3}">
+            <TabItem Header="{x:Static prop:Resources.M_Prop1}" Style="{DynamicResource I2MS_TabItemStyle3}">
+                <StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP1AssetProp" Header="{x:Static prop:Resources.M_Prop1_1}" Style="{DynamicResource I2MS_ExpanderStyle}" 
+							Margin="5">
+                            <StackPanel Orientation="Vertical" Margin="2">
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_Id}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding asset_id, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop1_1_Asset_Name}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding asset_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop1_1_Remarks}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding remarks}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop1_1_Serial}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding serial_no}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop1_1_Ip}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ipv4}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PC"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop1_1_MAC}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding mac}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PC"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop1_1_NetBIOS_Name}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding netbios_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="RACKMOUNTABLE"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop1_1_Slot}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ra_slot_no, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="ICIPP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop1_1_ConID}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ic_con_id, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="IPP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop1_1_PPnum}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding pp_pp_id, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+
+                            </StackPanel>
+
+                        </Expander>
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP1CatProp" Header="{x:Static prop:Resources.M_Prop1_2}" Style="{DynamicResource I2MS_ExpanderStyle}" Margin="5">
+                            <!--<Border BorderBrush="{DynamicResource _brushCheckBox}" CornerRadius="2" BorderThickness="2">-->
+                            <StackPanel Orientation="Vertical" Margin="2">
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Catalog_ID}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_id, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <!--제품명-->
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Name}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_NumOfP}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_number_of_port, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Rack_Mountable}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding rm_is_rack_mount_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Unit_Size}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding rm_unit_size, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}" />
+                                </DockPanel>
+                                <!--컨트롤러 카탈로그-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="IC"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_IC_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ic_num_of_pp, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                        <Binding Source="IC"/>
+                                        <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_IC_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding ic_num_of_power_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" >
+                                            <!--<CheckBox.Height>
+                                                <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                                <Binding Source="IC"/>
+                                                <Binding Path="catalog_id"/>
+                                            </MultiBinding>
+                                        </CheckBox.Height>-->
+                                    </CheckBox>
+                                </DockPanel>
+                                <!--패치 카탈로그-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding pp_use_intelligent_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" >
+                                            <!--<CheckBox.Height>
+                                                <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                                <Binding Source="PP"/>
+                                                <Binding Path="catalog_id"/>
+                                            </MultiBinding>
+                                        </CheckBox.Height>-->
+                                    </CheckBox>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                        <RadioButton Content="XC(Cross)" Width="90" IsChecked="{Binding catalog_config_type_is_xc}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" >
+                                            <RadioButton.Height>
+                                                <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                                    <Binding Source="PP"/>
+                                                    <Binding Path="catalog_id"/>
+                                                </MultiBinding>
+                                            </RadioButton.Height>
+                                        </RadioButton>
+                                        <RadioButton Content="IC(Inter)" IsChecked="{Binding catalog_config_type_is_ic}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" >
+                                            <RadioButton.Height>
+                                                <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                                    <Binding Source="PP"/>
+                                                    <Binding Path="catalog_id"/>
+                                                </MultiBinding>
+                                            </RadioButton.Height>
+                                        </RadioButton>
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <DockPanel.Visibility>
+                                            <MultiBinding Converter="{StaticResource _GetPropertyVisibilityConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Visibility>
+                                        <DockPanel.Height>
+                                            <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                                <Binding Source="PP"/>
+                                                <Binding Path="catalog_id"/>
+                                            </MultiBinding>
+                                        </DockPanel.Height>
+                                        <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_3}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="UTP" Width="90" IsChecked="{Binding catalog_media_type_is_utp}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" >
+                                            <RadioButton.Visibility>
+                                                <MultiBinding Converter="{StaticResource _GetPropertyVisibilityConverter}" Mode="OneWay">
+                                                    <Binding Source="PP"/>
+                                                    <Binding Path="catalog_id"/>
+                                                </MultiBinding>
+                                            </RadioButton.Visibility>
+                                        </RadioButton>
+                                    <RadioButton Content="Fiber" IsChecked="{Binding catalog_media_type_is_fiber}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" >
+                                            <RadioButton.Visibility>
+                                                <MultiBinding Converter="{StaticResource _GetPropertyVisibilityConverter}" Mode="OneWay">
+                                                    <Binding Source="PP"/>
+                                                    <Binding Path="catalog_id"/>
+                                                </MultiBinding>
+                                            </RadioButton.Visibility>
+                                        </RadioButton>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_4}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="Panel Fixed" Width="90" IsChecked="{Binding catalog_utp_jack_type_is_fixed}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="Modula Jack " IsChecked="{Binding catalog_utp_jack_type_is_modula}"  Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_5}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="None" Width="90" IsChecked="{Binding catalog_utp_jack_shild_is_none}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="Shield" IsChecked="{Binding catalog_utp_jack_shild_is_shild}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_6}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="Flat" Width="90" IsChecked="{Binding catalog_figure_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="Angled" IsChecked="{Binding catalog_figure_type_2}"  Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <!--스토리지-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="ST"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_ST_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding st_num_of_disk, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <!--스위치-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SW"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_SW_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <!--<TextBox Text="{Binding sw_max_slots, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>-->
+                                    <TextBox Text="{Binding sw_num_of_slots, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SW"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_SW_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_SW_2_1}" IsChecked="{Binding sw_figure_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_SW_2_2}" IsChecked="{Binding sw_figure_type_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_SW_2_3}" IsChecked="{Binding sw_figure_type_3}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SW"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_SW_4}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="cisco" IsChecked="{Binding sw_model_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" Width="60"/>
+                                    <RadioButton Content="dasan" IsChecked="{Binding sw_model_type_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False"  Width="60"/>
+                                    <RadioButton Content="extreme" IsChecked="{Binding sw_model_type_3}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <!--C.P-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CP_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CP_1_1}" IsChecked="{Binding cp_plug_side_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CP_1_2}" IsChecked="{Binding cp_plug_side_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CP_1_3}" IsChecked="{Binding cp_plug_side_3}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <!--케이블-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding ca_use_intelligent_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_2_1}" IsChecked="{Binding ca_install_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_2_2}" IsChecked="{Binding ca_install_type_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_2_3}" IsChecked="{Binding ca_install_type_3}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_2_4}" IsChecked="{Binding ca_install_type_4}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_3}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_3_1}" Width="90" IsChecked="{Binding ca_for_army_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_3_2}" IsChecked="{Binding ca_for_army_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_4}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="UTP" Width="90" IsChecked="{Binding ca_media_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="Fiber" IsChecked="{Binding ca_media_type_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_5}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding ca_is_utp_shield_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_6}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ca_utp_cable_type_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_7}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ca_fiber_cable_type_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_8}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ca_fiber_connector_type_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}" />
+                                </DockPanel>
+                            </StackPanel>
+                            <!--</Border>-->
+                        </Expander>
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP1LocProp" Header="{x:Static prop:Resources.M_Prop2}" Style="{DynamicResource I2MS_ExpanderStyle}"
+							Margin="5">
+                            <StackPanel Orientation="Vertical" Margin="2">
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Location_ID}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding location_id}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Name}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding location_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Above}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding location_path}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+
+                            </StackPanel>
+                        </Expander>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="{x:Static prop:Resources.M_Prop2}" Style="{DynamicResource I2MS_TabItemStyle3}">
+                <StackPanel Orientation="Vertical">
+                    <Grid >
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP2LocProp" Header="{x:Static prop:Resources.M_Prop2}" Margin="5" Style="{DynamicResource I2MS_ExpanderStyle}" >
+
+                            <StackPanel Orientation="Vertical" Margin="4">
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Location_ID}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding location_id}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Name}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding location_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Group}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <StackPanel Orientation="Horizontal">
+                                        <RadioButton Content="{x:Static prop:Resources.C_Building}" Width="45" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" IsChecked="{Binding location_is_building}"/>
+                                        <RadioButton Content="{x:Static prop:Resources.C_Floor}" Width="35" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" IsChecked="{Binding location_is_floor}"/>
+                                        <RadioButton Content="{x:Static prop:Resources.C_Room}" Width="35"  Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" IsChecked="{Binding location_is_room}"/>
+                                        <RadioButton Content="{x:Static prop:Resources.C_Rack}" Width="35"  Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" IsChecked="{Binding location_is_rack}"/>
+                                    </StackPanel>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Above}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding location_path}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Remarks}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding location_remarks}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_RackInfo}" Style="{StaticResource I2MS_PropTextBoxStyle1}" HorizontalAlignment="Left"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Radian}" Style="{StaticResource I2MS_PropTextBoxStyle1}" Margin="10,0,0,0"/>
+                                    <TextBox Text="{Binding location_rack_radian, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_Rack}" Style="{StaticResource I2MS_PropTextBoxStyle1}"  Margin="10,0,0,0"/>
+                                    <TextBox Text="{Binding location_rack_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_VCML}" Style="{StaticResource I2MS_PropTextBoxStyle1}"  Margin="10,0,0,0"/>
+                                    <TextBox Text="{Binding location_rack_vcm_l}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_VCMR}" Style="{StaticResource I2MS_PropTextBoxStyle1}" Margin="10,0,0,0"/>
+                                    <TextBox Text="{Binding location_rack_vcm_r}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </Expander>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="{x:Static prop:Resources.M_Prop3}" Style="{DynamicResource I2MS_TabItemStyle3}" >
+                <StackPanel>
+                    <Grid >
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP3BasicProp" Header="{x:Static prop:Resources.M_Prop3_1}" Style="{DynamicResource I2MS_ExpanderStyle}" Margin="5">
+                            <StackPanel Orientation="Vertical" Margin="2">
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Catalog_ID}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_id, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Name}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Group}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_group}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_FullName}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_full_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Code}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_model_code}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Order}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_order_code}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Manufacure}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_manufacture}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="Width(mm)" Style="{StaticResource I2MS_PropTextBoxStyle1}"/>
+                                    <TextBox Text="{Binding catalog_width, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="Heith(mm)" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_height, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="Depth(mm)" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_depth, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_NumOfP}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_number_of_port, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Rack_Mountable}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding rm_is_rack_mount_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Unit_Size}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding rm_unit_size, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Remartks}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_remarks}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_LastUpdate}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding catalog_last_updated, Mode=OneWay, StringFormat={}{0:d}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_1_Img}" Style="{StaticResource I2MS_PropTextBoxStyle1}"/>
+                                    <!--<TextBox Text="{Binding catalog_image}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>-->
+                                    <Image Source="{Binding catalog_image}" Stretch="Fill" />
+                                </DockPanel>
+
+                            </StackPanel>
+                        </Expander>
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10" >
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+
+                        <Expander x:Name="_exP3OpProp" Header="{x:Static prop:Resources.M_Prop3_2}" Style="{DynamicResource I2MS_ExpanderStyle}" Margin="5">
+                            <StackPanel Orientation="Vertical" Margin="4,0">
+
+                                <!--컨트롤러 카탈로그-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="IC"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_IC_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ic_num_of_pp, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="IC"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_IC_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding ic_num_of_power_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" >
+                                        <!--<CheckBox.Height>
+                                                <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                                <Binding Source="IC"/>
+                                                <Binding Path="catalog_id"/>
+                                            </MultiBinding>
+                                        </CheckBox.Height>-->
+                                    </CheckBox>
+                                </DockPanel>
+                                <!--패치 카탈로그-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding pp_use_intelligent_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" >
+                                        <!--<CheckBox.Height>
+                                                <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                                <Binding Source="PP"/>
+                                                <Binding Path="catalog_id"/>
+                                            </MultiBinding>
+                                        </CheckBox.Height>-->
+                                    </CheckBox>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="XC(Cross)" Width="90" IsChecked="{Binding catalog_config_type_is_xc}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" >
+                                        <RadioButton.Height>
+                                            <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                                <Binding Source="PP"/>
+                                                <Binding Path="catalog_id"/>
+                                            </MultiBinding>
+                                        </RadioButton.Height>
+                                    </RadioButton>
+                                    <RadioButton Content="IC(Inter)" IsChecked="{Binding catalog_config_type_is_ic}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" >
+                                        <RadioButton.Height>
+                                            <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                                <Binding Source="PP"/>
+                                                <Binding Path="catalog_id"/>
+                                            </MultiBinding>
+                                        </RadioButton.Height>
+                                    </RadioButton>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Visibility>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyVisibilityConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Visibility>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_3}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="UTP" Width="90" IsChecked="{Binding catalog_media_type_is_utp}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" >
+                                        <RadioButton.Visibility>
+                                            <MultiBinding Converter="{StaticResource _GetPropertyVisibilityConverter}" Mode="OneWay">
+                                                <Binding Source="PP"/>
+                                                <Binding Path="catalog_id"/>
+                                            </MultiBinding>
+                                        </RadioButton.Visibility>
+                                    </RadioButton>
+                                    <RadioButton Content="Fiber" IsChecked="{Binding catalog_media_type_is_fiber}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" >
+                                        <RadioButton.Visibility>
+                                            <MultiBinding Converter="{StaticResource _GetPropertyVisibilityConverter}" Mode="OneWay">
+                                                <Binding Source="PP"/>
+                                                <Binding Path="catalog_id"/>
+                                            </MultiBinding>
+                                        </RadioButton.Visibility>
+                                    </RadioButton>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_4}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="Panel Fixed" Width="90" IsChecked="{Binding catalog_utp_jack_type_is_fixed}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="Modula Jack " IsChecked="{Binding catalog_utp_jack_type_is_modula}"  Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_5}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="None" Width="90" IsChecked="{Binding catalog_utp_jack_shild_is_none}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="Shield" IsChecked="{Binding catalog_utp_jack_shild_is_shild}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="PP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_PP_6}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="Flat" Width="90" IsChecked="{Binding catalog_figure_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="Angled" IsChecked="{Binding catalog_figure_type_2}"  Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <!--스토리지-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="ST"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_ST_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding st_num_of_disk, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <!--스위치-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SW"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_SW_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding sw_max_slots, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SW"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_SW_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_SW_2_1}" IsChecked="{Binding sw_figure_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_SW_2_2}" IsChecked="{Binding sw_figure_type_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_SW_2_3}" IsChecked="{Binding sw_figure_type_3}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SW"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_SW_4}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="cisco" IsChecked="{Binding sw_model_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" Width="60"/>
+                                    <RadioButton Content="dasan" IsChecked="{Binding sw_model_type_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False"  Width="60"/>
+                                    <RadioButton Content="extreme" IsChecked="{Binding sw_model_type_3}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <!--C.P-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CP_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CP_1_1}" IsChecked="{Binding cp_plug_side_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CP_1_2}" IsChecked="{Binding cp_plug_side_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CP_1_3}" IsChecked="{Binding cp_plug_side_3}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <!--케이블-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding ca_use_intelligent_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_2_1}" Width="90" IsChecked="{Binding ca_install_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_2_2}" IsChecked="{Binding ca_install_type_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_3}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_3_1}" Width="90" IsChecked="{Binding ca_for_army_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="{x:Static prop:Resources.M_Prop3_2_CA_3_2}" IsChecked="{Binding ca_for_army_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_4}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="UTP" Width="90" IsChecked="{Binding ca_media_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="Fiber" IsChecked="{Binding ca_media_type_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_5}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <CheckBox IsChecked="{Binding ca_is_utp_shield_1}" Style="{StaticResource  I2MS_CheckBoxStyle2}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_6}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ca_utp_cable_type_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_7}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ca_fiber_cable_type_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="CA"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop3_2_CA_8}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ca_fiber_connector_type_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}" />
+                                </DockPanel>
+
+                            </StackPanel>
+                        </Expander>
+
+                    </Grid>
+
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="{x:Static prop:Resources.M_Prop4}" Style="{DynamicResource I2MS_TabItemStyle3}"  >
+                <StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP4AssetProp" Header="{x:Static prop:Resources.M_Prop4_1}" Margin="5" Style="{DynamicResource I2MS_ExpanderStyle}">
+                            <StackPanel Orientation="Vertical" Margin="4,0">
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_Id}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding asset_id, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_Asset_Name}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding asset_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_Remarks}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding remarks}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_Serial}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding serial_no}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_InstallUser}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding install_user_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_InstallDate}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding install_date}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_LastUpdate}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding last_updated, Mode=OneWay, StringFormat={}{0:d}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_Layout}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding slot_no_in_rack, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_1_IP}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ipv4}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </Expander>
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10" >
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP4OpProp" Header="{x:Static prop:Resources.M_Prop4_2}" Margin="5" Style="{DynamicResource I2MS_ExpanderStyle}" >
+                            <StackPanel Orientation="Vertical" Margin="4,0">
+                                <!--IC and IPP-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="ICIPP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_ConID}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding ic_con_id, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="IPP"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_PatchNum}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding pp_pp_id, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <!--서버-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SV"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_SV_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding sv_kind_of_os}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SV"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_SV_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding sv_os_ver}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SV"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_SV_3}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding sv_host_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SV"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_SV_4}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding sv_num_of_nic, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SV"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_SV_5}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding sv_tot_disk_amount, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SV"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_SV_6}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding sv_num_of_disks, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <!--스토리지-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="ST"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_ST_1}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding st_cur_num_of_disks, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="ST"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_ST_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding st_cur_disk_amount, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="ST"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_ST_3}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <RadioButton Content="Stand-alone" IsChecked="{Binding st_type_1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="HOST-connected" IsChecked="{Binding st_type_2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <!--스위치-->
+                                <DockPanel>
+                                    <DockPanel.Height>
+                                        <MultiBinding Converter="{StaticResource _GetPropertyHeightConverter}" Mode="OneWay">
+                                            <Binding Source="SW"/>
+                                            <Binding Path="catalog_id"/>
+                                        </MultiBinding>
+                                    </DockPanel.Height>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_2_SW_2}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding sw_vlan}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+
+
+                            </StackPanel>
+                        </Expander>
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10" >
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP4DepProp" Header="{x:Static prop:Resources.M_Prop4_3}" Margin="5" Style="{DynamicResource I2MS_ExpanderStyle}" IsExpanded="False">
+                            <StackPanel Orientation="Vertical" Margin="4,0">
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_3_Depart}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding as_management_div}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_3_Charge}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding as_management_user_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_3_StartFree}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding as_free_start_date, Mode=OneWay, StringFormat={}{0:d}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_3_TermFree}" Style="{StaticResource I2MS_PropTextBoxStyle1}"/>
+                                    <TextBox Text="{Binding as_free_duration, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_3_EndFree}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding as_free_end_date, Mode=OneWay, StringFormat={}{0:d}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_3_Contract}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding as_start_date, Mode=OneWay, StringFormat={}{0:d}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_3_Term}" Style="{StaticResource I2MS_PropTextBoxStyle1}"/>
+                                    <TextBox Text="{Binding as_duration, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_3_End}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding as_end_date, Mode=OneWay, StringFormat={}{0:d}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_3_Price}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding as_price, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop2_3_Company}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding as_company}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </Expander>
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10" >
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP4WorthProp" Header="{x:Static prop:Resources.M_Prop4_4}" Margin="5" Style="{DynamicResource I2MS_ExpanderStyle}" IsExpanded="False">
+                            <StackPanel Orientation="Vertical" Margin="4,0">
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_4_PurchDay}" Style="{StaticResource I2MS_PropTextBoxStyle1}"/>
+                                    <TextBox Text="{Binding Path=bu_purchase_date, Mode=OneWay}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_4_Buyer}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding bu_purchase_user_name}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_4_Start}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding bu_depreciation_start_year, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_4_Use}" Style="{StaticResource I2MS_PropTextBoxStyle1}"/>
+                                    <TextBox Text="{Binding bu_depreciation_duration, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_4_End}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding bu_depreciation_end_year, StringFormat={}{0:#}}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </Expander>
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Expander x:Name="_exP4SNMPProp" Header="{x:Static prop:Resources.M_Prop4_5}" Margin="5" Style="{DynamicResource I2MS_ExpanderStyle}" >
+                            <StackPanel Orientation="Vertical" Margin="4,0">
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_5_Get}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding snmp_get_community}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_5_Set}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding snmp_set_community}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_5_Ver}" Style="{StaticResource I2MS_PropTextBoxStyle1}"/>
+                                    <RadioButton Content="v1" Width="80" IsChecked="{Binding snmp_version1}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="v2" Width="80" IsChecked="{Binding snmp_version2}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                    <RadioButton Content="v3" Width="80" IsChecked="{Binding snmp_version3}" Style="{DynamicResource I2MS_RadioButtonStyle}" IsHitTestVisible="False" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_5_SNMP_User}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding snmp_user}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_5_SNMP_Password}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding snmp_password}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBox Text="{x:Static prop:Resources.M_Prop4_5_SNMP_Trap}" Style="{StaticResource I2MS_PropTextBoxStyle1}" />
+                                    <TextBox Text="{Binding snmp_trap_svr_ip}" Style="{StaticResource I2MS_PropTextBoxStyle2}"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </Expander>
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10" >
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.8"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+
+                        <!--확장 속성 출력-->
+                        <Expander x:Name="_exP4CusTomProp" Margin="5" Header="{x:Static prop:Resources.M_Prop4_6}" Style="{DynamicResource I2MS_ExpanderStyle}" >
+                            <StackPanel x:Name="_spExtProp" Orientation="Vertical" Margin="4,0">
+                            </StackPanel>
+                        </Expander>
+
+                    </Grid>
+
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <ToggleButton x:Name="_tgbPutIn" Content="tg" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,5,0" Checked="_tgbPutIn_Checked" Unchecked="_tgbPutIn_Unchecked" Style="{DynamicResource SideMenuPutAndPullToggleButtonStyle}"/>
+
+    </Grid>
+</UserControl>
+
+

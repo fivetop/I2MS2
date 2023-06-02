@@ -1,0 +1,124 @@
+﻿<Window x:Class="ConfigS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	x:Name="ConfigWindow"
+	Title="Config Window"
+	Width="822" Height="551" 
+    ResizeMode="NoResize"
+    mc:Ignorable="d" WindowStartupLocation="CenterScreen" Topmost="True" WindowStyle="None" Loaded="ConfigWindow_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <Image Source="/ConfigS;component/Images/login.png" Stretch="None" />
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40,230,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="500"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Language : " TextAlignment="Right" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                <ComboBox x:Name="_cboLanguage" Height="25" Width="133" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" >
+                    <ComboBoxItem Content="Korean (한국어)"/>
+                    <ComboBoxItem Content="English (영어)"/>
+                </ComboBox>
+                <CheckBox x:Name="_p10" Margin="0,4,0,0" Height="16" Grid.Column="2"/>
+                <TextBlock Text="Using FTP" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                <CheckBox x:Name="_p11" Margin="0,4,0,0" Height="16" Grid.Column="4"/>
+                <TextBlock Text="Using Energy Box" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,8,-15,8" Width="116" />
+            </Grid>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="140"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="NMS Server IP : " TextAlignment="Right" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                <TextBox x:Name="_p1" Height="23" Text="" Width="150" HorizontalAlignment="Left" Grid.Column="1" />
+                <CheckBox x:Name="_p2" Margin="0,4,0,0" Height="16" Grid.Column="2"/>
+                <TextBlock Text="Using NMS" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" />
+            </Grid>
+
+            <TextBlock Text="Log Folder : " TextAlignment="Right" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" Grid.Row="2" VerticalAlignment="Center" />
+            <TextBox x:Name="_p3" Height="23" Text="" Width="300" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="2"/>
+
+            <TextBlock Text="Image Folder : " TextAlignment="Right" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" Grid.Row="3" VerticalAlignment="Center" />
+            <TextBox x:Name="_p4" Height="23" Text="" Width="300" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="3"/>
+
+            <Grid Grid.Row="4" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Unlocated Terminal : " TextAlignment="Right" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" VerticalAlignment="Center" Height="16" Margin="0,7" />
+                <TextBox x:Name="_p5" Text="" Width="40" HorizontalAlignment="Left" MaxLength="2" Grid.Column="1" Margin="0,4"/>
+                <TextBlock Text="day" TextAlignment="Left" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" VerticalAlignment="Center" Height="16" Margin="0,7" Grid.Column="2" />
+                <TextBlock Text="Remove Terminal : " TextAlignment="Right" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" Grid.Row="5" VerticalAlignment="Center" Grid.Column="3" />
+                <TextBox x:Name="_p6" Height="23" Text="" Width="40" HorizontalAlignment="Left" MaxLength="2" Grid.Column="4"/>
+                <TextBlock Text="day" TextAlignment="Left" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" VerticalAlignment="Center" Height="16" Margin="0,7" Grid.Column="5" />
+            </Grid>
+
+            <Grid Grid.Row="5" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Environment Duration : " TextAlignment="Right" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" VerticalAlignment="Center" />
+                <TextBox x:Name="_p8" Height="23" Text="" Width="40" HorizontalAlignment="Left" MaxLength="4" Grid.Column="1"/>
+                <TextBlock Text="Second" TextAlignment="Left" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" VerticalAlignment="Center" Grid.Column="2" />
+                <TextBlock Text="Net Scan Duration : " TextAlignment="Right" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" VerticalAlignment="Center" Grid.Column="3"/>
+                <TextBox x:Name="_p9" Height="23" Text="" Width="40" HorizontalAlignment="Left" MaxLength="4" Grid.Column="4"/>
+                <TextBlock Text="Minute" TextAlignment="Left" FontWeight="Bold" Foreground="#FFFDFDFD" VerticalAlignment="Center" Grid.Column="5" />
+            </Grid>
+
+            <Grid Grid.Row="6">
+                <TextBlock Text="DB Connection String : " Grid.Column="0"  TextAlignment="Right" FontWeight="Bold"  Background="Black" Foreground="#FFFDFDFD" VerticalAlignment="Center" />
+            </Grid>
+            <TextBox x:Name="_p7" Grid.Column="1" Grid.Row="6" Text="" Width="500" HorizontalAlignment="Left" TextWrapping="Wrap"/>
+        </Grid>
+
+        <Button x:Name="_no" Content="X" Height="24" Width="Auto" VerticalAlignment="Top" Click="_no_Click" RenderTransformOrigin="18.788,-17.082" Margin="788,5,5,0" Opacity="0.3" ToolTip="Exit" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFFFFEFE" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="_ok" Content="Save Config" Height="54" Width="102" Click="_ok_Click" IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="695,275,25,222" ToolTip="Save" Opacity="0.5"/>
+        <Button x:Name="_mail" Content="Mail/SMS" Height="54" Width="102" IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="695,206,25,291" ToolTip="Save" Opacity="0.5" Click="_mail_Click"/>
+    </Grid>
+</Window>
+    

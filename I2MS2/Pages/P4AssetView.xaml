@@ -1,0 +1,410 @@
+﻿<Page x:Class="I2MS2.Pages.P4AssetView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+      xmlns:uc="clr-namespace:I2MS2.UserControls"
+      xmlns:ucdr="clr-namespace:I2MS2.UserControls.Drawing"
+      mc:Ignorable="d" 
+     
+    d:DesignHeight="1000" d:DesignWidth="1600"
+	Title="P4AssetView" Loaded="P4AssetView_Loaded" SizeChanged="_p4_SizeChanged" >
+
+    <Grid>
+        <!--창배경-->
+        <!--<Border  Background="#FF202020" Opacity="0.3" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.3"/>
+            </Border.Effect>
+            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+        </Border>-->
+
+        <Grid Name="mainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+
+
+            <Grid Name="_gridTop" Grid.Row="0" Margin="0">
+
+                <!--1.2.3.4. TopGrid for site,building,floor,room-->
+                <Grid Name="_gridTop1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="240"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.ColumnSpan="5"  Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+
+
+                    <StackPanel Grid.Column="0" Margin="10" >
+                        <StackPanel Orientation="Vertical" Margin="5">
+                            <TextBlock Name="_txtName"  Text="{x:Static prop:Resources.C_Site}" Style="{StaticResource I2MS_TextBlockStyle}" Width="50" HorizontalAlignment="Left"/>
+                            <TextBox Name="_txbName" Style="{StaticResource I2MS_TextBoxStyle}" Focusable="False" Margin="5" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Margin="5">
+                            <TextBlock Name="_txtRemarks" Text="{x:Static prop:Resources.C_Remarks}" Style="{StaticResource I2MS_TextBlockStyle}" Width="50" HorizontalAlignment="Left"/>
+                            <TextBox Name="_txbRemarks" Style="{StaticResource I2MS_TextBoxStyle}" Focusable="False" Height="50" Margin="5" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!--<uc:PortStatisticsControl Grid.Column="1"/>-->
+                    <Grid Grid.Column="1" x:Name="_gridTopGraphes">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <uc:I2MS_BarChart x:Name="_ctlPieChart" Grid.Column="0"/>
+                        <uc:I2MS_BarChart x:Name="_ctlNormalBarChart"  Grid.Column="1"/>
+                        <uc:I2MS_BarChart x:Name="_ctlIntelliBarChart" Grid.Column="2"/>
+                        <uc:I2MS_BarChart x:Name="_ctlUserPortBarChart" Grid.Column="3"/>
+                    </Grid>
+                </Grid>
+                <Grid Name="_gridTop2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="240"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.ColumnSpan="5"  Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+
+                    <Grid Grid.Column="0" Name="_gridTop2Info">
+                        <StackPanel  Margin="10" >
+                            <StackPanel Orientation="Vertical" Margin="0">
+                                <TextBlock Name="_txtTop2Name"  Text="{x:Static prop:Resources.C_Asset_Name}" Style="{StaticResource I2MS_TextBlockStyle}" />
+                                <TextBox Name="_txbTop2Name" Style="{StaticResource I2MS_TextBoxStyle}" Focusable="False" Margin="0,4,0,0" />
+                            </StackPanel>
+
+                            <DockPanel Margin="0,5,0,0">
+                                <DockPanel.Resources>
+                                    <Style x:Key="I2MS_P4AssetViewPortListViewItemContainerStyle" TargetType="{x:Type ListViewItem}">
+                                        <!--<Setter Property="Background" Value="White"/>-->
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                                    <Border x:Name="bd"  Height="17" HorizontalAlignment="Stretch" Margin="0" BorderThickness="1" CornerRadius="2" >
+                                                        <TextBlock x:Name="txt" Text="{Binding port_no}" Margin="0,0,0,0" TextAlignment="Center"/>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsSelected" Value="true">
+                                                            <Setter TargetName="bd" Property="Background" Value="{StaticResource _brushBlue}"/>
+                                                            <Setter TargetName="txt" Property="Foreground" Value="Black"/>
+                                                            <Setter TargetName="bd" Property="Opacity" Value="1"/>
+                                                        </Trigger>
+                                                        <Trigger Property="IsMouseOver" Value="true">
+                                                            <Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource _brushBlue}"/>
+                                                        </Trigger>
+
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </DockPanel.Resources>
+                                <TextBlock Name="_txtTop2PortNo" Text="{x:Static prop:Resources.C_Port}" Style="{StaticResource I2MS_TextBlockStyle}" Width="50" Margin="0,4,0,0"/>
+                                <!--<TextBox Name="_txbTop2PortNo" Style="{StaticResource I2MS_TextBoxStyle}" Focusable="False" Height="50" Margin="0,0,20,0" />-->
+                                <Grid Height="92" Margin="100,4,0,0">
+                                    <Rectangle Fill="Black" Opacity="0.5" RadiusX="2" RadiusY="2" Margin="0,0,0,2" />
+                                    <ListView x:Name="_lvPortList" Style="{StaticResource I2MS_ListViewStyle}" ItemContainerStyle="{StaticResource I2MS_P4AssetViewPortListViewItemContainerStyle}" 
+                                              SelectionChanged="_lvPortList_SelectionChanged" Margin="0,0,0,9"/>
+                                </Grid>
+                            </DockPanel>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Column="1" Name="_gridTop2LinkDiagram" Margin="10">
+                        <uc:LinkDiagramControl Height="120" x:Name="_ctlLink" />
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Grid Name="_gridBottom" Grid.Row="1" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Margin="0,0,10,0">
+                    <Grid.Resources>
+                        <Style x:Key="I2MS_AssetViewListViewStyle" TargetType="{x:Type ListViewItem}">
+                            <!--<Setter Property="Background" Value="White"/>-->
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <Grid  Height="30" HorizontalAlignment="Stretch" Margin="5,10,5,0">
+                                            <Grid Name="Agrid" Margin="0" >
+                                                <Border x:Name="outBorder" Opacity="0.5" CornerRadius="5" BorderThickness="1" BorderBrush="Black" Background="{StaticResource _brushBigButtonBackground}">
+                                                    <Border.Effect>
+                                                        <DropShadowEffect Opacity="0.3" />
+                                                    </Border.Effect>
+                                                </Border>
+                                                <TextBlock Margin="0" Text="{Binding disp_name}" FontSize="13"  VerticalAlignment="Center" Style="{StaticResource I2MS_TextBlockStyle}" 
+                                                            TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource _brushBigButtonTextForeground}">
+                                                    <TextBlock.Effect>
+                                                        <DropShadowEffect ShadowDepth="1" BlurRadius="1" Direction="451"/>
+                                                    </TextBlock.Effect>
+                                                </TextBlock>
+                                            </Grid>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected" Value="true">
+                                                <Setter TargetName="outBorder" Property="Background" Value="{StaticResource _brushBlue}"/>
+                                                <Setter TargetName="outBorder" Property="Opacity" Value="1"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="true">
+                                                <Setter TargetName="outBorder" Property="BorderBrush" Value="{StaticResource _brushBlue}"/>
+                                            </Trigger>
+
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+                        <Style x:Key="I2MS_FloorListViewStyle" TargetType="{x:Type ListViewItem}">
+                            <!--<Setter Property="Background" Value="White"/>-->
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <Grid  Height="30" HorizontalAlignment="Stretch" Margin="5,10,5,0">
+                                            <Grid Name="Agrid" Margin="0" >
+                                                <Border x:Name="outBorder" Opacity="0.5" CornerRadius="5" BorderThickness="1" BorderBrush="Black" Background="{StaticResource _brushBigButtonBackground}">
+                                                    <Border.Effect>
+                                                        <DropShadowEffect Opacity="0.3" />
+                                                    </Border.Effect>
+                                                </Border>
+                                                <TextBlock Margin="0" Text="{Binding floor_name}" FontSize="13"  VerticalAlignment="Center" Style="{StaticResource I2MS_TextBlockStyle}" 
+                                                            TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource _brushBigButtonTextForeground}">
+                                                    <TextBlock.Effect>
+                                                        <DropShadowEffect ShadowDepth="1" BlurRadius="1" Direction="451"/>
+                                                    </TextBlock.Effect>
+                                                </TextBlock>
+                                            </Grid>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected" Value="true">
+                                                <Setter TargetName="outBorder" Property="Background" Value="{StaticResource _brushBlue}"/>
+                                                <Setter TargetName="outBorder" Property="Opacity" Value="1"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="true">
+                                                <Setter TargetName="outBorder" Property="BorderBrush" Value="{StaticResource _brushBlue}"/>
+                                            </Trigger>
+
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+                        <Style x:Key="I2MS_RoomListViewStyle" TargetType="{x:Type ListViewItem}">
+                            <!--<Setter Property="Background" Value="White"/>-->
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <Grid  Height="30" HorizontalAlignment="Stretch" Margin="5,10,5,0">
+                                            <Grid Name="Agrid" Margin="0" >
+                                                <Border x:Name="outBorder" Opacity="0.5" CornerRadius="5" BorderThickness="1" BorderBrush="Black" Background="{StaticResource _brushBigButtonBackground}">
+                                                    <Border.Effect>
+                                                        <DropShadowEffect Opacity="0.3" />
+                                                    </Border.Effect>
+                                                </Border>
+                                                <TextBlock Margin="0" Text="{Binding room_name}" FontSize="13"  VerticalAlignment="Center" Style="{StaticResource I2MS_TextBlockStyle}" 
+                                                            TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource _brushBigButtonTextForeground}">
+                                                    <TextBlock.Effect>
+                                                        <DropShadowEffect ShadowDepth="1" BlurRadius="1" Direction="451"/>
+                                                    </TextBlock.Effect>
+                                                </TextBlock>
+                                            </Grid>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected" Value="true">
+                                                <Setter TargetName="outBorder" Property="Background" Value="{StaticResource _brushBlue}"/>
+                                                <Setter TargetName="outBorder" Property="Opacity" Value="1"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="true">
+                                                <Setter TargetName="outBorder" Property="BorderBrush" Value="{StaticResource _brushBlue}"/>
+                                            </Trigger>
+
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+
+                        <Style x:Key="I2MS_RackListViewStyle" TargetType="{x:Type ListViewItem}">
+                            <!--<Setter Property="Background" Value="White"/>-->
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <Grid  Height="30" HorizontalAlignment="Stretch" Margin="5,10,5,0">
+                                            <Grid Name="Agrid" Margin="0" >
+                                                <Border x:Name="outBorder" Opacity="0.5" CornerRadius="5" BorderThickness="1" BorderBrush="Black" Background="{StaticResource _brushBigButtonBackground}">
+                                                    <Border.Effect>
+                                                        <DropShadowEffect Opacity="0.3" />
+                                                    </Border.Effect>
+                                                </Border>
+                                                <TextBlock Margin="0" Text="{Binding rack_name}" FontSize="13"  VerticalAlignment="Center" Style="{StaticResource I2MS_TextBlockStyle}" 
+                                                            TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource _brushBigButtonTextForeground}">
+                                                    <TextBlock.Effect>
+                                                        <DropShadowEffect ShadowDepth="1" BlurRadius="1" Direction="451"/>
+                                                    </TextBlock.Effect>
+                                                </TextBlock>
+                                            </Grid>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected" Value="true">
+                                                <Setter TargetName="outBorder" Property="Background" Value="{StaticResource _brushBlue}"/>
+                                                <Setter TargetName="outBorder" Property="Opacity" Value="1"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="true">
+                                                <Setter TargetName="outBorder" Property="BorderBrush" Value="{StaticResource _brushBlue}"/>
+                                            </Trigger>
+
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Grid.Resources>
+
+
+                    <Border Grid.ColumnSpan="2"  Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+
+                    <Grid Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Button Name="_btnBack" Content="Back" Style="{StaticResource I2MS_BigBackButtonStyle}"  Margin="0,10,0,0" HorizontalAlignment="Stretch" Height="Auto" Click="_btnBack_Cliecked"/>
+
+                        <!--사이트, 빌딩, 층, 룸 을 위한 리스트-->
+                        <Grid Grid.Row="1"  Name="_gridLeftListViewSubAsset">
+                            <ListView x:Name="_lvSubAssetList" UseLayoutRounding="True" ItemContainerStyle="{StaticResource I2MS_AssetViewListViewStyle}"
+                                ScrollViewer.HorizontalScrollBarVisibility="Disabled"  ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" SelectionChanged="_lvSubAssetList_SelectionChanged"  Style="{StaticResource I2MS_ListViewStyle}" MouseLeftButtonUp="_lvSubAssetList_MouseLeftButtonUp">
+                            </ListView>
+                        </Grid>
+
+                        <!--랙을 위한 Grid-->
+                        <Grid Grid.Row="1" Name="_gridLeftListViewRack" Margin="0,10,0,0">
+                            <uc:RackControl x:Name="_ctlRack" VerticalAlignment="Top" SelectionChanged="_ctlRack_SelectionChanged"/>
+                        </Grid>
+
+                    </Grid>
+
+
+                </Grid>
+
+                <Grid Grid.Column="1" Margin="0,0,0,0">
+                    <Border Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+
+                    <!--1.2.사이트 빌딩 뷰용 이미지뷰-->
+                    <Grid Name="_gridRightViewImage"  Margin="20">
+                        <Rectangle Fill="{StaticResource _brushDarkGray1}" RadiusX="10" RadiusY="10" Opacity="0.3"/>
+                        <Image Name="_imgPicture" Stretch="Uniform">
+                            <Image.Source>
+                                <BitmapImage UriSource="/I2MS2;component/Images/No_Image.png" CacheOption="OnLoad"/>
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+
+                    <!--3.4.5.6.Floor, Room, Rack, Asset 뷰-->
+                    <Grid Name="_gridRightView3D"  Margin="20">
+                        <Rectangle Fill="{StaticResource _brushDarkGray1}" RadiusX="10" RadiusY="10" Opacity="0.3"/>
+                        <!--<Image  Name="_imgSite"  Stretch="Uniform" Source="/I2MS2;component/Images/No_Image.png" CacheMode=""/>-->
+                        <ucdr:DrawingView3D  x:Name="_ctlDrawingView3D"/>
+                        <!--<Grid Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="302,20,0,0">
+                            <Button Name="_btnReflash" Style="{StaticResource I2MS_SmallButtonStyle}" Width="100" Height="30" Click="_btnReflash_Click"  >
+                                <Button.Content>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <Image Source="/I2MS2;component/Icons/env/set.png" Width="20" Height="20"/>
+                                        <TextBlock Text="Reflash" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+                        </Grid>-->
+                        
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,20,20,0" Height="88" Width="150" >
+                            <Border  Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                                <Border.Effect>
+                                    <DropShadowEffect Opacity="0.3"/>
+                                </Border.Effect>
+                            </Border>
+                            <!--<Path Data="M78.75,119.75 L156.52681,120.00312 C156.52681,120.00312 165.25299,120.38461 165.25299,112.63461 165.25299,104.88461 165.00006,44.926278 165.00006,44.926278 165.00006,44.926278 163.77676,39.259351 156.52676,39.259351 149.27676,39.259351 83.049853,39.385706 83.049853,39.385706" HorizontalAlignment="Left" Height="61.753" Margin="77.375,40.25,0,0" Stretch="Fill" Stroke="{DynamicResource _brushDarkGray4}" VerticalAlignment="Top" Width="85.833" StrokeThickness="2"/>-->
+                            <StackPanel Margin="10" >
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="-" Style="{StaticResource I2MS_TextBlockStyle2}"  Foreground="LightGray" Margin="5,0,0,0"/>
+                                    <Image Source="/I2MS2;component/Icons/room_16.png" Margin="5,0,0,0" Width="16" Height="16" />
+                                    <TextBlock Text="Room" Style="{StaticResource I2MS_TextBlockStyle2}" Margin="5,0,0,0"/>
+                                    <!--<Line X1="0" Y1="0" X2="70" Y2="0" Stroke="{StaticResource _brushDarkGray4}" 
+                                          StrokeThickness="2" VerticalAlignment="Top" Margin="5,13,0,0"/>-->
+                                    <!--<RadioButton Name="_rdbtnRoomInfoShow" Style="{StaticResource I2MS_RadioButtonStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,0,0" />-->
+                                    <CheckBox Name="_ckbxRoomInfoShow"  Style="{StaticResource I2MS_CheckBoxStyle2}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="46,2,0,0" Checked="_ckbxRoomInfoShow_Checked" Unchecked="_ckbxRoomInfoShow_Unchecked"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="-" Style="{StaticResource I2MS_TextBlockStyle2}"  Foreground="LightGray" Margin="5,0,0,0"/>
+                                            <Image Source="/I2MS2;component/Icons/fp_16.png"  Margin="5,0,0,0" Width="16" Height="16" />
+                                            <TextBlock Text="Rack/Outlet" Style="{StaticResource I2MS_TextBlockStyle2}" Margin="5,0,0,0"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <CheckBox x:Name="_ckbxRackAssetInfoShow"  Style="{StaticResource I2MS_CheckBoxStyle2}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="12,5,0,0" Unchecked="_ckbxRackAssetInfoShow_Unchecked" Checked="_ckbxRackAssetInfoShow_Checked"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                    <TextBlock Text="-" Style="{StaticResource I2MS_TextBlockStyle2}"  Foreground="LightGray" Margin="5,0,0,0"/>
+                                    <Image Source="/I2MS2;component/Icons/port_16.png"   Margin="5,0,0,0" Width="16" Height="16" />
+                                    <TextBlock Text="UserPort" Style="{StaticResource I2MS_TextBlockStyle2}" Margin="5,0,0,0"/>
+                                    <!--<Line X1="0" Y1="0" X2="50" Y2="0" Stroke="{StaticResource _brushDarkGray4}" 
+                                          StrokeThickness="2" VerticalAlignment="Top" Margin="5,13,0,0"/>-->
+
+                                    <CheckBox Name="_ckbxUserPortInfoShow"  Style="{StaticResource I2MS_CheckBoxStyle2}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,4,0,0" Checked="_ckbxUserPortInfoShow_Checked" Unchecked="_ckbxUserPortInfoShow_Unchecked"/>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+
+
+            </Grid>
+
+
+
+        </Grid>
+    </Grid>
+</Page>

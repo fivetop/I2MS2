@@ -1,0 +1,39 @@
+﻿<Page x:Class="I2MS2.Pages.P1SelectCenter_Region1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:tr="clr-namespace:I2MS2.Translation"
+      xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+      mc:Ignorable="d" 
+      d:DesignHeight="930" d:DesignWidth="1570"
+	Title="P1SelectCenter_Region1" Foreground="{x:Null}"
+      x:Name="_pageP1SelectCenter_Region1" 
+      Loaded="_pageP1SelectCenter_Region1_Loaded" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+      SizeChanged="_pageP1SelectCenter_Region1_SizeChanged">
+
+    <Grid x:Name="_gridMain">
+        <Grid x:Name="backGroundGrid">
+            <Border Style="{StaticResource I2MS_baseBorder}">
+                <Rectangle Stroke="{StaticResource _brushDarkGray1}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+            </Border>
+        </Grid>
+
+         <Button x:Name="_btnAddRegion" 
+    			HorizontalAlignment="Right" Margin="0,16,20,0" Style="{DynamicResource I2MS_ButtonStyle}" VerticalAlignment="Top" Width="100" Content="{x:Static prop:Resources.M1_Region1_1 }" Click="_btnAddRegion_Click" />
+         <Button x:Name="_btnBacktoPage" 
+        	    HorizontalAlignment="Right" Margin="0,60,20,0" Style="{DynamicResource I2MS_ButtonStyle}" VerticalAlignment="Top" Width="100" Content="{x:Static prop:Resources.C_back}" Click="_btnBacktoPage_Click" />
+
+        <Grid x:Name="_gridMap" VerticalAlignment="Center" Margin="0,50" HorizontalAlignment="Center">
+            <Image x:Name="_imgMap"  StretchDirection="DownOnly" />
+            <Path Data="M1015,195.5" Fill="{DynamicResource _brushRed}" HorizontalAlignment="Left" Height="0" Margin="1015,195.5,0,0" Stretch="Fill" VerticalAlignment="Top" Width="0"/>
+        </Grid>
+        <StackPanel Margin="0,790,0,0" Orientation="Horizontal" Height="40" HorizontalAlignment="Center">
+        	<TextBlock x:Name="_lblP1State1Text"  FontSize="20" HorizontalAlignment="Center" Foreground="{StaticResource _brushDarkGray4}" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="{x:Static prop:Resources.M1_Progress1}" FontWeight="Bold" Margin="0,1"/>
+        	<TextBlock FontSize="20" HorizontalAlignment="Center" Foreground="{StaticResource _brushDarkGray4}" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="   --> " FontWeight="Bold" Margin="0,1"/>
+            <TextBlock x:Name="_lblP1State2Text"  FontSize="22"  HorizontalAlignment="Center" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="{x:Static prop:Resources.M1_Progress2}" FontWeight="Bold" Margin="0,0,0,-1" />
+            <TextBlock FontSize="20" HorizontalAlignment="Center" Foreground="{StaticResource _brushDarkGray4}" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="   -->   " FontWeight="Bold" Margin="0,1"/>
+            <TextBlock x:Name="_lblP1State3Text" FontSize="20" Foreground="{StaticResource _brushDarkGray4}"   HorizontalAlignment="Center" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="{x:Static prop:Resources.M1_Progress3}" FontWeight="Bold" Margin="0,1"/>
+        </StackPanel>
+    </Grid>
+</Page>

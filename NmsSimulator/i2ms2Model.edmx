@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="i2ms2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="asset">
+          <Key>
+            <PropertyRef Name="asset_id" />
+          </Key>
+          <Property Name="asset_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="catalog_id" Type="int" Nullable="false" />
+          <Property Name="location_id" Type="int" Nullable="false" />
+          <Property Name="asset_name" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="serial_no" Type="varchar" MaxLength="40" />
+          <Property Name="ipv4" Type="varchar" MaxLength="15" />
+          <Property Name="ipv6" Type="varchar" MaxLength="39" />
+          <Property Name="install_user_name" Type="varchar" MaxLength="40" />
+          <Property Name="install_date" Type="datetime" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="last_updated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="remarks" Type="varchar" MaxLength="80" />
+          <Property Name="is_layout" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="pos_x" Type="int" />
+          <Property Name="pos_y" Type="int" />
+          <Property Name="last_updated2" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="asset_aux">
+          <Key>
+            <PropertyRef Name="asset_id" />
+          </Key>
+          <Property Name="asset_id" Type="int" Nullable="false" />
+          <Property Name="as_management_div" Type="varchar" MaxLength="40" />
+          <Property Name="as_management_user_name" Type="varchar" MaxLength="40" />
+          <Property Name="as_free_start_date" Type="date" />
+          <Property Name="as_free_duration" Type="int" />
+          <Property Name="as_free_end_date" Type="date" />
+          <Property Name="as_start_date" Type="date" />
+          <Property Name="as_duration" Type="int" />
+          <Property Name="as_end_date" Type="date" />
+          <Property Name="as_price" Type="int" />
+          <Property Name="as_company" Type="varchar" MaxLength="40" />
+          <Property Name="bu_purchase_date" Type="varchar" MaxLength="40" />
+          <Property Name="bu_purchase_user_name" Type="varchar" MaxLength="40" />
+          <Property Name="bu_depreciation_start_year" Type="int" />
+          <Property Name="bu_depreciation_duration" Type="int" />
+          <Property Name="bu_depreciation_end_year" Type="int" />
+          <Property Name="snmp_get_community" Type="varchar" MaxLength="20" />
+          <Property Name="snmp_set_community" Type="varchar" MaxLength="20" />
+          <Property Name="snmp_trap_svr_ip" Type="varchar" MaxLength="15" />
+          <Property Name="snmp_version" Type="char" MaxLength="1" />
+          <Property Name="snmp_v3_user" Type="varchar" MaxLength="40" />
+          <Property Name="snmp_v3_password" Type="varchar" MaxLength="40" />
+          <Property Name="ic_con_id" Type="int" />
+          <Property Name="sv_kind_of_os" Type="varchar" MaxLength="40" />
+          <Property Name="sv_os_ver" Type="varchar" MaxLength="40" />
+          <Property Name="sv_host_name" Type="varchar" MaxLength="40" />
+          <Property Name="sv_num_of_nic" Type="int" />
+          <Property Name="sv_tot_disk_amount" Type="int" />
+          <Property Name="sv_num_of_disks" Type="int" />
+          <Property Name="ra_vcm_type" Type="char" MaxLength="1" />
+          <Property Name="ra_vcm_depth" Type="int" />
+          <Property Name="st_cur_num_of_disks" Type="int" />
+          <Property Name="st_cur_disk_amount" Type="int" />
+          <Property Name="st_type" Type="char" MaxLength="1" />
+          <Property Name="sw_max_slots" Type="int" />
+        </EntityType>
+        <EntityType Name="asset_ipp_port_link">
+          <Key>
+            <PropertyRef Name="asset_ipp_port_link_id" />
+          </Key>
+          <Property Name="asset_ipp_port_link_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ipp_asset_id" Type="int" Nullable="false" />
+          <Property Name="port_no" Type="int" Nullable="false" />
+          <Property Name="alarm_status" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="wo_status" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="is_port_trace" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ipp_port_status" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="remote_ic_asset_id" Type="int" />
+          <Property Name="remote_pp_asset_id" Type="int" />
+          <Property Name="remote_port_no" Type="int" />
+          <Property Name="last_updated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="asset_port_link">
+          <Key>
+            <PropertyRef Name="asset_port_link_id" />
+          </Key>
+          <Property Name="asset_port_link_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="asset_id" Type="int" Nullable="false" />
+          <Property Name="port_no" Type="int" Nullable="false" />
+          <Property Name="front_asset_id" Type="int" />
+          <Property Name="front_port_no" Type="int" />
+          <Property Name="front_plug_side" Type="char" MaxLength="1" />
+          <Property Name="front_cable_catalog_id" Type="int" />
+          <Property Name="rear_asset_id" Type="int" />
+          <Property Name="rear_port_no" Type="int" />
+          <Property Name="rear_plug_side" Type="char" MaxLength="1" />
+          <Property Name="rear_cable_catalog_id" Type="int" />
+          <Property Name="last_updated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ic_connect_status">
+          <Key>
+            <PropertyRef Name="ic_asset_id" />
+          </Key>
+          <Property Name="ic_asset_id" Type="int" Nullable="false" />
+          <Property Name="ic_connect_status" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="last_updated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ic_ipp_config">
+          <Key>
+            <PropertyRef Name="ic_ipp_config_id" />
+          </Key>
+          <Property Name="ic_ipp_config_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ic_asset_id" Type="int" Nullable="false" />
+          <Property Name="ipp_connect_no" Type="int" Nullable="false" />
+          <Property Name="ipp_asset_id" Type="int" />
+        </EntityType>
+        <EntityType Name="ipp_connect_status">
+          <Key>
+            <PropertyRef Name="ipp_asset_id" />
+          </Key>
+          <Property Name="ipp_asset_id" Type="int" Nullable="false" />
+          <Property Name="ic_asset_id" Type="int" />
+          <Property Name="connect_status" Type="char" MaxLength="1" />
+        </EntityType>
+        <Association Name="FK_asset_aux_asset">
+          <End Role="asset" Type="Self.asset" Multiplicity="1" />
+          <End Role="asset_aux" Type="Self.asset_aux" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="asset_aux">
+              <PropertyRef Name="asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asset_ic_asset">
+          <End Role="asset" Type="Self.asset" Multiplicity="1" />
+          <End Role="ic_ipp_config" Type="Self.ic_ipp_config" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="ic_ipp_config">
+              <PropertyRef Name="ic_asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asset_ipp_asset">
+          <End Role="asset" Type="Self.asset" Multiplicity="1" />
+          <End Role="ipp_connect_status" Type="Self.ipp_connect_status" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="ipp_connect_status">
+              <PropertyRef Name="ipp_asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asset_ipp_port_link_asset">
+          <End Role="asset" Type="Self.asset" Multiplicity="1" />
+          <End Role="asset_ipp_port_link" Type="Self.asset_ipp_port_link" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="asset_ipp_port_link">
+              <PropertyRef Name="ipp_asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asset_port_link_asset">
+          <End Role="asset" Type="Self.asset" Multiplicity="1" />
+          <End Role="asset_port_link" Type="Self.asset_port_link" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="asset_port_link">
+              <PropertyRef Name="asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ic_connect_status_asset">
+          <End Role="asset" Type="Self.asset" Multiplicity="1" />
+          <End Role="ic_connect_status" Type="Self.ic_connect_status" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="ic_connect_status">
+              <PropertyRef Name="ic_asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="i2ms2ModelStoreContainer">
+          <EntitySet Name="asset" EntityType="Self.asset" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="asset_aux" EntityType="Self.asset_aux" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="asset_ipp_port_link" EntityType="Self.asset_ipp_port_link" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="asset_port_link" EntityType="Self.asset_port_link" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ic_connect_status" EntityType="Self.ic_connect_status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ic_ipp_config" EntityType="Self.ic_ipp_config" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ipp_connect_status" EntityType="Self.ipp_connect_status" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_asset_aux_asset" Association="Self.FK_asset_aux_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="asset_aux" EntitySet="asset_aux" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asset_ic_asset" Association="Self.FK_asset_ic_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="ic_ipp_config" EntitySet="ic_ipp_config" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asset_ipp_asset" Association="Self.FK_asset_ipp_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="ipp_connect_status" EntitySet="ipp_connect_status" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asset_ipp_port_link_asset" Association="Self.FK_asset_ipp_port_link_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="asset_ipp_port_link" EntitySet="asset_ipp_port_link" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asset_port_link_asset" Association="Self.FK_asset_port_link_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="asset_port_link" EntitySet="asset_port_link" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ic_connect_status_asset" Association="Self.FK_ic_connect_status_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="ic_connect_status" EntitySet="ic_connect_status" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="i2ms2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="asset_ipp_port_link">
+          <Key>
+            <PropertyRef Name="asset_ipp_port_link_id" />
+          </Key>
+          <Property Name="asset_ipp_port_link_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ipp_asset_id" Type="Int32" Nullable="false" />
+          <Property Name="port_no" Type="Int32" Nullable="false" />
+          <Property Name="alarm_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="wo_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="is_port_trace" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ipp_port_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="remote_ic_asset_id" Type="Int32" />
+          <Property Name="remote_pp_asset_id" Type="Int32" />
+          <Property Name="remote_port_no" Type="Int32" />
+          <Property Name="last_updated" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="asset" Relationship="i2ms2Model.FK_asset_ipp_port_link_asset" FromRole="asset_ipp_port_link" ToRole="asset" />
+        </EntityType>
+        <EntityType Name="asset_port_link">
+          <Key>
+            <PropertyRef Name="asset_port_link_id" />
+          </Key>
+          <Property Name="asset_port_link_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="asset_id" Type="Int32" Nullable="false" />
+          <Property Name="port_no" Type="Int32" Nullable="false" />
+          <Property Name="front_asset_id" Type="Int32" />
+          <Property Name="front_port_no" Type="Int32" />
+          <Property Name="front_plug_side" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="front_cable_catalog_id" Type="Int32" />
+          <Property Name="rear_asset_id" Type="Int32" />
+          <Property Name="rear_port_no" Type="Int32" />
+          <Property Name="rear_plug_side" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="rear_cable_catalog_id" Type="Int32" />
+          <Property Name="last_updated" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="asset" Relationship="i2ms2Model.FK_asset_port_link_asset" FromRole="asset_port_link" ToRole="asset" />
+        </EntityType>
+        <EntityType Name="ic_connect_status">
+          <Key>
+            <PropertyRef Name="ic_asset_id" />
+          </Key>
+          <Property Name="ic_asset_id" Type="Int32" Nullable="false" />
+          <Property Name="ic_connect_status1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="last_updated" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="asset" Relationship="i2ms2Model.FK_ic_connect_status_asset" FromRole="ic_connect_status" ToRole="asset" />
+        </EntityType>
+        <EntityType Name="ic_ipp_config">
+          <Key>
+            <PropertyRef Name="ic_ipp_config_id" />
+          </Key>
+          <Property Name="ic_ipp_config_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ic_asset_id" Type="Int32" Nullable="false" />
+          <Property Name="ipp_connect_no" Type="Int32" Nullable="false" />
+          <Property Name="ipp_asset_id" Type="Int32" />
+          <NavigationProperty Name="asset" Relationship="i2ms2Model.FK_asset_ic_asset" FromRole="ic_ipp_config" ToRole="asset" />
+        </EntityType>
+        <EntityType Name="ipp_connect_status">
+          <Key>
+            <PropertyRef Name="ipp_asset_id" />
+          </Key>
+          <Property Name="ipp_asset_id" Type="Int32" Nullable="false" />
+          <Property Name="ic_asset_id" Type="Int32" />
+          <Property Name="connect_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="asset" Relationship="i2ms2Model.FK_asset_ipp_asset" FromRole="ipp_connect_status" ToRole="asset" />
+        </EntityType>
+        <EntityContainer Name="i2ms2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="asset_ipp_port_link" EntityType="Self.asset_ipp_port_link" />
+          <EntitySet Name="asset_port_link" EntityType="Self.asset_port_link" />
+          <EntitySet Name="ic_connect_status" EntityType="Self.ic_connect_status" />
+          <EntitySet Name="ic_ipp_config" EntityType="Self.ic_ipp_config" />
+          <EntitySet Name="ipp_connect_status" EntityType="Self.ipp_connect_status" />
+          <EntitySet Name="asset" EntityType="i2ms2Model.asset" />
+          <EntitySet Name="asset_aux" EntityType="i2ms2Model.asset_aux" />
+          <AssociationSet Name="FK_asset_aux_asset" Association="i2ms2Model.FK_asset_aux_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="asset_aux" EntitySet="asset_aux" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asset_ic_asset" Association="i2ms2Model.FK_asset_ic_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="ic_ipp_config" EntitySet="ic_ipp_config" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asset_ipp_asset" Association="i2ms2Model.FK_asset_ipp_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="ipp_connect_status" EntitySet="ipp_connect_status" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asset_ipp_port_link_asset" Association="i2ms2Model.FK_asset_ipp_port_link_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="asset_ipp_port_link" EntitySet="asset_ipp_port_link" />
+          </AssociationSet>
+          <AssociationSet Name="FK_asset_port_link_asset" Association="i2ms2Model.FK_asset_port_link_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="asset_port_link" EntitySet="asset_port_link" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ic_connect_status_asset" Association="i2ms2Model.FK_ic_connect_status_asset">
+            <End Role="asset" EntitySet="asset" />
+            <End Role="ic_connect_status" EntitySet="ic_connect_status" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="asset">
+          <Key>
+            <PropertyRef Name="asset_id" />
+          </Key>
+          <Property Name="asset_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="catalog_id" Type="Int32" Nullable="false" />
+          <Property Name="location_id" Type="Int32" Nullable="false" />
+          <Property Name="asset_name" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="serial_no" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ipv4" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ipv6" Type="String" MaxLength="39" FixedLength="false" Unicode="false" />
+          <Property Name="install_user_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="install_date" Type="DateTime" Precision="3" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="last_updated" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="remarks" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="is_layout" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pos_x" Type="Int32" />
+          <Property Name="pos_y" Type="Int32" />
+          <Property Name="last_updated2" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="asset_aux" Relationship="i2ms2Model.FK_asset_aux_asset" FromRole="asset" ToRole="asset_aux" />
+          <NavigationProperty Name="ic_ipp_config" Relationship="i2ms2Model.FK_asset_ic_asset" FromRole="asset" ToRole="ic_ipp_config" />
+          <NavigationProperty Name="ipp_connect_status" Relationship="i2ms2Model.FK_asset_ipp_asset" FromRole="asset" ToRole="ipp_connect_status" />
+          <NavigationProperty Name="asset_ipp_port_link" Relationship="i2ms2Model.FK_asset_ipp_port_link_asset" FromRole="asset" ToRole="asset_ipp_port_link" />
+          <NavigationProperty Name="asset_port_link" Relationship="i2ms2Model.FK_asset_port_link_asset" FromRole="asset" ToRole="asset_port_link" />
+          <NavigationProperty Name="ic_connect_status" Relationship="i2ms2Model.FK_ic_connect_status_asset" FromRole="asset" ToRole="ic_connect_status" />
+        </EntityType>
+        <EntityType Name="asset_aux">
+          <Key>
+            <PropertyRef Name="asset_id" />
+          </Key>
+          <Property Name="asset_id" Type="Int32" Nullable="false" />
+          <Property Name="as_management_div" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="as_management_user_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="as_free_start_date" Type="DateTime" Precision="0" />
+          <Property Name="as_free_duration" Type="Int32" />
+          <Property Name="as_free_end_date" Type="DateTime" Precision="0" />
+          <Property Name="as_start_date" Type="DateTime" Precision="0" />
+          <Property Name="as_duration" Type="Int32" />
+          <Property Name="as_end_date" Type="DateTime" Precision="0" />
+          <Property Name="as_price" Type="Int32" />
+          <Property Name="as_company" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="bu_purchase_date" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="bu_purchase_user_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="bu_depreciation_start_year" Type="Int32" />
+          <Property Name="bu_depreciation_duration" Type="Int32" />
+          <Property Name="bu_depreciation_end_year" Type="Int32" />
+          <Property Name="snmp_get_community" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="snmp_set_community" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="snmp_trap_svr_ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="snmp_version" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="snmp_v3_user" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="snmp_v3_password" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ic_con_id" Type="Int32" />
+          <Property Name="sv_kind_of_os" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="sv_os_ver" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="sv_host_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="sv_num_of_nic" Type="Int32" />
+          <Property Name="sv_tot_disk_amount" Type="Int32" />
+          <Property Name="sv_num_of_disks" Type="Int32" />
+          <Property Name="ra_vcm_type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ra_vcm_depth" Type="Int32" />
+          <Property Name="st_cur_num_of_disks" Type="Int32" />
+          <Property Name="st_cur_disk_amount" Type="Int32" />
+          <Property Name="st_type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="sw_max_slots" Type="Int32" />
+          <NavigationProperty Name="asset" Relationship="i2ms2Model.FK_asset_aux_asset" FromRole="asset_aux" ToRole="asset" />
+        </EntityType>
+        <Association Name="FK_asset_aux_asset">
+          <End Type="i2ms2Model.asset" Role="asset" Multiplicity="1" />
+          <End Type="i2ms2Model.asset_aux" Role="asset_aux" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="asset_aux">
+              <PropertyRef Name="asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asset_ic_asset">
+          <End Type="i2ms2Model.asset" Role="asset" Multiplicity="1" />
+          <End Type="i2ms2Model.ic_ipp_config" Role="ic_ipp_config" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="ic_ipp_config">
+              <PropertyRef Name="ic_asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asset_ipp_asset">
+          <End Type="i2ms2Model.asset" Role="asset" Multiplicity="1" />
+          <End Type="i2ms2Model.ipp_connect_status" Role="ipp_connect_status" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="ipp_connect_status">
+              <PropertyRef Name="ipp_asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asset_ipp_port_link_asset">
+          <End Type="i2ms2Model.asset" Role="asset" Multiplicity="1" />
+          <End Type="i2ms2Model.asset_ipp_port_link" Role="asset_ipp_port_link" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="asset_ipp_port_link">
+              <PropertyRef Name="ipp_asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_asset_port_link_asset">
+          <End Type="i2ms2Model.asset" Role="asset" Multiplicity="1" />
+          <End Type="i2ms2Model.asset_port_link" Role="asset_port_link" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="asset_port_link">
+              <PropertyRef Name="asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ic_connect_status_asset">
+          <End Type="i2ms2Model.asset" Role="asset" Multiplicity="1" />
+          <End Type="i2ms2Model.ic_connect_status" Role="ic_connect_status" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="asset">
+              <PropertyRef Name="asset_id" />
+            </Principal>
+            <Dependent Role="ic_connect_status">
+              <PropertyRef Name="ic_asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="i2ms2ModelStoreContainer" CdmEntityContainer="i2ms2Entities">
+          <EntitySetMapping Name="asset_ipp_port_link">
+            <EntityTypeMapping TypeName="i2ms2Model.asset_ipp_port_link">
+              <MappingFragment StoreEntitySet="asset_ipp_port_link">
+                <ScalarProperty Name="asset_ipp_port_link_id" ColumnName="asset_ipp_port_link_id" />
+                <ScalarProperty Name="ipp_asset_id" ColumnName="ipp_asset_id" />
+                <ScalarProperty Name="port_no" ColumnName="port_no" />
+                <ScalarProperty Name="alarm_status" ColumnName="alarm_status" />
+                <ScalarProperty Name="wo_status" ColumnName="wo_status" />
+                <ScalarProperty Name="is_port_trace" ColumnName="is_port_trace" />
+                <ScalarProperty Name="ipp_port_status" ColumnName="ipp_port_status" />
+                <ScalarProperty Name="remote_ic_asset_id" ColumnName="remote_ic_asset_id" />
+                <ScalarProperty Name="remote_pp_asset_id" ColumnName="remote_pp_asset_id" />
+                <ScalarProperty Name="remote_port_no" ColumnName="remote_port_no" />
+                <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="asset_port_link">
+            <EntityTypeMapping TypeName="i2ms2Model.asset_port_link">
+              <MappingFragment StoreEntitySet="asset_port_link">
+                <ScalarProperty Name="asset_port_link_id" ColumnName="asset_port_link_id" />
+                <ScalarProperty Name="asset_id" ColumnName="asset_id" />
+                <ScalarProperty Name="port_no" ColumnName="port_no" />
+                <ScalarProperty Name="front_asset_id" ColumnName="front_asset_id" />
+                <ScalarProperty Name="front_port_no" ColumnName="front_port_no" />
+                <ScalarProperty Name="front_plug_side" ColumnName="front_plug_side" />
+                <ScalarProperty Name="front_cable_catalog_id" ColumnName="front_cable_catalog_id" />
+                <ScalarProperty Name="rear_asset_id" ColumnName="rear_asset_id" />
+                <ScalarProperty Name="rear_port_no" ColumnName="rear_port_no" />
+                <ScalarProperty Name="rear_plug_side" ColumnName="rear_plug_side" />
+                <ScalarProperty Name="rear_cable_catalog_id" ColumnName="rear_cable_catalog_id" />
+                <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ic_connect_status">
+            <EntityTypeMapping TypeName="i2ms2Model.ic_connect_status">
+              <MappingFragment StoreEntitySet="ic_connect_status">
+                <ScalarProperty Name="ic_asset_id" ColumnName="ic_asset_id" />
+                <ScalarProperty Name="ic_connect_status1" ColumnName="ic_connect_status" />
+                <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ic_ipp_config">
+            <EntityTypeMapping TypeName="i2ms2Model.ic_ipp_config">
+              <MappingFragment StoreEntitySet="ic_ipp_config">
+                <ScalarProperty Name="ic_ipp_config_id" ColumnName="ic_ipp_config_id" />
+                <ScalarProperty Name="ic_asset_id" ColumnName="ic_asset_id" />
+                <ScalarProperty Name="ipp_connect_no" ColumnName="ipp_connect_no" />
+                <ScalarProperty Name="ipp_asset_id" ColumnName="ipp_asset_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ipp_connect_status">
+            <EntityTypeMapping TypeName="i2ms2Model.ipp_connect_status">
+              <MappingFragment StoreEntitySet="ipp_connect_status">
+                <ScalarProperty Name="ipp_asset_id" ColumnName="ipp_asset_id" />
+                <ScalarProperty Name="ic_asset_id" ColumnName="ic_asset_id" />
+                <ScalarProperty Name="connect_status" ColumnName="connect_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="asset">
+            <EntityTypeMapping TypeName="i2ms2Model.asset">
+              <MappingFragment StoreEntitySet="asset">
+                <ScalarProperty Name="last_updated2" ColumnName="last_updated2" />
+                <ScalarProperty Name="pos_y" ColumnName="pos_y" />
+                <ScalarProperty Name="pos_x" ColumnName="pos_x" />
+                <ScalarProperty Name="is_layout" ColumnName="is_layout" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+                <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="install_date" ColumnName="install_date" />
+                <ScalarProperty Name="install_user_name" ColumnName="install_user_name" />
+                <ScalarProperty Name="ipv6" ColumnName="ipv6" />
+                <ScalarProperty Name="ipv4" ColumnName="ipv4" />
+                <ScalarProperty Name="serial_no" ColumnName="serial_no" />
+                <ScalarProperty Name="asset_name" ColumnName="asset_name" />
+                <ScalarProperty Name="location_id" ColumnName="location_id" />
+                <ScalarProperty Name="catalog_id" ColumnName="catalog_id" />
+                <ScalarProperty Name="asset_id" ColumnName="asset_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="asset_aux">
+            <EntityTypeMapping TypeName="i2ms2Model.asset_aux">
+              <MappingFragment StoreEntitySet="asset_aux">
+                <ScalarProperty Name="sw_max_slots" ColumnName="sw_max_slots" />
+                <ScalarProperty Name="st_type" ColumnName="st_type" />
+                <ScalarProperty Name="st_cur_disk_amount" ColumnName="st_cur_disk_amount" />
+                <ScalarProperty Name="st_cur_num_of_disks" ColumnName="st_cur_num_of_disks" />
+                <ScalarProperty Name="ra_vcm_depth" ColumnName="ra_vcm_depth" />
+                <ScalarProperty Name="ra_vcm_type" ColumnName="ra_vcm_type" />
+                <ScalarProperty Name="sv_num_of_disks" ColumnName="sv_num_of_disks" />
+                <ScalarProperty Name="sv_tot_disk_amount" ColumnName="sv_tot_disk_amount" />
+                <ScalarProperty Name="sv_num_of_nic" ColumnName="sv_num_of_nic" />
+                <ScalarProperty Name="sv_host_name" ColumnName="sv_host_name" />
+                <ScalarProperty Name="sv_os_ver" ColumnName="sv_os_ver" />
+                <ScalarProperty Name="sv_kind_of_os" ColumnName="sv_kind_of_os" />
+                <ScalarProperty Name="ic_con_id" ColumnName="ic_con_id" />
+                <ScalarProperty Name="snmp_v3_password" ColumnName="snmp_v3_password" />
+                <ScalarProperty Name="snmp_v3_user" ColumnName="snmp_v3_user" />
+                <ScalarProperty Name="snmp_version" ColumnName="snmp_version" />
+                <ScalarProperty Name="snmp_trap_svr_ip" ColumnName="snmp_trap_svr_ip" />
+                <ScalarProperty Name="snmp_set_community" ColumnName="snmp_set_community" />
+                <ScalarProperty Name="snmp_get_community" ColumnName="snmp_get_community" />
+                <ScalarProperty Name="bu_depreciation_end_year" ColumnName="bu_depreciation_end_year" />
+                <ScalarProperty Name="bu_depreciation_duration" ColumnName="bu_depreciation_duration" />
+                <ScalarProperty Name="bu_depreciation_start_year" ColumnName="bu_depreciation_start_year" />
+                <ScalarProperty Name="bu_purchase_user_name" ColumnName="bu_purchase_user_name" />
+                <ScalarProperty Name="bu_purchase_date" ColumnName="bu_purchase_date" />
+                <ScalarProperty Name="as_company" ColumnName="as_company" />
+                <ScalarProperty Name="as_price" ColumnName="as_price" />
+                <ScalarProperty Name="as_end_date" ColumnName="as_end_date" />
+                <ScalarProperty Name="as_duration" ColumnName="as_duration" />
+                <ScalarProperty Name="as_start_date" ColumnName="as_start_date" />
+                <ScalarProperty Name="as_free_end_date" ColumnName="as_free_end_date" />
+                <ScalarProperty Name="as_free_duration" ColumnName="as_free_duration" />
+                <ScalarProperty Name="as_free_start_date" ColumnName="as_free_start_date" />
+                <ScalarProperty Name="as_management_user_name" ColumnName="as_management_user_name" />
+                <ScalarProperty Name="as_management_div" ColumnName="as_management_div" />
+                <ScalarProperty Name="asset_id" ColumnName="asset_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

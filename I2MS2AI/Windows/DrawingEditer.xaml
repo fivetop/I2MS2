@@ -1,0 +1,14 @@
+﻿<Window x:Class="I2MS2.Windows.DrawingEditer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR"
+        xmlns:w="clr-namespace:I2MS2.Windows"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:uc="clr-namespace:I2MS2.UserControls"
+        xmlns:ucdr="clr-namespace:I2MS2.UserControls.Drawing"
+        Name="_window"
+        Title="{x:Static prop:Resources.M9_Drawing_Editor}" Height="910" Width="1280" Style="{StaticResource I2MS_SubWindowStyle}" WindowStartupLocation="CenterOwner" >
+    <Grid>
+        <ucdr:DrawingEditControl VerticalAlignment="Top"/>
+    </Grid>
+</Window>

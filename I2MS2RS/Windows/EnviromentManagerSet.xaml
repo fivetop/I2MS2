@@ -1,0 +1,136 @@
+﻿<controls:MetroWindow x:Class="I2MS2.Windows.EnviromentManagerSet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+        xmlns:im="clr-namespace:I2MS2.Models" 
+        xmlns:iw="clr-namespace:I2MS2.Windows" 
+        xmlns:clr="clr-namespace:System;assembly=mscorlib"
+        xmlns:uc="clr-namespace:I2MS2.UserControls"     
+            xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            BorderBrush="{DynamicResource AccentColorBrush}"
+            Width="480"
+            Height="510"
+            ShowIconOnTitleBar="True"
+            ShowTitleBar="True"
+            GlowBrush="{DynamicResource AccentColorBrush}"
+            NonActiveGlowBrush="#CDFF0000"
+            mc:Ignorable="d"
+            d:DesignHeight="480"
+            d:DesignWidth="480"
+            TitlebarHeight="60" 
+        WindowStartupLocation="CenterOwner"
+        Title="{x:Static prop:Resources.Menu_EnvironmentSetting}" 
+        Name="_window" ResizeMode="NoResize">
+
+    <Window.CommandBindings>
+        <CommandBinding x:Name="_cmdEdit" Command="{x:Static iw:EnviromentManager.EditCommand}" CanExecute="_cmdEdit_CanExecute" Executed="_cmdEdit_Executed" />
+        <CommandBinding x:Name="_cmdSave" Command="{x:Static iw:EnviromentManager.SaveCommand}" CanExecute="_cmdSave_CanExecute" Executed="_cmdSave_Executed" />
+        <CommandBinding x:Name="_cmdCancel" Command="{x:Static iw:EnviromentManager.CancelCommand}" CanExecute="_cmdCancel_CanExecute" Executed="_cmdCancel_Executed" />
+    </Window.CommandBindings>
+
+    <Grid  Margin="5,5,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <!--현재 유저 컨트롤 전체의 보더-->
+        <Grid Grid.Row="0">
+            <TextBlock x:Name="_asset_id" Text="Asset ID:" Margin="4" HorizontalAlignment="Right"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <TextBlock Text="{x:Static prop:Resources.EB_PowerSensorSetting}" Margin="4" />
+        </Grid>
+        <Grid Grid.Row="4">
+            <TextBlock Text="{x:Static prop:Resources.EB_TempHumiSetting}" Margin="4" />
+        </Grid>
+
+        <Grid x:Name="_g1" Grid.Row="1"  Margin="10">
+        </Grid>
+
+        <Grid x:Name="_g2" Grid.Row="3" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="{DynamicResource AccentColorBrush}" Margin="1,1,1,-4" BorderThickness="1" Grid.ColumnSpan="6" Grid.RowSpan="1"/>
+            <StackPanel Orientation="Vertical" Grid.Column="0" Margin="10,10,0,0">
+                <CheckBox Name="_ckbx1" Margin="0,0,0,0" Checked="_ckbx1_Checked" Unchecked="_ckbx1_Unchecked"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical"  Grid.Column="1" Margin="10,10,0,0">
+                <TextBlock Text="{x:Static prop:Resources.EB_C_High}" Margin="0,4,0,0"/>
+                <TextBlock Text="전압 상한 설정" Margin="0,12,0,0"/>
+                <TextBlock Text="{x:Static prop:Resources.EB_P_High}" Margin="0,12,0,0"/>
+                <TextBlock Text="{x:Static prop:Resources.EB_PH_High}" Margin="0,12,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="2" Margin="10,10,0,0">
+                <TextBox  x:Name="txthigh_current_th" Margin="0,0,0,0"  IsEnabled="False" MaxLength="7" TextAlignment="Right" FontSize="14" uc:TextHelper.IsNumeric="True"/>
+                <TextBox  x:Name="txthigh_vo_th" Margin="0,2,0,0"  IsEnabled="False" MaxLength="7" TextAlignment="Right" FontSize="14" uc:TextHelper.IsNumeric="True"/>
+                <TextBox  x:Name="txthigh_power_th" Margin="0,2,0,0"  IsEnabled="False" MaxLength="7" TextAlignment="Right" FontSize="14" uc:TextHelper.IsNumeric="True"/>
+                <TextBox  x:Name="txthigh_powerh_th" Margin="0,2,0,0"  IsEnabled="False" MaxLength="7" TextAlignment="Right" FontSize="14" uc:TextHelper.IsNumeric="True"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="3" Margin="10">
+                <TextBlock Text="A (100 A)" Margin="0,1,0,0" FontWeight="Bold"/>
+                <TextBlock Text="V (230 V)" Margin="0,12,0,0" FontWeight="Bold"/>
+                <TextBlock Text="Kw (400 Kw)" Margin="0,12,0,0" FontWeight="Bold"/>
+                <TextBlock Text="kWh" Margin="0,12,0,0" FontWeight="Bold"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="_g3" Grid.Row="5" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="{DynamicResource AccentColorBrush}" Margin="1" BorderThickness="1"  Grid.ColumnSpan="6" Grid.RowSpan="1"/>
+            <StackPanel Orientation="Vertical" Grid.Column="0" Margin="10,10,0,0">
+                <CheckBox Name="_ckbx2" Margin="0,1,0,0" Checked="_ckbx2_Checked" Unchecked="_ckbx2_Unchecked"/>
+                <CheckBox Name="_ckbx3" Margin="0,4,0,0" Checked="_ckbx3_Checked" Unchecked="_ckbx3_Unchecked"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical"  Grid.Column="1" Margin="10,10,0,0">
+                <TextBlock Text="{x:Static prop:Resources.EB_TempLow}" Margin="0,1,0,0"/>
+                <TextBlock Text="{x:Static prop:Resources.EB_HumiLow}" Margin="0,12,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="2" Margin="10,10,0,0">
+                <TextBox  x:Name="txtlow_temp_th" Margin="0,1,0,0"  IsEnabled="False" MaxLength="2" TextChanged="TextTempChangedDigit" TextAlignment="Right" FontSize="14" uc:TextHelper.IsNumeric="True" />
+                <TextBox  x:Name="txtlow_humi_th" Margin="0,4,0,0"  IsEnabled="False" MaxLength="2" TextChanged="TextHumiChangedDigit" TextAlignment="Right" FontSize="14" uc:TextHelper.IsNumeric="True"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="3" Margin="10,10,0,0">
+                <TextBlock Text="{x:Static prop:Resources.EB_High}" Margin="0,1,0,0"/>
+                <TextBlock Text="{x:Static prop:Resources.EB_High}" Margin="0,12,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="4" Margin="10,10,0,0">
+                <TextBox  x:Name="txthigh_temp_th" Margin="0,1,0,0"  IsEnabled="False" MaxLength="2" TextChanged="TextTempChangedDigit" TextAlignment="Right" FontSize="14" uc:TextHelper.IsNumeric="True"/>
+                <TextBox  x:Name="txthigh_humi_th" Margin="0,4,0,0"  IsEnabled="False" MaxLength="2" TextChanged="TextHumiChangedDigit" TextAlignment="Right" FontSize="14" uc:TextHelper.IsNumeric="True"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical"  Grid.Column="5" Margin="10,10,10,0">
+                <TextBlock Text="ºC" Margin="0,1,0,0" FontWeight="Bold"/>
+                <TextBlock Text="%" Margin="0,12,0,0" FontWeight="Bold"/>
+            </StackPanel>
+            <TextBlock Text="{x:Static prop:Resources.EB_HumiInfo}" Margin="160,70,0,0" Grid.ColumnSpan="6"/>
+            <TextBlock Text="{x:Static prop:Resources.EB_TempInfo}" Margin="160,90,0,0" Grid.ColumnSpan="6"/>
+        </Grid>
+
+        <!--아래 버튼-->
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Height="30" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <Button x:Name="_btnEdit" Content="{x:Static prop:Resources.C_Edit}"  Margin="0,0,6,0" Command="{x:Static iw:EnviromentManager.EditCommand}" Height="24" Width="100"/>
+            <Button x:Name="_btnSave" Content="{x:Static prop:Resources.C_Save}"  Margin="0,0,6,0" Command="{x:Static iw:EnviromentManager.SaveCommand}" Height="24" Width="100"/>
+            <Button x:Name="_btnCancel" Content="{x:Static prop:Resources.C_Cancel}"  Margin="0,0,6,0" Command="{x:Static iw:EnviromentManager.CancelCommand}" Height="24" Width="100"/>
+        </StackPanel>
+
+    </Grid>
+</controls:MetroWindow>
+
+    

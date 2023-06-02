@@ -1,0 +1,3 @@
+https://www.microsoft.com/en-us/download/details.aspx?id=8279
+
+C:\Users\jake\Source\Workspaces\I2MS2\I2MS2\I2MSR>"C:\Program Files (x86)\MSBuild\12.0\Bin\msbuild" i2msr.csproj

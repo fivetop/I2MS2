@@ -1,0 +1,165 @@
+﻿<Controls:MetroWindow x:Class="I2MS2.MainWindow2"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:MetroDemo="clr-namespace:MetroDemo"
+                      xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:exampleViews="clr-namespace:MetroDemo.ExampleViews"
+                      xmlns:local="clr-namespace:I2MS2.Chart"
+                      Title="LS SimpleWIN DashBoard v2.1"
+                      Width="1024"
+                      Height="768"
+                      ShowIconOnTitleBar="True"
+                      ShowTitleBar="True"
+                      WindowStartupLocation="CenterScreen"
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      NonActiveGlowBrush="#CDFF0000"
+                      mc:Ignorable="d"
+                      d:DesignHeight="768"
+                      d:DesignWidth="1024"
+                      Closing="MetroWindow_Closing"
+                      Dialog:DialogParticipation.Register="{Binding}" 
+                      TitlebarHeight="60" ResizeMode="CanResizeWithGrip" TitleCaps="False">
+
+    <!-- Region //리소스 선언-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro.Resources;component/Icons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/FlatSlider.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Rectangle x:Key="AppThemeMenuIcon" x:Shared="False" Width="16" Height="16" StrokeThickness="1" Stroke="{Binding BorderColorBrush, Mode=OneWay}" Fill="{Binding ColorBrush, Mode=OneWay}" />
+            <Ellipse x:Key="AccentMenuIcon" x:Shared="False" Width="16" Height="16" Fill="{Binding ColorBrush, Mode=OneWay}" />
+
+            <Style x:Key="AppThemeMenuItemStyle" TargetType="{x:Type MenuItem}"  BasedOn="{StaticResource MetroMenuItem}">
+                <Setter Property="Command" Value="{Binding ChangeAccentCommand}" />
+                <Setter Property="Icon" Value="{StaticResource AppThemeMenuIcon}" />
+                <Setter Property="Header" Value="{Binding Name, Mode=OneWay}" />
+            </Style>
+
+            <Style x:Key="AccentColorMenuItemStyle" TargetType="{x:Type MenuItem}" BasedOn="{StaticResource MetroMenuItem}">
+                <Setter Property="Command" Value="{Binding ChangeAccentCommand}" />
+                <Setter Property="Icon" Value="{StaticResource AccentMenuIcon}" />
+                <Setter Property="Header" Value="{Binding Name, Mode=OneWay}" />
+            </Style>
+
+            <Dialog:CustomDialog x:Key="CustomDialogTest" Title="This dialog allows arbitrary content."  x:Name="CustomTestDialog">
+                <TextBlock Height="200" x:Name="MessageTextBlock" Text="{Binding Artists[0].Name}" Foreground="{DynamicResource AccentColorBrush}" />
+            </Dialog:CustomDialog>
+
+            <Dialog:CustomDialog x:Key="CustomCloseDialogTest" Title="Custom Dialog which is awaitable" x:Name="CustomCloseDialogTest">
+                <StackPanel>
+                    <TextBlock Height="30" Text="This dialog allows arbitrary content. " TextWrapping="Wrap"  Foreground="{DynamicResource AccentColorBrush}" />
+                    <Button Content="Close Me!" Click="CloseCustomDialog"/>
+                </StackPanel>
+            </Dialog:CustomDialog>
+        </ResourceDictionary>
+    </Window.Resources>
+    <!--END Region-->
+
+    <!-- Region // 상단 메뉴 선언-->
+    <Controls:MetroWindow.LeftWindowCommands>
+        <Controls:WindowCommands>
+            <Button Click="LaunchMahAppsOnCompany" ToolTip="LS SimpleWIN web site">
+                <Rectangle Width="44" Height="44" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Uniform" Visual="{StaticResource appbar_vector_line_curve}" />
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.LeftWindowCommands>
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands ShowLastSeparator="False">
+            <Button ToolTip="SizeToContent demo"  Content="Color" ContextMenuService.IsEnabled="True" Click="Button_Click" >
+                <Button.ContextMenu>
+                    <ContextMenu >
+                        <MenuItem Header="Base Color Theme" ItemsSource="{Binding AppThemes, Mode=OneWay}"
+                          ItemContainerStyle="{StaticResource AppThemeMenuItemStyle}" />
+                        <MenuItem Header="Title Theme" ItemsSource="{Binding AccentColors, Mode=OneWay}"
+                          ItemContainerStyle="{StaticResource AccentColorMenuItemStyle}" />
+                        <MenuItem Header="Dialogs">
+                            <MenuItem Command="{Binding ShowCustomDialogCommand}" Header="Show CustomDialog via VM" />
+                            <MenuItem Header="Window with drop shadow" Click="MenuWindowWithShadowOnClick" />
+                        </MenuItem>
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+            <Button Click="LaunchIcons"  ToolTip="All icons"  Content="Icons" />
+            <ToggleButton Content="ToggleButton"      ToolTip="Shows the toggle button magic" x:Name="MagicToggleButton"  IsChecked="{Binding MagicToggleButtonIsChecked}" />
+            <ToggleButton Content="Confirm quit"  ToolTip="Enable quit confirmation dialog on exit"  IsChecked="{Binding QuitConfirmationEnabled}" />
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    <!--END Region-->
+
+    <!-- Region // 메인 폼 -->
+    <Controls:MetroContentControl>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Menu Grid.Row="0"
+                  Margin="5"
+                  VerticalAlignment="Stretch"
+                  HorizontalAlignment="Left">
+            </Menu>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Border Height="150">
+                    <local:FishEyePanel>
+                        <Image Source="Images\tile\1_gauge.jpg" Tag="1" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                        <Image Source="Images\tile\gauge.png" Tag="1" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                        <Image Source="Images\tile\Ascent.jpg" Tag="2" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                        <Image Source="Images\tile\Autumn.jpg" Tag="3" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                        <Image Source="Images\tile\Crystal.jpg" Tag="4" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                        <Image Source="Images\tile\DaVinci.jpg" Tag="5" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                        <Image Source="Images\tile\Follow.jpg" Tag="6" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                        <Image Source="Images\tile\Friend.jpg" Tag="7" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                        <Image Source="Images\tile\Home.jpg" Tag="8" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                        <Image Source="Images\tile\Moon flower.jpg" Tag="9" Width="100" Margin="5" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+                    </local:FishEyePanel>
+                </Border>
+                <!--
+                <TextBlock Grid.Row="1" x:Name="title2" Text="System Infomation" Background="{DynamicResource AccentColorBrush2}" FontSize="24"></TextBlock>
+                -->
+            </Grid>
+
+            <Controls:MetroAnimatedSingleRowTabControl Grid.Row="1" x:Name="MainTabControl">
+                <TabItem Header="Syatem Info">
+                    <exampleViews:Dash2 DataContext="{Binding}" />
+                </TabItem>
+                <TabItem Header="Syatem Information">
+                    <exampleViews:Dash1 DataContext="{Binding}" />
+                </TabItem>
+                <TabItem Header="Statistics">
+                    <exampleViews:DateExamples DataContext="{Binding}" />
+                </TabItem>
+                <TabItem Header="Terminal State">
+                    <exampleViews:TilesExample DataContext="{Binding}" Loaded="TilesExample_Loaded" />
+                </TabItem>
+                <TabItem Header="Statistics">
+                    <exampleViews:ColorExample DataContext="{Binding}" />
+                </TabItem>
+            </Controls:MetroAnimatedSingleRowTabControl>
+
+            <StatusBar Grid.Row="2" Height="40">
+                <StatusBarItem>LS Cable System Co,. </StatusBarItem>
+                <StatusBarItem>Selected Tab: </StatusBarItem>
+                <StatusBarItem Content="{Binding ElementName=MainTabControl, Path=SelectedItem.Header, Mode=OneWay}" />
+            </StatusBar>
+
+        </Grid>
+    </Controls:MetroContentControl>
+    <!--END Region-->
+</Controls:MetroWindow>

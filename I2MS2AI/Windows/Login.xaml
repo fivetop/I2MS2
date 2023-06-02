@@ -1,0 +1,105 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+    xmlns:w="clr-namespace:I2MS2.Windows"
+    xmlns:uc="clr-namespace:I2MS2.UserControls"     
+	x:Class="I2MS2.Windows.Login"
+	x:Name="LoginWindow"
+	Title="Login Window"
+	Width="822" Height="551" 
+    ResizeMode="NoResize"
+    mc:Ignorable="d" WindowStartupLocation="CenterScreen" Topmost="True" WindowStyle="None" Icon="/I2MS2;component/logo.ico">
+
+    <Window.Resources>
+        <Storyboard x:Key="Storyboard1" RepeatBehavior="Forever">
+            <DoubleAnimationUsingPath BeginTime="00:00:00" Duration="00:00:07" Storyboard.TargetName="fly" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Source="X">
+                <DoubleAnimationUsingPath.PathGeometry>
+                    <PathGeometry Figures="M-6,0.019579687 C25.054213,-5.9951088 68.630287,-22.535502 121.72297,22.574661 174.81566,67.684825 79.649524,190.98668 155.78243,262.16081 231.91534,333.33494 394.19865,365.41343 426.25462,302.25892 458.31058,239.10441 224.9031,281.20777 307.04651,351.37953 389.18991,421.55129 618.96151,357.11287 641,311"/>
+                </DoubleAnimationUsingPath.PathGeometry>
+            </DoubleAnimationUsingPath>
+            <DoubleAnimationUsingPath BeginTime="00:00:00" Duration="00:00:07" Storyboard.TargetName="fly" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Source="Y">
+                <DoubleAnimationUsingPath.PathGeometry>
+                    <PathGeometry Figures="M-6,0.019579687 C25.054213,-5.9951088 68.630287,-22.535502 121.72297,22.574661 174.81566,67.684825 79.649524,190.98668 155.78243,262.16081 231.91534,333.33494 394.19865,365.41343 426.25462,302.25892 458.31058,239.10441 224.9031,281.20777 307.04651,351.37953 389.18991,421.55129 618.96151,357.11287 641,311"/>
+                </DoubleAnimationUsingPath.PathGeometry>
+            </DoubleAnimationUsingPath>
+            <PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="fly" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+                <SplinePointKeyFrame KeyTime="00:00:00" Value="0.5,0.5"/>
+                <SplinePointKeyFrame KeyTime="00:00:03" Value="0.5,0.5"/>
+                <SplinePointKeyFrame KeyTime="00:00:03.6000000" Value="0.5,0.5"/>
+                <SplinePointKeyFrame KeyTime="00:00:04.1000000" Value="0.5,0.5"/>
+                <SplinePointKeyFrame KeyTime="00:00:04.6000000" Value="0.5,0.5"/>
+                <SplinePointKeyFrame KeyTime="00:00:05.1000000" Value="0.5,0.5"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="fly" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-45.527"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.4000000" Value="77.992"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:03" Value="-9.93"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-45.948"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04.1000000" Value="-195.72"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04.6000000" Value="-238.825"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:05.1000000" Value="-352.905"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:06.2000000" Value="-401.073"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:07" Value="-425.826"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid x:Name="LayoutRoot" MouseLeftButtonDown="LayoutRoot_MouseLeftButtonDown" Background="Black">
+        <Image Source="/I2MS2;component/Images/login.png" Stretch="None" />
+        <!--
+        <Image Source="/I2MS2;component/Images/gs.png" Stretch="None" Margin="524,227,49,160" RenderTransformOrigin="0.5,0.5" Opacity="0.8">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        -->
+        <w:fly HorizontalAlignment="Left" Margin="2,-19.557,0,0" x:Name="fly" VerticalAlignment="Top" Width="94" Height="55" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+            <w:fly.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </w:fly.RenderTransform>
+        </w:fly>
+        <Path Fill="{x:Null}" Stretch="Fill" Stroke="{x:Null}" Margin="43,0,0,80.157" Data="M49,57 C80,51 123.5,34.5 176.5,79.5 229.5,124.5 134.5,247.50074 210.5,318.50105 286.5,389.50137 448.5,421.50153 480.5,358.50125 512.5,295.50097 279.5,337.5015 361.5,407.50189 443.5,477.50229 652.90538,436.16507 674.90541,390.16481"/>
+
+        <Expander Canvas.Top="73" Header="Configuration" ExpandDirection="Up" Margin="10,453,510,10" Foreground="Gray">
+            <Grid Height="64">
+                <TextBlock Height="27" TextWrapping="Wrap" Text="Language :" Canvas.Left="5" Canvas.Top="70" TextAlignment="Right" FontWeight="Bold" Width="130" Margin="6,4,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource I2MS_TextBlockStyle}"/>
+                <ComboBox x:Name="_cboLanguage" Height="25" Canvas.Left="142" Canvas.Top="67" Width="133" Margin="141,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource I2MS_ComboboxStyle}">
+                    <ComboBoxItem Content="Local (ko-KR)" Style="{StaticResource I2MS_ComboboxItemStyle}"/>
+                    <ComboBoxItem Content="English (Eng)" Style="{StaticResource I2MS_ComboboxItemStyle}"/>
+                </ComboBox>
+                <TextBlock Height="27" TextWrapping="Wrap" Text="Server Domain or IP :" Width="130" Canvas.Top="102" TextAlignment="Right" FontWeight="Bold" Canvas.Left="5" Margin="6,38,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource I2MS_TextBlockStyle}" />
+                <TextBox x:Name="_ip"  Height="23" Canvas.Left="141" Canvas.Top="99" Width="134" Margin="142,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" MaxLength="15" Style="{StaticResource I2MS_TextBoxStyle}" uc:TextHelper.IsAlphaNumeric="True"  InputMethod.IsInputMethodEnabled="False"/>
+            </Grid>
+        </Expander>
+
+        <Canvas HorizontalAlignment="Left" Height="71" Margin="496,470,0,0" VerticalAlignment="Top" Width="316">
+            <TextBlock Height="27" TextWrapping="Wrap" Text="{x:Static prop:Resources.M9_UserManager_LoginID}" Width="70" Canvas.Left="5" Canvas.Top="14" TextAlignment="Right" FontWeight="Bold" Style="{StaticResource I2MS_TextBlockStyle}"/>
+            <TextBox x:Name="_id" Height="23" Canvas.Left="82" Text="" Canvas.Top="10" Width="133" MaxLength="10" Style="{StaticResource I2MS_TextBoxStyle}" uc:TextHelper.IsAlphaNumeric="True" InputMethod.IsInputMethodEnabled="False"/>
+            <TextBlock Height="27" TextWrapping="Wrap" Text="{x:Static prop:Resources.M9_UserManager_Password}" Width="70" Canvas.Left="5" Canvas.Top="41" TextAlignment="Right" FontWeight="Bold" Style="{StaticResource I2MS_TextBlockStyle}"/>
+            <PasswordBox x:Name="_pw" Height="23" Canvas.Left="82" Canvas.Top="38" Width="133" MaxLength="16" Style="{StaticResource I2MS_PasswordBox}" Foreground="Gray" InputMethod.IsInputMethodEnabled="False"/>
+            <Button x:Name="_ok" Content="Log-In" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="75" Canvas.Left="227" Canvas.Top="10" Click="_ok_Click" IsDefault="True" Style="{StaticResource I2MS_ButtonStyle}"/>
+
+        </Canvas>
+        <Button x:Name="_no" Content="X" Height="24" Width="Auto" VerticalAlignment="Top" Click="_no_Click" RenderTransformOrigin="18.788,-17.082" Margin="788,5,5,0" Style="{StaticResource I2MS_ButtonStyle}" />
+        <TextBlock x:Name="_test" Visibility="Collapsed" Height="21" TextWrapping="Wrap" Text="" Width="139" Canvas.Top="102" TextAlignment="Right" FontWeight="Bold" Canvas.Left="5" Margin="10,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource I2MS_TextBlockStyle}" FontSize="9" />
+
+    </Grid>
+</Window>

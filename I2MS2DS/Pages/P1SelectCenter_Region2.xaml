@@ -1,0 +1,301 @@
+﻿<Page x:Class="I2MS2.Pages.P1SelectCenter_Region2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+	Title="P1SelectCenter_Region2"
+      d:DesignHeight="930" d:DesignWidth="1570"
+      x:Name="_pageP1SelectCenter_Region2" 
+      Loaded="_pageP1SelectCenter_Region2_Loaded" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+      SizeChanged="_pageP1SelectCenter_Region2_SizeChanged">
+    
+    <Page.Resources>
+        <DataTemplate x:Key="_templateSiteCell" >
+            <Grid Width="400" Height="400" >
+                <Rectangle Fill="{DynamicResource _brushButtonPushBackground}" RadiusX="10" RadiusY="10"/>
+                <StackPanel Margin="0,0,0,360" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                    <TextBlock Text="{Binding site_id}" Height="20" VerticalAlignment="Top" Foreground="{StaticResource _brushNormalText}" TextAlignment="Center"/>
+                    <TextBlock Text="{Binding site_name}" Height="20" VerticalAlignment="Top" Foreground="{StaticResource _brushNormalText}" TextAlignment="Center"/>
+                    <TextBlock Text="{Binding region2_id}" Height="20" VerticalAlignment="Top" Foreground="{StaticResource _brushNormalText}"  TextAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+
+        <ItemsPanelTemplate x:Key="I2MS_siteListViewItemPanelStyle" >
+            <WrapPanel Background="{x:Null}"  />
+        </ItemsPanelTemplate>
+
+
+        <ControlTemplate x:Key="siteListViewItemIsMouseOver" TargetType='{x:Type ListViewItem}'>
+            <Grid Width="450" Height="400">
+                <Grid x:Name="Agrid1" Margin="20,20,20,20" >
+                    <Border x:Name="outBorder" Opacity="1" CornerRadius="10" >
+                        <Border.Background>
+                            <RadialGradientBrush GradientOrigin="0.506,-0.511" RadiusY="0.555" RadiusX="0.876" Center="0.502,0.36">
+                                <GradientStop Color="#FF4A4A4A" Offset="0"/>
+                                <GradientStop Color="#FF151515" Offset="1"/>
+                                <GradientStop Color="#FF222222" Offset="0.659"/>
+                            </RadialGradientBrush>
+                        </Border.Background>
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.8" Color="{DynamicResource _colorBlue}" BlurRadius="5" />
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+
+                    <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" >
+                        <Border x:Name="inBorder" BorderBrush="{DynamicResource _brushButtonPushBackground}" 
+            					            BorderThickness="2" Opacity="1" CornerRadius="10" >
+                            <Grid>
+                                <Rectangle RadiusX="10" RadiusY="10" Fill="{DynamicResource _brushCheckBoxFillNormal}" Opacity="0.5" />
+                                <Image Margin="20,20,20,40" Stretch="UniformToFill"  >
+                                    <Image.Source>
+                                        <BitmapImage UriSource="{Binding site_image_file_path}" CacheOption="OnLoad"/>
+                                    </Image.Source>
+                                </Image>
+                            </Grid>
+                        </Border>
+                        <TextBlock Margin="0,313,0,0" Text="{Binding site_name}" FontSize="20" VerticalAlignment="Top"  Foreground="{StaticResource _brushNormalText}" TextAlignment="Center" Height="27" />
+                    </Grid>
+
+
+                </Grid>
+            </Grid>
+            <!--<Grid Width="450" Height="400">
+                <Grid Name="Agrid" Margin="20,20,20,20" >
+                    <Border Opacity="1" CornerRadius="40" >
+                        <Border.Background>
+                            <RadialGradientBrush GradientOrigin="0.506,-0.511" RadiusY="0.555" RadiusX="0.876" Center="0.502,0.36">
+                                <GradientStop Color="#FF4A4A4A" Offset="0"/>
+                                <GradientStop Color="#FF151515" Offset="1"/>
+                                <GradientStop Color="#FF222222" Offset="0.659"/>
+                            </RadialGradientBrush>
+                        </Border.Background>
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.8" Color="{DynamicResource _colorBlue}" BlurRadius="72" />
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="40" RadiusY="40" 
+                               />
+                    </Border>
+
+                    <StackPanel Margin="0,40,0,10" Orientation="Vertical" VerticalAlignment="Top" >
+                        <Grid Height="255" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center">
+                            <Image Source="{Binding site_image_file_path}"  Margin="5" />
+                            <Border BorderBrush="{DynamicResource _brushButtonPushBackground}" BorderThickness="2" Opacity="1" CornerRadius="22" >
+                                <Grid>
+                                    <Rectangle RadiusX="20" RadiusY="20" Fill="{DynamicResource _brushCheckBoxFillNormal}" Opacity="0.5" />
+                                    <Image Margin="5" >
+                                        <Image.Source>
+                                            <BitmapImage UriSource="{Binding site_image_file_path}" CacheOption="OnLoad"/>
+                                        </Image.Source>
+                                    </Image>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <TextBlock Margin="0,10,0,0" Text="{Binding site_name}" FontSize="24" VerticalAlignment="Top" Style="{StaticResource I2MS_TextBlockStyle}" TextAlignment="Center" Height="27" />
+                    </StackPanel>
+                </Grid>
+            </Grid>-->
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="siteListViewItemItemSeleted" TargetType='{x:Type ListViewItem}'>
+            <Grid Width="450" Height="400">
+                <Grid x:Name="Agrid1" Margin="20,20,20,20" >
+                    <Border x:Name="outBorder" Opacity="1" CornerRadius="10" Background="{StaticResource _brushTreeViewSelectItemBorder}" >
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.8" />
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+
+                    <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" >
+                        <Border x:Name="inBorder" BorderBrush="{DynamicResource _brushButtonPushBackground}" 
+            					            BorderThickness="2" Opacity="1" CornerRadius="10" >
+                            <Grid>
+                                <Rectangle RadiusX="10" RadiusY="10" Fill="{DynamicResource _brushCheckBoxFillNormal}" Opacity="0.5" />
+                                <Image Margin="20,20,20,40" Stretch="UniformToFill"  >
+                                    <Image.Source>
+                                        <BitmapImage UriSource="{Binding site_image_file_path}" CacheOption="OnLoad"/>
+                                    </Image.Source>
+                                </Image>
+                            </Grid>
+                        </Border>
+                        <TextBlock Margin="0,313,0,0" Text="{Binding site_name}" FontSize="20" VerticalAlignment="Top"  Foreground="{StaticResource _brushNormalText}" TextAlignment="Center" Height="27" />
+                    </Grid>
+
+
+                </Grid>
+            </Grid>
+            <!--<Grid Width="450" Height="400">
+                <Grid Name="Agrid" Margin="20,20,20,20" >
+                    <Border Opacity="1" CornerRadius="40" Background="{DynamicResource _brushTreeViewSelectItemBorder}">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.8" Color="{DynamicResource _colorBlue}" BlurRadius="72" />
+                        </Border.Effect>
+                    </Border>
+
+                    <StackPanel Margin="0,40,0,10" Orientation="Vertical" VerticalAlignment="Top" >
+                        <Grid Height="255" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center">
+                            <Image Source="{Binding site_image_file_path}"  Margin="5" />
+                            <Border BorderBrush="{DynamicResource _brushButtonPushBackground}" BorderThickness="0" Opacity="1" CornerRadius="22" >
+                                <Grid>
+                                    <Rectangle RadiusX="20" RadiusY="20" Fill="{DynamicResource _brushCheckBoxFillNormal}" Opacity="0.5" />
+                                    <Image Margin="5" >
+                                        <Image.Source>
+                                            <BitmapImage UriSource="{Binding site_image_file_path}" CacheOption="OnLoad"/>
+                                        </Image.Source>
+                                    </Image>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <TextBlock Margin="0,10,0,0" Text="{Binding site_name}" FontSize="24" VerticalAlignment="Top" Style="{StaticResource I2MS_TextBlockStyle}" TextAlignment="Center" Height="27" 
+                                   Foreground="Black"/>
+
+                    </StackPanel>
+                </Grid>
+            </Grid>-->
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="siteListViewItemItemSeletedMouseOver" TargetType='{x:Type ListViewItem}'>
+            <Grid Width="450" Height="400">
+                <Grid x:Name="Agrid1" Margin="20,20,20,20" >
+                    <Border x:Name="outBorder" Opacity="1" CornerRadius="10" Background="{StaticResource _brushTreeViewSelectItemBorder}" >
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.8" Color="{DynamicResource _colorBlue}" BlurRadius="5" />
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+
+                    <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" >
+                        <Border x:Name="inBorder" BorderBrush="{DynamicResource _brushButtonPushBackground}" 
+            					            BorderThickness="2" Opacity="1" CornerRadius="10" >
+                            <Grid>
+                                <Rectangle RadiusX="10" RadiusY="10" Fill="{DynamicResource _brushCheckBoxFillNormal}" Opacity="0.5" />
+                                <Image Margin="20,20,20,40" Stretch="UniformToFill"  >
+                                    <Image.Source>
+                                        <BitmapImage UriSource="{Binding site_image_file_path}" CacheOption="OnLoad"/>
+                                    </Image.Source>
+                                </Image>
+                            </Grid>
+                        </Border>
+                        <TextBlock Margin="0,313,0,0" Text="{Binding site_name}" FontSize="20" VerticalAlignment="Top"  Foreground="{StaticResource _brushNormalText}" TextAlignment="Center" Height="27" />
+                    </Grid>
+
+
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+
+
+        <Style x:Key="I2MS_siteListViewStyle" TargetType="{x:Type ListViewItem}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                        <Grid Width="450" Height="400">
+                            <Grid x:Name="Agrid1" Margin="20,20,20,20" >
+                                <Border x:Name="outBorder" Opacity="1" CornerRadius="10" >
+                                    <Border.Background>
+                                        <RadialGradientBrush GradientOrigin="0.506,-0.511" RadiusY="0.555" RadiusX="0.876" Center="0.502,0.36">
+                                            <GradientStop Color="#FF4A4A4A" Offset="0"/>
+                                            <GradientStop Color="#FF151515" Offset="1"/>
+                                            <GradientStop Color="#FF222222" Offset="0.659"/>
+                                        </RadialGradientBrush>
+                                    </Border.Background>
+                                    <Border.Effect>
+                                        <DropShadowEffect Opacity="0.8" />
+                                    </Border.Effect>
+                                    <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                                </Border>
+
+                                <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" >
+                                    <Border x:Name="inBorder" BorderBrush="{DynamicResource _brushButtonPushBackground}" 
+            					            BorderThickness="2" Opacity="1" CornerRadius="10" >
+                                        <Grid>
+                                            <Rectangle RadiusX="10" RadiusY="10" Fill="{DynamicResource _brushCheckBoxFillNormal}" Opacity="0.5" />
+                                            <Image Margin="20,20,20,40" Stretch="UniformToFill"  >
+                                                <Image.Source>
+                                                    <BitmapImage UriSource="{Binding site_image_file_path}" CacheOption="OnLoad"/>
+                                                </Image.Source>
+                                            </Image>
+                                        </Grid>
+                                    </Border>
+                                    <TextBlock Margin="0,313,0,0" Text="{Binding site_name}" FontSize="18" VerticalAlignment="Top"  Foreground="{StaticResource _brushNormalText}" TextAlignment="Center" Height="27" />
+                                </Grid>
+
+
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Trigger.Setters>
+                        <Setter Property="Template" Value="{StaticResource siteListViewItemItemSeleted}"/>
+                       
+                    </Trigger.Setters>
+                </Trigger>
+
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.Setters>
+                       
+                        <Setter Property="Template" Value="{StaticResource siteListViewItemIsMouseOver}"/>
+                    </Trigger.Setters>
+                </Trigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsSelected" Value="true"/>
+                        <Condition Property="IsMouseOver" Value="true"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Template" Value="{StaticResource siteListViewItemItemSeletedMouseOver}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <Grid x:Name="_gridMain" Margin="0">
+        <Grid x:Name="_gridBackground">
+            <!--페이지 배경-->
+            <!--<Border  Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                <Border.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Border.Effect>
+                <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+            </Border>-->
+            <Border Style="{StaticResource I2MS_baseBorder}">
+                <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+            </Border>
+        </Grid>
+
+        <Grid Name="_gridSiteList" Margin="0,0,0,0">
+            <ListView x:Name="_lvSiteList" 
+                        UseLayoutRounding="True" 
+                        ItemContainerStyle="{StaticResource I2MS_siteListViewStyle}"
+                        ItemsPanel="{StaticResource I2MS_siteListViewItemPanelStyle}" 
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"  
+                        ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                      Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" 
+                      SelectionChanged="_lvSiteList_SelectionChanged" MouseDoubleClick="_lvSiteList_MouseDoubleClick" >
+            </ListView>
+          
+        </Grid>
+
+        <Button x:Name="_btnManageSite" 
+    			HorizontalAlignment="Right" Margin="0,16,20,0" Style="{DynamicResource I2MS_ButtonStyle}" VerticalAlignment="Top" Width="100" Content="{x:Static prop:Resources.M1_Region2_1 }" Click="_btnManageSite_Click" />
+        <Button x:Name="_btnBacktoPage" 
+        	    HorizontalAlignment="Right" Margin="0,60,20,0" Style="{DynamicResource I2MS_ButtonStyle}" VerticalAlignment="Top" Width="100" Content="{x:Static prop:Resources.C_back}" Click="_btnBacktoPage_Click" />
+
+        <StackPanel Margin="0,790,0,0" Orientation="Horizontal" Height="40" HorizontalAlignment="Center">
+            <TextBlock x:Name="_lblP1State1Text"  FontSize="20"  Foreground="{StaticResource _brushDarkGray4}" HorizontalAlignment="Center" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="{x:Static prop:Resources.M1_Progress1 }" FontWeight="Bold" Grid.Column="0"/>
+            <TextBlock FontSize="20" HorizontalAlignment="Center" Foreground="{StaticResource _brushDarkGray4}" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="   --> " FontWeight="Bold" Margin="0,1"/>
+            <TextBlock x:Name="_lblP1State2Text"  FontSize="20" Foreground="{StaticResource _brushDarkGray4}" Grid.Column="2"  HorizontalAlignment="Center" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="{x:Static prop:Resources.M1_Progress2 }" FontWeight="Bold" Margin="0" />
+            <TextBlock FontSize="20" HorizontalAlignment="Center" Foreground="{StaticResource _brushDarkGray4}" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="   --> " FontWeight="Bold" Margin="0,1"/>
+            <TextBlock x:Name="_lblP1State3Text" FontSize="22"  Grid.Column="4"   HorizontalAlignment="Center" Style="{DynamicResource I2MS_TextBlockStyle}" VerticalAlignment="Center"  Text="{x:Static prop:Resources.M1_Progress3 }" FontWeight="Bold" Margin="0"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,27 @@
+var class_i2_m_s2_1_1_models_1_1_event_view_list =
+[
+    [ "EventViewList", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#afb804dc2a382c559af0e203eb1a18b86", null ],
+    [ "asset_id", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a7172ef672f355db19c9e663cd22f1fbe", null ],
+    [ "catalog_group_id", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a217869411e3cce531824581c6856c30d", null ],
+    [ "catalog_id", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a35931c1aced7df9775c1ab6fd49288da", null ],
+    [ "checked_color", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#adf6690944b8003b9fda5da1155a4882f", null ],
+    [ "confirm_user_id", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#ae81698ffef75c39f9a2fb6562f3b2919", null ],
+    [ "event_hist_id", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#adb44b61c88c1df139c1099905c984ccf", null ],
+    [ "event_id", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#af2ad18f6d973024759047f3f0f57bd81", null ],
+    [ "event_text", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#ade93002c1699b8ed692d399637ecabba", null ],
+    [ "event_type", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#ad3ac80c21293d74fff74d8cd33c430de", null ],
+    [ "event_type_c", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#acab406de5b15cd0ed935898e92d9795b", null ],
+    [ "event_type_s", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a0d4cdfdcb2ff16cddee677a36663b15d", null ],
+    [ "force_changed", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a24e236edfb1010bf44a5d17395a56059", null ],
+    [ "ipv4", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#ad96fc0b0dabd4dda66f195a94ea6d93e", null ],
+    [ "is_confirm", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#aa558961078acaec46b4f04dfc3e6ebe5", null ],
+    [ "location_id", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a971798980a045fdfb1c761e916dff547", null ],
+    [ "mac", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a7275188eb2751fb46f0483e5b820402f", null ],
+    [ "node_list", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#aea8842dbac626f79e761cfa3f2df3964", null ],
+    [ "port_no", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a57d390e4d12e335d7cba83e684187b31", null ],
+    [ "terminal_asset_id", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a39e39aaa9fcd6951feb7eaf9da13950f", null ],
+    [ "user_id", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#aee1cd343a23c2e6056e970a7d1d089e7", null ],
+    [ "write_time", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a07e99b6713d15652627e3136b056df70", null ],
+    [ "write_time_s", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a4bdef5632f4bf37fcce61a3cb99f4a6c", null ],
+    [ "PropertyChanged", "dc/d92/class_i2_m_s2_1_1_models_1_1_event_view_list.html#a6cf4bb2646ae971013b2c0496d90badd", null ]
+];

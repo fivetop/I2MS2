@@ -1,0 +1,148 @@
+﻿<controls:MetroWindow x:Class="I2MS2.Windows.AssetList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+        xmlns:im="clr-namespace:I2MS2.Models" 
+        xmlns:iw="clr-namespace:I2MS2.Windows" 
+        xmlns:model="clr-namespace:I2MS2.Models"
+            xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            BorderBrush="{DynamicResource AccentColorBrush}"
+            Width="1280"
+            Height="960"
+            ShowIconOnTitleBar="True"
+            ShowTitleBar="True"
+            GlowBrush="{DynamicResource AccentColorBrush}"
+            NonActiveGlowBrush="#CDFF0000"
+            mc:Ignorable="d"
+            d:DesignHeight="800"
+            d:DesignWidth="1100"
+            TitlebarHeight="60" 
+        WindowStartupLocation="CenterOwner"
+        Title="{x:Static prop:Resources.Menu_AssetList}"  
+        Name="_window">
+
+    <Window.CommandBindings>
+        <CommandBinding x:Name="_cmdPrint" Command="{x:Static iw:ManufactureList.PrintCommand}" CanExecute="_cmdPrint_CanExecute" Executed="_cmdPrint_Executed" />
+        <CommandBinding x:Name="_cmdSave" Command="{x:Static iw:ManufactureList.SaveCommand}" CanExecute="_cmdSave_CanExecute" Executed="_cmdSave_Executed" />
+        <CommandBinding x:Name="_cmdDelete" Command="{x:Static iw:ManufactureList.DeleteCommand}" CanExecute="_cmdDelete_CanExecute" Executed="_cmdDelete_Executed" />
+    </Window.CommandBindings>
+
+    <Grid  Margin="10,5,10,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Border BorderBrush="{DynamicResource AccentColorBrush}" Margin="1" BorderThickness="1"></Border>
+        <Grid >
+           <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+                <!-- 1번 그리드-->
+            <Grid Grid.Column="0">
+                <Grid Margin="5,5,5,0" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <!--그리드 컬럼 1-->
+                    <Grid Grid.Column="0">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{x:Static prop:Resources.M_Prop2_Name}" Margin="10,2,10,2"/>
+                            <ComboBox  x:Name="cboType1"  Height="25"  Margin="10,2,10,2" ItemContainerStyle="{StaticResource I2MS_ComboboxItemStyle}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="{Binding location_building}"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding location_floor}"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                        </StackPanel>
+                    </Grid>
+                    <!--그리드 컬럼 3-->
+                    <Grid Grid.Column="1">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{x:Static prop:Resources.C_Asset_Name}" Margin="10,2,0,2"/>
+                            <TextBox  x:Name="txt_sname1" Text="" Margin="10,4,0,2"  Height="22"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <!-- 검색 버튼-->
+            <Grid Grid.Column="1" Margin="10,0,10,0">
+                <Button  Height="60" Width="60"  Click="_btnSearch1_Click" >
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/I2MS2;component/icons/search_24.png" Height="24" Width="24" Margin="0,0,0,5" />
+                        <TextBlock Text="{x:Static prop:Resources.C_Search}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+
+
+        </Grid>
+        <!-- 2번 그리드-->
+        <Border Grid.Row="1" BorderBrush="{DynamicResource AccentColorBrush}" Margin="1" BorderThickness="1"></Border>
+        <Grid Margin="0,10,0,5" Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+                
+            <StackPanel Orientation="Horizontal" Margin="15,5,10, 0" Height="30" Grid.Row="0" HorizontalAlignment="Left">
+                <TextBlock Text="{x:Static prop:Resources.C_TempleateSelect}" Margin="0,5,0,0"   Width="100"/>
+                <ComboBox  x:Name="cboTypeTemplate" Margin="10,0,0,0" DisplayMemberPath="template_name" SelectedValuePath="template_id" SelectionChanged="cboTypeTemplate_SelectionChanged" Height="24" Width="200" ItemContainerStyle="{StaticResource I2MS_ComboboxItemStyle}" >
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,10,0" Height="30" Grid.Row="0" HorizontalAlignment="Right">
+                <TextBlock Text="{x:Static prop:Resources.C_TempleateInfo}" Margin="0,5,10,0"  />
+                <TextBox  x:Name="txtsave_name" Text="Document_Name" Margin="0,0,0,0"  Width="320" MaxLength="40"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="15,0,0,0" Height="30" Grid.Row="1" HorizontalAlignment="Left">
+                <TextBlock Text="{x:Static prop:Resources.C_TempleateDisp}" Margin="0,5,0,0"  Width="100"/>
+                <TextBox  x:Name="txtadd" Text="Record Count (0) / Additional Data" Margin="10,0,0,0" Height="22" Width="340" IsEnabled="False" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,3,10,0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Button x:Name="_btnTemplate1" Content="{x:Static prop:Resources.C_TempleateSave}"  Margin="0,0,10,0"  
+                    Command="{x:Static iw:ManufactureList.SaveCommand}" Height="24" Width="100" />
+                <Button x:Name="_btnTemplate2" Content="{x:Static prop:Resources.C_TempleateDelete}"  Margin="0,0,10,0"  
+                    Command="{x:Static iw:ManufactureList.DeleteCommand}" Height="24" Width="100"  />
+                <Button x:Name="_btnPrint" Content="{x:Static prop:Resources.C_Printer}"  Margin="0,0,10, 0"  
+                    Command="{x:Static iw:ManufactureList.PrintCommand}" Click="_btnPrint_Click" Height="24" Width="100" />
+                <Button x:Name="_btnExcel" Content="Excel"  Margin="0,0,0, 0"  Click="_btnExcel_Click" Height="24" Width="100" />
+            </StackPanel>
+        </Grid>
+
+
+        <!--출 력 -->
+        <Grid Grid.Row="2"  >
+            <Border BorderBrush="{DynamicResource AccentColorBrush}" Margin="1" BorderThickness="1"></Border>
+            <ListView x:Name="_lvManufacture" Margin="10" Style="{StaticResource I2MS_ListViewStyleR}" ItemContainerStyle="{StaticResource I2MS_ListViewItemContainerStyleR}"  >
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                    </ContextMenu>
+                </ListView.ContextMenu>
+
+                <ListView.View>
+                    <GridView  x:Name="_lvGridView" AllowsColumnReorder="True">
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+
+    </Grid>
+</controls:MetroWindow>

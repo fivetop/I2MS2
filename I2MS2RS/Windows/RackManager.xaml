@@ -1,0 +1,74 @@
+﻿<controls:MetroWindow x:Class="I2MS2.Windows.RackManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR"
+        xmlns:w="clr-namespace:I2MS2.Windows"
+        xmlns:uc="clr-namespace:I2MS2.UserControls"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ucdr="clr-namespace:I2MS2.UserControls.Drawing"
+            xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            BorderBrush="{DynamicResource AccentColorBrush}"
+            ShowIconOnTitleBar="True"
+            ShowTitleBar="True"
+            GlowBrush="{DynamicResource AccentColorBrush}"
+            NonActiveGlowBrush="#CDFF0000"
+            mc:Ignorable="d"
+            d:DesignHeight="900"
+            d:DesignWidth="600"
+            TitlebarHeight="60" 
+        Height="380" Width="600" 
+        Name="_window"        
+        WindowStartupLocation="CenterOwner"
+        Title="{x:Static prop:Resources.M9_RackManagerTitle}" 
+        Loaded="_window_Loaded">
+
+    <Window.CommandBindings>
+        <CommandBinding x:Name="_cmdSave" Command="{x:Static w:RackManager.SaveCommand}" CanExecute="_cmdSave_CanExecute" Executed="_cmdSave_Executed" />
+    </Window.CommandBindings>
+    <Grid  Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border BorderBrush="{DynamicResource AccentColorBrush}" Grid.ColumnSpan="2"/>
+
+        <StackPanel Orientation="Vertical" Margin="10">
+            <TextBlock Text="{x:Static prop:Resources.C_Rack_Name}" Margin="0,3,0,0" />
+            <TextBlock Text="{x:Static prop:Resources.C_Remarks}" Margin="0,23,0,0" />
+            <TextBlock Text="자산 연계" Margin="0,45,0,0"  FontSize="11"/>
+            <TextBlock Text="{x:Static prop:Resources.M9_Rack_1}" Margin="0,14,0,0" />
+            <!--
+            <Grid>
+                <TextBlock Text="{x:Static prop:Resources.M9_Rack_2}" Margin="0,15,0,0" />
+                <TextBlock Text="(L)" Margin="0,15,0,0"  HorizontalAlignment="Right"/>
+            </Grid>
+            <TextBlock Text="(R)" Margin="0,14,0,0"  HorizontalAlignment="Right"/>
+            -->
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10">
+            <TextBox  x:Name="_txtName"  Margin="0,0,0,0" Height="24"  TextWrapping="Wrap" MaxLength="20" uc:TextHelper.IsHan="True"/>
+            <TextBox  x:Name="_txtRemarks"  Margin="0,16,0,0" Height="35"  TextWrapping="Wrap" MaxLength="40" uc:TextHelper.IsHan="True"/>
+            <ComboBox  x:Name="_cboRack"  Margin="0,52,0,0" DisplayMemberPath="catalog_name" SelectedValuePath="catalog_id" ItemContainerStyle="{StaticResource I2MS_ComboboxItemStyle}"/>
+            <!--
+            <ComboBox  x:Name="_cboVcmL"  Margin="0,8,0,0" DisplayMemberPath="catalog_name" SelectedValuePath="catalog_id" Style="{StaticResource I2MS_ComboboxStyle}"  ItemContainerStyle="{StaticResource I2MS_ComboboxItemStyle}"/>
+            <ComboBox  x:Name="_cboVcmR"  Margin="0,8,0,0" DisplayMemberPath="catalog_name" SelectedValuePath="catalog_id" Style="{StaticResource I2MS_ComboboxStyle}"  ItemContainerStyle="{StaticResource I2MS_ComboboxItemStyle}"/>
+            -->
+        </StackPanel>
+
+        <!--아래 버튼-->
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,0" Height="30" Grid.Row="1" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+            <Button x:Name="_btnSave" Content="{x:Static prop:Resources.C_Save}"  Margin="0,0,6,0" Width="100"  
+                    Command="{x:Static w:RackManager.SaveCommand}"/>
+            <Button x:Name="_btnCancel" Content="{x:Static prop:Resources.C_Cancel}" Margin="20,0,6,0"  Width="100" Click="_btnCancel_Click" />
+        </StackPanel>
+    </Grid>
+</controls:MetroWindow>

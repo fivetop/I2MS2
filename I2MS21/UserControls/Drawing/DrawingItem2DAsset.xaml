@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="I2MS2.UserControls.Drawing.DrawingItem2DAsset"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="20" d:DesignWidth="100">
+    <Grid>
+            <StackPanel Orientation="Horizontal">
+            <!-- 2015.09.15 romee basci color change -->
+            <Border Name="_bdAsset" Width="12" Height="12" CornerRadius="3,3,3,3" Background="{StaticResource _brushDarkGray4}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <!--<Image Name="_imgAsset" Source="/I2MS2;component/Icons/fp_16.png" Margin="1"/>-->
+            </Border> 
+                <TextBlock Name="_txtName" Text="Asset" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Center" Margin="5,0,0,0" HorizontalAlignment="Left"/>
+            </StackPanel>
+        
+        
+    </Grid>
+</UserControl>

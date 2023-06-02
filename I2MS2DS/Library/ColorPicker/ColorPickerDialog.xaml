@@ -1,0 +1,47 @@
+﻿<Window x:Class="I2MS2.Library.ColorPicker.ColorPickerDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:customControls="clr-namespace:I2MS2.Library.ColorPicker"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+        Title="Select a Color" Width="600" Height="425">
+
+    <Window.Style>
+        <StaticResource ResourceKey="I2MS_WindowStyle"/>
+    </Window.Style>
+
+    <Grid  Margin="5,5,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <!--현재 유저 컨트롤 전체의 보더-->
+        <Border  Background="#FF202020" Opacity="0.8" CornerRadius="10" Grid.RowSpan="3">
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.7"/>
+            </Border.Effect>
+            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+        </Border>
+
+        <!--상단 탭바-->
+        <Grid x:Name="_gridTitle" Height="25" MouseLeftButtonDown="_gridTitle_MouseLeftButtonDown">
+            <Border CornerRadius="5,5,0,0" Background="{StaticResource _brushButtonNormalBorder2}"></Border>
+
+            <TextBlock HorizontalAlignment="Center" Height="16" Margin="0" TextWrapping="Wrap" 
+        		Text="{x:Static prop:Resources.C_ColorPickerDialogTitle}" VerticalAlignment="Center" Foreground="#FFBDBDBD" TextAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <customControls:ColorPicker x:Name="cPicker" SelectedColorChanged="onSelectedColorChanged" Margin="10,10,10,0" Foreground="{StaticResource _brushButtonNormalText}"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"  Margin="10">
+                <Button Name="OKButton" Click="okButtonClicked" IsEnabled="False" Width="71" Style="{StaticResource I2MS_ButtonStyle}">OK</Button>
+                <Button Click="cancelButtonClicked" Style="{StaticResource I2MS_ButtonStyle}" Margin="20,0,0,0">Cancel</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Window>

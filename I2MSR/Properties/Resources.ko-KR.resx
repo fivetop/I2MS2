@@ -1,0 +1,2907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="C_Add" xml:space="preserve">
+    <value>추가</value>
+  </data>
+  <data name="C_Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="C_Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="C_Edit" xml:space="preserve">
+    <value>수정</value>
+  </data>
+  <data name="C_New" xml:space="preserve">
+    <value>신규</value>
+  </data>
+  <data name="C_Ok" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="C_Save" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="M1_1" xml:space="preserve">
+    <value>국가 등록 관리</value>
+  </data>
+  <data name="M1_Progress1" xml:space="preserve">
+    <value>세계</value>
+  </data>
+  <data name="M1_Progress2" xml:space="preserve">
+    <value>국가</value>
+  </data>
+  <data name="M1_Progress3" xml:space="preserve">
+    <value>도시</value>
+  </data>
+  <data name="M1_Region1Title" xml:space="preserve">
+    <value>국가 등록 관리</value>
+  </data>
+  <data name="M1_World_ChImageFail" xml:space="preserve">
+    <value>이미지 파일을 변경하지 못했습니다.</value>
+  </data>
+  <data name="M1_World_ControlRegionName" xml:space="preserve">
+    <value>1. 관리 지역 명</value>
+  </data>
+  <data name="M1_World_ControlRegionNameSub" xml:space="preserve">
+    <value>( 국가 명 또는 위치 명 )</value>
+  </data>
+  <data name="M1_World_ControlSelectImageFile" xml:space="preserve">
+    <value>3. 이미지를 등록하세요 (1600X1000 : 40자)</value>
+  </data>
+  <data name="M1_World_ControlSelectLocation" xml:space="preserve">
+    <value>2. 지역을 마우스로 선택하세요</value>
+  </data>
+  <data name="M1_World_DuplicateName" xml:space="preserve">
+    <value>동일한 지역이름이 존재합니다. 다른 이름을 사용하세요</value>
+  </data>
+  <data name="M1_World_listVew_Etc" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M1_World_listVew_Name" xml:space="preserve">
+    <value>지역명</value>
+  </data>
+  <data name="M1_World_listVew_Number" xml:space="preserve">
+    <value>번호</value>
+  </data>
+  <data name="M1_World_listVew_Register" xml:space="preserve">
+    <value>등록자</value>
+  </data>
+  <data name="M1_World_NoImage" xml:space="preserve">
+    <value>이미지 파일을 선택해 주세요</value>
+  </data>
+  <data name="M1_World_NoLocation" xml:space="preserve">
+    <value>위치를 선택해 주세요</value>
+  </data>
+  <data name="M1_World_NoName" xml:space="preserve">
+    <value>지역이름을 입력하세요</value>
+  </data>
+  <data name="M1_World_SelectImage" xml:space="preserve">
+    <value>이미지선택</value>
+  </data>
+  <data name="M1_World_SelectLocation" xml:space="preserve">
+    <value>지역선택</value>
+  </data>
+  <data name="M1_World_UpImageFail" xml:space="preserve">
+    <value>이미지 파일을 업로드하지 못했습니다.</value>
+  </data>
+  <data name="M9_LanguageTitle" xml:space="preserve">
+    <value>언어 설정</value>
+  </data>
+  <data name="M9_Language1" xml:space="preserve">
+    <value>사용할 언어를 선택하세요.</value>
+  </data>
+  <data name="M9_Language_Country1" xml:space="preserve">
+    <value>Korean (한글)</value>
+  </data>
+  <data name="M9_Language_Country2" xml:space="preserve">
+    <value>English (영어)</value>
+  </data>
+  <data name="M_Prop1" xml:space="preserve">
+    <value>속성요약</value>
+  </data>
+  <data name="M_Prop2" xml:space="preserve">
+    <value>위치속성</value>
+  </data>
+  <data name="M_Prop3" xml:space="preserve">
+    <value>카탈로그속성</value>
+  </data>
+  <data name="M_Prop4" xml:space="preserve">
+    <value>자산속성</value>
+  </data>
+  <data name="M_TopMenu1" xml:space="preserve">
+    <value>사이트 선택</value>
+  </data>
+  <data name="M_TopMenu2" xml:space="preserve">
+    <value>대쉬보드</value>
+  </data>
+  <data name="M_TopMenu3" xml:space="preserve">
+    <value>층별뷰</value>
+  </data>
+  <data name="M_TopMenu4" xml:space="preserve">
+    <value>자산뷰</value>
+  </data>
+  <data name="M_TopMenu5" xml:space="preserve">
+    <value>배선뷰</value>
+  </data>
+  <data name="M_TopMenu6" xml:space="preserve">
+    <value>Rack View</value>
+  </data>
+  <data name="M_Tree1" xml:space="preserve">
+    <value>자산</value>
+  </data>
+  <data name="M_Tree2" xml:space="preserve">
+    <value>지능형</value>
+  </data>
+  <data name="M_Tree3" xml:space="preserve">
+    <value>즐겨찾기</value>
+  </data>
+  <data name="M1_Region2Title" xml:space="preserve">
+    <value>도시 등록 관리</value>
+  </data>
+  <data name="M1_Region1_1" xml:space="preserve">
+    <value>도시 등록 관리</value>
+  </data>
+  <data name="C_back" xml:space="preserve">
+    <value>이전</value>
+  </data>
+  <data name="M1_Region2_1" xml:space="preserve">
+    <value>사이트 등록 관리</value>
+  </data>
+  <data name="M1_Site_SiteName" xml:space="preserve">
+    <value>1. 사이트 이름</value>
+  </data>
+  <data name="M1_Site_SiteRemark" xml:space="preserve">
+    <value>2. 비고</value>
+  </data>
+  <data name="C_lackOfInformation" xml:space="preserve">
+    <value>정보가 부족합니다.</value>
+  </data>
+  <data name="M1_Site_SelectImage" xml:space="preserve">
+    <value>3. 선택 사이트의 이미지를 등록하세요 (40자)</value>
+  </data>
+  <data name="M9_CatalogGroupManagerTitle" xml:space="preserve">
+    <value>카탈로그 그룹 등록 관리</value>
+  </data>
+  <data name="M_TopMenu7" xml:space="preserve">
+    <value>관리</value>
+  </data>
+  <data name="M_TopMenu8" xml:space="preserve">
+    <value>리포트</value>
+  </data>
+  <data name="M_TopMenu9" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="M_Prop1_1" xml:space="preserve">
+    <value>자산 속성</value>
+  </data>
+  <data name="M_Prop1_1_AssetId" xml:space="preserve">
+    <value>자산 ID</value>
+  </data>
+  <data name="M_Prop1_1_ConID" xml:space="preserve">
+    <value>컨트롤러 ID</value>
+  </data>
+  <data name="M_Prop1_1_Ip" xml:space="preserve">
+    <value>IP 주소</value>
+  </data>
+  <data name="M_Prop1_1_PPnum" xml:space="preserve">
+    <value>패치 제어 번호(1~40)</value>
+  </data>
+  <data name="M_Prop1_1_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M_Prop1_1_Serial" xml:space="preserve">
+    <value>시리얼 번호</value>
+  </data>
+  <data name="M_Prop1_1_Slot" xml:space="preserve">
+    <value>랙 장착 슬록</value>
+  </data>
+  <data name="M_Prop1_2" xml:space="preserve">
+    <value>카달로그 속성</value>
+  </data>
+  <data name="M_Prop1_2_Config" xml:space="preserve">
+    <value>구성 방식</value>
+  </data>
+  <data name="M_Prop1_2_Figure" xml:space="preserve">
+    <value>외형 타입</value>
+  </data>
+  <data name="M_Prop1_2_Img" xml:space="preserve">
+    <value>이미지</value>
+  </data>
+  <data name="M_Prop1_2_Media" xml:space="preserve">
+    <value>미디어 타입</value>
+  </data>
+  <data name="M_Prop1_2_ModelName" xml:space="preserve">
+    <value>모델명</value>
+  </data>
+  <data name="M_Prop1_2_Name" xml:space="preserve">
+    <value>제품명</value>
+  </data>
+  <data name="M_Prop1_2_RackUnit" xml:space="preserve">
+    <value>랙 사용 유닛(U)</value>
+  </data>
+  <data name="M_Prop1_2_UTPJack" xml:space="preserve">
+    <value>UTP 잭 타입</value>
+  </data>
+  <data name="M_Prop1_2_UTPShild" xml:space="preserve">
+    <value>UTP 쉴드 여부</value>
+  </data>
+  <data name="M_Prop1_3" xml:space="preserve">
+    <value>위치 속성</value>
+  </data>
+  <data name="M_Prop1_3_Local" xml:space="preserve">
+    <value>위치</value>
+  </data>
+  <data name="M_Prop2_Above" xml:space="preserve">
+    <value>연결 위치</value>
+  </data>
+  <data name="M_Prop2_Group" xml:space="preserve">
+    <value>분류</value>
+  </data>
+  <data name="M_Prop2_Name" xml:space="preserve">
+    <value>위치명</value>
+  </data>
+  <data name="M_Prop2_Rack" xml:space="preserve">
+    <value>랙</value>
+  </data>
+  <data name="M_Prop2_RackInfo" xml:space="preserve">
+    <value>랙 정보</value>
+  </data>
+  <data name="M_Prop2_Radian" xml:space="preserve">
+    <value>배치 각도</value>
+  </data>
+  <data name="M_Prop2_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M_Prop2_VCML" xml:space="preserve">
+    <value>VCM(L)</value>
+  </data>
+  <data name="M_Prop2_VCMR" xml:space="preserve">
+    <value>VCM(R)</value>
+  </data>
+  <data name="M_Prop3_1" xml:space="preserve">
+    <value>기본 속성</value>
+  </data>
+  <data name="M_Prop3_1_Code" xml:space="preserve">
+    <value>제품(모델) 코드</value>
+  </data>
+  <data name="M_Prop3_1_Manufacure" xml:space="preserve">
+    <value>제조사</value>
+  </data>
+  <data name="M_Prop3_1_FullName" xml:space="preserve">
+    <value>제품명(Full)</value>
+  </data>
+  <data name="M_Prop3_1_Group" xml:space="preserve">
+    <value>분류</value>
+  </data>
+  <data name="M_Prop3_1_Img" xml:space="preserve">
+    <value>이미지</value>
+  </data>
+  <data name="M_Prop3_1_LastUpdate" xml:space="preserve">
+    <value>최종 수정일</value>
+  </data>
+  <data name="M_Prop3_1_Name" xml:space="preserve">
+    <value>제품명</value>
+  </data>
+  <data name="M_Prop3_1_NumOfP" xml:space="preserve">
+    <value>포트수</value>
+  </data>
+  <data name="M_Prop3_1_Order" xml:space="preserve">
+    <value>주문 번호(Order Number)</value>
+  </data>
+  <data name="M_Prop3_1_Remartks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M_Prop3_1_Width" xml:space="preserve">
+    <value>Width, Depth, Height(mm)</value>
+  </data>
+  <data name="M_Prop3_2" xml:space="preserve">
+    <value>추가 속성</value>
+  </data>
+  <data name="M_Prop4_1" xml:space="preserve">
+    <value>기본 속성</value>
+  </data>
+  <data name="M_Prop4_1_Id" xml:space="preserve">
+    <value>자산 ID</value>
+  </data>
+  <data name="M_Prop4_1_InstallDate" xml:space="preserve">
+    <value>설치일</value>
+  </data>
+  <data name="M_Prop4_1_InstallUser" xml:space="preserve">
+    <value>설치자명</value>
+  </data>
+  <data name="M_Prop4_1_IP" xml:space="preserve">
+    <value>IP 주소</value>
+  </data>
+  <data name="M_Prop4_1_LastUpdate" xml:space="preserve">
+    <value>최종 수정일</value>
+  </data>
+  <data name="M_Prop4_1_Layout" xml:space="preserve">
+    <value>랙 내 슬롯 위치</value>
+  </data>
+  <data name="M_Prop4_1_Local" xml:space="preserve">
+    <value>위치</value>
+  </data>
+  <data name="M_Prop4_1_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M_Prop4_1_Serial" xml:space="preserve">
+    <value>시리얼 넘버</value>
+  </data>
+  <data name="M_Prop4_2" xml:space="preserve">
+    <value>제품 그룹별 속성</value>
+  </data>
+  <data name="M_Prop4_2_ConID" xml:space="preserve">
+    <value>연결된 컨트롤러 ID</value>
+  </data>
+  <data name="M_Prop4_2_PatchNum" xml:space="preserve">
+    <value>패치 제어 번호(1~40)</value>
+  </data>
+  <data name="M_Prop4_3" xml:space="preserve">
+    <value>유지보수</value>
+  </data>
+  <data name="M_Prop4_3_Charge" xml:space="preserve">
+    <value>관리담당자</value>
+  </data>
+  <data name="M_Prop4_3_Contract" xml:space="preserve">
+    <value>유상유지보수 계약일</value>
+  </data>
+  <data name="M_Prop4_3_Depart" xml:space="preserve">
+    <value>관리담당부서</value>
+  </data>
+  <data name="M_Prop4_3_End" xml:space="preserve">
+    <value>유상유지보수 종료일</value>
+  </data>
+  <data name="M_Prop4_3_EndFree" xml:space="preserve">
+    <value>무상유지보수 종료일</value>
+  </data>
+  <data name="M_Prop4_3_Price" xml:space="preserve">
+    <value>유상유지보수 금액</value>
+  </data>
+  <data name="M_Prop4_3_StartFree" xml:space="preserve">
+    <value>무상유지보수 시작일</value>
+  </data>
+  <data name="M_Prop4_3_Term" xml:space="preserve">
+    <value>유상유지보수 기간(개월)</value>
+  </data>
+  <data name="M_Prop4_3_TermFree" xml:space="preserve">
+    <value>무상유지보수 기간(개월)</value>
+  </data>
+  <data name="M_Prop4_4" xml:space="preserve">
+    <value>구매감가상각</value>
+  </data>
+  <data name="M_Prop4_4_Buyer" xml:space="preserve">
+    <value>구매담당자</value>
+  </data>
+  <data name="M_Prop4_4_End" xml:space="preserve">
+    <value>감가상각 종료(년)</value>
+  </data>
+  <data name="M_Prop4_4_PurchDay" xml:space="preserve">
+    <value>구매일</value>
+  </data>
+  <data name="M_Prop4_4_Start" xml:space="preserve">
+    <value>감가상각적용 시작(년)</value>
+  </data>
+  <data name="M_Prop4_4_Use" xml:space="preserve">
+    <value>감가상각적용 년수</value>
+  </data>
+  <data name="M_Prop4_5" xml:space="preserve">
+    <value>SNMP</value>
+  </data>
+  <data name="M_Prop4_5_Get" xml:space="preserve">
+    <value>Get Community</value>
+  </data>
+  <data name="M_Prop4_5_Set" xml:space="preserve">
+    <value>Set Community</value>
+  </data>
+  <data name="M_Prop4_5_Ver" xml:space="preserve">
+    <value>SNMP 버전</value>
+  </data>
+  <data name="M_Prop4_6" xml:space="preserve">
+    <value>확장 속성</value>
+  </data>
+  <data name="M_Prop4_6_Col" xml:space="preserve">
+    <value>제품 색상</value>
+  </data>
+  <data name="M_Prop4_6_MOQ" xml:space="preserve">
+    <value>MOQ</value>
+  </data>
+  <data name="C_Building" xml:space="preserve">
+    <value>빌딩</value>
+  </data>
+  <data name="C_Floor" xml:space="preserve">
+    <value>층</value>
+  </data>
+  <data name="C_Rack" xml:space="preserve">
+    <value>랙</value>
+  </data>
+  <data name="C_Room" xml:space="preserve">
+    <value>룸</value>
+  </data>
+  <data name="M9_CatalogGroupManager_NewTitle" xml:space="preserve">
+    <value>카탈로그 그룹 추가</value>
+  </data>
+  <data name="M_Prop2_3_Company" xml:space="preserve">
+    <value>유상유지보수 업체명</value>
+  </data>
+  <data name="M9_ManufactureTitle" xml:space="preserve">
+    <value>제조사 등록 관리</value>
+  </data>
+  <data name="M9_Manufacture_Address" xml:space="preserve">
+    <value>주소</value>
+  </data>
+  <data name="M9_Manufacture_FullName" xml:space="preserve">
+    <value>제조사명(Full Name)</value>
+  </data>
+  <data name="M9_Manufacture_Name" xml:space="preserve">
+    <value>제조사명</value>
+  </data>
+  <data name="M9_Contact_Duty" xml:space="preserve">
+    <value>직책</value>
+  </data>
+  <data name="M9_Contact_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="M9_Contact_Mobile" xml:space="preserve">
+    <value>휴대폰번호</value>
+  </data>
+  <data name="M9_Contact_Name" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="M9_Contact_Phone" xml:space="preserve">
+    <value>전화번호</value>
+  </data>
+  <data name="M9_Contact_Position" xml:space="preserve">
+    <value>직위</value>
+  </data>
+  <data name="M9_Contact_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M9_Contact_EditTitle" xml:space="preserve">
+    <value>연락처 수정</value>
+  </data>
+  <data name="M9_Contact_NewTitle" xml:space="preserve">
+    <value>연락처 등록</value>
+  </data>
+  <data name="M9_CatalogManagerTitle" xml:space="preserve">
+    <value>카탈로그 등록 관리</value>
+  </data>
+  <data name="M9_Catalog_Capacity" xml:space="preserve">
+    <value>부피(mm)</value>
+  </data>
+  <data name="M9_Catalog_ExclusiveProperty" xml:space="preserve">
+    <value>제품그룹별속성</value>
+  </data>
+  <data name="M9_Catalog_ExtendedProperty" xml:space="preserve">
+    <value>확장속성</value>
+  </data>
+  <data name="M9_Catalog_FullName" xml:space="preserve">
+    <value>카탈로그명(Full Name)</value>
+  </data>
+  <data name="M9_Catalog_Image" xml:space="preserve">
+    <value>이미지</value>
+  </data>
+  <data name="M9_Catalog_LastUpdate" xml:space="preserve">
+    <value>마지막 수정일</value>
+  </data>
+  <data name="M9_Catalog_Manufacture" xml:space="preserve">
+    <value>제조사</value>
+  </data>
+  <data name="M9_Catalog_Model" xml:space="preserve">
+    <value>모델명</value>
+  </data>
+  <data name="M9_Catalog_Name" xml:space="preserve">
+    <value>카탈로그명</value>
+  </data>
+  <data name="M9_Catalog_NumberOfPorts" xml:space="preserve">
+    <value>포트 수</value>
+  </data>
+  <data name="M9_Catalog_OrderNumber" xml:space="preserve">
+    <value>주문번호(Order Number)</value>
+  </data>
+  <data name="M9_Catalog_RackMountProperty" xml:space="preserve">
+    <value>랙마운트속성</value>
+  </data>
+  <data name="M9_Catalog_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M9_Catalog_Weight" xml:space="preserve">
+    <value>무게(kg)</value>
+  </data>
+  <data name="M9_CatalogGroup_Name" xml:space="preserve">
+    <value>카탈로그 그룹 명</value>
+  </data>
+  <data name="M9_Catalog_Depth" xml:space="preserve">
+    <value>깊이(D)</value>
+  </data>
+  <data name="M9_Catalog_Height" xml:space="preserve">
+    <value>높이(H)</value>
+  </data>
+  <data name="M9_Catalog_Width" xml:space="preserve">
+    <value>폭(W)</value>
+  </data>
+  <data name="M9_Catalog_pp_1" xml:space="preserve">
+    <value>인텔리전트 기능</value>
+  </data>
+  <data name="M9_Catalog_pp_2" xml:space="preserve">
+    <value>연결 방식(인텔리전트 only)</value>
+  </data>
+  <data name="M9_Catalog_pp_3" xml:space="preserve">
+    <value>케이블 미디어 타입</value>
+  </data>
+  <data name="M9_Catalog_pp_4" xml:space="preserve">
+    <value>UTP 잭 타입(UTP only)</value>
+  </data>
+  <data name="M9_Catalog_pp_4_1" xml:space="preserve">
+    <value>일반 잭 통합형</value>
+  </data>
+  <data name="M9_Catalog_pp_4_2" xml:space="preserve">
+    <value>모듈라 잭 분리형</value>
+  </data>
+  <data name="M9_Catalog_pp_5" xml:space="preserve">
+    <value>UTP 쉴드 여부(UTP only)</value>
+  </data>
+  <data name="M9_Catalog_pp_6" xml:space="preserve">
+    <value>패치 패널 외형 타입</value>
+  </data>
+  <data name="M9_Catalog_ic_1" xml:space="preserve">
+    <value>최대 패치 패널 커넥터 수</value>
+  </data>
+  <data name="M9_Catalog_ic_2" xml:space="preserve">
+    <value>전원 이중화</value>
+  </data>
+  <data name="M9_Catalog_ca_1" xml:space="preserve">
+    <value>지능형 패치 코드</value>
+  </data>
+  <data name="M9_Catalog_ca_10" xml:space="preserve">
+    <value>화면 표시 명칭</value>
+  </data>
+  <data name="M9_Catalog_ca_2" xml:space="preserve">
+    <value>설치 용도</value>
+  </data>
+  <data name="M9_Catalog_ca_2_1" xml:space="preserve">
+    <value>고정</value>
+  </data>
+  <data name="M9_Catalog_ca_2_2" xml:space="preserve">
+    <value>패치코드</value>
+  </data>
+  <data name="M9_Catalog_ca_3" xml:space="preserve">
+    <value>용도</value>
+  </data>
+  <data name="M9_Catalog_ca_3_1" xml:space="preserve">
+    <value>민수용</value>
+  </data>
+  <data name="M9_Catalog_ca_3_2" xml:space="preserve">
+    <value>군용</value>
+  </data>
+  <data name="M9_Catalog_ca_4" xml:space="preserve">
+    <value>케이블 타입</value>
+  </data>
+  <data name="M9_Catalog_ca_5" xml:space="preserve">
+    <value>UTP 쉴드</value>
+  </data>
+  <data name="M9_Catalog_ca_6" xml:space="preserve">
+    <value>UTP Category</value>
+  </data>
+  <data name="M9_Catalog_ca_7" xml:space="preserve">
+    <value>Fiber 케이블 타입</value>
+  </data>
+  <data name="M9_Catalog_ca_8" xml:space="preserve">
+    <value>Fiber 커넥터 타입</value>
+  </data>
+  <data name="M9_Catalog_ca_9" xml:space="preserve">
+    <value>화면 표시 색상</value>
+  </data>
+  <data name="M9_Catalog_cp_1" xml:space="preserve">
+    <value>UTP 플러그(RJ-45) 연결 방향</value>
+  </data>
+  <data name="M9_Catalog_cp_1_1" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="M9_Catalog_cp_1_2" xml:space="preserve">
+    <value>한 방향(우측)</value>
+  </data>
+  <data name="M9_Catalog_cp_1_3" xml:space="preserve">
+    <value>양쪽 방향</value>
+  </data>
+  <data name="M9_Catalog_st_1" xml:space="preserve">
+    <value>최대 실장 디스크 수</value>
+  </data>
+  <data name="M9_Catalog_sw_1" xml:space="preserve">
+    <value>외형 형태</value>
+  </data>
+  <data name="M9_Catalog_sw_1_1" xml:space="preserve">
+    <value>단일형</value>
+  </data>
+  <data name="M9_Catalog_sw_1_2" xml:space="preserve">
+    <value>새시형</value>
+  </data>
+  <data name="M9_Catalog_sw_1_3" xml:space="preserve">
+    <value>카드(모듈)형</value>
+  </data>
+  <data name="M9_Catalog_sw_2" xml:space="preserve">
+    <value>최대 실장 슬롯 수</value>
+  </data>
+  <data name="M9_Catalog_ca_9_2" xml:space="preserve">
+    <value>색상 선택</value>
+  </data>
+  <data name="M9_Catalog_ep_1" xml:space="preserve">
+    <value>확장속성명</value>
+  </data>
+  <data name="M9_Catalog_ep_2" xml:space="preserve">
+    <value>길이</value>
+  </data>
+  <data name="M9_Catalog_ep_3" xml:space="preserve">
+    <value>형태</value>
+  </data>
+  <data name="M9_Catalog_ep_4" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M9_Catalog_rm_1" xml:space="preserve">
+    <value>랙마운트 제품</value>
+  </data>
+  <data name="M9_Catalog_rm_2" xml:space="preserve">
+    <value>유닛 크기(U)</value>
+  </data>
+  <data name="M9_Catalog_rm_3" xml:space="preserve">
+    <value>이미지</value>
+  </data>
+  <data name="C_ColorPickerDialogTitle" xml:space="preserve">
+    <value>색상 선택</value>
+  </data>
+  <data name="M9_ExtendedPropertyTitle" xml:space="preserve">
+    <value>확장 속성 등록 관리</value>
+  </data>
+  <data name="M9_ExtendedProperty_AnsName" xml:space="preserve">
+    <value>답변명</value>
+  </data>
+  <data name="M9_ExtendedProperty_Length" xml:space="preserve">
+    <value>길이</value>
+  </data>
+  <data name="M9_ExtendedProperty_Name" xml:space="preserve">
+    <value>확장속성명</value>
+  </data>
+  <data name="M9_ExtendedProperty_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type" xml:space="preserve">
+    <value>형태</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_1" xml:space="preserve">
+    <value>문자열</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_2" xml:space="preserve">
+    <value>숫자</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_3" xml:space="preserve">
+    <value>날짜</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_4" xml:space="preserve">
+    <value>라디오버튼</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_5" xml:space="preserve">
+    <value>리스트박스</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_6" xml:space="preserve">
+    <value>체크박스</value>
+  </data>
+  <data name="M9_ExtendedProperty_AnsNameList" xml:space="preserve">
+    <value>선택형 타입 답변 목록</value>
+  </data>
+  <data name="M9_AssetManagerTitle" xml:space="preserve">
+    <value>자산 등록 관리</value>
+  </data>
+  <data name="M9_Asset_Installer" xml:space="preserve">
+    <value>설치자</value>
+  </data>
+  <data name="M9_Asset_Install_Date" xml:space="preserve">
+    <value>설치일</value>
+  </data>
+  <data name="M9_Asset_IP" xml:space="preserve">
+    <value>IP 주소</value>
+  </data>
+  <data name="M9_Asset_Name" xml:space="preserve">
+    <value>자산명(ID)</value>
+  </data>
+  <data name="M9_Asset_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M9_Asset_SN" xml:space="preserve">
+    <value>시리얼넘버</value>
+  </data>
+  <data name="M9_Asset_AS1" xml:space="preserve">
+    <value>관리담당부서</value>
+  </data>
+  <data name="M9_Asset_AS10" xml:space="preserve">
+    <value>유상유지보수 업체명</value>
+  </data>
+  <data name="M9_Asset_AS2" xml:space="preserve">
+    <value>관리담당자</value>
+  </data>
+  <data name="M9_Asset_AS3" xml:space="preserve">
+    <value>무상유지보수 시작일</value>
+  </data>
+  <data name="M9_Asset_AS4" xml:space="preserve">
+    <value>무상유지보수 기간(개월)</value>
+  </data>
+  <data name="M9_Asset_AS5" xml:space="preserve">
+    <value>무상유지보수 종료일</value>
+  </data>
+  <data name="M9_Asset_AS6" xml:space="preserve">
+    <value>유상유지보수 계약일</value>
+  </data>
+  <data name="M9_Asset_AS7" xml:space="preserve">
+    <value>유상유지보수 기간(개월)</value>
+  </data>
+  <data name="M9_Asset_AS8" xml:space="preserve">
+    <value>유상유지보수 종료일</value>
+  </data>
+  <data name="M9_Asset_AS9" xml:space="preserve">
+    <value>유상유지보수 계약금액</value>
+  </data>
+  <data name="M9_Asset_BUY1" xml:space="preserve">
+    <value>구매일</value>
+  </data>
+  <data name="M9_Asset_BUY2" xml:space="preserve">
+    <value>구매담당자</value>
+  </data>
+  <data name="M9_Asset_BUY3" xml:space="preserve">
+    <value>감가상각적용 시작(년)</value>
+  </data>
+  <data name="M9_Asset_BUY4" xml:space="preserve">
+    <value>감가상각적용 년수</value>
+  </data>
+  <data name="M9_Asset_BUY5" xml:space="preserve">
+    <value>감가상각적용 종료(년)</value>
+  </data>
+  <data name="M9_Asset_SNMP1" xml:space="preserve">
+    <value>Get Community</value>
+  </data>
+  <data name="M9_Asset_SNMP2" xml:space="preserve">
+    <value>Set Community</value>
+  </data>
+  <data name="M9_Asset_SNMP3" xml:space="preserve">
+    <value>SNMP 버전</value>
+  </data>
+  <data name="M9_Asset_Tab1" xml:space="preserve">
+    <value>고유속성</value>
+  </data>
+  <data name="M9_Asset_Tab2" xml:space="preserve">
+    <value>유지보수</value>
+  </data>
+  <data name="M9_Asset_Tab3" xml:space="preserve">
+    <value>구매/감가상각</value>
+  </data>
+  <data name="M9_Asset_Tab4" xml:space="preserve">
+    <value>SNMP</value>
+  </data>
+  <data name="M9_Asset_Tab5" xml:space="preserve">
+    <value>확장속성</value>
+  </data>
+  <data name="M9_CatalogSelectorTitle" xml:space="preserve">
+    <value>카탈로그 선택</value>
+  </data>
+  <data name="C_SelectFile" xml:space="preserve">
+    <value>파일 선택</value>
+  </data>
+  <data name="C_ClearWarning" xml:space="preserve">
+    <value>Yes를 선택하면 현재 입력한 정보가 지워집니다</value>
+  </data>
+  <data name="M9_Asset_Rack1" xml:space="preserve">
+    <value>Vertical Cable Manager</value>
+  </data>
+  <data name="M9_Asset_Rack2" xml:space="preserve">
+    <value>깊이(mm)</value>
+  </data>
+  <data name="M9_Asset_Server1" xml:space="preserve">
+    <value>OS 종류(Win, Linux, etc)</value>
+  </data>
+  <data name="M9_Asset_Server2" xml:space="preserve">
+    <value>OS 버전</value>
+  </data>
+  <data name="M9_Asset_Server3" xml:space="preserve">
+    <value>Host 명</value>
+  </data>
+  <data name="M9_Asset_Server4" xml:space="preserve">
+    <value>네트워크 카드 수</value>
+  </data>
+  <data name="M9_Asset_Server5" xml:space="preserve">
+    <value>디스크 전체 용량(GB)</value>
+  </data>
+  <data name="M9_Asset_Server6" xml:space="preserve">
+    <value>디스크 수</value>
+  </data>
+  <data name="M9_Asset_Storage1" xml:space="preserve">
+    <value>현재 실장 디스크 수</value>
+  </data>
+  <data name="M9_Asset_Storage2" xml:space="preserve">
+    <value>현재 실장 용량(GB)</value>
+  </data>
+  <data name="M9_Asset_Storage3" xml:space="preserve">
+    <value>연결 형태</value>
+  </data>
+  <data name="M9_Asset_Switch1" xml:space="preserve">
+    <value>게이트웨이 IP</value>
+  </data>
+  <data name="C_FileName" xml:space="preserve">
+    <value>파일이름</value>
+  </data>
+  <data name="C_Group" xml:space="preserve">
+    <value>그룹</value>
+  </data>
+  <data name="C_Name" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="C_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="C_Size" xml:space="preserve">
+    <value>사이즈</value>
+  </data>
+  <data name="M9_ImgMgr_ImageInfo" xml:space="preserve">
+    <value>이미지 정보</value>
+  </data>
+  <data name="M9_ImgMgr_ImageManager" xml:space="preserve">
+    <value>이미지 관리자</value>
+  </data>
+  <data name="M9_ImgMgr_ImageName" xml:space="preserve">
+    <value>이미지 명</value>
+  </data>
+  <data name="M9_ImgMgr_ImageView" xml:space="preserve">
+    <value>이미지 뷰</value>
+  </data>
+  <data name="M9_ImgMgr_ExistSameImg" xml:space="preserve">
+    <value>동일한 이미지가 존재합니다.</value>
+  </data>
+  <data name="M9_ImgMgr_UpLoadFail" xml:space="preserve">
+    <value>이미지 업로드에 실패했습니다!</value>
+  </data>
+  <data name="M9_UserManagerTitle" xml:space="preserve">
+    <value>사용자 등록 관리</value>
+  </data>
+  <data name="M9_Manufacture_NewTitle" xml:space="preserve">
+    <value>제조사 추가</value>
+  </data>
+  <data name="M_Tree1_Menu_AddAsset" xml:space="preserve">
+    <value>자산 추가</value>
+  </data>
+  <data name="M_Tree1_Menu_AddBuilding" xml:space="preserve">
+    <value>빌딩 추가</value>
+  </data>
+  <data name="M_Tree1_Menu_AddFloor" xml:space="preserve">
+    <value>층 추가</value>
+  </data>
+  <data name="M_Tree1_Menu_AddRack" xml:space="preserve">
+    <value>랙 추가</value>
+  </data>
+  <data name="M_Tree1_Menu_AddRoom" xml:space="preserve">
+    <value>룸 추가</value>
+  </data>
+  <data name="M_Tree1_Menu_Copy" xml:space="preserve">
+    <value>복사</value>
+  </data>
+  <data name="M_Tree1_Menu_Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="M_Tree1_Menu_EditAsset" xml:space="preserve">
+    <value>자산 수정</value>
+  </data>
+  <data name="M_Tree1_Menu_EditBuilding" xml:space="preserve">
+    <value>빌딩 수정</value>
+  </data>
+  <data name="M_Tree1_Menu_EditFloor" xml:space="preserve">
+    <value>층 수정</value>
+  </data>
+  <data name="M_Tree1_Menu_EditRack" xml:space="preserve">
+    <value>랙 수정</value>
+  </data>
+  <data name="M_Tree1_Menu_EditRoom" xml:space="preserve">
+    <value>룸 수정</value>
+  </data>
+  <data name="M_Tree1_Menu_Paste" xml:space="preserve">
+    <value>붙이기</value>
+  </data>
+  <data name="C_SelectImage" xml:space="preserve">
+    <value>이미지 선택</value>
+  </data>
+  <data name="M9_BuildingManagerTitle" xml:space="preserve">
+    <value>빌딩 등록 관리</value>
+  </data>
+  <data name="M9_Building_1" xml:space="preserve">
+    <value>예) 광진 빌딩</value>
+  </data>
+  <data name="M9_Building_Name" xml:space="preserve">
+    <value>빌딩 명</value>
+  </data>
+  <data name="M9_FloorManagerTitle" xml:space="preserve">
+    <value>층 등록 관리</value>
+  </data>
+  <data name="M9_Floor_1" xml:space="preserve">
+    <value>3D 도면 선택</value>
+  </data>
+  <data name="M9_Floor_Level" xml:space="preserve">
+    <value>층 선택</value>
+  </data>
+  <data name="M9_RackManagerTitle" xml:space="preserve">
+    <value>랙 등록 관리</value>
+  </data>
+  <data name="M9_Rack_1" xml:space="preserve">
+    <value>랙 자산</value>
+  </data>
+  <data name="M9_Rack_2" xml:space="preserve">
+    <value>VCM 자산</value>
+  </data>
+  <data name="M9_Rack_3" xml:space="preserve">
+    <value>랙 위치 지정</value>
+  </data>
+  <data name="M9_Rack_Angle" xml:space="preserve">
+    <value>설치각</value>
+  </data>
+  <data name="M9_Rack_No" xml:space="preserve">
+    <value>랙 번호</value>
+  </data>
+  <data name="M9_Rack_Row" xml:space="preserve">
+    <value>랙 Row Zone</value>
+  </data>
+  <data name="M9_RoomManagerTitle" xml:space="preserve">
+    <value>룸 등록 관리</value>
+  </data>
+  <data name="M9_Room_1" xml:space="preserve">
+    <value>예) ER, 1F-IDF, Room 1010, RO-3B02, 룸 1010</value>
+  </data>
+  <data name="M9_Room_2" xml:space="preserve">
+    <value>룸 위치 지정</value>
+  </data>
+  <data name="M9_Room_Name" xml:space="preserve">
+    <value>룸 명</value>
+  </data>
+  <data name="M9_UserManager_Chk1" xml:space="preserve">
+    <value>수신</value>
+  </data>
+  <data name="M9_UserManager_Chk2" xml:space="preserve">
+    <value>체크시 가능</value>
+  </data>
+  <data name="M9_UserManager_Deletable" xml:space="preserve">
+    <value>삭제여부</value>
+  </data>
+  <data name="M9_UserManager_Email" xml:space="preserve">
+    <value>이메일</value>
+  </data>
+  <data name="M9_UserManager_Group" xml:space="preserve">
+    <value>권한</value>
+  </data>
+  <data name="M9_UserManager_LoginID" xml:space="preserve">
+    <value>로그인 ID</value>
+  </data>
+  <data name="M9_UserManager_Mobile" xml:space="preserve">
+    <value>핸드폰</value>
+  </data>
+  <data name="M9_UserManager_Password" xml:space="preserve">
+    <value>패스워드</value>
+  </data>
+  <data name="M9_UserManager_Phone" xml:space="preserve">
+    <value>전화번호</value>
+  </data>
+  <data name="M9_UserManager_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M9_UserManager_UserID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="M9_UserManager_UserName" xml:space="preserve">
+    <value>사용자명</value>
+  </data>
+  <data name="C_Error_2" xml:space="preserve">
+    <value>이미 사용된 빌딩명입니다. 다른 명을 사용해 주세요.</value>
+  </data>
+  <data name="C_Error_1" xml:space="preserve">
+    <value>서버와 통신 장애로 삭제되지 않았습니다.</value>
+  </data>
+  <data name="M9_SelectDrawing3dTitle" xml:space="preserve">
+    <value>3D 층 도면 선택</value>
+  </data>
+  <data name="C_Error_3" xml:space="preserve">
+    <value>층 번호는 이미 사용되었습니다. 다른 층을 선택하여 주세요.,</value>
+  </data>
+  <data name="C_Error_4" xml:space="preserve">
+    <value>빌딩내에서 룸 이름은 이미 사용되고 있습니다. 다른 이름을 입력하여 주세요.</value>
+  </data>
+  <data name="C_Error_5" xml:space="preserve">
+    <value>같은 방에서 랙 이름이 이미 사용되고 있습니다. 다른 이름을 선택하여 주세요.</value>
+  </data>
+  <data name="M_Tree1_Menu_ConfigRackMount" xml:space="preserve">
+    <value>랙 마운트 구성 설정</value>
+  </data>
+  <data name="C_Asset_Name" xml:space="preserve">
+    <value>자산명</value>
+  </data>
+  <data name="C_Catalog_Name" xml:space="preserve">
+    <value>카탈로그명</value>
+  </data>
+  <data name="M9_RackMountManagerTitle" xml:space="preserve">
+    <value>랙 마운트 구성 관리</value>
+  </data>
+  <data name="M9_RackMount_1" xml:space="preserve">
+    <value>자산 목록</value>
+  </data>
+  <data name="M9_RackMount_2" xml:space="preserve">
+    <value>엔트리 판넬</value>
+  </data>
+  <data name="C_Rack_Name" xml:space="preserve">
+    <value>랙 명</value>
+  </data>
+  <data name="M9_RackMount_3" xml:space="preserve">
+    <value>설치슬롯(U)</value>
+  </data>
+  <data name="M9_RackMount_4" xml:space="preserve">
+    <value>구성할 랙</value>
+  </data>
+  <data name="M_Tree1_Menu_ConfigIC" xml:space="preserve">
+    <value>컨트롤러 구성 등록 관리</value>
+  </data>
+  <data name="M_Tree1_Menu_ConfigSW" xml:space="preserve">
+    <value>새시형 네트워크 스위치 구성 관리</value>
+  </data>
+  <data name="M9_RackMount_5" xml:space="preserve">
+    <value>유닛 크기(U)</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewRack" xml:space="preserve">
+    <value>랙 뷰</value>
+  </data>
+  <data name="C_Site" xml:space="preserve">
+    <value>사이트</value>
+  </data>
+  <data name="M9_Rack_4" xml:space="preserve">
+    <value>랙 위치 조정</value>
+  </data>
+  <data name="M9_ICMountManagerTitle" xml:space="preserve">
+    <value>컨트롤러 구성 등록 관리</value>
+  </data>
+  <data name="M9_ICMount_1" xml:space="preserve">
+    <value>패치 패널 목록</value>
+  </data>
+  <data name="M9_ICMount_2" xml:space="preserve">
+    <value>구성할 컨트롤러 자산명</value>
+  </data>
+  <data name="M9_ICMount_3" xml:space="preserve">
+    <value>패치패널 번호</value>
+  </data>
+  <data name="M9_ICMount_4" xml:space="preserve">
+    <value>패치패널명</value>
+  </data>
+  <data name="M9_ICMount_5" xml:space="preserve">
+    <value>패치패널 커넥터 번호</value>
+  </data>
+  <data name="M9_SWMountManagerTitle" xml:space="preserve">
+    <value>네트워크 스위치 구성 관리 (새시함체형 only)</value>
+  </data>
+  <data name="M9_SWMount_1" xml:space="preserve">
+    <value>네트워크 스위치 카드 목록</value>
+  </data>
+  <data name="M9_SWMount_2" xml:space="preserve">
+    <value>설정중인 네트워크 스위치</value>
+  </data>
+  <data name="M9_SWMount_3" xml:space="preserve">
+    <value>슬롯 번호</value>
+  </data>
+  <data name="M9_SWMount_4" xml:space="preserve">
+    <value>스위치카드명</value>
+  </data>
+  <data name="C_Brief" xml:space="preserve">
+    <value>요약</value>
+  </data>
+  <data name="C_Detail" xml:space="preserve">
+    <value>상세</value>
+  </data>
+  <data name="C_Summary" xml:space="preserve">
+    <value>종합</value>
+  </data>
+  <data name="M9_ICViewTitle" xml:space="preserve">
+    <value>지능형 컨트롤러 뷰</value>
+  </data>
+  <data name="M9_ICView_1" xml:space="preserve">
+    <value>패치패널 번호</value>
+  </data>
+  <data name="M9_ICView_2" xml:space="preserve">
+    <value>외형</value>
+  </data>
+  <data name="M9_ICView_3" xml:space="preserve">
+    <value>케이블 타입</value>
+  </data>
+  <data name="M9_ICView_4" xml:space="preserve">
+    <value>쉴드</value>
+  </data>
+  <data name="M9_ICView_5" xml:space="preserve">
+    <value>구성방법</value>
+  </data>
+  <data name="M9_ICView_6" xml:space="preserve">
+    <value>연결 상태</value>
+  </data>
+  <data name="C_IC_Name" xml:space="preserve">
+    <value>지능형 컨트롤러명</value>
+  </data>
+  <data name="C_PP_Name" xml:space="preserve">
+    <value>패치패널명</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewIC" xml:space="preserve">
+    <value>지능형 컨트롤러 뷰</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewPP" xml:space="preserve">
+    <value>지능형 패치패널 뷰</value>
+  </data>
+  <data name="M9_SWViewTitle" xml:space="preserve">
+    <value>네트워크 스위치 뷰</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewSW" xml:space="preserve">
+    <value>네트워크 스위치 뷰</value>
+  </data>
+  <data name="C_Host_Name" xml:space="preserve">
+    <value>호스트명</value>
+  </data>
+  <data name="C_IP_Address" xml:space="preserve">
+    <value>IP 주소</value>
+  </data>
+  <data name="C_MAC_Address" xml:space="preserve">
+    <value>MAC 주소</value>
+  </data>
+  <data name="C_Port_Trace" xml:space="preserve">
+    <value>Port Trace</value>
+  </data>
+  <data name="M9_PPView_1" xml:space="preserve">
+    <value>선택한 포트 정보</value>
+  </data>
+  <data name="M9_PPView_2" xml:space="preserve">
+    <value>위치 패스</value>
+  </data>
+  <data name="M9_PPView_3" xml:space="preserve">
+    <value>현재 포트</value>
+  </data>
+  <data name="M9_PPView_4" xml:space="preserve">
+    <value>연결된 단말 정보</value>
+  </data>
+  <data name="C_SW_Name" xml:space="preserve">
+    <value>네트워크 스위치명</value>
+  </data>
+  <data name="M9_SWView_1" xml:space="preserve">
+    <value>스위치 포트 On</value>
+  </data>
+  <data name="M9_SWView_2" xml:space="preserve">
+    <value>스위치 포트 Off</value>
+  </data>
+  <data name="M_Tree1_Menu_RoomRackLayout" xml:space="preserve">
+    <value>룸, 랙 레이아웃</value>
+  </data>
+  <data name="M_Tree1_Menu_MoveTree" xml:space="preserve">
+    <value>트리 항목 이동</value>
+  </data>
+  <data name="C_Floor_Name" xml:space="preserve">
+    <value>층 명</value>
+  </data>
+  <data name="M9_ExtAssignManagerTitle" xml:space="preserve">
+    <value>확장 속성 할당 관리</value>
+  </data>
+  <data name="M9_ExtAssign_1" xml:space="preserve">
+    <value>카탈로그 목록</value>
+  </data>
+  <data name="M9_ExtAssign_2" xml:space="preserve">
+    <value>확장속성 목록</value>
+  </data>
+  <data name="C_Catalog_Group1_Name" xml:space="preserve">
+    <value>대분류</value>
+  </data>
+  <data name="C_Catalog_Group2_Name" xml:space="preserve">
+    <value>소분류</value>
+  </data>
+  <data name="C_Select" xml:space="preserve">
+    <value>선택</value>
+  </data>
+  <data name="C_Error_Server" xml:space="preserve">
+    <value>에러: 데이터 저장 중 장애가 발생하였습니다.</value>
+  </data>
+  <data name="C_CEO" xml:space="preserve">
+    <value>대표이사</value>
+  </data>
+  <data name="C_Homepage" xml:space="preserve">
+    <value>홈페이지</value>
+  </data>
+  <data name="C_Manager" xml:space="preserve">
+    <value>관리자</value>
+  </data>
+  <data name="C_Post" xml:space="preserve">
+    <value>우편번호</value>
+  </data>
+  <data name="M_Tree1_Menu_AddFavorite" xml:space="preserve">
+    <value>즐겨찾기 추가</value>
+  </data>
+  <data name="M_Tree1_Menu_Clone" xml:space="preserve">
+    <value>붙이기(대량복제)</value>
+  </data>
+  <data name="C_DeleteAsset" xml:space="preserve">
+    <value>자산 삭제</value>
+  </data>
+  <data name="C_DeleteSpace" xml:space="preserve">
+    <value>공간 삭제</value>
+  </data>
+  <data name="C_InsertSpace" xml:space="preserve">
+    <value>공간 삽입</value>
+  </data>
+  <data name="C_ReportName" xml:space="preserve">
+    <value>리포트 명</value>
+  </data>
+  <data name="C_TempleateName" xml:space="preserve">
+    <value>템플릿 명</value>
+  </data>
+  <data name="C_Front" xml:space="preserve">
+    <value>전면부</value>
+  </data>
+  <data name="C_Rear" xml:space="preserve">
+    <value>후면부</value>
+  </data>
+  <data name="C_PortNo" xml:space="preserve">
+    <value>포트번호</value>
+  </data>
+  <data name="C_Region1" xml:space="preserve">
+    <value>국가</value>
+  </data>
+  <data name="C_Region2" xml:space="preserve">
+    <value>도시</value>
+  </data>
+  <data name="C_Copy" xml:space="preserve">
+    <value>복사</value>
+  </data>
+  <data name="C_Paste" xml:space="preserve">
+    <value>붙이기</value>
+  </data>
+  <data name="M5_Menu_AddCable" xml:space="preserve">
+    <value>케이블 연결</value>
+  </data>
+  <data name="C_Ctrl_Copy" xml:space="preserve">
+    <value>복사</value>
+  </data>
+  <data name="C_Ctrl_Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="C_Ctrl_Paste" xml:space="preserve">
+    <value>붙이기</value>
+  </data>
+  <data name="C_Asset_Part" xml:space="preserve">
+    <value>자산 항목 분류</value>
+  </data>
+  <data name="C_Ctrl_Turn" xml:space="preserve">
+    <value>좌우회전</value>
+  </data>
+  <data name="C_Cable_Type" xml:space="preserve">
+    <value>케이블 종류</value>
+  </data>
+  <data name="M9_CableSelectorTitle" xml:space="preserve">
+    <value>케이블 선택</value>
+  </data>
+  <data name="C_Cable_Color" xml:space="preserve">
+    <value>케이블 색상</value>
+  </data>
+  <data name="C_Cable_Catalog_Name" xml:space="preserve">
+    <value>케이블 카탈로그 명</value>
+  </data>
+  <data name="C_Cable_Disp_Name" xml:space="preserve">
+    <value>표시 명칭</value>
+  </data>
+  <data name="M9_Con_ID" xml:space="preserve">
+    <value>컨트롤러 ID</value>
+  </data>
+  <data name="C_Date" xml:space="preserve">
+    <value>일자</value>
+  </data>
+  <data name="C_Reserved" xml:space="preserve">
+    <value>예약</value>
+  </data>
+  <data name="C_Reserved_Date" xml:space="preserve">
+    <value>예약일</value>
+  </data>
+  <data name="C_Reserved_Time" xml:space="preserve">
+    <value>예약시간</value>
+  </data>
+  <data name="C_Start" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="C_Time" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="C_WorkOrder_Desc" xml:space="preserve">
+    <value>작업지시명</value>
+  </data>
+  <data name="M9_WorkOrder_NewTitle" xml:space="preserve">
+    <value>작업 지시</value>
+  </data>
+  <data name="C_WorkOrder" xml:space="preserve">
+    <value>작업지시</value>
+  </data>
+  <data name="C_Imediate" xml:space="preserve">
+    <value>즉시</value>
+  </data>
+  <data name="M_Tree1_Menu_ScanIC" xml:space="preserve">
+    <value>스캔 컨트롤러</value>
+  </data>
+  <data name="M5_Accept_Connection" xml:space="preserve">
+    <value>현재 상태 허용</value>
+  </data>
+  <data name="M5_Scan_Controller" xml:space="preserve">
+    <value>스캔 컨트롤러</value>
+  </data>
+  <data name="C_Location_Name" xml:space="preserve">
+    <value>위치</value>
+  </data>
+  <data name="M_Prop4_5_SNMP_Password" xml:space="preserve">
+    <value>SNMP 암호</value>
+  </data>
+  <data name="M_Prop4_5_SNMP_User" xml:space="preserve">
+    <value>SNMP 유저ID</value>
+  </data>
+  <data name="M_Prop3_2_IC_1" xml:space="preserve">
+    <value>최대 패치 패널 수</value>
+  </data>
+  <data name="M_Prop3_2_IC_2" xml:space="preserve">
+    <value>전원 이중화</value>
+  </data>
+  <data name="M_Prop3_2_PP_2" xml:space="preserve">
+    <value>구성 방식</value>
+  </data>
+  <data name="M_Prop3_2_PP_3" xml:space="preserve">
+    <value>케이블 타입</value>
+  </data>
+  <data name="M_Prop3_2_PP_4" xml:space="preserve">
+    <value>UTP 잭 타입</value>
+  </data>
+  <data name="M_Prop3_2_PP_5" xml:space="preserve">
+    <value>UTP 쉴드 타입</value>
+  </data>
+  <data name="M_Prop3_2_PP_6" xml:space="preserve">
+    <value>외형 타입</value>
+  </data>
+  <data name="M_Prop3_2_CA_1" xml:space="preserve">
+    <value>지능형 패치 코드</value>
+  </data>
+  <data name="M_Prop3_2_CA_10" xml:space="preserve">
+    <value>화면 표시 명칭</value>
+  </data>
+  <data name="M_Prop3_2_CA_2" xml:space="preserve">
+    <value>설치용도</value>
+  </data>
+  <data name="M_Prop3_2_CA_2_1" xml:space="preserve">
+    <value>고정</value>
+  </data>
+  <data name="M_Prop3_2_CA_2_2" xml:space="preserve">
+    <value>패치</value>
+  </data>
+  <data name="M_Prop3_2_CA_3" xml:space="preserve">
+    <value>용도</value>
+  </data>
+  <data name="M_Prop3_2_CA_3_1" xml:space="preserve">
+    <value>민간용</value>
+  </data>
+  <data name="M_Prop3_2_CA_3_2" xml:space="preserve">
+    <value>군용</value>
+  </data>
+  <data name="M_Prop3_2_CA_4" xml:space="preserve">
+    <value>케이블 타입</value>
+  </data>
+  <data name="M_Prop3_2_CA_5" xml:space="preserve">
+    <value>UTP 쉴드</value>
+  </data>
+  <data name="M_Prop3_2_CA_6" xml:space="preserve">
+    <value>UTP Category</value>
+  </data>
+  <data name="M_Prop3_2_CA_7" xml:space="preserve">
+    <value>광케이블 타입</value>
+  </data>
+  <data name="M_Prop3_2_CA_8" xml:space="preserve">
+    <value>광커넥터 타입</value>
+  </data>
+  <data name="M_Prop3_2_CA_9" xml:space="preserve">
+    <value>화면 표시</value>
+  </data>
+  <data name="M_Prop3_2_CP_1" xml:space="preserve">
+    <value>UTP 플러그(RJ-45) 연결 방향</value>
+  </data>
+  <data name="M_Prop3_2_CP_1_1" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="M_Prop3_2_CP_1_2" xml:space="preserve">
+    <value>한 방향</value>
+  </data>
+  <data name="M_Prop3_2_CP_1_3" xml:space="preserve">
+    <value>양 방향</value>
+  </data>
+  <data name="M_Prop3_2_ST_1" xml:space="preserve">
+    <value>최대 실장 디스크 수</value>
+  </data>
+  <data name="M_Prop3_2_SW_1" xml:space="preserve">
+    <value>최대 실장 슬롯 수</value>
+  </data>
+  <data name="M_Prop3_2_SW_2" xml:space="preserve">
+    <value>외형 형태</value>
+  </data>
+  <data name="M_Prop3_2_SW_2_1" xml:space="preserve">
+    <value>단일형</value>
+  </data>
+  <data name="M_Prop3_2_SW_2_2" xml:space="preserve">
+    <value>새시형</value>
+  </data>
+  <data name="M_Prop3_2_SW_2_3" xml:space="preserve">
+    <value>카드(모듈)형</value>
+  </data>
+  <data name="M_Prop3_2_SW_3" xml:space="preserve">
+    <value>SNMP oid 문자열</value>
+  </data>
+  <data name="M_Prop3_1_Rack_Mountable" xml:space="preserve">
+    <value>랙 마운트</value>
+  </data>
+  <data name="M_Prop3_1_Unit_Size" xml:space="preserve">
+    <value>유닛(U) 사이즈</value>
+  </data>
+  <data name="M_Prop3_2_PP_1" xml:space="preserve">
+    <value>지능형 패치 패널</value>
+  </data>
+  <data name="M_Prop4_2_ST_1" xml:space="preserve">
+    <value>현재 실장 디스크 수</value>
+  </data>
+  <data name="M_Prop4_2_ST_2" xml:space="preserve">
+    <value>현재 실장 용량(GB)</value>
+  </data>
+  <data name="M_Prop4_2_ST_3" xml:space="preserve">
+    <value>연결 형태</value>
+  </data>
+  <data name="M_Prop4_2_SV_1" xml:space="preserve">
+    <value>OS 종류(Win, Linux, etc)</value>
+  </data>
+  <data name="M_Prop4_2_SV_2" xml:space="preserve">
+    <value>OS 버전</value>
+  </data>
+  <data name="M_Prop4_2_SV_3" xml:space="preserve">
+    <value>Host 명</value>
+  </data>
+  <data name="M_Prop4_2_SV_4" xml:space="preserve">
+    <value>네트워크 카드 수</value>
+  </data>
+  <data name="M_Prop4_2_SV_5" xml:space="preserve">
+    <value>디스크 전체 용량(GB)</value>
+  </data>
+  <data name="M_Prop4_2_SV_6" xml:space="preserve">
+    <value>디스크 수</value>
+  </data>
+  <data name="M_Prop4_2_SW_1" xml:space="preserve">
+    <value>게이트웨이 IP</value>
+  </data>
+  <data name="M_Prop4_5_SNMP_Trap" xml:space="preserve">
+    <value>SNMP 트랩서버 IP 주소</value>
+  </data>
+  <data name="M_Prop4_1_Asset_Name" xml:space="preserve">
+    <value>자산명</value>
+  </data>
+  <data name="M_Prop3_1_Catalog_ID" xml:space="preserve">
+    <value>카탈로그 ID</value>
+  </data>
+  <data name="M_Prop1_1_Asset_Name" xml:space="preserve">
+    <value>자산명</value>
+  </data>
+  <data name="M9_Asset_SNMP4" xml:space="preserve">
+    <value>사용자ID (for SNMP v3)</value>
+  </data>
+  <data name="M9_Asset_SNMP5" xml:space="preserve">
+    <value>암호 (for SNMP v3)</value>
+  </data>
+  <data name="M9_Asset_SNMP6" xml:space="preserve">
+    <value>트랩서버 IP 주소</value>
+  </data>
+  <data name="M9_CloneManagerTitle" xml:space="preserve">
+    <value>항목 복제</value>
+  </data>
+  <data name="M9_Clone_Qty" xml:space="preserve">
+    <value>생성할 항목 수</value>
+  </data>
+  <data name="M9_Clone_Start1" xml:space="preserve">
+    <value>시작 번호 1</value>
+  </data>
+  <data name="M9_Clone_Step1" xml:space="preserve">
+    <value>증감</value>
+  </data>
+  <data name="C_No" xml:space="preserve">
+    <value>순번</value>
+  </data>
+  <data name="M9_CloneManager_1" xml:space="preserve">
+    <value>시뮬레이션</value>
+  </data>
+  <data name="M9_Clone_2" xml:space="preserve">
+    <value>복제할 항목</value>
+  </data>
+  <data name="M9_CloneManager_3" xml:space="preserve">
+    <value>중복 체크</value>
+  </data>
+  <data name="M9_Clone_4" xml:space="preserve">
+    <value>복제될 위치</value>
+  </data>
+  <data name="M_Connect" xml:space="preserve">
+    <value>서버 연결 상태</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewFloorIPM" xml:space="preserve">
+    <value>층별 환경모니터링 뷰</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewIPM" xml:space="preserve">
+    <value>환경모니터링 뷰</value>
+  </data>
+  <data name="M_Tree1_Menu_DeleteFavorite" xml:space="preserve">
+    <value>즐겨찾기에서 삭제</value>
+  </data>
+  <data name="M9_Clone_Start2" xml:space="preserve">
+    <value>시작 번호 2</value>
+  </data>
+  <data name="M9_Clone_Start3" xml:space="preserve">
+    <value>시작 번호 3</value>
+  </data>
+  <data name="M9_Clone_StartFloor" xml:space="preserve">
+    <value>시작 층 번호</value>
+  </data>
+  <data name="M9_Clone_Step2" xml:space="preserve">
+    <value>증감</value>
+  </data>
+  <data name="M9_Clone_Step3" xml:space="preserve">
+    <value>증감</value>
+  </data>
+  <data name="M9_Clone_StepFloor" xml:space="preserve">
+    <value>증감</value>
+  </data>
+  <data name="M9_Clone_Digit1" xml:space="preserve">
+    <value>숫자 자릿수</value>
+  </data>
+  <data name="M9_Clone_Digit2" xml:space="preserve">
+    <value>숫자 자릿수</value>
+  </data>
+  <data name="M9_Clone_Digit3" xml:space="preserve">
+    <value>숫자 자릿수</value>
+  </data>
+  <data name="M9_Clone_DigitFloor" xml:space="preserve">
+    <value>숫자 자릿수</value>
+  </data>
+  <data name="M9_Catalog_ca_2_3" xml:space="preserve">
+    <value>IC용패치코드</value>
+  </data>
+  <data name="M9_Catalog_ca_2_4" xml:space="preserve">
+    <value>XC용패치코드</value>
+  </data>
+  <data name="M_Prop3_2_CA_2_3" xml:space="preserve">
+    <value>IC용패치</value>
+  </data>
+  <data name="M_Prop3_2_CA_2_4" xml:space="preserve">
+    <value>XC용패치</value>
+  </data>
+  <data name="M_Tree1_Menu_Select" xml:space="preserve">
+    <value>선택</value>
+  </data>
+  <data name="C_Apply" xml:space="preserve">
+    <value>적용</value>
+  </data>
+  <data name="M9_ICFwManagerNew_Title" xml:space="preserve">
+    <value>신규 F/W 파일 선택</value>
+  </data>
+  <data name="M9_ICFwManager_File" xml:space="preserve">
+    <value>파일 선택</value>
+  </data>
+  <data name="M9_ICFwManager_FileName" xml:space="preserve">
+    <value>파일명 (40)</value>
+  </data>
+  <data name="M9_ICFwManager_FWName" xml:space="preserve">
+    <value>FW 명</value>
+  </data>
+  <data name="M9_ICFwManager_LastUpdate" xml:space="preserve">
+    <value>업로드일</value>
+  </data>
+  <data name="M9_ICFwManager_Number" xml:space="preserve">
+    <value>번호</value>
+  </data>
+  <data name="M9_ICFwManager_Title" xml:space="preserve">
+    <value>IC F/W 업그래이드 메니저</value>
+  </data>
+  <data name="M9_ICFwManager_Version" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="C_Number" xml:space="preserve">
+    <value>번호</value>
+  </data>
+  <data name="M9_AlarmEventManager_Desc" xml:space="preserve">
+    <value>이벤트 설명</value>
+  </data>
+  <data name="M9_AlarmEventManager_email" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="M9_AlarmEventManager_Id" xml:space="preserve">
+    <value>이벤트 번호</value>
+  </data>
+  <data name="M9_AlarmEventManager_Popup" xml:space="preserve">
+    <value>Popup</value>
+  </data>
+  <data name="M9_AlarmEventManager_SMS" xml:space="preserve">
+    <value>SMS</value>
+  </data>
+  <data name="M9_AlarmEventManager_Title" xml:space="preserve">
+    <value>알람 이벤트 설정</value>
+  </data>
+  <data name="M9_AlarmEventManager_Type" xml:space="preserve">
+    <value>구분</value>
+  </data>
+  <data name="M9_ICFwManagerApply_Title" xml:space="preserve">
+    <value>IC F/W 업그레이드 적용</value>
+  </data>
+  <data name="M9_Catalog_AssetList" xml:space="preserve">
+    <value>포함된 자산 목록</value>
+  </data>
+  <data name="M9_Catalog_AssetList2" xml:space="preserve">
+    <value>전체 사이트</value>
+  </data>
+  <data name="M9_Catalog_AssetList3" xml:space="preserve">
+    <value>현재 사이트</value>
+  </data>
+  <data name="M9_NetworkSchedulerTitle" xml:space="preserve">
+    <value>단말 검색 스케쥴 관리</value>
+  </data>
+  <data name="M9_Network_Addr" xml:space="preserve">
+    <value>네트워크 대역</value>
+  </data>
+  <data name="M9_Network_Name" xml:space="preserve">
+    <value>네트워크명</value>
+  </data>
+  <data name="M9_Network_Remarks" xml:space="preserve">
+    <value>비고</value>
+  </data>
+  <data name="M9_Network_Start_IP" xml:space="preserve">
+    <value>시작 IP 주소</value>
+  </data>
+  <data name="M9_Network_Stop_IP" xml:space="preserve">
+    <value>종료 IP 주소</value>
+  </data>
+  <data name="M9_Network_Subnet" xml:space="preserve">
+    <value>서브넷</value>
+  </data>
+  <data name="M9_Network_SwList" xml:space="preserve">
+    <value>검색할 스위치들</value>
+  </data>
+  <data name="M9_Network_Config" xml:space="preserve">
+    <value>네트워크 스케쥴 설정</value>
+  </data>
+  <data name="M9_Network_Day" xml:space="preserve">
+    <value>요일</value>
+  </data>
+  <data name="M9_Network_Day0" xml:space="preserve">
+    <value>일요일</value>
+  </data>
+  <data name="M9_Network_Day1" xml:space="preserve">
+    <value>월요일</value>
+  </data>
+  <data name="M9_Network_Day2" xml:space="preserve">
+    <value>화요일</value>
+  </data>
+  <data name="M9_Network_Day3" xml:space="preserve">
+    <value>수요일</value>
+  </data>
+  <data name="M9_Network_Day4" xml:space="preserve">
+    <value>목요일</value>
+  </data>
+  <data name="M9_Network_Day5" xml:space="preserve">
+    <value>금요일</value>
+  </data>
+  <data name="M9_Network_Day6" xml:space="preserve">
+    <value>토요일</value>
+  </data>
+  <data name="M9_Network_Everyday" xml:space="preserve">
+    <value>매일</value>
+  </data>
+  <data name="M9_Network_Pattern" xml:space="preserve">
+    <value>반복 패턴</value>
+  </data>
+  <data name="M9_Network_RepeatHour" xml:space="preserve">
+    <value>반복 시간(시간단위)</value>
+  </data>
+  <data name="M9_Network_StartTime" xml:space="preserve">
+    <value>시작 시간</value>
+  </data>
+  <data name="M9_Network_Disable" xml:space="preserve">
+    <value>사용안함</value>
+  </data>
+  <data name="C_SwitchName" xml:space="preserve">
+    <value>스위치명</value>
+  </data>
+  <data name="M9_SwitchSelectorTitle" xml:space="preserve">
+    <value>스위치 셀렉터</value>
+  </data>
+  <data name="C_IP_Addr" xml:space="preserve">
+    <value>IP주소</value>
+  </data>
+  <data name="C_LastActivated" xml:space="preserve">
+    <value>최근활성화된시간</value>
+  </data>
+  <data name="C_MAC_Addr" xml:space="preserve">
+    <value>MAC주소</value>
+  </data>
+  <data name="M9_TerminalViewTitle" xml:space="preserve">
+    <value>단말 검색뷰</value>
+  </data>
+  <data name="C_Search" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="C_ManualScan" xml:space="preserve">
+    <value>수동검색</value>
+  </data>
+  <data name="C_OutletName" xml:space="preserve">
+    <value>아울렛명</value>
+  </data>
+  <data name="M9_Catalog_sw_3" xml:space="preserve">
+    <value>모델타입</value>
+  </data>
+  <data name="M_Prop3_2_SW_4" xml:space="preserve">
+    <value>모델타입</value>
+  </data>
+  <data name="M_Prop4_2_SW_2" xml:space="preserve">
+    <value>VLAN</value>
+  </data>
+  <data name="M9_Asset_Switch2" xml:space="preserve">
+    <value>VLAN</value>
+  </data>
+  <data name="M9_Catalog_sw_4" xml:space="preserve">
+    <value>SNMP oid 문자열</value>
+  </data>
+  <data name="M9_Network_Gateway" xml:space="preserve">
+    <value>게이트웨이</value>
+  </data>
+  <data name="M9_Network_RepeatMinute" xml:space="preserve">
+    <value>반복시간 (분단위)</value>
+  </data>
+  <data name="C_Open" xml:space="preserve">
+    <value>열기</value>
+  </data>
+  <data name="C_Upload" xml:space="preserve">
+    <value>전송</value>
+  </data>
+  <data name="M9_DrawingEditer_Drawing" xml:space="preserve">
+    <value>벽 그리기</value>
+  </data>
+  <data name="M9_DrawingEditer_ImageImport" xml:space="preserve">
+    <value>평면도 이미지 가져오기</value>
+  </data>
+  <data name="M9_DrawingEditer_Select" xml:space="preserve">
+    <value>화면이동</value>
+  </data>
+  <data name="M9_DrawingNamming_Input" xml:space="preserve">
+    <value>도면 이름을 입력하세요</value>
+  </data>
+  <data name="M_Tree4" xml:space="preserve">
+    <value>미접속단말</value>
+  </data>
+  <data name="Menu_3dDrawingsManager" xml:space="preserve">
+    <value>3D 도면 등록 관리</value>
+  </data>
+  <data name="Menu_AlarmEventSetup" xml:space="preserve">
+    <value>알람 / 이벤트 설정</value>
+  </data>
+  <data name="Menu_AssetList" xml:space="preserve">
+    <value>자산 목록 조회/출력</value>
+  </data>
+  <data name="Menu_CatalogGroupManager" xml:space="preserve">
+    <value>카탈로그 그룹 등록 관리</value>
+  </data>
+  <data name="Menu_CatalogList" xml:space="preserve">
+    <value>카탈로그 목록 출력</value>
+  </data>
+  <data name="Menu_CatalogManager" xml:space="preserve">
+    <value>카탈로그 등록 관리</value>
+  </data>
+  <data name="Menu_ContactsList" xml:space="preserve">
+    <value>연락처 목록 출력</value>
+  </data>
+  <data name="Menu_EnvironmentSetting" xml:space="preserve">
+    <value>환경 정보(센서) 설정</value>
+  </data>
+  <data name="Menu_EtcViewOption" xml:space="preserve">
+    <value>3D도면 옵션 설정</value>
+  </data>
+  <data name="Menu_EventList" xml:space="preserve">
+    <value>알람/이벤트 목록 조회/출력</value>
+  </data>
+  <data name="Menu_ExportManager" xml:space="preserve">
+    <value>데이터 저장(Export to Excel)</value>
+  </data>
+  <data name="Menu_ExtendedPropertyManager" xml:space="preserve">
+    <value>확장 속성 등록 관리</value>
+  </data>
+  <data name="Menu_IcFwUpgrade" xml:space="preserve">
+    <value>컨트롤러 F/W 업그레이드</value>
+  </data>
+  <data name="Menu_ImageManager" xml:space="preserve">
+    <value>이미지 등록 관리</value>
+  </data>
+  <data name="Menu_ImportManager" xml:space="preserve">
+    <value>데이터 불러오기(Import from Excel)</value>
+  </data>
+  <data name="Menu_LineLinkList" xml:space="preserve">
+    <value>선번장 목록 조회/출력</value>
+  </data>
+  <data name="Menu_LinkDiagramChangeHistList" xml:space="preserve">
+    <value>링크 다이어그램 변경 내역 조회</value>
+  </data>
+  <data name="Menu_LocationList" xml:space="preserve">
+    <value>위치 목록 출력</value>
+  </data>
+  <data name="Menu_ManufactureList" xml:space="preserve">
+    <value>제조사 목록 출력</value>
+  </data>
+  <data name="Menu_ManufactureManager" xml:space="preserve">
+    <value>제조사 및 연락처 등록 관리</value>
+  </data>
+  <data name="Menu_NetworkScheduleManager" xml:space="preserve">
+    <value>네트워크 스케쥴 등록 관리</value>
+  </data>
+  <data name="Menu_PrintTemplate" xml:space="preserve">
+    <value>출력 템플릿 관리</value>
+  </data>
+  <data name="Menu_SiteUserManager" xml:space="preserve">
+    <value>사이트별 사용자 허가 등록 관리</value>
+  </data>
+  <data name="Menu_TerminalSearchView" xml:space="preserve">
+    <value>단말 검색 뷰</value>
+  </data>
+  <data name="Menu_UserManager" xml:space="preserve">
+    <value>사용자 등록 관리</value>
+  </data>
+  <data name="Menu_WorkOrderList" xml:space="preserve">
+    <value>작업지시 목록</value>
+  </data>
+  <data name="Menu_ExtAssignManager" xml:space="preserve">
+    <value>확장 속성 할당 관리</value>
+  </data>
+  <data name="Menu_EnvironmentList" xml:space="preserve">
+    <value>환경정보 조회/출력</value>
+  </data>
+  <data name="C_Door" xml:space="preserve">
+    <value>도어 (개)</value>
+  </data>
+  <data name="C_Humidity" xml:space="preserve">
+    <value>습도 (%)</value>
+  </data>
+  <data name="C_Power" xml:space="preserve">
+    <value>전력 (Kwh)</value>
+  </data>
+  <data name="C_Temperature" xml:space="preserve">
+    <value>온도 (ºC)</value>
+  </data>
+  <data name="C_SearchDate" xml:space="preserve">
+    <value>조회 기간</value>
+  </data>
+  <data name="M_Prop1_1_MAC" xml:space="preserve">
+    <value>MAC주소</value>
+  </data>
+  <data name="M_Prop1_1_NetBIOS_Name" xml:space="preserve">
+    <value>호스트(NetBIOS)명</value>
+  </data>
+  <data name="Menu_StatEnvironment1" xml:space="preserve">
+    <value>환경 센서 정보 통계 (월별)</value>
+  </data>
+  <data name="Menu_StatEnvironment2" xml:space="preserve">
+    <value>환경 센서 정보 통계 (일별)</value>
+  </data>
+  <data name="Menu_StatEnvironment3" xml:space="preserve">
+    <value>시간대별 환경 센서 추이 통계</value>
+  </data>
+  <data name="Menu_StatTerminal1" xml:space="preserve">
+    <value>접속 단말 건수 통계 (월별)</value>
+  </data>
+  <data name="Menu_StatTerminal2" xml:space="preserve">
+    <value>접속 단말 건수 통계 (일별)</value>
+  </data>
+  <data name="Menu_StatTerminal3" xml:space="preserve">
+    <value>시간대별 접속 단말 추이 통계</value>
+  </data>
+  <data name="C_SearchInfo" xml:space="preserve">
+    <value>입력된 내용으로 조건 검색을 수행합니다.</value>
+  </data>
+  <data name="C_TempleateDelete" xml:space="preserve">
+    <value>템플릿 삭제</value>
+  </data>
+  <data name="C_TempleateDisp" xml:space="preserve">
+    <value>출력정보</value>
+  </data>
+  <data name="C_TempleateInfo" xml:space="preserve">
+    <value>저장할 템플릿 명</value>
+  </data>
+  <data name="C_TempleateSave" xml:space="preserve">
+    <value>템플릿 저장</value>
+  </data>
+  <data name="C_TempleateSelect" xml:space="preserve">
+    <value>출력템플릿 선택</value>
+  </data>
+  <data name="C_Printer" xml:space="preserve">
+    <value>프린터</value>
+  </data>
+  <data name="EB_C_High" xml:space="preserve">
+    <value>전류 상한 설정</value>
+  </data>
+  <data name="EB_High" xml:space="preserve">
+    <value>~ 상한</value>
+  </data>
+  <data name="EB_HumiInfo" xml:space="preserve">
+    <value>습도의 한계설정치 수치는 최소 15% ~ 99% 입니다.</value>
+  </data>
+  <data name="EB_HumiLow" xml:space="preserve">
+    <value>습도 한계 설정 : 하한</value>
+  </data>
+  <data name="EB_HumiRangeSet" xml:space="preserve">
+    <value>습도 범위 설정 : 하한</value>
+  </data>
+  <data name="EB_Low" xml:space="preserve">
+    <value>하한</value>
+  </data>
+  <data name="EB_MapColorSetting" xml:space="preserve">
+    <value>도면 색상 표시 설정</value>
+  </data>
+  <data name="EB_PH_High" xml:space="preserve">
+    <value>전력량 상한 설정</value>
+  </data>
+  <data name="EB_PowerRangeSet" xml:space="preserve">
+    <value>전력 범위 설정 : 하한</value>
+  </data>
+  <data name="EB_PowerSensorSetting" xml:space="preserve">
+    <value>전력 센서 수치 설정 (상한 전용)</value>
+  </data>
+  <data name="EB_P_High" xml:space="preserve">
+    <value>전력 상한 설정</value>
+  </data>
+  <data name="EB_TempHumiSetting" xml:space="preserve">
+    <value>온도/습도 센서 수치 설정 (하한/상한)</value>
+  </data>
+  <data name="EB_TempLow" xml:space="preserve">
+    <value>온도 한계 설정 : 하한</value>
+  </data>
+  <data name="EB_TempRangeSet" xml:space="preserve">
+    <value>온도 범위 설정 : 하한</value>
+  </data>
+  <data name="EB_CloseDoor" xml:space="preserve">
+    <value>Close 도어수</value>
+  </data>
+  <data name="EB_DoorOpen" xml:space="preserve">
+    <value>도어 오픈</value>
+  </data>
+  <data name="EB_DoorTotal" xml:space="preserve">
+    <value>총 도어수</value>
+  </data>
+  <data name="EB_Energy" xml:space="preserve">
+    <value>전력 사용량</value>
+  </data>
+  <data name="EB_EnergyPeekToday" xml:space="preserve">
+    <value>금일 최대 전력</value>
+  </data>
+  <data name="EB_EnergyPeekYesterday" xml:space="preserve">
+    <value>전일 최대전력</value>
+  </data>
+  <data name="EB_HumidityCur" xml:space="preserve">
+    <value>현재 습도</value>
+  </data>
+  <data name="EB_TemperatureCur" xml:space="preserve">
+    <value>현재 온도</value>
+  </data>
+  <data name="EB_TodayPeek" xml:space="preserve">
+    <value>금일 최대</value>
+  </data>
+  <data name="C_SiteID" xml:space="preserve">
+    <value>사이트 ID</value>
+  </data>
+  <data name="C_SiteName" xml:space="preserve">
+    <value>사이트 명</value>
+  </data>
+  <data name="C_TempleateInfo2" xml:space="preserve">
+    <value>삭제할 템플릿 명</value>
+  </data>
+  <data name="C_Count" xml:space="preserve">
+    <value>건수</value>
+  </data>
+  <data name="C_Day" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="C_Hour" xml:space="preserve">
+    <value>시</value>
+  </data>
+  <data name="C_Month" xml:space="preserve">
+    <value>월</value>
+  </data>
+  <data name="C_Value" xml:space="preserve">
+    <value>건수</value>
+  </data>
+  <data name="C_SelectInfo" xml:space="preserve">
+    <value>선택 정보</value>
+  </data>
+  <data name="D_Stat1" xml:space="preserve">
+    <value>패치 포트 사용 현황 / 사용률(%)</value>
+  </data>
+  <data name="D_Stat10" xml:space="preserve">
+    <value>습도</value>
+  </data>
+  <data name="D_Stat11" xml:space="preserve">
+    <value>도어</value>
+  </data>
+  <data name="D_Stat12" xml:space="preserve">
+    <value>금일 환경 현황</value>
+  </data>
+  <data name="D_Stat13" xml:space="preserve">
+    <value>시간별 전력 현황</value>
+  </data>
+  <data name="D_Stat14" xml:space="preserve">
+    <value>시간별 온도 현황</value>
+  </data>
+  <data name="D_Stat15" xml:space="preserve">
+    <value>시간별 습도 현황 </value>
+  </data>
+  <data name="D_Stat16" xml:space="preserve">
+    <value>일별 터미널 접속 현황</value>
+  </data>
+  <data name="D_Stat2" xml:space="preserve">
+    <value>스위치 포트 사용 현황 / 사용률(%)</value>
+  </data>
+  <data name="D_Stat3" xml:space="preserve">
+    <value>랙 스페이스 사용 현황 / 사용률(%)</value>
+  </data>
+  <data name="D_Stat4" xml:space="preserve">
+    <value>터미널 접속 현황 / 접속률(%)</value>
+  </data>
+  <data name="D_Stat5" xml:space="preserve">
+    <value>시간대별 터미널 접속 현황(건수)</value>
+  </data>
+  <data name="D_Stat6" xml:space="preserve">
+    <value>시스템 현황(배선자재)</value>
+  </data>
+  <data name="D_Stat7" xml:space="preserve">
+    <value>금일 지능형 이벤트건수</value>
+  </data>
+  <data name="D_Stat8" xml:space="preserve">
+    <value>전력</value>
+  </data>
+  <data name="D_Stat9" xml:space="preserve">
+    <value>온도</value>
+  </data>
+  <data name="C_Long_Term_Terminals" xml:space="preserve">
+    <value>장기 미접속 단말 목록</value>
+  </data>
+  <data name="C_Error11" xml:space="preserve">
+    <value>사용중 입니다.</value>
+  </data>
+  <data name="C_Error12" xml:space="preserve">
+    <value>저장할 템플릿 이름이 없습니다.</value>
+  </data>
+  <data name="C_Error13" xml:space="preserve">
+    <value>삭제 하시겠습니까?</value>
+  </data>
+  <data name="C_Error14" xml:space="preserve">
+    <value>저장 하시겠습니까?</value>
+  </data>
+  <data name="C_Report1" xml:space="preserve">
+    <value>자산 목록서</value>
+  </data>
+  <data name="C_Report2" xml:space="preserve">
+    <value>카탈로그 목록서</value>
+  </data>
+  <data name="C_Report3" xml:space="preserve">
+    <value>환경정보 목록서</value>
+  </data>
+  <data name="C_Report4" xml:space="preserve">
+    <value>선번 목록서</value>
+  </data>
+  <data name="C_Report5" xml:space="preserve">
+    <value>위치 정보 목록서</value>
+  </data>
+  <data name="C_Report6" xml:space="preserve">
+    <value>제조사 목록서</value>
+  </data>
+  <data name="C_Report7" xml:space="preserve">
+    <value>출력물 목록서</value>
+  </data>
+  <data name="C_Report8" xml:space="preserve">
+    <value>연락처 목록서</value>
+  </data>
+  <data name="C_Report9" xml:space="preserve">
+    <value>알람 이벤트 목록서</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewLinkDiagram" xml:space="preserve">
+    <value>링크 다이어그램 뷰</value>
+  </data>
+  <data name="M9_LinkDiagramViewTitle" xml:space="preserve">
+    <value>링크 다이어그램 뷰</value>
+  </data>
+  <data name="M9_LinkDiagramView_1" xml:space="preserve">
+    <value>포트 수</value>
+  </data>
+  <data name="C_Intelligent_Port_Utilization" xml:space="preserve">
+    <value>지능형 패치 포트 사용률</value>
+  </data>
+  <data name="C_Intelligent_Type" xml:space="preserve">
+    <value>지능형 포트</value>
+  </data>
+  <data name="C_Normal_Port_Utilization" xml:space="preserve">
+    <value>일반 패치 포트 사용률</value>
+  </data>
+  <data name="C_Normal_Type" xml:space="preserve">
+    <value>일반 포트</value>
+  </data>
+  <data name="C_User_Port_Utilization" xml:space="preserve">
+    <value>사용자 패치 사용률</value>
+  </data>
+  <data name="D_Stat17" xml:space="preserve">
+    <value>월별 터미널 접속 현황</value>
+  </data>
+  <data name="C_Confirm" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="C_Delete_Item" xml:space="preserve">
+    <value>선택한 항목을 삭제하시겠습니까?</value>
+  </data>
+  <data name="C_Drawing" xml:space="preserve">
+    <value>도면</value>
+  </data>
+  <data name="C_Error_Catalog_1" xml:space="preserve">
+    <value>삭제하려고 하는 카탈로그는 자산에 이미 등록되어 사용하고 있습니다. 정말 삭제하시려면 먼저 자산항목 부터 삭제하여야 합니다.</value>
+  </data>
+  <data name="C_Error_Contacts_1" xml:space="preserve">
+    <value>연락처 정보를 먼저 삭제하여야 합니다.</value>
+  </data>
+  <data name="C_Error_Controller_ID" xml:space="preserve">
+    <value>컨트롤러 ID를 반드시 입력하여야 합니다.</value>
+  </data>
+  <data name="C_Error_Duplicated_Answer" xml:space="preserve">
+    <value>이미 사용된 답변입니다.</value>
+  </data>
+  <data name="C_Error_Duplicated_Asset" xml:space="preserve">
+    <value>이미 사용된 자산명(ID)입니다.</value>
+  </data>
+  <data name="C_Error_Duplicated_Catalog" xml:space="preserve">
+    <value>이미 사용된 카탈로그명입니다.</value>
+  </data>
+  <data name="C_Error_Duplicated_Company" xml:space="preserve">
+    <value>중복된 회사명은 사용할 수 없습니다.</value>
+  </data>
+  <data name="C_Error_Duplicated_Contacts" xml:space="preserve">
+    <value>중복된 연락처명은 사용할 수 없습니다.</value>
+  </data>
+  <data name="C_Error_Duplicated_Controller" xml:space="preserve">
+    <value>컨트롤러 ID가 중복 사용중입니다. 다른 ID를 사용해주세요</value>
+  </data>
+  <data name="C_Error_Duplicated_ExtProperty" xml:space="preserve">
+    <value>이미 사용된 확장속성명입니다.</value>
+  </data>
+  <data name="C_Error_Login" xml:space="preserve">
+    <value>로그인 ID 또는 패스워드가 잘못되었습니다.</value>
+  </data>
+  <data name="C_Error_Login_Count" xml:space="preserve">
+    <value>로그인 정보를 확인하시고 시스템을 사용하여 주십시오. (반복 실패1)</value>
+  </data>
+  <data name="C_Error_Password" xml:space="preserve">
+    <value>로그인 ID 또는 패스워드가 잘못되었습니다.</value>
+  </data>
+  <data name="C_Error_Password_Count" xml:space="preserve">
+    <value>로그인 정보를 확인하시고 시스템을 사용하여 주십시오. (반복 실패2)</value>
+  </data>
+  <data name="C_Error_Rack_Unit_Size" xml:space="preserve">
+    <value>랙마운트 장치는 랙유닛 크기를 1(U)이상 지정해야 합니다. (단 랙옆면에 부착하는 센서류 제외)</value>
+  </data>
+  <data name="C_Error_Reserved_Date" xml:space="preserve">
+    <value>예약일을 정확히 입력하여 주시기 바랍니다.</value>
+  </data>
+  <data name="C_Error_Server_Domain" xml:space="preserve">
+    <value>서버 도메인 또는 IP 주소를 입력하여 주십시오.</value>
+  </data>
+  <data name="C_Error_Switch_Card_1" xml:space="preserve">
+    <value>새시형 스위치에는 스위치 카드만 추가할 수 있습니다.</value>
+  </data>
+  <data name="C_Firmware_Upgrade" xml:space="preserve">
+    <value>펌웨어 업그레이드</value>
+  </data>
+  <data name="C_Work" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="M9_DrawingManager_1" xml:space="preserve">
+    <value>도면 리스트</value>
+  </data>
+  <data name="M9_ICFwUpgradeManager_Apply_1" xml:space="preserve">
+    <value>선택한 컨트롤러의 펌웨어를 업그레이드 하시겠습니까? (업그레이드는 수 분 소요됩니다.)</value>
+  </data>
+  <data name="M9_Manufacture_ID" xml:space="preserve">
+    <value>제조사 ID</value>
+  </data>
+  <data name="C_Error_AssetTree_1" xml:space="preserve">
+    <value>자산ID의 매칭이 실패하였습니다. 프로그램을 다시 동작시켜주십시오. 계속 문제가 있으면 해당 증상을 엔지니어에 의뢰하여 주시기 바랍니다.</value>
+  </data>
+  <data name="C_Error_Rack_Config_1" xml:space="preserve">
+    <value>랙 카탈로그 설정이 안된 랙에 자산을 추가할 수 없습니다. 먼저 랙 수정화면에서 랙 카탈로그 설정부터 해야합니다.."</value>
+  </data>
+  <data name="C_Error_Rack_Config_2" xml:space="preserve">
+    <value>환경센서(파워스트립)는 랙의 좌우측 각각 하나씩만 장착 가능합니다.</value>
+  </data>
+  <data name="C_Error_Rack_Config_3" xml:space="preserve">
+    <value>랙의 하단부 빈자리에 마운트할 수 있는 공간이 없습니다.  랙 공간을 정렬하여 주세요.</value>
+  </data>
+  <data name="C_Error_Rack_Config_4" xml:space="preserve">
+    <value>랙에는 마운트가 가능한 장치만 추가할 수 있습니다.</value>
+  </data>
+  <data name="C_Error_Rack_Config_5" xml:space="preserve">
+    <value>랙유닛크기가 0이어서 마운트할 수 없습니다</value>
+  </data>
+  <data name="C_Error_Rack_Config_6" xml:space="preserve">
+    <value>마운트 되어 있지 않은 항목을 자동으로 마운팅하였습니다.</value>
+  </data>
+  <data name="C_Error_Save_Excel" xml:space="preserve">
+    <value>엑셀 화일 저장 중 에러가 발생했습니다.</value>
+  </data>
+  <data name="C_Error_Save_Excel1" xml:space="preserve">
+    <value>엑셀 화일을 읽어 도중 에러가 발생했습니다.</value>
+  </data>
+  <data name="C_Error_Scan_Failed" xml:space="preserve">
+    <value>서버와 연결이 안되어 컨트롤러 스캐닝이 실패하였습니다.</value>
+  </data>
+  <data name="C_Error_Site" xml:space="preserve">
+    <value>사이트에 접근할 수 없습니다.</value>
+  </data>
+  <data name="C_Info" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="C_Scan_Controller" xml:space="preserve">
+    <value>스캔 컨트롤러</value>
+  </data>
+  <data name="M9_Import_Data_1" xml:space="preserve">
+    <value>현재 사이트의 모든 자산을 삭제하고 엑셀로부터 데이터를 읽어오시겠습니까?</value>
+  </data>
+  <data name="M9_Import_Data_2" xml:space="preserve">
+    <value>자산 및 배선 데이터 불러오기(Import from Excel)</value>
+  </data>
+  <data name="M_Scan_IC_And_Save" xml:space="preserve">
+    <value>컨트롤러에 연결되어 있는 패치 패널들을 모두 스캐닝하여 DB에 저장하시겠습니까?</value>
+  </data>
+  <data name="C_Error_Import_Data_10" xml:space="preserve">
+    <value>location 테이블에서 랙을 검색할 수 없습니다. 셀=E{0}, 랙명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_11" xml:space="preserve">
+    <value>location 테이블에서 룸을 검색할 수 없습니다. 셀=D{0}, 룸명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_12" xml:space="preserve">
+    <value>카탈로그명을 검색할 수 없습니다. 셀=I{0}, 카탈로그명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_13" xml:space="preserve">
+    <value>랙 슬롯 범위(최대:{0}U)를 벗어났습니다. 셀=H{1}, 랙슬롯번호={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_14" xml:space="preserve">
+    <value>컨트롤러ID가 범위(1~999)를 벗어났습니다. 셀=M{0}, 컨트롤러ID={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_15" xml:space="preserve">
+    <value>두 개 이상의 컨트롤러ID가 엑셀내에서 컨트롤러 번호를 중복 사용하고 있습니다. 셀=M{0}, 컨트롤러ID={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_16" xml:space="preserve">
+    <value>다른 사이트에서 이미 사용하고 있는 컨트롤러ID입니다. 다른 컨트롤러ID를 사용하십시오. 셀=M{0}, 컨트롤러ID={1}, 중복사용중인사이트명={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_17" xml:space="preserve">
+    <value>같은 컨트롤러ID를 사용하는 패치패널이 패치패널번호를 중복 사용하고 있습니다. 셀=N{0}, 컨트롤러ID={1}, 패치패널번호={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_18" xml:space="preserve">
+    <value>패치패널이 연결된 컨트롤러ID를 사용하는 컨트롤러 자산을 찾을 수 없습니다. 셀=N{0}, 컨트롤러ID={1}, 패치패널번호={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_19" xml:space="preserve">
+    <value>랙에 마운트할 수 없는 자산입니다. 셀=F{0}, 자산명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_20" xml:space="preserve">
+    <value>자산명을 검색할 수 없습니다. 셀=C{0}, 자산명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_21" xml:space="preserve">
+    <value>포트 범위(1~{0})를 벗어났습니다. 셀=D{1}, 포트번호={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_22" xml:space="preserve">
+    <value>전면 포트와 연결될 자산명을 검색할 수 없습니다. 셀=D{0}, 자산명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_23" xml:space="preserve">
+    <value>포트 범위(1~{0})를 벗어났습니다. 셀=E{1}, 포트번호={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_24" xml:space="preserve">
+    <value>전면 포트와 연결될 케이블카탈로그명을 검색할 수 없습니다. 셀=F{0}, 케이블카탈로그명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_25" xml:space="preserve">
+    <value>전(F)/후(R) 포트 구분이 잘못되었습니다. 셀=G{0}, 앞/뒤구분={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_26" xml:space="preserve">
+    <value>후면 포트와 연결될 자산명을 검색할 수 없습니다. 셀=H{0}, 자산명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_27" xml:space="preserve">
+    <value>포트 범위(1~{0})를 벗어났습니다. 셀=I{1}, 포트번호={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_28" xml:space="preserve">
+    <value>후면 포트와 연결될 케이블카탈로그명을 검색할 수 없습니다. 셀=J{0}, 케이블카탈로그명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_29" xml:space="preserve">
+    <value>전(F)/후(R) 포트 구분이 잘못되었습니다. 셀=K{0}, 앞/뒤구분={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_3" xml:space="preserve">
+    <value>해당 사이트명과 다른 화일입니다.</value>
+  </data>
+  <data name="C_Error_Import_Data_30" xml:space="preserve">
+    <value>연결정보 테이블에서 자산 정보를 찾을 수 없습니다. 셀=C{0}, 자산명={1}, 포트={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_31" xml:space="preserve">
+    <value>패치 패널과 연결된 컨트롤러ID를 찾을 수 없습니다. 셀=C{0}, 자산명={1}, 컨트롤러ID={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_32" xml:space="preserve">
+    <value>컨트롤러 구성정보를 찾을 수 없습니다. 셀=C{0}, 자산명={1}, 컨트롤러ID={2}, 패치패널번호={3}</value>
+  </data>
+  <data name="C_Error_Import_Data_33" xml:space="preserve">
+    <value>새시형 스위치 구성정보를 찾을 수 없습니다. 셀=C{0}, 자산명={1}, 스위치ID={2}, 스위치슬롯번호={3}</value>
+  </data>
+  <data name="C_Error_Import_Data_34" xml:space="preserve">
+    <value>사용자포트 레이아웃정보를 찾을 수 없습니다. 셀=C{0}, 자산명={1}, 포트={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_35" xml:space="preserve">
+    <value>서버에 저장중에 장애가 발생하였습니다. 자산ID={0}, 포트={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_4" xml:space="preserve">
+    <value>자산 데이터가 없습니다</value>
+  </data>
+  <data name="C_Error_Import_Data_5" xml:space="preserve">
+    <value>자산이 중복되었습니다. 셀=F{0}, 자산명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_6" xml:space="preserve">
+    <value>빌딩명을 검색할 수 없습니다. 셀=B{0}, 빌딩명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_7" xml:space="preserve">
+    <value>층명을 검색할 수 없습니다. 셀=C{0}, 층명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_8" xml:space="preserve">
+    <value>룸명을 검색할 수 없습니다. 셀=D{0}, 룸명={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_9" xml:space="preserve">
+    <value>랙명을 검색할 수 없습니다. 셀=E{0}, 랙명={1}</value>
+  </data>
+  <data name="C_Contacts" xml:space="preserve">
+    <value>연락처</value>
+  </data>
+  <data name="P5_Drop_1" xml:space="preserve">
+    <value>좌측 트리메뉴에서 사용하실 패치 패널을 상단에 끌어다 놓으세요.</value>
+  </data>
+  <data name="P5_List_1" xml:space="preserve">
+    <value>패치 패널 목록</value>
+  </data>
+  <data name="P5_Save_1" xml:space="preserve">
+    <value>패치 코드 연결 구간도 DB에 저장하시겠습니까?</value>
+  </data>
+  <data name="P5_Save_2" xml:space="preserve">
+    <value>패치 연결 구간 저장</value>
+  </data>
+  <data name="C_Duplicated_Catalog_Group" xml:space="preserve">
+    <value>이미 사용된 카탈로그 그룹명입니다.</value>
+  </data>
+  <data name="C_Error_Cant_Delete" xml:space="preserve">
+    <value>삭제할 수 없는 항목입니다.</value>
+  </data>
+  <data name="C_Error_Catalog_Group_1" xml:space="preserve">
+    <value>사용중이므로 삭제할 수 없습니다.</value>
+  </data>
+  <data name="C_Port" xml:space="preserve">
+    <value>포트</value>
+  </data>
+  <data name="C_Error_Server_Domain_2" xml:space="preserve">
+    <value>서버로 연결이 되지 않았습니다. 네트웍 연결 상태 및 설정된 서버 도메인명 또는 IP를 확인하시기 바랍니다.</value>
+  </data>
+  <data name="M_Prop2_Location_ID" xml:space="preserve">
+    <value>위치 ID</value>
+  </data>
+  <data name="C_Kwh" xml:space="preserve">
+    <value>kW</value>
+  </data>
+  <data name="C_Percentage1" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="C_Temperature1" xml:space="preserve">
+    <value>ºC</value>
+  </data>
+  <data name="M9_PPViewTitle" xml:space="preserve">
+    <value>패치 패널 뷰</value>
+  </data>
+  <data name="M1_SiteMgrWindow_SiteModifyed" xml:space="preserve">
+    <value>사이트 정보가 변경 되었습니다.</value>
+  </data>
+  <data name="M1_SiteMgrWindow_SiteRegisted" xml:space="preserve">
+    <value>새로운 사이트가 등록 되었습니다.</value>
+  </data>
+  <data name="M9_UserManager_Password2" xml:space="preserve">
+    <value>패스워드 (확인용)</value>
+  </data>
+  <data name="C_Error_Password_1" xml:space="preserve">
+    <value>로그인 ID 또는 패스워드가 잘못되었습니다.</value>
+  </data>
+  <data name="C_Error_Not_Deletable" xml:space="preserve">
+    <value>삭제가 금지된 항목이라 삭제할 수 없습니다.</value>
+  </data>
+  <data name="C_Editable" xml:space="preserve">
+    <value>수정</value>
+  </data>
+  <data name="M9_Drawing_Namming" xml:space="preserve">
+    <value>도면명 입력</value>
+  </data>
+  <data name="M9_Drawing_Manager_Title" xml:space="preserve">
+    <value>도면 관리자</value>
+  </data>
+  <data name="M9_Drawing_Editor" xml:space="preserve">
+    <value>3D 도면 편집</value>
+  </data>
+  <data name="C_LogOutConfirm" xml:space="preserve">
+    <value>로그아웃 하시겠습니까?</value>
+  </data>
+  <data name="C_Error_Asset_1" xml:space="preserve">
+    <value>링크가 연결되어 있습니다. 먼저 링크 다이어그램에서 연결된 링크를 지워주시기 바랍니다.</value>
+  </data>
+  <data name="C_Error_Asset_2" xml:space="preserve">
+    <value>배선 관리에서 먼저 해당 자산을 닫은 후 삭제하시기 바랍니다.</value>
+  </data>
+  <data name="C_Error_Asset_3" xml:space="preserve">
+    <value>이미 배선 관리에서 사용중입니다. 배선 관리에서 먼저 해당 자산을 닫은 후 편집하시기 바랍니다.</value>
+  </data>
+  <data name="M9_Asset_Switch3" xml:space="preserve">
+    <value>컨트롤러 LCD에 출력할 명칭</value>
+  </data>
+  <data name="C_Error_Asset_4" xml:space="preserve">
+    <value>스케쥴러에 등록된 스위치는 삭제할 수 없습니다. 삭제하려면 네트워크 스케줄러에서 먼저 선택을 해지하세요.</value>
+  </data>
+  <data name="C_Error_Rack_Mount" xml:space="preserve">
+    <value>랙마운트가 체크가 안되어 있습니다.</value>
+  </data>
+  <data name="C_Error_Rack_Mount_2" xml:space="preserve">
+    <value>스위치 카드는 랙마운트 옵션을 체크하지 마세요.</value>
+  </data>
+  <data name="C_Error_Ports_Be_0" xml:space="preserve">
+    <value>샤시형 스위치는 포트 수가 0이어야 합니다.</value>
+  </data>
+  <data name="C_Error_Needs_Slots" xml:space="preserve">
+    <value>스위치 슬롯수가 1개 이상이어야 합니다.</value>
+  </data>
+  <data name="C_Error_Switch_Figure_Type" xml:space="preserve">
+    <value>스위치 외형 옵션을 선택하세요.</value>
+  </data>
+  <data name="C_Error_Ports_Not_Be_0" xml:space="preserve">
+    <value>포트 수가 0 이상이어야 합니다.</value>
+  </data>
+  <data name="C_Error_Empty_Catalog_Name" xml:space="preserve">
+    <value>카탈로그 이름을 입력하십시오.</value>
+  </data>
+  <data name="C_Completed_Export_Excel" xml:space="preserve">
+    <value>엑셀 화일로 저장이 완료되었습니다. </value>
+  </data>
+  <data name="C_Completed_Import_Excel1" xml:space="preserve">
+    <value>엑셀 화일로부터 데이터 로딩이 완료되었습니다. </value>
+  </data>
+  <data name="C_Error_Empty_Switch_Slot" xml:space="preserve">
+    <value>장착할 스위치 슬롯이 부족합니다.</value>
+  </data>
+  <data name="C_Error_Progressing_Auto_Scan" xml:space="preserve">
+    <value>서버에서 취소 되었습니다.</value>
+  </data>
+  <data name="C_Error_WorkOrder_Alarm" xml:space="preserve">
+    <value>작업 지시 전에 알람을 먼저 해지하셔야 합니다.</value>
+  </data>
+  <data name="Menu_ScanAll_IC" xml:space="preserve">
+    <value>전체 컨트롤러 스캔</value>
+  </data>
+  <data name="EB_TempInfo" xml:space="preserve">
+    <value>온도의 한계설정치 수치는 최소 18ºC ~ 32ºC 입니다.</value>
+  </data>
+  <data name="C_SearchDateYMD" xml:space="preserve">
+    <value>조회 기간 (년/월/일)</value>
+  </data>
+  <data name="C_Search1" xml:space="preserve">
+    <value>찾기</value>
+  </data>
+  <data name="Menu_MailSMS" xml:space="preserve">
+    <value>메일서버/SMS 서버 설정</value>
+  </data>
+  <data name="M9_Import_Data_3" xml:space="preserve">
+    <value>사이트 정보가 다릅니다.</value>
+  </data>
+  <data name="C_None" xml:space="preserve">
+    <value>해당없음</value>
+  </data>
+  <data name="Menu_GrantManager" xml:space="preserve">
+    <value>인가/비인가 관리</value>
+  </data>
+  <data name="C_Grant" xml:space="preserve">
+    <value>허가</value>
+  </data>
+  <data name="M9_TerminalGrantTitle" xml:space="preserve">
+    <value>인가/비인가 관리</value>
+  </data>
+  <data name="C_Grant_Ask" xml:space="preserve">
+    <value>해당 네트웍 장치의 허가 상태를 변경하시겠습니까?</value>
+  </data>
+  <data name="D_Stat18" xml:space="preserve">
+    <value>시스템 가동률(%)</value>
+  </data>
+  <data name="M_Tree1_Menu_SetIPM" xml:space="preserve">
+    <value>환경모니터링 개별 설정</value>
+  </data>
+  <data name="Menu_LogdbList" xml:space="preserve">
+    <value>로그 목록 조회/출력</value>
+  </data>
+  <data name="C_Report10" xml:space="preserve">
+    <value>로그 목록서</value>
+  </data>
+  <data name="C_Grant_Information" xml:space="preserve">
+    <value>알수 없는 사용자는 확인후 허가 바랍니다.</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewForm" xml:space="preserve">
+    <value>포트시험정보</value>
+  </data>
+  <data name="C_Report11" xml:space="preserve">
+    <value>작업지시 목록서</value>
+  </data>
+  <data name="C_Network_Info" xml:space="preserve">
+    <value>네트웍 부하를 유발할 수 있으며, 심한경우에는 망에 장애가 발생 될수 있습니다. </value>
+  </data>
+  <data name="C_CancelQ" xml:space="preserve">
+    <value>취소 하시겠습니까?</value>
+  </data>
+  <data name="C_Work_Cancel" xml:space="preserve">
+    <value>작업취소</value>
+  </data>
+  <data name="C_Error_Info1" xml:space="preserve">
+    <value>로그인 ID, 패스워드 생성규칙을 확인바랍니다.</value>
+  </data>
+  <data name="C_Error_Info2" xml:space="preserve">
+    <value>특수문자는 사용할 수 없습니다.</value>
+  </data>
+  <data name="C_Name1" xml:space="preserve">
+    <value>대상</value>
+  </data>
+  <data name="C_Error_6" xml:space="preserve">
+    <value>최소 단위는 삭제할 수 없습니다.</value>
+  </data>
+  <data name="C_Char_1" xml:space="preserve">
+    <value>(영문, 영문/숫자 조합:5~10)</value>
+  </data>
+  <data name="C_Char_2" xml:space="preserve">
+    <value>(영대문자/영소문자/숫자 조합:10~16)</value>
+  </data>
+  <data name="C_Char_3" xml:space="preserve">
+    <value>(예:Abcde12345)</value>
+  </data>
+  <data name="C_Pass_1" xml:space="preserve">
+    <value>비밀번호 변경 : 처음실행이거나 비밀번호 유효기간 180일 경과시 변경</value>
+  </data>
+  <data name="C_Pass_2" xml:space="preserve">
+    <value>비밀번호 변경후 시스템 사용이 가능하며, 비밀번호 변경시 이전 비밀번호와 동일한 비밀 번호를 사용할 수 없습니다.</value>
+  </data>
+  <data name="C_Pass_3" xml:space="preserve">
+    <value>로그인 정보 변경</value>
+  </data>
+  <data name="C_Info21" xml:space="preserve">
+    <value>주의 !! : 사이트 개설은 시스템의 증설과 관련되어 있으며, 반드시 당사의 기술지원을 받으셔야 사용 가능 합니다. 임의 사용은 시스템에 제약이 있음을 알려 드립니다. </value>
+  </data>
+  <data name="C_Info20" xml:space="preserve">
+    <value>주의 !! : 사용자의 로그인 ID와 패스워드는 생성시 제약이 있으므로 확인하시어 작성 하시기 바랍니다.</value>
+  </data>
+  <data name="C_Info22" xml:space="preserve">
+    <value>주의 !! : 확장 속성 할당은 카탈로그에 없는 특별한 정보를 확인하고자 할 경우 사용하는 옵션 기능 입니다. 카탈로그 특별 항목으로 한번 생성이 되면 지워지지 않으며, 삭제를 원할 경우 확장 속성 할당 제거후 확장속성을 제거하면 삭제 됩니다.</value>
+  </data>
+  <data name="C_Info23" xml:space="preserve">
+    <value>주의 !! : 이메일과 SMS 알림 기능은 고객사에서 사용하는 서비스를 연동하거나 유료 서비스가 필요한 기능입니다. 만일 이메일 알림과 SMS 문자 서비스를 받고자 할 경우 당사의 기술 지원을 받으시기 바랍니다. (본 기능은 시스템 구축시 협의하여 서비스되는 기능입니다.)</value>
+  </data>
+  <data name="C_Info24" xml:space="preserve">
+    <value>주의 !! : 본 기능은 시스템의 업그레이드를 위한 기능으로, 업그레이드시 전원이 나갈경우 복구가 안될 수 있으므로 반드시 당사와 협의후 진행 바랍니다.</value>
+  </data>
+  <data name="C_Info25" xml:space="preserve">
+    <value>서버에 저장되었습니다. </value>
+  </data>
+  <data name="C_Info26" xml:space="preserve">
+    <value>3D 도면 이미지</value>
+  </data>
+  <data name="C_Info27" xml:space="preserve">
+    <value>2D 도면 이미지</value>
+  </data>
+  <data name="C_Info28" xml:space="preserve">
+    <value>3D 도면 옵션 설정</value>
+  </data>
+  <data name="C_Info29" xml:space="preserve">
+    <value>사용중이므로 종료 합니다.</value>
+  </data>
+  <data name="C_Info30" xml:space="preserve">
+    <value>관리자는 처음실행시 정보를 변경하여야 합니다.</value>
+  </data>
+  <data name="C_Info31" xml:space="preserve">
+    <value>(예:02X-123X-1234)</value>
+  </data>
+  <data name="C_Info32" xml:space="preserve">
+    <value>(예:010-123X-1234)</value>
+  </data>
+  <data name="C_Info33" xml:space="preserve">
+    <value>(예:id@domain.com)</value>
+  </data>
+  <data name="C_Info34" xml:space="preserve">
+    <value>(예:192.168.1.1)</value>
+  </data>
+  <data name="C_Info35" xml:space="preserve">
+    <value>(예:192.168.1.254)</value>
+  </data>
+  <data name="C_Info36" xml:space="preserve">
+    <value>(예:255.255.255.0)</value>
+  </data>
+  <data name="C_Info37" xml:space="preserve">
+    <value>전화번호 형식이 맞지 않습니다.</value>
+  </data>
+  <data name="C_Info38" xml:space="preserve">
+    <value>이메일 형식이 맞지 않습니다.</value>
+  </data>
+  <data name="C_Info39" xml:space="preserve">
+    <value>IP Address 형식이 맞지 않습니다.</value>
+  </data>
+  <data name="C_Info40" xml:space="preserve">
+    <value>패스워드가 일치하지 않습니다. 패스워드 확인까지 똑 같이 입력하여 주십시요.</value>
+  </data>
+  <data name="C_Info41" xml:space="preserve">
+    <value>예제 패스워드입니다.</value>
+  </data>
+  <data name="C_Info42" xml:space="preserve">
+    <value>이전 로그인 ID는 사용할 수 없습니다.</value>
+  </data>
+  <data name="C_Info43" xml:space="preserve">
+    <value>이전 패스워드는 사용할 수 없습니다.</value>
+  </data>
+  <data name="C_Info44" xml:space="preserve">
+    <value>작업자</value>
+  </data>
+  <data name="C_Info45" xml:space="preserve">
+    <value>패스워드 생성규칙을 확인바랍니다.</value>
+  </data>
+  <data name="C_Info46" xml:space="preserve">
+    <value>SMS 수신</value>
+  </data>
+  <data name="C_Info47" xml:space="preserve">
+    <value>이메일 수신</value>
+  </data>
+  <data name="C_Info48" xml:space="preserve">
+    <value>최대 사용자를 초과하였습니다.</value>
+  </data>
+  <data name="C_Info49" xml:space="preserve">
+    <value>답변은 최대3개까지만 등록 가능합니다.</value>
+  </data>
+  <data name="C_Info50" xml:space="preserve">
+    <value>사용중인 로그인 ID 입니다.</value>
+  </data>
+  <data name="C_Info51" xml:space="preserve">
+    <value>이미지 이름이 없습니다.</value>
+  </data>
+  <data name="C_Info52" xml:space="preserve">
+    <value>그룹을 선택하여 주세요.</value>
+  </data>
+  <data name="C_Info53" xml:space="preserve">
+    <value>동일한 층명이 존재합니다. 다른 이름을 사용하세요</value>
+  </data>
+  <data name="C_Info54" xml:space="preserve">
+    <value>랙 슬롯 범위를 벗어났습니다.</value>
+  </data>
+  <data name="C_Info55" xml:space="preserve">
+    <value>컨트롤러ID가 범위(1~999)를 벗어났습니다. </value>
+  </data>
+  <data name="C_Info56" xml:space="preserve">
+    <value>예약</value>
+  </data>
+  <data name="C_Info57" xml:space="preserve">
+    <value>예약</value>
+  </data>
+  <data name="C_Info58" xml:space="preserve">
+    <value>예약</value>
+  </data>
+  <data name="C_Info59" xml:space="preserve">
+    <value>예약</value>
+  </data>
+  <data name="C_Info60" xml:space="preserve">
+    <value>예약</value>
+  </data>
+  <data name="M_Tree1_Menu_ConfigIE" xml:space="preserve">
+    <value>환경 모니터링 구성 등록 관리</value>
+  </data>
+  <data name="D_Stat21" xml:space="preserve">
+    <value>전압</value>
+  </data>
+  <data name="D_Stat22" xml:space="preserve">
+    <value>전류</value>
+  </data>
+  <data name="D_Stat23" xml:space="preserve">
+    <value>화재</value>
+  </data>
+  <data name="D_Stat24" xml:space="preserve">
+    <value>역률</value>
+  </data>
+  <data name="D_Stat25" xml:space="preserve">
+    <value>전력량</value>
+  </data>
+  <data name="D_Stat26" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat27" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat28" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat29" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat30" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat31" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat32" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat33" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat34" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat35" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat36" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat37" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat38" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat39" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat40" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat41" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat42" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat43" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat44" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat45" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat46" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat47" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat48" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat49" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+</root>

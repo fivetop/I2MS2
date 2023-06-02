@@ -1,0 +1,20 @@
+﻿<grammar version="1.0" sapi:alphabet="x-microsoft-ups" xml:lang="ko-KR" root="Command"
+         tag-format="semantics-ms/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:sapi="http://schemas.microsoft.com/Speech/2002/06/SRGSExtensions">
+  <rule id="Command" scope="public">
+    <one-of>
+      <item>미니야</item>
+      <item>안녕</item>
+      <item>종료</item>
+      <item>계산기</item>
+      <item>메모장</item>
+      <item>콘솔</item>
+      <item>그림판</item>
+      <item>계산기 닫기</item>
+      <item>자산뷰</item>
+      <item>대시보드</item>
+      <item>층별뷰</item>
+      <item>배선뷰</item>
+    </one-of>
+  </rule>
+</grammar>

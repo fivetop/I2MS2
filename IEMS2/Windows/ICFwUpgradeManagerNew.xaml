@@ -1,0 +1,49 @@
+﻿<Window x:Class="I2MS2.Windows.ICFwUpgradeManagerNew"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR"
+        xmlns:iw="clr-namespace:I2MS2.Windows" 
+        xmlns:uc="clr-namespace:I2MS2.UserControls"     
+        Title="{x:Static prop:Resources.M9_ICFwManagerNew_Title}" 
+        Height="300" Width="330"
+        WindowStartupLocation="CenterOwner"
+        Name="_window"
+        >
+    <Window.Style>
+        <StaticResource ResourceKey="I2MS_SubWindowStyle"/>
+    </Window.Style>
+    <Window.CommandBindings>
+        <CommandBinding x:Name="_cmdSave" Command="{x:Static iw:ICFwUpgradeManagerNew.SaveCommand}" CanExecute="_cmdSave_CanExecute" Executed="_cmdSave_Executed" />
+    </Window.CommandBindings>
+    <Grid>
+        <StackPanel Margin="5" >
+            <WrapPanel Margin="5,5,0,0">
+                <TextBlock Text="{x:Static prop:Resources.M9_ICFwManager_FWName}" Style="{StaticResource I2MS_TextBlockStyle}" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="_txbFwName" Style="{StaticResource I2MS_TextBoxStyle}" Width="200" TextChanged="_txbFwName_TextChanged" MaxLength="40"  uc:TextHelper.IsAlphaNumeric="True" InputMethod.IsInputMethodEnabled="False"/>
+            </WrapPanel>
+            <WrapPanel Margin="5,5,0,0">
+                <TextBlock Text="{x:Static prop:Resources.M9_ICFwManager_Version}" Style="{StaticResource I2MS_TextBlockStyle}" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="_txbFwVersion" Style="{StaticResource I2MS_TextBoxStyle}" Width="200" MaxLength="10"  uc:TextHelper.IsAlphaNumeric="True"  InputMethod.IsInputMethodEnabled="False"/>
+            </WrapPanel>
+            <!--<WrapPanel Margin="5,5,0,0">
+                <TextBlock Text="{x:Static prop:Resources.M9_ICFwManager_LastUpdate}" Style="{StaticResource I2MS_TextBlockStyle}" Width="100" VerticalAlignment="Center"/>
+                <DatePicker Name="_dpFwLastUpdate" SelectedDate="{Binding Mode=TwoWay, Path=install_date, UpdateSourceTrigger=PropertyChanged}" Width="200" SelectedDateChanged="_dpFwLastUpdate_SelectedDateChanged"/>
+            </WrapPanel>-->
+            <WrapPanel Margin="5,5,0,0">
+                <TextBlock Text="{x:Static prop:Resources.C_Remarks}" Style="{StaticResource I2MS_TextBlockStyle}" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="_txbFwRemarks" Style="{StaticResource I2MS_TextBoxStyle}" Width="200" MaxLength="40" uc:TextHelper.IsHan="True"/>
+            </WrapPanel>
+            <WrapPanel Margin="5,5,0,0">
+                <TextBlock Text="{x:Static prop:Resources.M9_ICFwManager_FileName}" Style="{StaticResource I2MS_TextBlockStyle}" Width="100" VerticalAlignment="Center"/>
+                <TextBox Name="_txbFwFileName" Style="{StaticResource I2MS_TextBoxStyle}" Width="173" MaxLength="40" uc:TextHelper.IsHan="True"/>
+                <Button Name="_btnFwSelect" Content="..." Width="20" Margin="5,0,0,0" Style="{StaticResource I2MS_ButtonStyle}" Height="20" Click="_btnFwSelect_Click"/>
+            </WrapPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0,50,0,0" Height="30" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                <Button x:Name="_btnSave" Content="{x:Static prop:Resources.C_Save}"  Margin="0,0,0,0" Style="{StaticResource I2MS_ButtonStyle}" Command="{x:Static iw:ICFwUpgradeManagerNew.SaveCommand}"/>
+                <Button x:Name="_btnCancel" Content="{x:Static prop:Resources.C_Cancel}"  Margin="20,0,0,0" Style="{StaticResource I2MS_ButtonStyle}" Click="_btnCancel_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

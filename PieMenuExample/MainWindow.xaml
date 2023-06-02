@@ -1,0 +1,91 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+        xmlns:PieG="clr-namespace:PieMenuExample" 
+        x:Class="PieMenuExample.MainWindow"
+        Title="MainWindow" Height="900" Width="715.87" Grid.IsSharedSizeScope="True" Background="Black">
+    <Window.Resources>
+        <ZoomPercentageConverter x:Key="ZoomPercentageConverter"/>
+    </Window.Resources>
+	<Grid>
+		<Grid >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="80"/>
+                <RowDefinition Height="420"/>
+                <RowDefinition Height="420"/>
+            </Grid.RowDefinitions>
+			<StackPanel Grid.Row="0" >
+				<Button Height="60" Width="100" Click="Button_Click"/>
+				<Slider x:Name="slider" Maximum="100" SmallChange="1" Value="10" Margin="0,0,-0.13,0.26" Grid.RowSpan="2"/>
+			</StackPanel>
+            <Grid Grid.Row="1">
+                <Grid x:Name="LayoutRoot">
+                    <Grid Width="400" Height="400">
+                        <PieG:PieG x:Name="_Menu1" Padding="10" 
+				                    ForceCursor="True" 
+				                    Radius="200" 
+				                    Rotation="160" MenuSector="230" SectorGap="0" InnerRadius="80" Gap="0" 
+                                    BorderBrush="#FFFFF302" 
+                                    Setvalue="{Binding Value, ElementName=slider}" >
+                            <PieG:PieGItem Header="Item 1"/>
+                            <PieG:PieGItem Header="Item 2"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                            <PieG:PieGItem Header="Item 3"/>
+                        </PieG:PieG>
+                        <Ellipse Fill="#FF0E0E0E" OpacityMask="White" Width="152" Height="152" Stroke="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="_t2" Text="{Binding Setvalue, ConverterParameter=Value, Converter={StaticResource ZoomPercentageConverter}, ElementName=_Menu1}" Foreground="#FFFDFDFD" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                        <Line VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="1" Stroke="{Binding BorderBrush2, ElementName=_Menu1}"  X1="1" X2="100" Margin="150.5,200.5,149.5,198.5" Opacity="0.2" />
+                        <Line VerticalAlignment="Center" HorizontalAlignment="Center" Width="1" Height="100" Stroke="{Binding BorderBrush2, ElementName=_Menu1}"  Y1="1" Y2="100" Opacity="0.2" />
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+	</Grid>
+</Window>

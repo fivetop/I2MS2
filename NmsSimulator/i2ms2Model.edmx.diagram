@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ddd91607fe5d4d2e9333d078f6d6955f" Name="Diagram1">
+        <EntityTypeShape EntityType="i2ms2Model.asset_ipp_port_link" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="i2ms2Model.asset_port_link" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="i2ms2Model.ic_connect_status" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="i2ms2Model.ic_ipp_config" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="i2ms2Model.ipp_connect_status" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="i2ms2Model.asset" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="i2ms2Model.asset_aux" Width="1.5" PointX="3" PointY="18.375" />
+        <AssociationConnector Association="i2ms2Model.FK_asset_aux_asset" />
+        <AssociationConnector Association="i2ms2Model.FK_asset_ic_asset" />
+        <AssociationConnector Association="i2ms2Model.FK_asset_ipp_asset" />
+        <AssociationConnector Association="i2ms2Model.FK_asset_ipp_port_link_asset" />
+        <AssociationConnector Association="i2ms2Model.FK_asset_port_link_asset" />
+        <AssociationConnector Association="i2ms2Model.FK_ic_connect_status_asset" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

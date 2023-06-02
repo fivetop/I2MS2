@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="I2MS2.UserControls.RackIPPControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:I2MS2.UserControls"
+             mc:Ignorable="d" 
+             x:Name="uc"
+             d:DesignHeight="20" d:DesignWidth="240">
+    
+    <UserControl.Resources>
+        <local:RearCableConverter x:Key="_RearCableConverter"/>
+        <local:LedStatusConverter x:Key="_LedStatusConverter"/>
+        <local:PlugStatusConverter x:Key="_PlugStatusConverter"/>
+        <local:PlugStatusConverter2 x:Key="_PlugStatusConverter2"/>
+
+        <!--리스트뷰 스타일-->
+        <Style TargetType="{x:Type ListView}">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListView}">
+                        <ItemsPresenter />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--리스트뷰 아이템 컨테이너 스타일-->
+        <Style TargetType="ListViewItem">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="7*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="6*"/>
+                            </Grid.RowDefinitions>
+                            <!--<Border Grid.Row="1" Margin="3,0,2,0">
+                                        <Border.Background>
+                                            <MultiBinding Mode="OneWay" Converter="{StaticResource _LedStatusConverter}">
+                                                <Binding Path="alarm_status" />
+                                                <Binding Path="wo_status" />
+                                                <Binding Path="is_port_trace" />
+                                            </MultiBinding>
+                                        </Border.Background>
+                                    </Border>-->
+                            <Border Grid.Row="3" Margin="1,0,0,0">
+                                <Border.Background>
+                                    <MultiBinding Mode="OneWay" Converter="{StaticResource _PlugStatusConverter2}">
+                                        <Binding Path="alarm_status" />
+                                        <Binding Path="wo_status" />
+                                        <Binding Path="is_port_trace" />
+                                        <Binding Path="port_status" />
+                                    </MultiBinding>
+                                </Border.Background>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid >
+        <!--수직을 5단계로 나눈다.-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <!--수평을 5단계로 나눈다. 두 번째가 플러그 부분-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="270*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <!--바탕색을 결정-->
+        <Border Grid.Column="0" Grid.RowSpan="5" Background="{StaticResource _brushDarkGray1}" CornerRadius="3,0,0,3"/>
+        <Border Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="5">
+            <Border.Background>
+                <SolidColorBrush Color="#FF1A2032"/>
+            </Border.Background>
+        </Border>
+        <Border Grid.Column="4" Grid.RowSpan="5" Background="{StaticResource _brushDarkGray1}" CornerRadius="0,3,3,0"/>
+
+        <!--좌측 구멍-->
+        <Grid Grid.Column="0" Grid.RowSpan="5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Ellipse Grid.Row="1" Width="4" Height="4" Fill="{StaticResource _brushDarkGray3}"></Ellipse>
+            <Ellipse Grid.Row="3" Width="4" Height="4" Fill="{StaticResource _brushDarkGray3}"></Ellipse>
+        </Grid>
+
+        <!--우측 구멍-->
+        <Grid Grid.Column="4" Grid.RowSpan="5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Ellipse Grid.Row="1" Width="3" Height="3" Fill="{StaticResource _brushDarkGray3}"></Ellipse>
+            <Ellipse Grid.Row="3" Width="3" Height="3" Fill="{StaticResource _brushDarkGray3}"></Ellipse>
+        </Grid>
+
+
+        <Grid Grid.RowSpan="5" Grid.Column="2">
+            <ListView x:Name="_lvPatch" Grid.RowSpan="7" Grid.Column="1" ItemsSource="{Binding Path=MyItemsSource, ElementName=uc, Mode=OneWay}" IsSynchronizedWithCurrentItem="True" >
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="1" Columns="24"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+        </Grid>
+        
+        <Border Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4" Height="1" BorderBrush="{StaticResource _brushDarkGray3}" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,68 @@
+﻿<Page x:Class="I2MS2.Pages.P3FloorView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ucdr="clr-namespace:I2MS2.UserControls.Drawing"
+      mc:Ignorable="d" 
+     
+    d:DesignHeight="1000" d:DesignWidth="1600"
+	Title="P3FloorView" Loaded="P3FloorView_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <!--창배경-->
+        <Border Grid.ColumnSpan="2" Background="#FF202020" Opacity="0.3" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.3"/>
+            </Border.Effect>
+            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+        </Border>
+
+        <Grid Name="_gridfloorList">
+            <Grid.Resources>
+                <MeshGeometry3D x:Key="bottom"
+                 Positions="0,0,0   1000,0,0     1000,1000,0  0,1000,0"
+                 TriangleIndices="3,0,1 1,2,3" />
+
+                <DiffuseMaterial x:Key="DarkGray2Material" Brush="{StaticResource _brushDarkGray2}"/>
+                <DiffuseMaterial x:Key="DarkGray4Material" Brush="{StaticResource _brushDarkGray4}"/>
+            </Grid.Resources>
+            <Viewport3D  x:Name="_vpFloorList" MouseLeftButtonDown="_vpFloorList_MouseLeftButtonDown" MouseMove="_vpFloorList_MouseMove" MouseLeave="_vpFloorList_MouseLeave" Margin="0,0,0,0" >
+                <Viewport3D.Camera>
+                    <!--<OrthographicCamera x:Name="mainCamera" Width="1700" Position="1000,1000,3000"  LookDirection="-500,-500,-400" UpDirection="0,0,1"/>-->
+                    <OrthographicCamera x:Name="mainCamera" Width="1700" Position="10000,10000,9000"  LookDirection="-9500,-9500,-7000" UpDirection="0,0,1"/>
+                </Viewport3D.Camera>
+
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <Model3DGroup>
+                            <!--<DirectionalLight x:Name="mainLight"  Color="White" Direction="-1,-1,-3" />-->
+                            <!--<DirectionalLight x:Name="mainLight"  Color="White" Direction="-1,1,-3" />-->
+                            <DirectionalLight x:Name="mainLight"  Color="White" Direction="1,-1,-3" />
+                            <!--<DirectionalLight x:Name="mainLight"  Color="White" Direction="10,1000,100" />-->
+                        </Model3DGroup>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <Model3DGroup>
+                            <DirectionalLight Color="White" Direction="-1,-1,-3" />
+                            <!--<GeometryModel3D Geometry="{StaticResource bottom}" Material="{StaticResource DarkGray2Material}" />-->
+                        </Model3DGroup>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+            </Viewport3D>
+            <Canvas x:Name="_cavasFloorList"/>
+        </Grid>
+        
+        <Grid Name="_gridMainView" Grid.Column="1">
+            <ucdr:DrawingMuiltFloorView3D x:Name="_ctlDrawingView3DMulti"/>
+            <!--<Button Content="Button" HorizontalAlignment="Left" Margin="1484,43,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource I2MS_ButtonStyle}" Click="Button_Click"/>-->
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,2910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="C_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="C_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="C_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="C_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="C_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="C_Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="C_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="M1_1" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="M1_Progress1" xml:space="preserve">
+    <value>WORLD</value>
+  </data>
+  <data name="M1_Progress2" xml:space="preserve">
+    <value>REGION1</value>
+  </data>
+  <data name="M1_Progress3" xml:space="preserve">
+    <value>REGION2</value>
+  </data>
+  <data name="M1_Region1Title" xml:space="preserve">
+    <value>Region-1 Registration Manager</value>
+  </data>
+  <data name="M1_World_ChImageFail" xml:space="preserve">
+    <value>Image change fail</value>
+  </data>
+  <data name="M1_World_ControlRegionName" xml:space="preserve">
+    <value>1. Region Name</value>
+  </data>
+  <data name="M1_World_ControlRegionNameSub" xml:space="preserve">
+    <value>( Contry or Location Name )</value>
+  </data>
+  <data name="M1_World_ControlSelectImageFile" xml:space="preserve">
+    <value>3. Upload region map file</value>
+  </data>
+  <data name="M1_World_ControlSelectLocation" xml:space="preserve">
+    <value>2. Pick up location of region, use mouse</value>
+  </data>
+  <data name="M1_World_DuplicateName" xml:space="preserve">
+    <value>Please change region name.(region name exist) </value>
+  </data>
+  <data name="M1_World_listVew_Etc" xml:space="preserve">
+    <value>Etc</value>
+  </data>
+  <data name="M1_World_listVew_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="M1_World_listVew_Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="M1_World_listVew_Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="M1_World_NoImage" xml:space="preserve">
+    <value>Please, Select Map Image</value>
+  </data>
+  <data name="M1_World_NoLocation" xml:space="preserve">
+    <value>Please, Select location</value>
+  </data>
+  <data name="M1_World_NoName" xml:space="preserve">
+    <value>Please, Input region name</value>
+  </data>
+  <data name="M1_World_SelectImage" xml:space="preserve">
+    <value>Open Image</value>
+  </data>
+  <data name="M1_World_SelectLocation" xml:space="preserve">
+    <value>Pick up Location</value>
+  </data>
+  <data name="M1_World_UpImageFail" xml:space="preserve">
+    <value>Image upload fail</value>
+  </data>
+  <data name="M9_LanguageTitle" xml:space="preserve">
+    <value>Language Setting</value>
+  </data>
+  <data name="M9_Language1" xml:space="preserve">
+    <value>Please, Choice language to use.</value>
+  </data>
+  <data name="M9_Language_Country1" xml:space="preserve">
+    <value>Korean (한글)</value>
+  </data>
+  <data name="M9_Language_Country2" xml:space="preserve">
+    <value>English (영어)</value>
+  </data>
+  <data name="M_Prop1" xml:space="preserve">
+    <value>Property Sumary</value>
+  </data>
+  <data name="M_Prop2" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="M_Prop3" xml:space="preserve">
+    <value>Catalog</value>
+  </data>
+  <data name="M_Prop4" xml:space="preserve">
+    <value>Asset</value>
+  </data>
+  <data name="M_TopMenu1" xml:space="preserve">
+    <value>SITE</value>
+  </data>
+  <data name="M_TopMenu2" xml:space="preserve">
+    <value>DASHBOARD</value>
+  </data>
+  <data name="M_TopMenu3" xml:space="preserve">
+    <value>FLOOR</value>
+  </data>
+  <data name="M_TopMenu4" xml:space="preserve">
+    <value>ASSET</value>
+  </data>
+  <data name="M_TopMenu5" xml:space="preserve">
+    <value>CONNECTION</value>
+  </data>
+  <data name="M_TopMenu6" xml:space="preserve">
+    <value>Enviroment</value>
+  </data>
+  <data name="M_Tree1" xml:space="preserve">
+    <value>Asset </value>
+  </data>
+  <data name="M_Tree2" xml:space="preserve">
+    <value>SimpleWin</value>
+  </data>
+  <data name="M_Tree3" xml:space="preserve">
+    <value>Favorite</value>
+  </data>
+  <data name="M1_Region2Title" xml:space="preserve">
+    <value>Region-2 Registration Manager</value>
+  </data>
+  <data name="M1_Region1_1" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="C_back" xml:space="preserve">
+    <value>Go to back</value>
+  </data>
+  <data name="M1_Region2_1" xml:space="preserve">
+    <value>Site Register</value>
+  </data>
+  <data name="M1_Site_SiteName" xml:space="preserve">
+    <value>1. Site name</value>
+  </data>
+  <data name="M1_Site_SiteRemark" xml:space="preserve">
+    <value>2. remark</value>
+  </data>
+  <data name="C_lackOfInformation" xml:space="preserve">
+    <value>Lack of information</value>
+  </data>
+  <data name="M1_Site_SelectImage" xml:space="preserve">
+    <value>3. Upload site map file</value>
+  </data>
+  <data name="M9_CatalogGroupManagerTitle" xml:space="preserve">
+    <value>Catalog Group Registration Manager</value>
+  </data>
+  <data name="M_TopMenu7" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="M_TopMenu8" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="M_TopMenu9" xml:space="preserve">
+    <value>Config</value>
+  </data>
+  <data name="C_Building" xml:space="preserve">
+    <value>Building</value>
+  </data>
+  <data name="C_Floor" xml:space="preserve">
+    <value>Floor</value>
+  </data>
+  <data name="C_Rack" xml:space="preserve">
+    <value>Rack</value>
+  </data>
+  <data name="C_Room" xml:space="preserve">
+    <value>Room</value>
+  </data>
+  <data name="M_Prop1_1" xml:space="preserve">
+    <value>Asset Properties</value>
+  </data>
+  <data name="M_Prop1_1_AssetId" xml:space="preserve">
+    <value>Asset ID</value>
+  </data>
+  <data name="M_Prop1_1_ConID" xml:space="preserve">
+    <value>Controller ID</value>
+  </data>
+  <data name="M_Prop1_1_Ip" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="M_Prop1_1_PPnum" xml:space="preserve">
+    <value>Patch Number</value>
+  </data>
+  <data name="M_Prop1_1_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M_Prop1_1_Serial" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
+  <data name="M_Prop1_1_Slot" xml:space="preserve">
+    <value>Slot in Rack</value>
+  </data>
+  <data name="M_Prop1_2" xml:space="preserve">
+    <value>Catalog Properties</value>
+  </data>
+  <data name="M_Prop1_2_Config" xml:space="preserve">
+    <value>Config Type</value>
+  </data>
+  <data name="M_Prop1_2_Figure" xml:space="preserve">
+    <value>Figure Type</value>
+  </data>
+  <data name="M_Prop1_2_Img" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="M_Prop1_2_Media" xml:space="preserve">
+    <value>Media Type</value>
+  </data>
+  <data name="M_Prop1_2_ModelName" xml:space="preserve">
+    <value>Model Name</value>
+  </data>
+  <data name="M_Prop1_2_Name" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+  <data name="M_Prop1_2_RackUnit" xml:space="preserve">
+    <value>Size(U)</value>
+  </data>
+  <data name="M_Prop1_2_UTPJack" xml:space="preserve">
+    <value>UTP Jack Type</value>
+  </data>
+  <data name="M_Prop1_2_UTPShild" xml:space="preserve">
+    <value>UTP Shild Type</value>
+  </data>
+  <data name="M_Prop1_3" xml:space="preserve">
+    <value>Location Properties</value>
+  </data>
+  <data name="M_Prop1_3_Local" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="M_Prop2_Above" xml:space="preserve">
+    <value>Above Location</value>
+  </data>
+  <data name="M_Prop2_Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="M_Prop2_Name" xml:space="preserve">
+    <value>Location Name</value>
+  </data>
+  <data name="M_Prop2_Rack" xml:space="preserve">
+    <value>Rack</value>
+  </data>
+  <data name="M_Prop2_RackInfo" xml:space="preserve">
+    <value>Rack Information</value>
+  </data>
+  <data name="M_Prop2_Radian" xml:space="preserve">
+    <value>Radian</value>
+  </data>
+  <data name="M_Prop2_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M_Prop2_VCML" xml:space="preserve">
+    <value>VCM(L)</value>
+  </data>
+  <data name="M_Prop2_VCMR" xml:space="preserve">
+    <value>VCM(R)</value>
+  </data>
+  <data name="M_Prop3_1" xml:space="preserve">
+    <value>Basic Properties</value>
+  </data>
+  <data name="M_Prop3_1_Code" xml:space="preserve">
+    <value>Model Code</value>
+  </data>
+  <data name="M_Prop3_1_Manufacure" xml:space="preserve">
+    <value>Manufacture</value>
+  </data>
+  <data name="M_Prop3_1_FullName" xml:space="preserve">
+    <value>Product Name(Full)</value>
+  </data>
+  <data name="M_Prop3_1_Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="M_Prop3_1_Img" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="M_Prop3_1_LastUpdate" xml:space="preserve">
+    <value>Last Update</value>
+  </data>
+  <data name="M_Prop3_1_Name" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+  <data name="M_Prop3_1_NumOfP" xml:space="preserve">
+    <value>Number of Port</value>
+  </data>
+  <data name="M_Prop3_1_Order" xml:space="preserve">
+    <value>Order Number</value>
+  </data>
+  <data name="M_Prop3_1_Remartks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M_Prop3_1_Width" xml:space="preserve">
+    <value>Width, Depth, Height(mm)</value>
+  </data>
+  <data name="M_Prop3_2" xml:space="preserve">
+    <value>Optional Properties</value>
+  </data>
+  <data name="M_Prop3_2_PP_2" xml:space="preserve">
+    <value>Config Type</value>
+  </data>
+  <data name="M_Prop3_2_PP_6" xml:space="preserve">
+    <value>Figure Type</value>
+  </data>
+  <data name="M_Prop3_2_PP_3" xml:space="preserve">
+    <value>Media Type</value>
+  </data>
+  <data name="M_Prop3_2_PP_4" xml:space="preserve">
+    <value>UTP Jack Type</value>
+  </data>
+  <data name="M_Prop3_2_PP_5" xml:space="preserve">
+    <value>UTP Shild Type</value>
+  </data>
+  <data name="M_Prop4_1" xml:space="preserve">
+    <value>Basic Properties</value>
+  </data>
+  <data name="M_Prop4_1_Id" xml:space="preserve">
+    <value>Asset ID</value>
+  </data>
+  <data name="M_Prop4_1_InstallDate" xml:space="preserve">
+    <value>Install Date</value>
+  </data>
+  <data name="M_Prop4_1_InstallUser" xml:space="preserve">
+    <value>Install User Name</value>
+  </data>
+  <data name="M_Prop4_1_IP" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="M_Prop4_1_LastUpdate" xml:space="preserve">
+    <value>Last Update</value>
+  </data>
+  <data name="M_Prop4_1_Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="M_Prop4_1_Local" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="M_Prop4_1_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M_Prop4_1_Serial" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
+  <data name="M_Prop4_2" xml:space="preserve">
+    <value>Catalog Group Properties</value>
+  </data>
+  <data name="M_Prop4_2_ConID" xml:space="preserve">
+    <value>Controller ID</value>
+  </data>
+  <data name="M_Prop4_2_PatchNum" xml:space="preserve">
+    <value>Patch Number</value>
+  </data>
+  <data name="M_Prop4_3" xml:space="preserve">
+    <value>Maintenance</value>
+  </data>
+  <data name="M_Prop4_3_Charge" xml:space="preserve">
+    <value>Charge</value>
+  </data>
+  <data name="M_Prop4_3_Contract" xml:space="preserve">
+    <value>Contract Date of Maintence</value>
+  </data>
+  <data name="M_Prop4_3_Depart" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="M_Prop4_3_End" xml:space="preserve">
+    <value>End of Maintenance</value>
+  </data>
+  <data name="M_Prop4_3_EndFree" xml:space="preserve">
+    <value>End of Free Maintenance</value>
+  </data>
+  <data name="M_Prop4_3_Price" xml:space="preserve">
+    <value>Price of Maintenance</value>
+  </data>
+  <data name="M_Prop4_3_StartFree" xml:space="preserve">
+    <value>Start of Free Maintenance</value>
+  </data>
+  <data name="M_Prop4_3_Term" xml:space="preserve">
+    <value>Term of Maintenance (Month)</value>
+  </data>
+  <data name="M_Prop4_3_TermFree" xml:space="preserve">
+    <value>Term of Free Maintenance (Month)</value>
+  </data>
+  <data name="M_Prop4_4" xml:space="preserve">
+    <value>Depreciation</value>
+  </data>
+  <data name="M_Prop4_4_Buyer" xml:space="preserve">
+    <value>Buyer</value>
+  </data>
+  <data name="M_Prop4_4_End" xml:space="preserve">
+    <value>End of Depreciation (Year)</value>
+  </data>
+  <data name="M_Prop4_4_PurchDay" xml:space="preserve">
+    <value>The Date of Purchase</value>
+  </data>
+  <data name="M_Prop4_4_Start" xml:space="preserve">
+    <value>Start of Depreciation (Year)</value>
+  </data>
+  <data name="M_Prop4_4_Use" xml:space="preserve">
+    <value>Used Years of Depreciation</value>
+  </data>
+  <data name="M_Prop4_5" xml:space="preserve">
+    <value>SNMP</value>
+  </data>
+  <data name="M_Prop4_5_Get" xml:space="preserve">
+    <value>Get Community</value>
+  </data>
+  <data name="M_Prop4_5_Set" xml:space="preserve">
+    <value>Set Community</value>
+  </data>
+  <data name="M_Prop4_5_Ver" xml:space="preserve">
+    <value>SNMP Version</value>
+  </data>
+  <data name="M_Prop4_6" xml:space="preserve">
+    <value>Extended Properties</value>
+  </data>
+  <data name="M_Prop4_6_Col" xml:space="preserve">
+    <value>Product Color</value>
+  </data>
+  <data name="M_Prop4_6_MOQ" xml:space="preserve">
+    <value>MOQ</value>
+  </data>
+  <data name="M9_CatalogGroupManager_NewTitle" xml:space="preserve">
+    <value>Add Catalog Group</value>
+  </data>
+  <data name="M_Prop2_3_Company" xml:space="preserve">
+    <value>Maintenance Company</value>
+  </data>
+  <data name="M9_ManufactureTitle" xml:space="preserve">
+    <value>Manufacture Registration Manager</value>
+  </data>
+  <data name="M9_Manufacture_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="M9_Manufacture_FullName" xml:space="preserve">
+    <value>Company Full Name</value>
+  </data>
+  <data name="M9_Manufacture_Name" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="M9_Contact_Duty" xml:space="preserve">
+    <value>Duty</value>
+  </data>
+  <data name="M9_Contact_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="M9_Contact_Mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="M9_Contact_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="M9_Contact_Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="M9_Contact_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="M9_Contact_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M9_Contact_EditTitle" xml:space="preserve">
+    <value>Remove Contacts</value>
+  </data>
+  <data name="M9_Contact_NewTitle" xml:space="preserve">
+    <value>Add Contacts</value>
+  </data>
+  <data name="M9_CatalogManagerTitle" xml:space="preserve">
+    <value>Catalog Registration Manager</value>
+  </data>
+  <data name="M9_Catalog_Capacity" xml:space="preserve">
+    <value>Width, Depth, Height(mm)</value>
+  </data>
+  <data name="M9_Catalog_ExclusiveProperty" xml:space="preserve">
+    <value>Catalog Group Property</value>
+  </data>
+  <data name="M9_Catalog_ExtendedProperty" xml:space="preserve">
+    <value>Extended Property</value>
+  </data>
+  <data name="M9_Catalog_FullName" xml:space="preserve">
+    <value>Catalog Full Name</value>
+  </data>
+  <data name="M9_Catalog_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="M9_Catalog_LastUpdate" xml:space="preserve">
+    <value>Last Updated</value>
+  </data>
+  <data name="M9_Catalog_Manufacture" xml:space="preserve">
+    <value>Manufacture</value>
+  </data>
+  <data name="M9_Catalog_Model" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="M9_Catalog_Name" xml:space="preserve">
+    <value>Catalog Name</value>
+  </data>
+  <data name="M9_Catalog_NumberOfPorts" xml:space="preserve">
+    <value>Number of Ports</value>
+  </data>
+  <data name="M9_Catalog_OrderNumber" xml:space="preserve">
+    <value>Order Number</value>
+  </data>
+  <data name="M9_Catalog_RackMountProperty" xml:space="preserve">
+    <value>Rack Mount Property</value>
+  </data>
+  <data name="M9_Catalog_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M9_Catalog_Weight" xml:space="preserve">
+    <value>Weight(kg)</value>
+  </data>
+  <data name="M9_CatalogGroup_Name" xml:space="preserve">
+    <value>Catalog Group Name</value>
+  </data>
+  <data name="M9_Catalog_Depth" xml:space="preserve">
+    <value>Depth</value>
+  </data>
+  <data name="M9_Catalog_Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="M9_Catalog_Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="M9_Catalog_pp_1" xml:space="preserve">
+    <value>Is Intelligent Function</value>
+  </data>
+  <data name="M9_Catalog_pp_2" xml:space="preserve">
+    <value>Connect Method(intelligent only)</value>
+  </data>
+  <data name="M9_Catalog_pp_3" xml:space="preserve">
+    <value>Cable Media Type</value>
+  </data>
+  <data name="M9_Catalog_pp_4" xml:space="preserve">
+    <value>UTP Jack Type(UTP only)</value>
+  </data>
+  <data name="M9_Catalog_pp_4_1" xml:space="preserve">
+    <value>Normal Jack Integreted</value>
+  </data>
+  <data name="M9_Catalog_pp_4_2" xml:space="preserve">
+    <value>Modular Jack Seperated</value>
+  </data>
+  <data name="M9_Catalog_pp_5" xml:space="preserve">
+    <value>UTP Shield Type(UTP only)</value>
+  </data>
+  <data name="M9_Catalog_pp_6" xml:space="preserve">
+    <value>Patch Panel Figure Type</value>
+  </data>
+  <data name="M9_Catalog_ic_1" xml:space="preserve">
+    <value>Max Patch Panel Connector</value>
+  </data>
+  <data name="M9_Catalog_ic_2" xml:space="preserve">
+    <value>Dual Power Supply</value>
+  </data>
+  <data name="M9_Catalog_ca_1" xml:space="preserve">
+    <value>Inteligent Patch Cord</value>
+  </data>
+  <data name="M9_Catalog_ca_10" xml:space="preserve">
+    <value>Display Cable Name</value>
+  </data>
+  <data name="M9_Catalog_ca_2" xml:space="preserve">
+    <value>Installation Type</value>
+  </data>
+  <data name="M9_Catalog_ca_2_1" xml:space="preserve">
+    <value>Fixed</value>
+  </data>
+  <data name="M9_Catalog_ca_2_2" xml:space="preserve">
+    <value>Patch Cord</value>
+  </data>
+  <data name="M9_Catalog_ca_3" xml:space="preserve">
+    <value>Military</value>
+  </data>
+  <data name="M9_Catalog_ca_3_1" xml:space="preserve">
+    <value>Civilian Version</value>
+  </data>
+  <data name="M9_Catalog_ca_3_2" xml:space="preserve">
+    <value>Military Version</value>
+  </data>
+  <data name="M9_Catalog_ca_4" xml:space="preserve">
+    <value>Cable Media Type</value>
+  </data>
+  <data name="M9_Catalog_ca_5" xml:space="preserve">
+    <value>UTP Shield</value>
+  </data>
+  <data name="M9_Catalog_ca_6" xml:space="preserve">
+    <value>UTP Category</value>
+  </data>
+  <data name="M9_Catalog_ca_7" xml:space="preserve">
+    <value>Fiber Cable Type</value>
+  </data>
+  <data name="M9_Catalog_ca_8" xml:space="preserve">
+    <value>Fiber Connector Type</value>
+  </data>
+  <data name="M9_Catalog_ca_9" xml:space="preserve">
+    <value>Display Cable Color</value>
+  </data>
+  <data name="M9_Catalog_cp_1" xml:space="preserve">
+    <value>UTP Plug(RJ-45) Location</value>
+  </data>
+  <data name="M9_Catalog_cp_1_1" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="M9_Catalog_cp_1_2" xml:space="preserve">
+    <value>One(Right) Side</value>
+  </data>
+  <data name="M9_Catalog_cp_1_3" xml:space="preserve">
+    <value>Both Side</value>
+  </data>
+  <data name="M9_Catalog_st_1" xml:space="preserve">
+    <value>Max Disks</value>
+  </data>
+  <data name="M9_Catalog_sw_1" xml:space="preserve">
+    <value>Figure Type</value>
+  </data>
+  <data name="M9_Catalog_sw_1_1" xml:space="preserve">
+    <value>Single Embedded</value>
+  </data>
+  <data name="M9_Catalog_sw_1_2" xml:space="preserve">
+    <value>Sash Type</value>
+  </data>
+  <data name="M9_Catalog_sw_1_3" xml:space="preserve">
+    <value>Card Type</value>
+  </data>
+  <data name="M9_Catalog_sw_2" xml:space="preserve">
+    <value>Max Slots</value>
+  </data>
+  <data name="M9_Catalog_ca_9_2" xml:space="preserve">
+    <value>Choice Color</value>
+  </data>
+  <data name="M9_Catalog_ep_1" xml:space="preserve">
+    <value>Extended Property Name</value>
+  </data>
+  <data name="M9_Catalog_ep_2" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="M9_Catalog_ep_3" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="M9_Catalog_ep_4" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M9_Catalog_rm_1" xml:space="preserve">
+    <value>Rack Mountable</value>
+  </data>
+  <data name="M9_Catalog_rm_2" xml:space="preserve">
+    <value>Unit Size(U)</value>
+  </data>
+  <data name="M9_Catalog_rm_3" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="C_ColorPickerDialogTitle" xml:space="preserve">
+    <value>Color Picker Dialog</value>
+  </data>
+  <data name="M9_ExtendedPropertyTitle" xml:space="preserve">
+    <value>Extended Property Registration Manager</value>
+  </data>
+  <data name="M9_ExtendedProperty_AnsName" xml:space="preserve">
+    <value>Answer Name</value>
+  </data>
+  <data name="M9_ExtendedProperty_Length" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="M9_ExtendedProperty_Name" xml:space="preserve">
+    <value>Extended Property Name</value>
+  </data>
+  <data name="M9_ExtendedProperty_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_1" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_2" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_3" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_4" xml:space="preserve">
+    <value>RadioButton</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_5" xml:space="preserve">
+    <value>ListBox</value>
+  </data>
+  <data name="M9_ExtendedProperty_Type_6" xml:space="preserve">
+    <value>CheckBox</value>
+  </data>
+  <data name="M9_ExtendedProperty_AnsNameList" xml:space="preserve">
+    <value>Answer List for Choice</value>
+  </data>
+  <data name="M9_AssetManagerTitle" xml:space="preserve">
+    <value>Asset Registration Manager</value>
+  </data>
+  <data name="M9_Asset_Catalog_Name" xml:space="preserve">
+    <value>Catalog Name</value>
+  </data>
+  <data name="M9_Asset_Installer" xml:space="preserve">
+    <value>Installer</value>
+  </data>
+  <data name="M9_Asset_Install_Date" xml:space="preserve">
+    <value>Install Date</value>
+  </data>
+  <data name="M9_Asset_IP" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="M9_Asset_Name" xml:space="preserve">
+    <value>Asset Name(ID)</value>
+  </data>
+  <data name="M9_Asset_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M9_Asset_SN" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
+  <data name="M9_Asset_AS1" xml:space="preserve">
+    <value>Management Department</value>
+  </data>
+  <data name="M9_Asset_AS10" xml:space="preserve">
+    <value>Company for After Service</value>
+  </data>
+  <data name="M9_Asset_AS2" xml:space="preserve">
+    <value>Management User Name</value>
+  </data>
+  <data name="M9_Asset_AS3" xml:space="preserve">
+    <value>Start Date for Free After Service</value>
+  </data>
+  <data name="M9_Asset_AS4" xml:space="preserve">
+    <value>Duration(Month) for Free After Service</value>
+  </data>
+  <data name="M9_Asset_AS5" xml:space="preserve">
+    <value>Finish Date for Free After Service</value>
+  </data>
+  <data name="M9_Asset_AS6" xml:space="preserve">
+    <value>Contract Date for After Service</value>
+  </data>
+  <data name="M9_Asset_AS7" xml:space="preserve">
+    <value>Duration(Month) for After Service</value>
+  </data>
+  <data name="M9_Asset_AS8" xml:space="preserve">
+    <value>Finish Date for After Service</value>
+  </data>
+  <data name="M9_Asset_AS9" xml:space="preserve">
+    <value>Contract Price for After Service</value>
+  </data>
+  <data name="M9_Asset_BUY1" xml:space="preserve">
+    <value>The Date of Purchasing</value>
+  </data>
+  <data name="M9_Asset_BUY2" xml:space="preserve">
+    <value>Purchasing Agent Name</value>
+  </data>
+  <data name="M9_Asset_BUY3" xml:space="preserve">
+    <value>Start Year of Deprecation</value>
+  </data>
+  <data name="M9_Asset_BUY4" xml:space="preserve">
+    <value>Duration of Deprecation(Year)</value>
+  </data>
+  <data name="M9_Asset_BUY5" xml:space="preserve">
+    <value>Finish Year of Deprecation</value>
+  </data>
+  <data name="M9_Asset_SNMP1" xml:space="preserve">
+    <value>Get Community</value>
+  </data>
+  <data name="M9_Asset_SNMP2" xml:space="preserve">
+    <value>Set Community</value>
+  </data>
+  <data name="M9_Asset_SNMP3" xml:space="preserve">
+    <value>SNMP Version</value>
+  </data>
+  <data name="M9_Asset_Tab1" xml:space="preserve">
+    <value>Exclusive Property</value>
+  </data>
+  <data name="M9_Asset_Tab2" xml:space="preserve">
+    <value>Maintnance</value>
+  </data>
+  <data name="M9_Asset_Tab3" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="M9_Asset_Tab4" xml:space="preserve">
+    <value>SNMP</value>
+  </data>
+  <data name="M9_Asset_Tab5" xml:space="preserve">
+    <value>Extended Property</value>
+  </data>
+  <data name="M9_CatalogSelectorTitle" xml:space="preserve">
+    <value>Select Catalog</value>
+  </data>
+  <data name="C_SelectFile" xml:space="preserve">
+    <value>Select File</value>
+  </data>
+  <data name="C_ClearWarning" xml:space="preserve">
+    <value>Select 'Yes', the input information is erased</value>
+  </data>
+  <data name="M9_Asset_Rack1" xml:space="preserve">
+    <value>Vertical Cable Manager</value>
+  </data>
+  <data name="M9_Asset_Rack2" xml:space="preserve">
+    <value>Depth(mm)</value>
+  </data>
+  <data name="M9_Asset_Server1" xml:space="preserve">
+    <value>OS Type(Win, Linux, etc)</value>
+  </data>
+  <data name="M9_Asset_Server2" xml:space="preserve">
+    <value>OS Version</value>
+  </data>
+  <data name="M9_Asset_Server3" xml:space="preserve">
+    <value>Host Name</value>
+  </data>
+  <data name="M9_Asset_Server4" xml:space="preserve">
+    <value>Number of NIC</value>
+  </data>
+  <data name="M9_Asset_Server5" xml:space="preserve">
+    <value>Total Disk Amount</value>
+  </data>
+  <data name="M9_Asset_Server6" xml:space="preserve">
+    <value>Number of Disks</value>
+  </data>
+  <data name="M9_Asset_Storage1" xml:space="preserve">
+    <value>Current Number of Disks</value>
+  </data>
+  <data name="M9_Asset_Storage2" xml:space="preserve">
+    <value>Current DIsk Amount(GB)</value>
+  </data>
+  <data name="M9_Asset_Storage3" xml:space="preserve">
+    <value>Storage Connection Type</value>
+  </data>
+  <data name="M9_Asset_Switch1" xml:space="preserve">
+    <value>Gateway IP Address</value>
+  </data>
+  <data name="C_FileName" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="C_Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="C_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="C_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="C_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="M9_ImgMgr_ImageInfo" xml:space="preserve">
+    <value>Image Info</value>
+  </data>
+  <data name="M9_ImgMgr_ImageManager" xml:space="preserve">
+    <value>Image Managemant</value>
+  </data>
+  <data name="M9_ImgMgr_ImageName" xml:space="preserve">
+    <value>Image Name</value>
+  </data>
+  <data name="M9_ImgMgr_ImageView" xml:space="preserve">
+    <value>Image View</value>
+  </data>
+  <data name="M9_ImgMgr_ExistSameImg" xml:space="preserve">
+    <value>Same image name exists</value>
+  </data>
+  <data name="M9_ImgMgr_UpLoadFail" xml:space="preserve">
+    <value>Image Upload Fail!</value>
+  </data>
+  <data name="M9_UserManagerTitle" xml:space="preserve">
+    <value>User Registration Manager</value>
+  </data>
+  <data name="M9_Manufacture_NewTitle" xml:space="preserve">
+    <value>Add Manufacture</value>
+  </data>
+  <data name="M_Tree1_Menu_AddAsset" xml:space="preserve">
+    <value>Add Asset</value>
+  </data>
+  <data name="M_Tree1_Menu_AddBuilding" xml:space="preserve">
+    <value>Add Building</value>
+  </data>
+  <data name="M_Tree1_Menu_AddFloor" xml:space="preserve">
+    <value>Add Floor</value>
+  </data>
+  <data name="M_Tree1_Menu_AddRack" xml:space="preserve">
+    <value>Add Rack</value>
+  </data>
+  <data name="M_Tree1_Menu_AddRoom" xml:space="preserve">
+    <value>Add Room</value>
+  </data>
+  <data name="M_Tree1_Menu_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="M_Tree1_Menu_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="M_Tree1_Menu_EditAsset" xml:space="preserve">
+    <value>Edit Asset</value>
+  </data>
+  <data name="M_Tree1_Menu_EditBuilding" xml:space="preserve">
+    <value>Edit Building</value>
+  </data>
+  <data name="M_Tree1_Menu_EditFloor" xml:space="preserve">
+    <value>Edit Floor</value>
+  </data>
+  <data name="M_Tree1_Menu_EditRack" xml:space="preserve">
+    <value>Edit Rack</value>
+  </data>
+  <data name="M_Tree1_Menu_EditRoom" xml:space="preserve">
+    <value>Edit Room</value>
+  </data>
+  <data name="M_Tree1_Menu_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="C_SelectImage" xml:space="preserve">
+    <value>Select Image</value>
+  </data>
+  <data name="M9_BuildingManagerTitle" xml:space="preserve">
+    <value>Building Registration Manager</value>
+  </data>
+  <data name="M9_Building_1" xml:space="preserve">
+    <value>Example: ABC Building</value>
+  </data>
+  <data name="M9_Building_Name" xml:space="preserve">
+    <value>Building Name</value>
+  </data>
+  <data name="M9_FloorManagerTitle" xml:space="preserve">
+    <value>Floor Registration Manager</value>
+  </data>
+  <data name="M9_Floor_1" xml:space="preserve">
+    <value>Select 3D Drawing</value>
+  </data>
+  <data name="M9_Floor_Level" xml:space="preserve">
+    <value>Floor Stage</value>
+  </data>
+  <data name="M9_RackManagerTitle" xml:space="preserve">
+    <value>Rack Registration Manager</value>
+  </data>
+  <data name="M9_Rack_1" xml:space="preserve">
+    <value>Rack Asset</value>
+  </data>
+  <data name="M9_Rack_2" xml:space="preserve">
+    <value>VCM Asset</value>
+  </data>
+  <data name="M9_Rack_3" xml:space="preserve">
+    <value>Layout Rack</value>
+  </data>
+  <data name="M9_Rack_Angle" xml:space="preserve">
+    <value>Rack Angle</value>
+  </data>
+  <data name="M9_Rack_No" xml:space="preserve">
+    <value>Rack Number</value>
+  </data>
+  <data name="M9_Rack_Row" xml:space="preserve">
+    <value>Rack Row Zone</value>
+  </data>
+  <data name="M9_RoomManagerTitle" xml:space="preserve">
+    <value>Room Registration Manager</value>
+  </data>
+  <data name="M9_Room_1" xml:space="preserve">
+    <value>Example: ER, 1F-IDF, Room 1010, RO-3B02</value>
+  </data>
+  <data name="M9_Room_2" xml:space="preserve">
+    <value>Set Region</value>
+  </data>
+  <data name="M9_Room_Name" xml:space="preserve">
+    <value>Room Name</value>
+  </data>
+  <data name="M9_UserManager_Chk1" xml:space="preserve">
+    <value>Receive</value>
+  </data>
+  <data name="M9_UserManager_Chk2" xml:space="preserve">
+    <value>Check then Delete able</value>
+  </data>
+  <data name="M9_UserManager_Deletable" xml:space="preserve">
+    <value>Delete Enable</value>
+  </data>
+  <data name="M9_UserManager_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="M9_UserManager_Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="M9_UserManager_LoginID" xml:space="preserve">
+    <value>Login ID</value>
+  </data>
+  <data name="M9_UserManager_Mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="M9_UserManager_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="M9_UserManager_Phone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="M9_UserManager_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M9_UserManager_UserID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="M9_UserManager_UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="C_Error_2" xml:space="preserve">
+    <value>Building name is arleady used. please input another name again.</value>
+  </data>
+  <data name="C_Error_1" xml:space="preserve">
+    <value>Error: Record is not deleted. Communication failed to server.</value>
+  </data>
+  <data name="M9_SelectDrawing3dTitle" xml:space="preserve">
+    <value>Select 3D Drawing of Floors</value>
+  </data>
+  <data name="C_Error_3" xml:space="preserve">
+    <value>Floor level is arleady used in the building. please input another Floor again.</value>
+  </data>
+  <data name="C_Error_4" xml:space="preserve">
+    <value>Room name is arleady used in the building. please input another name.</value>
+  </data>
+  <data name="C_Error_5" xml:space="preserve">
+    <value>Rack name is arleady used in the room. please input another name.</value>
+  </data>
+  <data name="M_Tree1_Menu_ConfigRackMount" xml:space="preserve">
+    <value>Config Rack Mount</value>
+  </data>
+  <data name="C_Asset_Name" xml:space="preserve">
+    <value>Asset Name</value>
+  </data>
+  <data name="C_Catalog_Name" xml:space="preserve">
+    <value>Catalog Nmae</value>
+  </data>
+  <data name="M9_RackMountManagerTitle" xml:space="preserve">
+    <value>Configuration of Rack Mount</value>
+  </data>
+  <data name="M9_RackMount_1" xml:space="preserve">
+    <value>List of Assets</value>
+  </data>
+  <data name="M9_RackMount_2" xml:space="preserve">
+    <value>List of Entry panels</value>
+  </data>
+  <data name="C_Rack_Name" xml:space="preserve">
+    <value>Rack Name</value>
+  </data>
+  <data name="M9_RackMount_3" xml:space="preserve">
+    <value>Slot No(U)</value>
+  </data>
+  <data name="M9_RackMount_4" xml:space="preserve">
+    <value>Current Rack</value>
+  </data>
+  <data name="M_Tree1_Menu_ConfigIC" xml:space="preserve">
+    <value>Config Intelligent Controller</value>
+  </data>
+  <data name="M_Tree1_Menu_ConfigSW" xml:space="preserve">
+    <value>Config Sloted Network Swich</value>
+  </data>
+  <data name="M9_RackMount_5" xml:space="preserve">
+    <value>Unit Size(U)</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewRack" xml:space="preserve">
+    <value>View Racks</value>
+  </data>
+  <data name="C_Site" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="M9_Rack_4" xml:space="preserve">
+    <value>Set Rack Position</value>
+  </data>
+  <data name="M9_ICMountManagerTitle" xml:space="preserve">
+    <value>Intelligent Controller Configuration Manager</value>
+  </data>
+  <data name="M9_ICMount_1" xml:space="preserve">
+    <value>List of Patch Panels</value>
+  </data>
+  <data name="M9_ICMount_2" xml:space="preserve">
+    <value>Controller Configuration</value>
+  </data>
+  <data name="M9_ICMount_3" xml:space="preserve">
+    <value>PP Number</value>
+  </data>
+  <data name="M9_ICMount_4" xml:space="preserve">
+    <value>PP Connector Number</value>
+  </data>
+  <data name="M9_ICMount_5" xml:space="preserve">
+    <value>Patch Panel Name</value>
+  </data>
+  <data name="M9_SWMountManagerTitle" xml:space="preserve">
+    <value>Shassi Enclosure Type Network Switch Configuration Manager</value>
+  </data>
+  <data name="M9_SWMount_1" xml:space="preserve">
+    <value>List of Network Switch Card</value>
+  </data>
+  <data name="M9_SWMount_2" xml:space="preserve">
+    <value>Config Network Switch</value>
+  </data>
+  <data name="M9_SWMount_3" xml:space="preserve">
+    <value>Slot Number</value>
+  </data>
+  <data name="M9_SWMount_4" xml:space="preserve">
+    <value>Switch Card Name</value>
+  </data>
+  <data name="C_Brief" xml:space="preserve">
+    <value>Brief</value>
+  </data>
+  <data name="C_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="C_Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="M9_ICViewTitle" xml:space="preserve">
+    <value>Intelligent Controller View</value>
+  </data>
+  <data name="M9_ICView_1" xml:space="preserve">
+    <value>Patch Panel No.</value>
+  </data>
+  <data name="M9_ICView_2" xml:space="preserve">
+    <value>Figure Type</value>
+  </data>
+  <data name="M9_ICView_3" xml:space="preserve">
+    <value>Media Type</value>
+  </data>
+  <data name="M9_ICView_4" xml:space="preserve">
+    <value>Shield Type</value>
+  </data>
+  <data name="M9_ICView_5" xml:space="preserve">
+    <value>Configure Type</value>
+  </data>
+  <data name="M9_ICView_6" xml:space="preserve">
+    <value>Connect Status</value>
+  </data>
+  <data name="C_IC_Name" xml:space="preserve">
+    <value>Intelligent Controller Name</value>
+  </data>
+  <data name="C_PP_Name" xml:space="preserve">
+    <value>Patch Panel Name</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewIC" xml:space="preserve">
+    <value>View Intelligent Controller</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewPP" xml:space="preserve">
+    <value>View Intelligent Patch Panel</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewSW" xml:space="preserve">
+    <value>View Network Switch</value>
+  </data>
+  <data name="M9_SWViewTitle" xml:space="preserve">
+    <value>Network Switch Viewer</value>
+  </data>
+  <data name="C_Port_Trace" xml:space="preserve">
+    <value>Port Trace</value>
+  </data>
+  <data name="M9_PPView_1" xml:space="preserve">
+    <value>Seleted Port Information</value>
+  </data>
+  <data name="M9_PPView_2" xml:space="preserve">
+    <value>Location Path</value>
+  </data>
+  <data name="M9_PPView_3" xml:space="preserve">
+    <value>Current Port</value>
+  </data>
+  <data name="M9_PPView_4" xml:space="preserve">
+    <value>IP Information</value>
+  </data>
+  <data name="C_Host_Name" xml:space="preserve">
+    <value>Host Name</value>
+  </data>
+  <data name="C_IP_Address" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="C_MAC_Address" xml:space="preserve">
+    <value>MAP Address</value>
+  </data>
+  <data name="C_SW_Name" xml:space="preserve">
+    <value>Network Switch Name</value>
+  </data>
+  <data name="M9_SWView_1" xml:space="preserve">
+    <value>Switch Port On</value>
+  </data>
+  <data name="M9_SWView_2" xml:space="preserve">
+    <value>Switch Port Off</value>
+  </data>
+  <data name="M_Tree1_Menu_RoomRackLayout" xml:space="preserve">
+    <value>Room,Rack Layout</value>
+  </data>
+  <data name="M_Tree1_Menu_MoveTree" xml:space="preserve">
+    <value>Move Tree Location or Asset</value>
+  </data>
+  <data name="C_Floor_Name" xml:space="preserve">
+    <value>Floor Name</value>
+  </data>
+  <data name="M9_ExtAssignManagerTitle" xml:space="preserve">
+    <value>Assign Extended Property to Catalogs Manager</value>
+  </data>
+  <data name="M9_ExtAssign_1" xml:space="preserve">
+    <value>List of Catalog</value>
+  </data>
+  <data name="M9_ExtAssign_2" xml:space="preserve">
+    <value>List of Extended Property</value>
+  </data>
+  <data name="C_Catalog_Group1_Name" xml:space="preserve">
+    <value>Group1</value>
+  </data>
+  <data name="C_Catalog_Group2_Name" xml:space="preserve">
+    <value>Group2</value>
+  </data>
+  <data name="C_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="C_Error_Server" xml:space="preserve">
+    <value>Error: Problem is occured when data saving.</value>
+  </data>
+  <data name="C_CEO" xml:space="preserve">
+    <value>CEO</value>
+  </data>
+  <data name="C_Homepage" xml:space="preserve">
+    <value>Homepage</value>
+  </data>
+  <data name="C_Manager" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="C_Post" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="M_Tree1_Menu_AddFavorite" xml:space="preserve">
+    <value>Add Favorite</value>
+  </data>
+  <data name="M_Tree1_Menu_Clone" xml:space="preserve">
+    <value>Paste multiple</value>
+  </data>
+  <data name="C_DeleteAsset" xml:space="preserve">
+    <value>Remove Asset</value>
+  </data>
+  <data name="C_DeleteSpace" xml:space="preserve">
+    <value>Remove Space</value>
+  </data>
+  <data name="C_InsertSpace" xml:space="preserve">
+    <value>Insert Space</value>
+  </data>
+  <data name="C_ReportName" xml:space="preserve">
+    <value>Report Name</value>
+  </data>
+  <data name="C_TempleateName" xml:space="preserve">
+    <value>Templeate Name</value>
+  </data>
+  <data name="C_Front" xml:space="preserve">
+    <value>Front Part</value>
+  </data>
+  <data name="C_Rear" xml:space="preserve">
+    <value>Rear Part</value>
+  </data>
+  <data name="C_PortNo" xml:space="preserve">
+    <value>Port No</value>
+  </data>
+  <data name="C_Region1" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="C_Region2" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="C_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="C_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="M5_Menu_AddCable" xml:space="preserve">
+    <value>Add Cable</value>
+  </data>
+  <data name="C_Ctrl_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="C_Ctrl_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="C_Ctrl_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="C_Asset_Part" xml:space="preserve">
+    <value>kind of Asset</value>
+  </data>
+  <data name="C_Ctrl_Turn" xml:space="preserve">
+    <value>Turn</value>
+  </data>
+  <data name="C_Cable_Type" xml:space="preserve">
+    <value>Cable Type</value>
+  </data>
+  <data name="M9_CableSelectorTitle" xml:space="preserve">
+    <value>Select Cable</value>
+  </data>
+  <data name="C_Cable_Color" xml:space="preserve">
+    <value>Color of Cable</value>
+  </data>
+  <data name="C_Cable_Catalog_Name" xml:space="preserve">
+    <value>Cable Catalog Name</value>
+  </data>
+  <data name="C_Cable_Disp_Name" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="M9_Con_ID" xml:space="preserve">
+    <value>Controller ID</value>
+  </data>
+  <data name="C_Reserved_Date" xml:space="preserve">
+    <value>Reserved Date &amp; Time</value>
+  </data>
+  <data name="C_Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="C_WorkOrder_Desc" xml:space="preserve">
+    <value>Work Order Description</value>
+  </data>
+  <data name="M9_WorkOrder_NewTitle" xml:space="preserve">
+    <value>Work Order</value>
+  </data>
+  <data name="C_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="C_Reserved" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Reserved_Time" xml:space="preserve">
+    <value>Reserved Time</value>
+  </data>
+  <data name="C_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="C_WorkOrder" xml:space="preserve">
+    <value>Work Order</value>
+  </data>
+  <data name="C_Imediate" xml:space="preserve">
+    <value>Imediate</value>
+  </data>
+  <data name="M_Tree1_Menu_ScanIC" xml:space="preserve">
+    <value>Scan Controller</value>
+  </data>
+  <data name="M5_Accept_Connection" xml:space="preserve">
+    <value>Accept Current State</value>
+  </data>
+  <data name="M5_Scan_Controller" xml:space="preserve">
+    <value>Scan Controller</value>
+  </data>
+  <data name="C_Location_Name" xml:space="preserve">
+    <value>Location Name</value>
+  </data>
+  <data name="M_Prop4_5_SNMP_Password" xml:space="preserve">
+    <value>SNMP Password</value>
+  </data>
+  <data name="M_Prop4_5_SNMP_User" xml:space="preserve">
+    <value>SNMP User</value>
+  </data>
+  <data name="M_Prop3_2_IC_1" xml:space="preserve">
+    <value>Max Patch Panel Connector</value>
+  </data>
+  <data name="M_Prop3_2_IC_2" xml:space="preserve">
+    <value>Dual Power Supply</value>
+  </data>
+  <data name="M_Prop3_2_CA_1" xml:space="preserve">
+    <value>Inteligent Patch Cord</value>
+  </data>
+  <data name="M_Prop3_2_CA_10" xml:space="preserve">
+    <value>Display Cable Name</value>
+  </data>
+  <data name="M_Prop3_2_CA_2" xml:space="preserve">
+    <value>Installation Type</value>
+  </data>
+  <data name="M_Prop3_2_CA_2_1" xml:space="preserve">
+    <value>FIxed</value>
+  </data>
+  <data name="M_Prop3_2_CA_2_2" xml:space="preserve">
+    <value>Patch</value>
+  </data>
+  <data name="M_Prop3_2_CA_3" xml:space="preserve">
+    <value>Military</value>
+  </data>
+  <data name="M_Prop3_2_CA_3_1" xml:space="preserve">
+    <value>Civilian Version</value>
+  </data>
+  <data name="M_Prop3_2_CA_3_2" xml:space="preserve">
+    <value>Military Version</value>
+  </data>
+  <data name="M_Prop3_2_CA_4" xml:space="preserve">
+    <value>Cable Media Type</value>
+  </data>
+  <data name="M_Prop3_2_CA_5" xml:space="preserve">
+    <value>UTP Shield</value>
+  </data>
+  <data name="M_Prop3_2_CA_6" xml:space="preserve">
+    <value>UTP Category</value>
+  </data>
+  <data name="M_Prop3_2_CA_7" xml:space="preserve">
+    <value>Fiber Cable Type</value>
+  </data>
+  <data name="M_Prop3_2_CA_8" xml:space="preserve">
+    <value>Fiber Connector Type</value>
+  </data>
+  <data name="M_Prop3_2_CA_9" xml:space="preserve">
+    <value>Display Cable</value>
+  </data>
+  <data name="M_Prop3_2_CP_1" xml:space="preserve">
+    <value>Plug Side</value>
+  </data>
+  <data name="M_Prop3_2_CP_1_1" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="M_Prop3_2_CP_1_2" xml:space="preserve">
+    <value>One(Right) Side</value>
+  </data>
+  <data name="M_Prop3_2_CP_1_3" xml:space="preserve">
+    <value>Both Side</value>
+  </data>
+  <data name="M_Prop3_2_ST_1" xml:space="preserve">
+    <value>Max Disks</value>
+  </data>
+  <data name="M_Prop3_2_SW_1" xml:space="preserve">
+    <value>Max Slots</value>
+  </data>
+  <data name="M_Prop3_2_SW_2" xml:space="preserve">
+    <value>Figure Type</value>
+  </data>
+  <data name="M_Prop3_2_SW_2_1" xml:space="preserve">
+    <value>Single Embedded</value>
+  </data>
+  <data name="M_Prop3_2_SW_2_2" xml:space="preserve">
+    <value>Sash Type</value>
+  </data>
+  <data name="M_Prop3_2_SW_2_3" xml:space="preserve">
+    <value>Card Type</value>
+  </data>
+  <data name="M_Prop3_2_SW_3" xml:space="preserve">
+    <value>SNMP oid</value>
+  </data>
+  <data name="M_Prop3_1_Rack_Mountable" xml:space="preserve">
+    <value>Rack Mountable</value>
+  </data>
+  <data name="M_Prop3_1_Unit_Size" xml:space="preserve">
+    <value>Unit Size</value>
+  </data>
+  <data name="M_Prop3_2_PP_1" xml:space="preserve">
+    <value>Interlligent Patch Panel</value>
+  </data>
+  <data name="M_Prop4_2_ST_1" xml:space="preserve">
+    <value>Current Number of Disks</value>
+  </data>
+  <data name="M_Prop4_2_ST_2" xml:space="preserve">
+    <value>Current DIsk Amount(GB)</value>
+  </data>
+  <data name="M_Prop4_2_ST_3" xml:space="preserve">
+    <value>Storage Connection Type</value>
+  </data>
+  <data name="M_Prop4_2_SV_1" xml:space="preserve">
+    <value>OS Type(Win, Linux, etc)</value>
+  </data>
+  <data name="M_Prop4_2_SV_2" xml:space="preserve">
+    <value>OS Version</value>
+  </data>
+  <data name="M_Prop4_2_SV_3" xml:space="preserve">
+    <value>Host Name</value>
+  </data>
+  <data name="M_Prop4_2_SV_4" xml:space="preserve">
+    <value>Number of NIC</value>
+  </data>
+  <data name="M_Prop4_2_SV_5" xml:space="preserve">
+    <value>Total Disk Amount</value>
+  </data>
+  <data name="M_Prop4_2_SV_6" xml:space="preserve">
+    <value>Number of Disks</value>
+  </data>
+  <data name="M_Prop4_2_SW_1" xml:space="preserve">
+    <value>Gateway IP Address</value>
+  </data>
+  <data name="M_Prop4_5_SNMP_Trap" xml:space="preserve">
+    <value>SNMP Trap Server IP Address</value>
+  </data>
+  <data name="M_Prop4_1_Asset_Name" xml:space="preserve">
+    <value>Asset Name</value>
+  </data>
+  <data name="M_Prop3_1_Catalog_ID" xml:space="preserve">
+    <value>Catalog ID</value>
+  </data>
+  <data name="M_Prop1_1_Asset_Name" xml:space="preserve">
+    <value>Asset Name</value>
+  </data>
+  <data name="M9_Asset_SNMP4" xml:space="preserve">
+    <value>User ID for SNMP v3</value>
+  </data>
+  <data name="M9_Asset_SNMP5" xml:space="preserve">
+    <value>Password for SNMP v3</value>
+  </data>
+  <data name="M9_Asset_SNMP6" xml:space="preserve">
+    <value>Trap(NMS) Server IP Address</value>
+  </data>
+  <data name="M9_CloneManagerTitle" xml:space="preserve">
+    <value>Clone Item</value>
+  </data>
+  <data name="M9_Clone_Qty" xml:space="preserve">
+    <value>Number of Creation</value>
+  </data>
+  <data name="M9_Clone_Start1" xml:space="preserve">
+    <value>Start Number 1</value>
+  </data>
+  <data name="M9_Clone_Step1" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="C_No" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="M9_CloneManager_1" xml:space="preserve">
+    <value>Simulation</value>
+  </data>
+  <data name="M9_Clone_2" xml:space="preserve">
+    <value>Source Item</value>
+  </data>
+  <data name="M9_CloneManager_3" xml:space="preserve">
+    <value>Duplication Check</value>
+  </data>
+  <data name="M9_Clone_4" xml:space="preserve">
+    <value>Dest Location</value>
+  </data>
+  <data name="M_Connect" xml:space="preserve">
+    <value>Server Connection Status</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewFloorIPM" xml:space="preserve">
+    <value>Environment Monitoring View of Floor</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewIPM" xml:space="preserve">
+    <value>Environment Monitoring View</value>
+  </data>
+  <data name="M_Tree1_Menu_DeleteFavorite" xml:space="preserve">
+    <value>Delete from Favorite</value>
+  </data>
+  <data name="M9_Clone_Start2" xml:space="preserve">
+    <value>Start Number 2</value>
+  </data>
+  <data name="M9_Clone_Start3" xml:space="preserve">
+    <value>Start Number 3</value>
+  </data>
+  <data name="M9_Clone_Step2" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="M9_Clone_Step3" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="M9_Clone_StartFloor" xml:space="preserve">
+    <value>Start Number of Floor</value>
+  </data>
+  <data name="M9_Clone_StepFloor" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="M9_Clone_Digit1" xml:space="preserve">
+    <value>Number of Digits</value>
+  </data>
+  <data name="M9_Clone_Digit2" xml:space="preserve">
+    <value>Number of Digits</value>
+  </data>
+  <data name="M9_Clone_Digit3" xml:space="preserve">
+    <value>Number of Digits</value>
+  </data>
+  <data name="M9_Clone_DigitFloor" xml:space="preserve">
+    <value>Number of Digits</value>
+  </data>
+  <data name="M9_Catalog_ca_2_3" xml:space="preserve">
+    <value>IC Patch</value>
+  </data>
+  <data name="M9_Catalog_ca_2_4" xml:space="preserve">
+    <value>XC Patch</value>
+  </data>
+  <data name="M_Prop3_2_CA_2_3" xml:space="preserve">
+    <value>Patch(IC)</value>
+  </data>
+  <data name="M_Prop3_2_CA_2_4" xml:space="preserve">
+    <value>Patch(XC)</value>
+  </data>
+  <data name="M_Tree1_Menu_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="C_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="M9_ICFwManagerNew_Title" xml:space="preserve">
+    <value>New F/W File Select</value>
+  </data>
+  <data name="M9_ICFwManager_File" xml:space="preserve">
+    <value>File Select</value>
+  </data>
+  <data name="M9_ICFwManager_FileName" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="M9_ICFwManager_FWName" xml:space="preserve">
+    <value>Fw Name</value>
+  </data>
+  <data name="M9_ICFwManager_LastUpdate" xml:space="preserve">
+    <value>Upload Date</value>
+  </data>
+  <data name="M9_ICFwManager_Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="M9_ICFwManager_Title" xml:space="preserve">
+    <value>IC F/W Upgrade Manager</value>
+  </data>
+  <data name="M9_ICFwManager_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="C_Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="M9_AlarmEventManager_Desc" xml:space="preserve">
+    <value>Event Description</value>
+  </data>
+  <data name="M9_AlarmEventManager_email" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="M9_AlarmEventManager_Id" xml:space="preserve">
+    <value>Event ID</value>
+  </data>
+  <data name="M9_AlarmEventManager_Popup" xml:space="preserve">
+    <value>Popup</value>
+  </data>
+  <data name="M9_AlarmEventManager_SMS" xml:space="preserve">
+    <value>SMS</value>
+  </data>
+  <data name="M9_AlarmEventManager_Title" xml:space="preserve">
+    <value>Alarm Event Setup Manager</value>
+  </data>
+  <data name="M9_AlarmEventManager_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="M9_ICFwManagerApply_Title" xml:space="preserve">
+    <value>IC F/W Upgrade Apply</value>
+  </data>
+  <data name="M9_Catalog_AssetList" xml:space="preserve">
+    <value>Included Assets</value>
+  </data>
+  <data name="M9_Catalog_AssetList2" xml:space="preserve">
+    <value>All Sites</value>
+  </data>
+  <data name="M9_Catalog_AssetList3" xml:space="preserve">
+    <value>Current Site</value>
+  </data>
+  <data name="M9_NetworkSchedulerTitle" xml:space="preserve">
+    <value>Network Scheduler Manager</value>
+  </data>
+  <data name="M9_Network_Addr" xml:space="preserve">
+    <value>Network Range</value>
+  </data>
+  <data name="M9_Network_Name" xml:space="preserve">
+    <value>Network Name</value>
+  </data>
+  <data name="M9_Network_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="M9_Network_Start_IP" xml:space="preserve">
+    <value>Start IP address</value>
+  </data>
+  <data name="M9_Network_Stop_IP" xml:space="preserve">
+    <value>Stop IP address</value>
+  </data>
+  <data name="M9_Network_Subnet" xml:space="preserve">
+    <value>Subnet</value>
+  </data>
+  <data name="M9_Network_SwList" xml:space="preserve">
+    <value>Selected Switch List</value>
+  </data>
+  <data name="M9_Network_Config" xml:space="preserve">
+    <value>Setup Network Scheduller</value>
+  </data>
+  <data name="M9_Network_Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="M9_Network_Day0" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="M9_Network_Day1" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="M9_Network_Day2" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="M9_Network_Day3" xml:space="preserve">
+    <value>Wednsday</value>
+  </data>
+  <data name="M9_Network_Day4" xml:space="preserve">
+    <value>Thrusday</value>
+  </data>
+  <data name="M9_Network_Day5" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="M9_Network_Day6" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="M9_Network_Everyday" xml:space="preserve">
+    <value>Everyday</value>
+  </data>
+  <data name="M9_Network_Pattern" xml:space="preserve">
+    <value>Pattern</value>
+  </data>
+  <data name="M9_Network_RepeatHour" xml:space="preserve">
+    <value>Repeat Hour</value>
+  </data>
+  <data name="M9_Network_StartTime" xml:space="preserve">
+    <value>Start Time</value>
+  </data>
+  <data name="M9_Network_Disable" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="C_SwitchName" xml:space="preserve">
+    <value>Switch Name</value>
+  </data>
+  <data name="M9_SwitchSelectorTitle" xml:space="preserve">
+    <value>Switch Selector</value>
+  </data>
+  <data name="C_IP_Addr" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="C_LastActivated" xml:space="preserve">
+    <value>Last Activated</value>
+  </data>
+  <data name="C_MAC_Addr" xml:space="preserve">
+    <value>MAC Address</value>
+  </data>
+  <data name="M9_TerminalViewTitle" xml:space="preserve">
+    <value>Searched Terminal View</value>
+  </data>
+  <data name="C_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="C_ManualScan" xml:space="preserve">
+    <value>Manual Scan</value>
+  </data>
+  <data name="C_OutletName" xml:space="preserve">
+    <value>Outlet Name</value>
+  </data>
+  <data name="M9_Catalog_sw_3" xml:space="preserve">
+    <value>Model Type</value>
+  </data>
+  <data name="M_Prop3_2_SW_4" xml:space="preserve">
+    <value>Model Type</value>
+  </data>
+  <data name="M_Prop4_2_SW_2" xml:space="preserve">
+    <value>Vlan</value>
+  </data>
+  <data name="M9_Asset_Switch2" xml:space="preserve">
+    <value>VLAN</value>
+  </data>
+  <data name="M9_Catalog_sw_4" xml:space="preserve">
+    <value>SNMP oid string</value>
+  </data>
+  <data name="C_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="C_Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="M9_DrawingEditer_Drawing" xml:space="preserve">
+    <value>Wall Drawing</value>
+  </data>
+  <data name="M9_DrawingEditer_ImageImport" xml:space="preserve">
+    <value>Drawing Image Import</value>
+  </data>
+  <data name="M9_DrawingEditer_Select" xml:space="preserve">
+    <value>Wall Select</value>
+  </data>
+  <data name="M9_DrawingNamming_Input" xml:space="preserve">
+    <value>Input Drawing name</value>
+  </data>
+  <data name="M9_Network_Gateway" xml:space="preserve">
+    <value>Switch for Gateway</value>
+  </data>
+  <data name="M9_Network_RepeatMinute" xml:space="preserve">
+    <value>Repeat Minute</value>
+  </data>
+  <data name="M_Tree4" xml:space="preserve">
+    <value>L-Terminals</value>
+  </data>
+  <data name="Menu_3dDrawingsManager" xml:space="preserve">
+    <value>3D Drawings Registration Manager</value>
+  </data>
+  <data name="Menu_AlarmEventSetup" xml:space="preserve">
+    <value>Setup Alarm Event</value>
+  </data>
+  <data name="Menu_AssetList" xml:space="preserve">
+    <value>Search List of Assets</value>
+  </data>
+  <data name="Menu_CatalogGroupManager" xml:space="preserve">
+    <value>Catalog Group Registration Manager</value>
+  </data>
+  <data name="Menu_CatalogList" xml:space="preserve">
+    <value>Search List of Catalogs</value>
+  </data>
+  <data name="Menu_CatalogManager" xml:space="preserve">
+    <value>Catalog Registration Manager</value>
+  </data>
+  <data name="Menu_ContactsList" xml:space="preserve">
+    <value>Search List of Contacts</value>
+  </data>
+  <data name="Menu_EnvironmentSetting" xml:space="preserve">
+    <value>Setup Environment Sensor</value>
+  </data>
+  <data name="Menu_EtcViewOption" xml:space="preserve">
+    <value>3D Map View Option</value>
+  </data>
+  <data name="Menu_EventList" xml:space="preserve">
+    <value>Search List of Alarms/Events</value>
+  </data>
+  <data name="Menu_ExportManager" xml:space="preserve">
+    <value>Export Data to Excel</value>
+  </data>
+  <data name="Menu_ExtAssignManager" xml:space="preserve">
+    <value>Extended Property Assign Manager</value>
+  </data>
+  <data name="Menu_ExtendedPropertyManager" xml:space="preserve">
+    <value>Extended Property Registration Manager</value>
+  </data>
+  <data name="Menu_IcFwUpgrade" xml:space="preserve">
+    <value>Upgrade Firmware for Intelligent Controller</value>
+  </data>
+  <data name="Menu_ImageManager" xml:space="preserve">
+    <value>Image File Registration Manager</value>
+  </data>
+  <data name="Menu_ImportManager" xml:space="preserve">
+    <value>Import Data from Excel</value>
+  </data>
+  <data name="Menu_LineLinkList" xml:space="preserve">
+    <value>Search List of Connections</value>
+  </data>
+  <data name="Menu_LinkDiagramChangeHistList" xml:space="preserve">
+    <value>Search List of Link Diagram Change History</value>
+  </data>
+  <data name="Menu_LocationList" xml:space="preserve">
+    <value>List of Locations</value>
+  </data>
+  <data name="Menu_ManufactureList" xml:space="preserve">
+    <value>List of Manufactures</value>
+  </data>
+  <data name="Menu_ManufactureManager" xml:space="preserve">
+    <value>Manufacture Registration Manager</value>
+  </data>
+  <data name="Menu_NetworkScheduleManager" xml:space="preserve">
+    <value>Network Schdule Registration Manager</value>
+  </data>
+  <data name="Menu_PrintTemplate" xml:space="preserve">
+    <value>Print Template Manager</value>
+  </data>
+  <data name="Menu_SiteUserManager" xml:space="preserve">
+    <value>User Permision Manager For Site</value>
+  </data>
+  <data name="Menu_TerminalSearchView" xml:space="preserve">
+    <value>View Search of Terminals</value>
+  </data>
+  <data name="Menu_UserManager" xml:space="preserve">
+    <value>User Registration Manager</value>
+  </data>
+  <data name="Menu_WorkOrderList" xml:space="preserve">
+    <value>Search List of Work Orders</value>
+  </data>
+  <data name="Menu_EnvironmentList" xml:space="preserve">
+    <value>Search List of Environment</value>
+  </data>
+  <data name="C_Door" xml:space="preserve">
+    <value>Door Open (ea)</value>
+  </data>
+  <data name="C_Humidity" xml:space="preserve">
+    <value>Humidity (%)</value>
+  </data>
+  <data name="C_Power" xml:space="preserve">
+    <value>Power (Kwh)</value>
+  </data>
+  <data name="C_Temperature" xml:space="preserve">
+    <value>Temperature (ºC)</value>
+  </data>
+  <data name="C_SearchDate" xml:space="preserve">
+    <value>Search of Duration Date</value>
+  </data>
+  <data name="M_Prop1_1_MAC" xml:space="preserve">
+    <value>MAC Address</value>
+  </data>
+  <data name="M_Prop1_1_NetBIOS_Name" xml:space="preserve">
+    <value>NetBIOS Name</value>
+  </data>
+  <data name="Menu_StatEnvironment1" xml:space="preserve">
+    <value>Statistics of Monthly Environment Report</value>
+  </data>
+  <data name="Menu_StatEnvironment2" xml:space="preserve">
+    <value>Statistics of Daily Environment Report</value>
+  </data>
+  <data name="Menu_StatEnvironment3" xml:space="preserve">
+    <value>Statistics of Hour Environment Transition Report</value>
+  </data>
+  <data name="Menu_StatTerminal1" xml:space="preserve">
+    <value>Statistics of Monthly Terminal Report</value>
+  </data>
+  <data name="Menu_StatTerminal2" xml:space="preserve">
+    <value>Statistics of Daily Terminal Report</value>
+  </data>
+  <data name="Menu_StatTerminal3" xml:space="preserve">
+    <value>Statistics of Hour Terminal Transition Report</value>
+  </data>
+  <data name="C_SearchInfo" xml:space="preserve">
+    <value>Search conditon of Input data after Searching.</value>
+  </data>
+  <data name="C_TempleateDelete" xml:space="preserve">
+    <value>Delete Template</value>
+  </data>
+  <data name="C_TempleateDisp" xml:space="preserve">
+    <value>Display information</value>
+  </data>
+  <data name="C_TempleateInfo" xml:space="preserve">
+    <value>Save Document name</value>
+  </data>
+  <data name="C_TempleateSave" xml:space="preserve">
+    <value>Save Template</value>
+  </data>
+  <data name="C_TempleateSelect" xml:space="preserve">
+    <value>Select Document</value>
+  </data>
+  <data name="C_Printer" xml:space="preserve">
+    <value>Printer</value>
+  </data>
+  <data name="EB_C_High" xml:space="preserve">
+    <value>Current Range High Value</value>
+  </data>
+  <data name="EB_High" xml:space="preserve">
+    <value>~ High</value>
+  </data>
+  <data name="EB_HumiInfo" xml:space="preserve">
+    <value>Humidity Limit Set Value : min 15% ~ max 99%.</value>
+  </data>
+  <data name="EB_HumiLow" xml:space="preserve">
+    <value>Humidity Limit Set Value : Low</value>
+  </data>
+  <data name="EB_HumiRangeSet" xml:space="preserve">
+    <value>Humidity Range Set Value : Low</value>
+  </data>
+  <data name="EB_Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="EB_MapColorSetting" xml:space="preserve">
+    <value>Map Color Setting</value>
+  </data>
+  <data name="EB_PH_High" xml:space="preserve">
+    <value>Energy Range High Value</value>
+  </data>
+  <data name="EB_PowerRangeSet" xml:space="preserve">
+    <value>Power Range Set Value : Low</value>
+  </data>
+  <data name="EB_PowerSensorSetting" xml:space="preserve">
+    <value>Power Sensor Setting (High Only)</value>
+  </data>
+  <data name="EB_P_High" xml:space="preserve">
+    <value>Power Range High Value</value>
+  </data>
+  <data name="EB_TempHumiSetting" xml:space="preserve">
+    <value>Temperature &amp; Humidity Setting (High / Low)</value>
+  </data>
+  <data name="EB_TempLow" xml:space="preserve">
+    <value>Temperature Limit Set Value : Low</value>
+  </data>
+  <data name="EB_TempRangeSet" xml:space="preserve">
+    <value>Temperature Range Set Value : Low</value>
+  </data>
+  <data name="EB_CloseDoor" xml:space="preserve">
+    <value>Door Close Count</value>
+  </data>
+  <data name="EB_DoorOpen" xml:space="preserve">
+    <value>Door Open Count</value>
+  </data>
+  <data name="EB_DoorTotal" xml:space="preserve">
+    <value>Door Total Count</value>
+  </data>
+  <data name="EB_Energy" xml:space="preserve">
+    <value>Energy Usage</value>
+  </data>
+  <data name="EB_EnergyPeekToday" xml:space="preserve">
+    <value>Peek Energy Today</value>
+  </data>
+  <data name="EB_EnergyPeekYesterday" xml:space="preserve">
+    <value>Peek Energy Yesterday</value>
+  </data>
+  <data name="EB_HumidityCur" xml:space="preserve">
+    <value>Current Humidity</value>
+  </data>
+  <data name="EB_TemperatureCur" xml:space="preserve">
+    <value>Current Temperature</value>
+  </data>
+  <data name="EB_TodayPeek" xml:space="preserve">
+    <value>Today Peek</value>
+  </data>
+  <data name="C_SiteID" xml:space="preserve">
+    <value>Site ID</value>
+  </data>
+  <data name="C_SiteName" xml:space="preserve">
+    <value>Site Name</value>
+  </data>
+  <data name="C_TempleateInfo2" xml:space="preserve">
+    <value>Delete Templeate Name</value>
+  </data>
+  <data name="C_Count" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="C_Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="C_Hour" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="C_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="C_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="C_SelectInfo" xml:space="preserve">
+    <value>Select Information</value>
+  </data>
+  <data name="D_Stat1" xml:space="preserve">
+    <value>Status of Patch Port  / Percentage (%)</value>
+  </data>
+  <data name="D_Stat10" xml:space="preserve">
+    <value>Current Humidity</value>
+  </data>
+  <data name="D_Stat11" xml:space="preserve">
+    <value>Todays Door alarm</value>
+  </data>
+  <data name="D_Stat12" xml:space="preserve">
+    <value>Todays Environment</value>
+  </data>
+  <data name="D_Stat13" xml:space="preserve">
+    <value>Todays Hourly Power </value>
+  </data>
+  <data name="D_Stat14" xml:space="preserve">
+    <value>Todays Hourly Temperature</value>
+  </data>
+  <data name="D_Stat15" xml:space="preserve">
+    <value>Todays Hourly Humidity </value>
+  </data>
+  <data name="D_Stat16" xml:space="preserve">
+    <value>Todays Daily Terminal (Count)</value>
+  </data>
+  <data name="D_Stat2" xml:space="preserve">
+    <value>Status of Switch Port  / Percentage (%)</value>
+  </data>
+  <data name="D_Stat3" xml:space="preserve">
+    <value>Status of Rack Space  / Percentage (%)</value>
+  </data>
+  <data name="D_Stat4" xml:space="preserve">
+    <value>Status of Terminal Connected  / Percentage (%)</value>
+  </data>
+  <data name="D_Stat5" xml:space="preserve">
+    <value>Statistics of Timely Terminal Connected (Count)</value>
+  </data>
+  <data name="D_Stat6" xml:space="preserve">
+    <value>Status of Intelligent System</value>
+  </data>
+  <data name="D_Stat7" xml:space="preserve">
+    <value>Status of Event (Count) </value>
+  </data>
+  <data name="D_Stat8" xml:space="preserve">
+    <value>Current Power (kwh)</value>
+  </data>
+  <data name="D_Stat9" xml:space="preserve">
+    <value>Current Temperature</value>
+  </data>
+  <data name="C_Error11" xml:space="preserve">
+    <value>Already Exists Name.</value>
+  </data>
+  <data name="C_Error12" xml:space="preserve">
+    <value>It dose not have to save the template name.</value>
+  </data>
+  <data name="C_Error13" xml:space="preserve">
+    <value>- Are you sure delete?</value>
+  </data>
+  <data name="C_Error14" xml:space="preserve">
+    <value>- Do you want to save?</value>
+  </data>
+  <data name="C_Report1" xml:space="preserve">
+    <value>Asset Information Report</value>
+  </data>
+  <data name="C_Report2" xml:space="preserve">
+    <value>Catalog Information Report</value>
+  </data>
+  <data name="C_Report3" xml:space="preserve">
+    <value>Environment Information Report</value>
+  </data>
+  <data name="C_Report4" xml:space="preserve">
+    <value>Line Linked Information Report</value>
+  </data>
+  <data name="C_Report5" xml:space="preserve">
+    <value>Location Information Report</value>
+  </data>
+  <data name="C_Report6" xml:space="preserve">
+    <value>Manufacture Information Report</value>
+  </data>
+  <data name="C_Report7" xml:space="preserve">
+    <value>Print List Information Report</value>
+  </data>
+  <data name="C_Report8" xml:space="preserve">
+    <value>Contact Information Report</value>
+  </data>
+  <data name="C_Report9" xml:space="preserve">
+    <value>Alarm-Event Information Report</value>
+  </data>
+  <data name="C_Long_Term_Terminals" xml:space="preserve">
+    <value>Long-term Connectionless Terminals</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewLinkDiagram" xml:space="preserve">
+    <value>View Link Diagram</value>
+  </data>
+  <data name="M9_LinkDiagramViewTitle" xml:space="preserve">
+    <value>Link Diagram View</value>
+  </data>
+  <data name="M9_LinkDiagramView_1" xml:space="preserve">
+    <value>Total number of ports</value>
+  </data>
+  <data name="C_Intelligent_Port_Utilization" xml:space="preserve">
+    <value>Intelligent Port Utilization</value>
+  </data>
+  <data name="C_Intelligent_Type" xml:space="preserve">
+    <value>Intelligent Port</value>
+  </data>
+  <data name="C_Normal_Port_Utilization" xml:space="preserve">
+    <value>Normal Port Utilization</value>
+  </data>
+  <data name="C_Normal_Type" xml:space="preserve">
+    <value>Normal Port</value>
+  </data>
+  <data name="C_User_Port_Utilization" xml:space="preserve">
+    <value>User Port Utilization</value>
+  </data>
+  <data name="D_Stat17" xml:space="preserve">
+    <value>Todays Monthly Terminal (Count)</value>
+  </data>
+  <data name="C_Confirm" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="C_Delete_Item" xml:space="preserve">
+    <value>Do you want to delete selected item?</value>
+  </data>
+  <data name="C_Drawing" xml:space="preserve">
+    <value>Drawing</value>
+  </data>
+  <data name="C_Error_AssetTree_1" xml:space="preserve">
+    <value>asset_id is not match!! please restart program!</value>
+  </data>
+  <data name="C_Error_Catalog_1" xml:space="preserve">
+    <value>Only empty catalog can be deleted. This selected catalog already contain asset.</value>
+  </data>
+  <data name="C_Error_Contacts_1" xml:space="preserve">
+    <value>Please delete contacts before</value>
+  </data>
+  <data name="C_Error_Controller_ID" xml:space="preserve">
+    <value>Must be enter controller id (1~999).</value>
+  </data>
+  <data name="C_Error_Duplicated_Answer" xml:space="preserve">
+    <value>Duplicated extended answer name. Please use another name.</value>
+  </data>
+  <data name="C_Error_Duplicated_Asset" xml:space="preserve">
+    <value>Already used asset name(ID).</value>
+  </data>
+  <data name="C_Error_Duplicated_Catalog" xml:space="preserve">
+    <value>Already used catalog name. Please use another catalog name.</value>
+  </data>
+  <data name="C_Error_Duplicated_Company" xml:space="preserve">
+    <value>Duplicated company name. Please use another name.</value>
+  </data>
+  <data name="C_Error_Duplicated_Contacts" xml:space="preserve">
+    <value>Duplicated contacts name. Please use another contacts name.</value>
+  </data>
+  <data name="C_Error_Duplicated_Controller" xml:space="preserve">
+    <value>Duplicated controller id. Please use another controller id. (1~999)</value>
+  </data>
+  <data name="C_Error_Duplicated_ExtProperty" xml:space="preserve">
+    <value>Duplicated extended property name. Please use another name.</value>
+  </data>
+  <data name="C_Error_Login" xml:space="preserve">
+    <value>Wrong account. Please enter correct user id.</value>
+  </data>
+  <data name="C_Error_Login_Count" xml:space="preserve">
+    <value>Please use system after checked your account.</value>
+  </data>
+  <data name="C_Error_Password" xml:space="preserve">
+    <value>Wrong password Please enter correct password.</value>
+  </data>
+  <data name="C_Error_Password_Count" xml:space="preserve">
+    <value>Please use system after checked your login password.</value>
+  </data>
+  <data name="C_Error_Rack_Config_1" xml:space="preserve">
+    <value>Please set rack catalog first.</value>
+  </data>
+  <data name="C_Error_Rack_Config_2" xml:space="preserve">
+    <value>Power strip module is mountable only two side left and right.</value>
+  </data>
+  <data name="C_Error_Rack_Config_3" xml:space="preserve">
+    <value>No more mountable space. </value>
+  </data>
+  <data name="C_Error_Rack_Config_4" xml:space="preserve">
+    <value>Only rack mountable device can be mounted.</value>
+  </data>
+  <data name="C_Error_Rack_Config_5" xml:space="preserve">
+    <value>Can't mount rack unit coz unit size is 0.</value>
+  </data>
+  <data name="C_Error_Rack_Config_6" xml:space="preserve">
+    <value>Auto mounted some device.</value>
+  </data>
+  <data name="C_Error_Rack_Unit_Size" xml:space="preserve">
+    <value>Rack slot type of rack-mountable device must enter rack unit size than 1.</value>
+  </data>
+  <data name="C_Error_Reserved_Date" xml:space="preserve">
+    <value>Please enter reserved date correctly.</value>
+  </data>
+  <data name="C_Error_Save_Excel" xml:space="preserve">
+    <value>Error when saving to excel file</value>
+  </data>
+  <data name="C_Error_Save_Excel1" xml:space="preserve">
+    <value>Error when loading from excel file</value>
+  </data>
+  <data name="C_Error_Scan_Failed" xml:space="preserve">
+    <value>Failed to scan controller.</value>
+  </data>
+  <data name="C_Error_Server_Domain" xml:space="preserve">
+    <value>Please enter server domain name or IP address.</value>
+  </data>
+  <data name="C_Error_Site" xml:space="preserve">
+    <value>Can't acess this site.</value>
+  </data>
+  <data name="C_Error_Switch_Card_1" xml:space="preserve">
+    <value>Slot type switch can be added switch card only.</value>
+  </data>
+  <data name="C_Firmware_Upgrade" xml:space="preserve">
+    <value>Upgrade Firmware</value>
+  </data>
+  <data name="C_Info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="C_Scan_Controller" xml:space="preserve">
+    <value>Scan Controller</value>
+  </data>
+  <data name="C_Work" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="M9_DrawingManager_1" xml:space="preserve">
+    <value>List of drawings</value>
+  </data>
+  <data name="M9_ICFwUpgradeManager_Apply_1" xml:space="preserve">
+    <value>Do you want to upgrade selected controller? (It needs few minutes)</value>
+  </data>
+  <data name="M9_Import_Data_1" xml:space="preserve">
+    <value>Do you want to import excel data? (Warnning: Exists all asset data will be deleted!!!)</value>
+  </data>
+  <data name="M9_Import_Data_2" xml:space="preserve">
+    <value>Import asset data and connection data from Excel</value>
+  </data>
+  <data name="M9_Manufacture_ID" xml:space="preserve">
+    <value>Manufacture ID</value>
+  </data>
+  <data name="M_Scan_IC_And_Save" xml:space="preserve">
+    <value>Do you want to scan controller and save it?</value>
+  </data>
+  <data name="C_Error_Import_Data_10" xml:space="preserve">
+    <value>Can't find rack from location table. cell=E{0}, rack={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_11" xml:space="preserve">
+    <value>Can't find room from location table. cell=D{0}, room={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_12" xml:space="preserve">
+    <value>Can't find catalog. cell=I{0}, catalog={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_13" xml:space="preserve">
+    <value>Wrong range({max={0}U) in rack slot. cell=H{1}, rack_slot={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_14" xml:space="preserve">
+    <value>Wrong controller range(1~999). cell=M{0}, con_id={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_15" xml:space="preserve">
+    <value>Duplicated controller id from excel. cell=M{0}, con_id={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_16" xml:space="preserve">
+    <value>Duplicated controller id. Please use another controller id. cell=M{0}, con_id={1}, duplcated_site={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_17" xml:space="preserve">
+    <value>Duplicated patch panel number in same controller id. cell=N{0}, con_id={1}, pp_no={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_18" xml:space="preserve">
+    <value>Can't find controller id. cell=N{0}, con_id={1}, pp_no={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_19" xml:space="preserve">
+    <value>Can't Mount asset. Please check mountable type. cell=F{0}, asset={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_20" xml:space="preserve">
+    <value>Can't find asset. cell=C{0}, asset={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_21" xml:space="preserve">
+    <value>Wrong port number range(1~{0}). cell=D{1}, port={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_22" xml:space="preserve">
+    <value>Can't find asset name which is connected front port. cell=D{0}, asset={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_23" xml:space="preserve">
+    <value>Wrong port number range(1~{0}). cell=E{1}, port={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_24" xml:space="preserve">
+    <value>Can't find cable catalog which is connected front port. cell=F{0}, cable_catalog={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_25" xml:space="preserve">
+    <value>Wrong front/rear port. cell=G{0}, font/rear={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_26" xml:space="preserve">
+    <value>Can't find asset name which is connected rear port. cell=H{0}, asset={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_27" xml:space="preserve">
+    <value>Wrong port number range(1~{0}). cell=I{1}, port={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_28" xml:space="preserve">
+    <value>Can't find cable catalog which is connected rear port. cell=J{0}, cable_catalog={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_29" xml:space="preserve">
+    <value>Wrong front/rear port. cell=K{0}, front/rear={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_3" xml:space="preserve">
+    <value>Wrong file. site name is wrong.</value>
+  </data>
+  <data name="C_Error_Import_Data_30" xml:space="preserve">
+    <value>Can't find asset from connection table. cell=C{0}, asset={1}, port={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_31" xml:space="preserve">
+    <value>Can't find controller id. cell=C{0}, asset={1}, con_id={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_32" xml:space="preserve">
+    <value>Can't find controller config information. cell=C{0}, asset={1}, con_id={2}, pp_no={3}</value>
+  </data>
+  <data name="C_Error_Import_Data_33" xml:space="preserve">
+    <value>Can't find slot type switch. cell=C{0}, asset={1}, sw_id={2}, sw_slot={3}</value>
+  </data>
+  <data name="C_Error_Import_Data_34" xml:space="preserve">
+    <value>Can't find user port layout information. cell=C{0}, asset={1}, port={2}</value>
+  </data>
+  <data name="C_Error_Import_Data_35" xml:space="preserve">
+    <value>Error when saving data to server. asset={0}, port={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_4" xml:space="preserve">
+    <value>No asset data.</value>
+  </data>
+  <data name="C_Error_Import_Data_5" xml:space="preserve">
+    <value>Duplicated asset name. cell=F{0}, asset={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_6" xml:space="preserve">
+    <value>Can't find building name. cell=B{0}, building={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_7" xml:space="preserve">
+    <value>Can't find floor name. cell=C{0}, floor={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_8" xml:space="preserve">
+    <value>Can't find room name. cell=D{0}, room={1}</value>
+  </data>
+  <data name="C_Error_Import_Data_9" xml:space="preserve">
+    <value>Can't find rack name. cell=E{0}, rack={1}</value>
+  </data>
+  <data name="C_Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="P5_Drop_1" xml:space="preserve">
+    <value>Please drag &amp; drop patch panel to upper from left tree menu.</value>
+  </data>
+  <data name="P5_List_1" xml:space="preserve">
+    <value>List of Patch Panels</value>
+  </data>
+  <data name="P5_Save_1" xml:space="preserve">
+    <value>Do you want to save inter-connect intelligent patch panel link to DB?</value>
+  </data>
+  <data name="P5_Save_2" xml:space="preserve">
+    <value>Save Intelligent patch panel link</value>
+  </data>
+  <data name="C_Duplicated_Catalog_Group" xml:space="preserve">
+    <value>Duplicted catalog group. Please use another name.</value>
+  </data>
+  <data name="C_Error_Cant_Delete" xml:space="preserve">
+    <value>Can't delete.</value>
+  </data>
+  <data name="C_Error_Catalog_Group_1" xml:space="preserve">
+    <value>Can't delete catalog group having sub catalog group.</value>
+  </data>
+  <data name="C_Port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="C_Error_Server_Domain_2" xml:space="preserve">
+    <value>Connecting to server error. Please check network connection status and confiugred server domain name or IP address.</value>
+  </data>
+  <data name="M_Prop2_Location_ID" xml:space="preserve">
+    <value>Location ID</value>
+  </data>
+  <data name="C_Kwh" xml:space="preserve">
+    <value>kW</value>
+  </data>
+  <data name="C_Percentage1" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="C_Temperature1" xml:space="preserve">
+    <value>ºC</value>
+  </data>
+  <data name="M9_PPViewTitle" xml:space="preserve">
+    <value>Patch Panel View</value>
+  </data>
+  <data name="M1_SiteMgrWindow_SiteModifyed" xml:space="preserve">
+    <value>Site infomation changed</value>
+  </data>
+  <data name="M1_SiteMgrWindow_SiteRegisted" xml:space="preserve">
+    <value>New Site Registed</value>
+  </data>
+  <data name="M9_UserManager_Password2" xml:space="preserve">
+    <value>Password (confirm)</value>
+  </data>
+  <data name="C_Error_Password_1" xml:space="preserve">
+    <value>Password is not same. Please input password corectlly.</value>
+  </data>
+  <data name="C_Error_Not_Deletable" xml:space="preserve">
+    <value>Non-deletable item can't be removed.</value>
+  </data>
+  <data name="C_Editable" xml:space="preserve">
+    <value>Editable</value>
+  </data>
+  <data name="M9_Drawing_Namming" xml:space="preserve">
+    <value>Enter Name of Drawings</value>
+  </data>
+  <data name="M9_Drawing_Manager_Title" xml:space="preserve">
+    <value>Drawing Manager</value>
+  </data>
+  <data name="M9_Drawing_Editor" xml:space="preserve">
+    <value>3D Drawing Editor</value>
+  </data>
+  <data name="C_Error_Asset_1" xml:space="preserve">
+    <value>Please remove link first in link diagram.</value>
+  </data>
+  <data name="C_Error_Asset_2" xml:space="preserve">
+    <value>Please close related asset in connection top menu before delete it.</value>
+  </data>
+  <data name="C_Error_Asset_3" xml:space="preserve">
+    <value>Please close related asset in connection top menu before edit it.</value>
+  </data>
+  <data name="C_LogOutConfirm" xml:space="preserve">
+    <value>Do you want to Log-Out?</value>
+  </data>
+  <data name="M9_Asset_Switch3" xml:space="preserve">
+    <value>Alias for Controller LCD</value>
+  </data>
+  <data name="C_Error_Asset_4" xml:space="preserve">
+    <value>It can't be deleted. If you want to delete then you have to remove switch in your network scheduler manager. </value>
+  </data>
+  <data name="C_Error_Rack_Mount" xml:space="preserve">
+    <value>Please check rack mountable option.</value>
+  </data>
+  <data name="C_Error_Rack_Mount_2" xml:space="preserve">
+    <value>Switch card must be set non-rackmountable.</value>
+  </data>
+  <data name="C_Error_Ports_Be_0" xml:space="preserve">
+    <value>The number of ports must be 0 when it use shassi type switch.</value>
+  </data>
+  <data name="C_Error_Needs_Slots" xml:space="preserve">
+    <value>Shassi type Switch must have slots.</value>
+  </data>
+  <data name="C_Error_Switch_Figure_Type" xml:space="preserve">
+    <value>Please figure type of switch.</value>
+  </data>
+  <data name="C_Error_Ports_Not_Be_0" xml:space="preserve">
+    <value>The number of ports are greater then 0.</value>
+  </data>
+  <data name="C_Error_Empty_Catalog_Name" xml:space="preserve">
+    <value>Please enter catalog name.</value>
+  </data>
+  <data name="C_Completed_Export_Excel" xml:space="preserve">
+    <value>Completed saving to excel file success.</value>
+  </data>
+  <data name="C_Completed_Import_Excel" xml:space="preserve">
+    <value>Completed loading from excel data success.</value>
+  </data>
+  <data name="C_Error_Empty_Switch_Slot" xml:space="preserve">
+    <value>Switch slot space is full.</value>
+  </data>
+  <data name="C_Error_Progressing_Auto_Scan" xml:space="preserve">
+    <value>Currently network scanning auto. Please use later.</value>
+  </data>
+  <data name="C_Error_WorkOrder_Alarm" xml:space="preserve">
+    <value>Please fix alarm before begin to do work order.</value>
+  </data>
+  <data name="Menu_ScanAll_IC" xml:space="preserve">
+    <value>Scan All Controllers</value>
+  </data>
+  <data name="EB_TempInfo" xml:space="preserve">
+    <value>Temperature Limit Set Value : min 18ºC ~ max 32ºC</value>
+  </data>
+  <data name="C_SearchDateYMD" xml:space="preserve">
+    <value>Search of Duration Date (Year/Month/Day)</value>
+  </data>
+  <data name="C_Search1" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Menu_MailSMS" xml:space="preserve">
+    <value>e-Mail/SMS Setting</value>
+  </data>
+  <data name="M9_Import_Data_3" xml:space="preserve">
+    <value>Check Site Information </value>
+  </data>
+  <data name="C_None" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="Menu_GrantManager" xml:space="preserve">
+    <value>Accept/Reject Manager</value>
+  </data>
+  <data name="C_Grant" xml:space="preserve">
+    <value>Authorized</value>
+  </data>
+  <data name="M9_TerminalGrantTitle" xml:space="preserve">
+    <value>Accept/Reject Manager</value>
+  </data>
+  <data name="C_Grant_Ask" xml:space="preserve">
+    <value>Do you want to change network device status of grant?</value>
+  </data>
+  <data name="D_Stat18" xml:space="preserve">
+    <value>System utilization / Percentage(%)</value>
+  </data>
+  <data name="M_Tree1_Menu_SetIPM" xml:space="preserve">
+    <value>Set Environment Device</value>
+  </data>
+  <data name="Menu_LogdbList" xml:space="preserve">
+    <value>Search List of Logs</value>
+  </data>
+  <data name="C_Report10" xml:space="preserve">
+    <value>Log Information Report</value>
+  </data>
+  <data name="C_Grant_Information" xml:space="preserve">
+    <value>Check user permission.</value>
+  </data>
+  <data name="M_Tree1_Menu_ViewForm" xml:space="preserve">
+    <value>Port Test Report</value>
+  </data>
+  <data name="C_Report11" xml:space="preserve">
+    <value>Work Order information Report </value>
+  </data>
+  <data name="C_Network_Info" xml:space="preserve">
+    <value>Check network traffic.</value>
+  </data>
+  <data name="C_CancelQ" xml:space="preserve">
+    <value>Do you want to cancel selected item?</value>
+  </data>
+  <data name="C_Work_Cancel" xml:space="preserve">
+    <value>Cancel work order.</value>
+  </data>
+  <data name="C_Error_Info1" xml:space="preserve">
+    <value>Check makeing rull about id and password.</value>
+  </data>
+  <data name="C_Error_Info2" xml:space="preserve">
+    <value>Don't use special character.</value>
+  </data>
+  <data name="C_Name1" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="C_Error_6" xml:space="preserve">
+    <value>At least unit is not delete.</value>
+  </data>
+  <data name="C_Char_1" xml:space="preserve">
+    <value>(Alpha-Numeric:5~10)</value>
+  </data>
+  <data name="C_Char_2" xml:space="preserve">
+    <value>(Alpha-Numeric/Upper,Lower:10~16)</value>
+  </data>
+  <data name="C_Char_3" xml:space="preserve">
+    <value>(ex : Abcde12345)</value>
+  </data>
+  <data name="C_Pass_1" xml:space="preserve">
+    <value>Change Password: When first run, or change the password validity period of 180 days has elapsed</value>
+  </data>
+  <data name="C_Pass_2" xml:space="preserve">
+    <value>After changing the password system it can be used, and can not use the same password as the old password when changing the password.</value>
+  </data>
+  <data name="C_Pass_3" xml:space="preserve">
+    <value>Login Information change</value>
+  </data>
+  <data name="C_Info21" xml:space="preserve">
+    <value>Note: The site has been opened in connection with the expansion of the system to be used should seek our technical support.</value>
+  </data>
+  <data name="C_Info20" xml:space="preserve">
+    <value>Note: Please check please write the user's login ID and password are created when it is constrained.</value>
+  </data>
+  <data name="C_Info22" xml:space="preserve">
+    <value>Caution !! : Extended attribute assignment is an optional feature to use when you want to check the specific information that is not in the catalog. If the catalog is not deleted once created as special items are deleted after you remove the extended attributes Extended attributes assigned to remove when you want to delete.</value>
+  </data>
+  <data name="C_Info23" xml:space="preserve">
+    <value>Caution !! : E-mail and SMS notification feature is linked to the services used by customers or require a paid service. If you want to receive e-mail alerts and SMS service, please obtain our technical support. (This feature allows the system to build the service in consultation).</value>
+  </data>
+  <data name="C_Info24" xml:space="preserve">
+    <value>Caution !! This feature is the ability for the upgrade of the system, when the upgrade when the power is out, so you can not see any recovery Please be conducted after consultation with us.</value>
+  </data>
+  <data name="C_Info25" xml:space="preserve">
+    <value>Completed uploading data to server.</value>
+  </data>
+  <data name="C_Info26" xml:space="preserve">
+    <value>3D Map Image</value>
+  </data>
+  <data name="C_Info27" xml:space="preserve">
+    <value>Map Image</value>
+  </data>
+  <data name="C_Info28" xml:space="preserve">
+    <value>3D Option Setting</value>
+  </data>
+  <data name="C_Info29" xml:space="preserve">
+    <value>Shut down because it is in use.</value>
+  </data>
+  <data name="C_Info30" xml:space="preserve">
+    <value>Administrator must first change the runtime information.</value>
+  </data>
+  <data name="C_Info31" xml:space="preserve">
+    <value>(ex:02X-123X-1234)</value>
+  </data>
+  <data name="C_Info32" xml:space="preserve">
+    <value>(ex:010-123X-1234)</value>
+  </data>
+  <data name="C_Info33" xml:space="preserve">
+    <value>(ex:id@domain.com)</value>
+  </data>
+  <data name="C_Info34" xml:space="preserve">
+    <value>(ex:192.168.1.1)</value>
+  </data>
+  <data name="C_Info35" xml:space="preserve">
+    <value>(ex:192.168.1.254)</value>
+  </data>
+  <data name="C_Info36" xml:space="preserve">
+    <value>(ex:255.255.255.0)</value>
+  </data>
+  <data name="C_Info37" xml:space="preserve">
+    <value>This phone number format is not correct.</value>
+  </data>
+  <data name="C_Info38" xml:space="preserve">
+    <value>This e-mail format is not correct.</value>
+  </data>
+  <data name="C_Info39" xml:space="preserve">
+    <value>This IP address format is not correct.</value>
+  </data>
+  <data name="C_Info40" xml:space="preserve">
+    <value>Password is not correct.</value>
+  </data>
+  <data name="C_Info41" xml:space="preserve">
+    <value>The password is example too.</value>
+  </data>
+  <data name="C_Info42" xml:space="preserve">
+    <value>Previous login ID can not be used.</value>
+  </data>
+  <data name="C_Info43" xml:space="preserve">
+    <value>Previous passwords can not be used.</value>
+  </data>
+  <data name="C_Info44" xml:space="preserve">
+    <value>Worker</value>
+  </data>
+  <data name="C_Info45" xml:space="preserve">
+    <value>Please check the password creation rules.</value>
+  </data>
+  <data name="C_Info46" xml:space="preserve">
+    <value>SMS rcv.</value>
+  </data>
+  <data name="C_Info47" xml:space="preserve">
+    <value>EMail rcv.</value>
+  </data>
+  <data name="C_Info48" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info49" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info50" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info51" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info52" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info53" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info54" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info55" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info56" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info57" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info58" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info59" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="C_Info60" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="M_Tree1_Menu_ConfigIE" xml:space="preserve">
+    <value>Config Environment Monitoring</value>
+  </data>
+  <data name="D_Stat21" xml:space="preserve">
+    <value>Voltage</value>
+  </data>
+  <data name="D_Stat22" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="D_Stat23" xml:space="preserve">
+    <value>Smoke</value>
+  </data>
+  <data name="D_Stat24" xml:space="preserve">
+    <value>Fact</value>
+  </data>
+  <data name="D_Stat25" xml:space="preserve">
+    <value>Watt</value>
+  </data>
+  <data name="D_Stat26" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat27" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat28" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat29" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat30" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat31" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat32" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat33" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat34" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat35" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat36" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat37" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat38" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat39" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat40" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat41" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat42" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat43" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat44" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat45" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat46" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat47" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat48" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="D_Stat49" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+</root>

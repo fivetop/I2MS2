@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="I2MS2.Windows.listHeader">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Windows\PrintPreView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="I2MS2.Windows.lvCompare">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAQgAAAAAAAAAAAAAEAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Windows\PrintPreView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="I2MS2.Windows.iPrint">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEIAEAAAAAAIgAAIiIAgRAAJAQAA=</HashCode>
+      <FileName>Windows\PrintPreView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="I2MS2.Windows.PrintPreView">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIABCAAAEhBAAIEAAQSghEAAAACCQAAAgAGAAAAA=</HashCode>
+      <FileName>Windows\PrintPreView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="I2MS2.Windows.PrintDocumentViewer">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAICAEAAAJIAAACAAAAAAAAAQAA=</HashCode>
+      <FileName>Windows\PrintPreView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="굴림" Size="9" />
+</ClassDiagram>

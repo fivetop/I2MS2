@@ -1,0 +1,217 @@
+﻿<Window x:Class="I2MS2.Windows.IPMView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+        xmlns:im="clr-namespace:I2MS2.Models" 
+        xmlns:iw="clr-namespace:I2MS2.Windows" 
+        xmlns:clr="clr-namespace:System;assembly=mscorlib"
+        xmlns:uc="clr-namespace:I2MS2.UserControls"     
+        xmlns:lib="clr-namespace:I2MS2.Library" 
+        Height="658" Width="810"
+        WindowStartupLocation="CenterOwner"
+        Title="Environment Information" 
+        x:Name="_window" Style="{StaticResource I2MS_SubWindowStyle}" 
+    >
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Name="_grid1" Grid.Row="0" Margin="0">
+            <Expander Name="_exP60" Header=" Environment Device Information" Style="{DynamicResource I2MS_ExpanderStyle}" Margin="0">
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <!--1.2.3.4. TopGrid for site,building,floor,room-->
+                    <Grid Name="_grid11">
+
+                        <Border Grid.ColumnSpan="5"  Background="Black" Opacity="0.3" CornerRadius="10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.3"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                        </Border>
+                        <Grid Height="180">
+                            <ListBox x:Name="_lb" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                <ListBox.BorderBrush>
+                                    <SolidColorBrush Color="#FF363636" Opacity="0.3"/>
+                                </ListBox.BorderBrush>
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel />
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="130"/>
+                                                <RowDefinition Height="40"/>
+                                            </Grid.RowDefinitions>
+                                            <Border BorderBrush="Black" BorderThickness="3" CornerRadius="5" Margin="6" Width="135" >
+                                                <Image Source="{Binding Path=dataImages}" Stretch="Fill" Width="80" Height="80" />
+                                            </Border>
+                                            <Grid Grid.Row="1">
+                                                <Border BorderBrush="Black" BorderThickness="2" CornerRadius="1" Margin="6" >
+                                                    <TextBlock Text="{Binding Path=dataStrings}" Margin="5,0,0,5" HorizontalAlignment="Center" Foreground="Gray"/>
+                                                </Border>
+                                            </Grid>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                                <ListBox.Background>
+                                    <SolidColorBrush Opacity="0.4" Color="#FF292929"/>
+                                </ListBox.Background>
+                            </ListBox>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Expander>
+        </Grid>
+
+        <Grid Name="_grid2" Grid.Row="1"  Margin="0">
+            <Expander Name="_exP61" Header=" Power Usage / Door open Status" Style="{DynamicResource I2MS_ExpanderStyle}" Margin="0">
+                <Grid Name="_gridTop1" Margin="10">
+                    <Border Grid.ColumnSpan="5"  Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+
+                    <Grid Grid.Column="1" x:Name="_gridTopGraphes">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0" Style="{StaticResource I2MS_baseBorder}">
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10" Margin="5"/>
+                        </Border>
+                        <Border Grid.Column="1" Style="{StaticResource I2MS_baseBorder}">
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10" Margin="5"/>
+                        </Border>
+                        <Grid  Grid.Column="0" >
+                            <Canvas Margin="0,0,242,37">
+                                <Image Source="/I2MS2;component/icons/env/e1.png" Height="76" Width="64" Canvas.Left="31" RenderTransformOrigin="0.5,0.5">
+                                </Image>
+                            </Canvas>
+                            <StackPanel>
+                                <TextBlock Text="{x:Static prop:Resources.EB_Energy}" Margin="120,10,0,0" Foreground="#FF8F8F8F"/>
+                                <TextBlock x:Name="_power1" Text="1,364 KW" FontSize="28" HorizontalAlignment="Right" TextTrimming="CharacterEllipsis" TextOptions.TextHintingMode="Animated" Foreground="#FF268910" Width="125" Height="34" Margin="0,0,27,0"/>
+                                <Rectangle Fill="#FF858484" StrokeThickness="5" RadiusY="1" RadiusX="1" Height="2" Margin="125,4,20,0"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="{x:Static prop:Resources.EB_EnergyPeekYesterday}" Margin="50,10,0,0" Foreground="#FF727171"/>
+                                            <TextBlock x:Name="_power2" Text="1,377 KW" Margin="60,5,0,0" FontSize="16" Foreground="#FFB2B1B1"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="{x:Static prop:Resources.EB_EnergyPeekToday}" Margin="10,10,0,0" Foreground="#FF727171"/>
+                                            <TextBlock x:Name="_power3" Text="1,324 KW" Margin="20,5,0,0" FontSize="16" Foreground="#FFB2B1B1"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <Grid  Grid.Column="1">
+                            <Canvas Margin="0,0,242,37">
+                                <Image Source="/I2MS2;component/icons/env/e4.png" Height="56" Width="56" Canvas.Left="24" RenderTransformOrigin="0.5,0.5" Canvas.Top="10">
+                                </Image>
+                            </Canvas>
+                            <StackPanel>
+                                <TextBlock Text="{x:Static prop:Resources.EB_DoorOpen}" Margin="120,10,0,0" Foreground="#FF8F8F8F"/>
+                                <TextBlock x:Name="_door1" Text="0 EA" FontSize="28" HorizontalAlignment="Right" TextTrimming="CharacterEllipsis" TextOptions.TextHintingMode="Animated" Foreground="#FF268910" Width="125" Height="34" Margin="0,0,27,0"/>
+                                <Rectangle Fill="#FF858484" StrokeThickness="5" RadiusY="1" RadiusX="1" Height="2" Margin="125,4,20,0"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="{x:Static prop:Resources.EB_DoorTotal}" Margin="50,10,0,0" Foreground="#FF727171"/>
+                                            <TextBlock x:Name="_door2" Text="10 EA" Margin="60,5,0,0" FontSize="16" Foreground="#FFB2B1B1"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="{x:Static prop:Resources.EB_CloseDoor}" Margin="10,10,0,0" Foreground="#FF727171"/>
+                                            <TextBlock x:Name="_door3" Text="10 EA" Margin="20,5,0,0" FontSize="16" Foreground="#FFB2B1B1"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Expander>
+        </Grid>
+
+        <Grid Name="_grid3" Grid.Row="2" Margin="0">
+            <Expander Name="_exP62" Header=" Temperature / Humidity Status" Style="{DynamicResource I2MS_ExpanderStyle}" Margin="0">
+                <Grid Name="_grid31" Margin="10">
+                    <Border Grid.ColumnSpan="5"  Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+
+                    <!--<uc:PortStatisticsControl Grid.Column="1"/>-->
+                    <Grid Grid.Column="1" x:Name="_gridTopGraphes1">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0" Style="{StaticResource I2MS_baseBorder}">
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10" Margin="5"/>
+                        </Border>
+                        <Border Grid.Column="1" Style="{StaticResource I2MS_baseBorder}">
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10" Margin="5"/>
+                        </Border>
+                        <Grid  Grid.Column="0" >
+                            <Canvas Margin="0,0,242,37">
+                                <Image Source="/I2MS2;component/icons/env/e2.png" Height="56" Width="56" Canvas.Left="28" RenderTransformOrigin="0.5,0.5" Canvas.Top="10">
+                                </Image>
+                            </Canvas>
+                            <StackPanel>
+                                <TextBlock Text="{x:Static prop:Resources.EB_TemperatureCur}" Margin="120,10,0,0" Foreground="#FF8F8F8F"/>
+                                <TextBlock x:Name="_temperture1" Text="25 ºC" FontSize="28" HorizontalAlignment="Right" TextTrimming="CharacterEllipsis" TextOptions.TextHintingMode="Animated" Foreground="#FF268910" Width="125" Height="34" Margin="0,0,27,0"/>
+                                <Rectangle Fill="#FF858484" StrokeThickness="5" RadiusY="1" RadiusX="1" Height="2" Margin="125,4,20,0"/>
+                                <TextBlock Text="{x:Static prop:Resources.EB_TodayPeek}" Margin="250,10,0,0" Foreground="#FF727171"/>
+                                <TextBlock x:Name="_temperture2"  Text="31 ºC" Margin="260,5,0,0" FontSize="16" Foreground="#FFB2B1B1"/>
+                            </StackPanel>
+                        </Grid>
+                        <Grid  Grid.Column="1">
+                            <Canvas Margin="0,0,242,37">
+                                <Image Source="/I2MS2;component/icons/env/e3.png" Height="56" Width="56" Canvas.Left="31" RenderTransformOrigin="0.5,0.5" Canvas.Top="10">
+                                </Image>
+                            </Canvas>
+                            <StackPanel>
+                                <TextBlock Text="{x:Static prop:Resources.EB_HumidityCur}" Margin="120,10,0,0" Foreground="#FF8F8F8F"/>
+                                <TextBlock x:Name="_humidity1" Text="40 ºF" FontSize="28" HorizontalAlignment="Right" TextTrimming="CharacterEllipsis" TextOptions.TextHintingMode="Animated" Foreground="#FF268910" Width="125" Height="34" Margin="0,0,27,0"/>
+                                <Rectangle Fill="#FF858484" StrokeThickness="5" RadiusY="1" RadiusX="1" Height="2" Margin="125,4,20,0"/>
+                                <TextBlock Text="{x:Static prop:Resources.EB_TodayPeek}" Margin="250,10,0,0" Foreground="#FF727171"/>
+                                <TextBlock x:Name="_humidity2" Text="52 ºF" Margin="260,5,0,0" FontSize="16" Foreground="#FFB2B1B1"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Expander>
+        </Grid>
+
+    </Grid>
+</Window>
+

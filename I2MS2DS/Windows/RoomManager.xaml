@@ -1,0 +1,112 @@
+﻿<Window x:Class="I2MS2.Windows.RoomManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR"
+        xmlns:w="clr-namespace:I2MS2.Windows"
+        xmlns:uc="clr-namespace:I2MS2.UserControls"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ucdr="clr-namespace:I2MS2.UserControls.Drawing"
+        Height="960" Width="880" 
+        Name="_window"   
+        
+        WindowStartupLocation="CenterOwner"
+        Title="{x:Static prop:Resources.M9_RoomManagerTitle}" 
+        Style="{StaticResource I2MS_SubWindowStyle}" 
+        MouseLeftButtonUp="_window_MouseLeftButtonUp"
+        MouseLeave="_window_MouseLeave"
+        MouseMove="right_MouseMove" Loaded="_window_Loaded" >
+    <Window.CommandBindings>
+        <CommandBinding x:Name="_cmdSave" Command="{x:Static w:RoomManager.SaveCommand}" CanExecute="_cmdSave_CanExecute" Executed="_cmdSave_Executed" />
+        <CommandBinding x:Name="_cmdSelectFile" Command="{x:Static w:RoomManager.SelectFileCommand}" CanExecute="_cmdSelectFile_CanExecute" Executed="_cmdSelectFile_Executed" />
+    </Window.CommandBindings>
+    <Grid  Margin="5,5,5,5" >
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid Margin="10" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Background="#FF292929" Opacity="0.4" CornerRadius="5" Grid.ColumnSpan="2"/>
+
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <TextBlock Text="{x:Static prop:Resources.M9_Room_Name}" Margin="0,1,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+                    <TextBlock Text="{x:Static prop:Resources.C_Remarks}" Margin="0,40,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10">
+                    <TextBox  x:Name="_txtName"  Margin="0,1,0,0" Style="{DynamicResource I2MS_TextBoxStyle}" TextWrapping="Wrap" MaxLength="20" />
+                    <TextBlock Text="{x:Static prop:Resources.M9_Room_1}" Margin="0,1,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+                    <TextBox  x:Name="_txtRemarks"  Margin="0,16,0,0" Height="35" Style="{DynamicResource I2MS_TextBoxStyle}" TextWrapping="Wrap" MaxLength="40" />
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="10">
+                <Border Background="#FF292929" CornerRadius="5" />
+
+                <Border Background="{StaticResource _brushDarkGray1}"  CornerRadius="5"  Margin="10">
+                    <Grid x:Name="_gridDrawings" Background="{StaticResource _brushDarkGray1}">
+                        <!--<Image Name="_imgDrawings"  HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>-->
+                        <ucdr:DrawingView2D x:Name="_ctlDrawingView2D" />
+                        <TextBlock Text="File Name:" Margin="58,166,353,0" Style="{DynamicResource I2MS_TextBlockStyle}" Foreground="White" Height="27" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="_txtFileName" Margin="127,166,55,0" Style="{DynamicResource I2MS_TextBlockStyle}" Foreground="White" Height="27" VerticalAlignment="Top"/>
+                        <ItemsControl x:Name="_rectBox" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="180" Margin="50,50,0,0"
+                                      MouseLeftButtonDown="_rectBox_MouseLeftButtonDown">
+                            <ItemsControl.Resources>
+                                <Style TargetType="{x:Type ItemsControl}">
+                                    <Setter Property="BorderBrush" Value="{StaticResource _brushBlue}"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                                <Grid>
+                                                    <Border x:Name="bd" BorderBrush="{StaticResource _brushRed}" BorderThickness="1" Opacity="0.3">
+                                                        <Border Opacity="0.3" Background="Black" Cursor="Hand" />
+                                                    </Border>
+                                                    <Path x:Name="right2" Fill="{StaticResource _brushBlue}" Data="M0,0 L0,18 L5,18 L5,0 L0,0 M8,0 L8,18 L18,9 L8,0" Margin="0,0,-11,0" Width="18" Height="18" HorizontalAlignment="Right" Opacity="0.3"/>
+                                                    <Grid x:Name="right" Background="Black" Margin="0,0,-11,0" Width="18" Height="18" HorizontalAlignment="Right" MouseLeftButtonDown="right_MouseLeftButtonDown" Opacity="0.1" Cursor="Cross"/>
+                                                </Grid>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver"  SourceName="right" Value="true">
+                                                        <Setter Property="Opacity" TargetName="bd" Value="1.0"/>
+                                                        <Setter Property="Opacity" TargetName="right2" Value="1.0"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsMouseOver"  SourceName="bd" Value="true">
+                                                        <Setter Property="Opacity" TargetName="bd" Value="1.0"/>
+                                                    </Trigger>
+                                                    <Trigger Property="IsEnabled" Value="false">
+                                                        <Setter Property="BorderBrush" TargetName="bd" Value="{StaticResource _brushBlue}"/>
+                                                        <Setter Property="Visibility" TargetName="right2" Value="Hidden"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                    </Style.Triggers>
+                                </Style>
+                            </ItemsControl.Resources>
+                        </ItemsControl>
+                        <!--<Image Name="_imgDrawings" Source="{Binding client_file_path}" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None" StretchDirection="DownOnly"/>-->
+                        <!--<Button x:Name="_btnImageSelect" Content="{x:Static prop:Resources.M9_Room_2}"  Margin="0,24,23,0" Style="{StaticResource I2MS_ButtonStyle}" 
+                        Command="{x:Static w:RoomManager.SelectFileCommand}" VerticalAlignment="Top" HorizontalAlignment="Right"/>-->
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <!--아래 버튼-->
+            <StackPanel Orientation="Horizontal" Margin="346,10,10,10" Height="30" Grid.Row="1" HorizontalAlignment="Center" Width="501">
+                <Button x:Name="_btnSave" Content="{x:Static prop:Resources.C_Save}"  Margin="0,0,6,0" Style="{StaticResource I2MS_ButtonStyle}" 
+                        Command="{x:Static w:RoomManager.SaveCommand}"/>
+                <Button x:Name="_btnCancel" Content="{x:Static prop:Resources.C_Cancel}" Margin="20,0,6,0" Style="{StaticResource I2MS_ButtonStyle}" Click="_btnCancel_Click" />
+                <Button x:Name="_btnImageSelect_Copy" Content="{x:Static prop:Resources.M9_Room_2}"  Margin="80,0,23,0" Style="{StaticResource I2MS_ButtonStyle}" 
+                	Command="{x:Static w:RoomManager.SelectFileCommand}" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

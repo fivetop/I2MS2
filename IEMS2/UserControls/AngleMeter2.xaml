@@ -1,0 +1,194 @@
+﻿<UserControl x:Class="I2MS2.UserControls.AngleMeter2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:I2MS2.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200"
+             x:Name="_uc" Loaded="_uc_Loaded">
+    <UserControl.Resources>
+        <local:ImageOffsetConverter x:Key="imageOffsetConverter" />
+        <local:RadiusToDiameterConverter x:Key="radiusToDiameterConverter"/>
+        <local:PointerCenterConverter x:Key="pointerCenterConverter"/>
+        <local:RangeIndicatorLightPositionConverter x:Key="rangeIndicatorLightPositionConverter"/>
+        <local:SizeConverter x:Key="sizeConverter" />
+        <local:BackgroundColorConverter x:Key="backgroundColorConverter" />
+        <local:GlassEffectWidthConverter x:Key="glassEffectWidthConverter" />
+        <local:ColorToSolidColorBrushConverter x:Key="colorToSolidColorBrushConverter" />
+
+        <Style TargetType="local:AngleMeter2" >
+            <Setter Property="Radius" Value="100" />
+            <Setter Property="ScaleRadius" Value="85" />
+            <Setter Property="ScaleLabelRadius" Value="65" />
+
+            <Setter Property="ScaleLabelSize" Value="40,20" />
+            <Setter Property="ScaleLabelFontSize" Value="10" />
+            <Setter Property="ScaleLabelForeground" Value="#FF9C9B9B" />
+            <Setter Property="ScaleStartAngle" Value="170" />
+            <Setter Property="ScaleSweepAngle" Value="200" />
+
+            <Setter Property="MinValue" Value="0" />
+            <Setter Property="MaxValue" Value="200" />
+            <Setter Property="MajorDivisionsCount" Value="10" />
+            <Setter Property="MinorDivisionsCount" Value="5" />
+
+            <Setter Property="CurrentValue" Value="50" />
+            <Setter Property="ImageSize" Value="30,30" />
+            <Setter Property="ImageOffset" Value="-30" />
+            <Setter Property="RangeIndicatorThickness" Value="0" />
+            <Setter Property="RangeIndicatorRadius" Value="0" />
+            <Setter Property="RangeIndicatorLightRadius" Value="5" />
+            <Setter Property="RangeIndicatorLightOffset" Value="0" />
+
+            <Setter Property="MajorTickSize" Value="10,3" />
+            <Setter Property="MinorTickSize" Value="3,1" />
+            <Setter Property="MajorTickColor" Value="#FF890A0A" />
+            <Setter Property="MinorTickColor" Value="#FF2264D8" />
+
+            <Setter Property="PointerCapRadius" Value="35" />
+            <Setter Property="PointerLength" Value="60" />
+            <Setter Property="PointerThickness" Value="12" />
+            
+            <Setter Property="ResetPointerOnStartUp" Value="True" />
+            <Setter Property="ScaleValuePrecision" Value="5" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AFD6" Offset="0.321"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.674"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="GaugeBackgroundColor" Value="Transparent" />
+            <Setter Property="OptimalRangeStartValue" Value="30" />
+            <Setter Property="OptimalRangeEndValue" Value="70" />
+            <Setter Property="BelowOptimalRangeColor" Value="Yellow" />
+            <Setter Property="OptimalRangeColor" Value="Green" />
+            <Setter Property="AboveOptimalRangeColor" Value="Red" />
+            <Setter Property="DialTextColor" Value="LightGray" />
+            <Setter Property="DialTextFontSize" Value="20" />
+            <Setter Property="DialTextOffset" Value="40" />
+            <Setter Property="DialText" Value="온도" />
+        </Style>
+
+
+        <!--
+    			MajorTickSize="10,3"
+    			MinorTickSize="3,1"
+    			MajorTickColor="#FF890A0A"
+    			MinorTickColor="#FF2264D8"
+    			PointerThickness ="12"
+    			DialTextOffset="40" 
+    			DialText="온도"
+    			DialTextColor="LightGray" Margin="10" OptimalRangeColor="#FF2B2B2B" ScaleValuePrecision="5" GaugeBackgroundColor="#FF111111"-->
+
+    </UserControl.Resources>
+    <Grid>
+            <!-- Root Grid-->
+            <Grid x:Name="LayoutRoot" 
+                          Height="{Binding Path=Radius, ElementName=_uc, Converter={StaticResource radiusToDiameterConverter}}" 
+                          Width="{Binding Path=Radius, ElementName=_uc, Converter={StaticResource radiusToDiameterConverter}}" MouseDown="LayoutRoot_MouseDown" >
+
+
+                <Ellipse x:Name="OuterFrame" StrokeThickness="1" 
+                                 Height="{Binding Path=Radius, ElementName=_uc, Converter={StaticResource radiusToDiameterConverter}}" 
+                                 Width="{Binding Path=Radius,ElementName=_uc, Converter={StaticResource radiusToDiameterConverter}}" 
+                                 Fill="{Binding Path=GaugeBackgroundColor,ElementName=_uc, Converter={StaticResource backgroundColorConverter}}" Opacity="0.2">
+
+                    <!--<Ellipse.Stroke>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF636060" Offset="1"/>
+                            --><!--<GradientStop Color="#FF5F5C5C" Offset="0"/>
+                                    <GradientStop Color="#FFEEDEDE" Offset="0.35"/>
+                                    <GradientStop Color="#FFA09595" Offset="0.705"/>--><!--
+                        </LinearGradientBrush>
+                    </Ellipse.Stroke>-->
+                </Ellipse>
+            <!-- Dial Text -->
+            <TextBlock x:Name="_DialText" Text="{Binding DialText,ElementName=_uc}"  
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"  
+                                   Foreground="{Binding Path=DialTextColor,ElementName=_uc, Converter={StaticResource colorToSolidColorBrushConverter}}"
+                                   FontSize="{Binding DialTextFontSize,ElementName=_uc}"                             
+                                   FontWeight="Bold"
+                                                         
+                              RenderTransform="{Binding Path=DialTextOffset,ElementName=_uc, Converter={StaticResource rangeIndicatorLightPositionConverter}}">
+
+            </TextBlock>
+            <!-- Gauge Image -->
+            <Image Source="{Binding ImageSource}" 
+                               Width="{Binding Path=ImageSize, ElementName=_uc, Converter={StaticResource sizeConverter}, ConverterParameter=Width }" 
+                               
+                               Height="{Binding Path=ImageSize, ElementName=_uc, Converter={StaticResource sizeConverter}, ConverterParameter=Height }"
+                               
+                               RenderTransform="{Binding Path=ImageOffset, ElementName=_uc, Converter={StaticResource imageOffsetConverter}}">
+
+            </Image>
+
+            <!-- Pointer -->
+            <Path x:Name="Pointer" Stroke="#FFE91C1C" StrokeThickness="2" 
+                              Width="{Binding PointerLength, ElementName=_uc}" 
+                              Height="{Binding PointerThickness, ElementName=_uc}" HorizontalAlignment="Center"
+                              Data="M1,1 L1,10 L156,6 z" Stretch="Fill"  RenderTransformOrigin="0,0.5" 
+                              RenderTransform="{Binding Path=PointerLength, ElementName=_uc, Converter={StaticResource pointerCenterConverter}}" Fill="Red">
+                <!--<Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF890A0A" Offset="0.197"/>
+                        <GradientStop Color="#FFC40808" Offset="1"/>
+                        <GradientStop Color="#FFE32323" Offset="0.61"/>
+                    </LinearGradientBrush>
+                </Path.Fill>-->
+
+            </Path>
+
+            <!--Pointer Cap-->
+            <Ellipse x:Name="PointerCap" Height="{Binding PointerCapRadius, ElementName=_uc}" Width="{Binding PointerCapRadius, ElementName=_uc}" StrokeThickness="4" Opacity="1" >
+                <Ellipse.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF000000" Offset="0.675"/>
+                        <GradientStop Color="#FFC1B5B5" Offset="0.031"/>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF152029" Offset="0.846"/>
+                        <GradientStop Color="#FF140204" Offset="0.342"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+
+                <!--Range indicator light-->
+                <Ellipse x:Name="RangeIndicatorLight" 
+                                  Height="{Binding Path=RangeIndicatorLightRadius, ElementName=_uc, Converter={StaticResource radiusToDiameterConverter}}" 
+                                  Width="{Binding Path=RangeIndicatorLightRadius, ElementName=_uc, Converter={StaticResource radiusToDiameterConverter}}" 
+                                
+                                RenderTransform="{Binding Path=RangeIndicatorLightOffset, ElementName=_uc, Converter={StaticResource rangeIndicatorLightPositionConverter}}">
+                    <!--Range indicator light off position effect-->
+                    <Ellipse.Fill>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="LightGray" Offset="0.2" />
+                            <GradientStop Color="Gray" Offset="0.5" />
+                            <GradientStop Color="Black" Offset="0.8" />
+                    </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+                <!--Glass effect ellipse-->
+                <!--<Path x:Name="GlassEffect" StrokeThickness="1" Stretch="Fill" VerticalAlignment="Bottom"
+                              Height="{TemplateBinding Radius}"
+                              Width="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Radius, Converter={StaticResource glassEffectWidthConverter}}" 
+                              Opacity="0.18" Data="M265.99997,151.00005 C263.99994,194.00003 209.55908,259 135.00064,259 C60.442207,259 11,200.00003 5.9999995,157.00005 C5.0181994,148.55656 73.000877,112.00006 137.00053,112.00007 C199.00887,112.00008 266.72015,135.5164 265.99997,151.00005 z">
+                            <Path.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#68FCFCFC"/>
+                                    <GradientStop Color="#FFF8FCF8" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Path.Fill>
+                        </Path>-->
+
+            </Grid>
+
+    </Grid>
+</UserControl>

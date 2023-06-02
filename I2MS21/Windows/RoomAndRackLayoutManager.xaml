@@ -1,0 +1,112 @@
+﻿<Window x:Class="I2MS2.Windows.RoomAndRackLayoutManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:I2MS2.UserControls"
+        xmlns:model="clr-namespace:I2MS2.Models"
+        xmlns:ucdr="clr-namespace:I2MS2.UserControls.Drawing"
+        Title="RoomAndRackLayoutManager" Height="900" Width="1280"
+        WindowStartupLocation="CenterOwner" 
+        Loaded="_window_Loaded" 
+        x:Name="_window"
+        >
+    <Window.Style>
+        <StaticResource ResourceKey="I2MS_SubWindowStyle"/>
+    </Window.Style>
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="788"/>
+            <RowDefinition Height="50"/>
+
+        </Grid.RowDefinitions>
+        
+        
+        <Grid Grid.Row="1">
+           <StackPanel Orientation="Horizontal" Margin="10,0,10,0">
+                <ToggleButton Name="_tbtnEdit" Content="Edit" Style="{StaticResource I2MS_ToggleButtonStyle}" Checked="_tbtnEdit_Checked" Unchecked="_tbtnEdit_Unchecked" />
+                
+               <Button x:Name="_btnZoomIn" Content="+" Style="{StaticResource I2MS_ButtonStyle}"  Click="_btnZoomIn_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Width="20" Height="20" FontSize="13" Margin="900,0,0,0" />
+                <Button x:Name="_btnZoomOut" Content="-" Style="{StaticResource I2MS_ButtonStyle}"  Click="_btnZoomOut_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Width="20" Height="20" FontSize="13" Margin="0,0,0,0" />
+                <Button Name="_btnSave" Content="Save" Style="{StaticResource I2MS_ButtonStyle}" Click="_btnSave_Click" Margin="20,0,0,0"/>
+            </StackPanel>
+        </Grid>
+        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1044"/>
+            </Grid.ColumnDefinitions>
+   
+            <!--<uc:AssetTreeControl Grid.Column="0" x:Name="_ctlAssetTreeControl" Margin="10"/>-->
+            <Grid Name="_gridAssetTreeView"  Grid.Column="0">
+                <TreeView x:Name="_tvAssetTree" AllowDrop="true" Margin="10"
+                      Style="{StaticResource I2MS_TreeViewStyle}" ItemContainerStyle="{StaticResource I2MS_TreeViewItemStyle}"
+                      SelectedItemChanged="_tvAssetTree_SelectedItemChanged">
+                    <TreeView.Resources>
+                        <HierarchicalDataTemplate DataType="{x:Type model:AssetTreeVM}" ItemsSource="{Binding child_list}">
+                            <!--<StackPanel x:Name="aaa" Orientation="Horizontal">
+                                <Ellipse Width="3" Height="3" Fill="Red" Visibility="{Binding check_view}"/>
+                                <Image Source="{Binding image_file_path}" Width="16" Height="16" />
+                                <TextBlock x:Name="text" Text="{Binding disp_name}" Margin="5,0,0,0"/>                                
+                            </StackPanel>-->
+                            <Grid>
+                                <Rectangle Fill="Red" Opacity="0.5" Visibility="{Binding check_view}" RadiusX="3" RadiusY="3"/>
+                                <StackPanel x:Name="aaa" Orientation="Horizontal">
+                                    <Image Source="{Binding image_file_path}" Width="16" Height="16" />
+                                    <TextBlock x:Name="text" Text="{Binding disp_name}" Margin="5,0,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </HierarchicalDataTemplate>
+                    </TreeView.Resources>
+                </TreeView>
+            </Grid>
+            <ScrollViewer Name="_sclDrawing" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource I2MS_ScrollViewerStyle}" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" 
+                          Width="1024" Height="768" Margin="10">
+                <Grid Name="_gridDrawing" Background="Transparent" MouseLeftButtonDown="_gridDrawing_MouseLeftButtonDown" MouseMove="_gridDrawing_MouseMove" MouseLeftButtonUp="_gridDrawing_MouseLeftButtonUp" >
+                    <!--<ucdr:DrawingView2D x:Name="_ctlDrawingView2D" Margin="10"/>-->
+                    <Canvas x:Name="_canvasWallDrawing" />
+                    <!--<uc:RoomLayoutControl  />-->
+                    <Grid Name="_gridRoomLayout" Background="Transparent" MouseLeftButtonUp="_gridRoomLayout_MouseLeftButtonUp" MouseMove="_gridRoomLayout_MouseMove" MouseWheel="_gridRoomLayout_MouseWheel">
+                        <ItemsControl x:Name="_rectRoomBox" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="180" 
+                                      MouseLeftButtonDown="_rectRoomBox_MouseLeftButtonDown">
+                            <ItemsControl.Resources>
+                                <Style TargetType="{x:Type ItemsControl}">
+                                    <Setter Property="BorderBrush" Value="{StaticResource _brushBlue}"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                                <Grid>
+                                                    <Border x:Name="bd" BorderBrush="{StaticResource _brushRed}" BorderThickness="4" Opacity="0.7">
+                                                        <Border Opacity="0.3" Background="{StaticResource _brushBlue}" Cursor="Hand" />
+                                                    </Border>
+                                                    <Path x:Name="right2" Fill="{StaticResource _brushBlue}" Data="M0,0 L0,18 L5,18 L5,0 L0,0 M8,0 L8,18 L18,9 L8,0" Margin="0,0,-11,0" Width="18" Height="18" HorizontalAlignment="Right" Opacity="0.3"/>
+                                                    <!-- 2015.09.15 romee basci color change -->
+                                                    <Grid x:Name="right" Background="{StaticResource _brushBackground}" Margin="0,0,-11,0" Width="18" Height="18" HorizontalAlignment="Right" MouseLeftButtonDown="_rmLayoutCtlright_MouseLeftButtonDown" Opacity="0.1" Cursor="Cross"/>
+                                                </Grid>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsEnabled" Value="false">
+                                                        <Setter Property="BorderBrush" TargetName="bd" Value="{StaticResource _brushBlue}"/>
+                                                        <Setter Property="Visibility" TargetName="right2" Value="Hidden"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                    </Style.Triggers>
+                                </Style>
+                            </ItemsControl.Resources>
+                        </ItemsControl>
+                        <StackPanel x:Name="_gridRoomNamePoint" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Ellipse x:Name="_ellipseRoomNamePoint" Fill="Gray" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="8.8,6.9" MouseLeftButtonDown="_ellipseRoomNamePoint_MouseLeftButtonDown" />
+                            <TextBlock x:Name="_txtNamePoint" Text="Name Point" Style="{StaticResource I2MS_TextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Name="_gridGuide"/>
+                    <Canvas x:Name="_canvasRackDrawingSub"/>
+                    <Canvas x:Name="_canvasRackDrawing" />
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

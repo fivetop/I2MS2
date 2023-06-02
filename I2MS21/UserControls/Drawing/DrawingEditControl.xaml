@@ -1,0 +1,241 @@
+﻿<UserControl x:Class="I2MS2.UserControls.Drawing.DrawingEditControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ucdr="clr-namespace:I2MS2.UserControls.Drawing"
+             xmlns:local="clr-namespace:I2MS2"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR"
+             mc:Ignorable="d"  Name="_ctlDrawingEdit"
+             d:DesignHeight="900" d:DesignWidth="1280" KeyDown="_ctlDrawingEdit_KeyDown" Loaded="_ctlDrawingEdit_Loaded" >
+    <UserControl.CommandBindings>
+        <CommandBinding Command="{x:Static ucdr:DrawingEditControl.Cmd_btnShowLayer1}" Executed="_btnShowLayer1_Executed"  CanExecute="_btnShowLayer1_CanExecuted"/>
+        <CommandBinding Command="{x:Static ucdr:DrawingEditControl.Cmd_btnShowLayer2}" Executed="_btnShowLayer2_Executed"  CanExecute="_btnShowLayer2_CanExecuted"/>
+        <CommandBinding Command="{x:Static ucdr:DrawingEditControl.Cmd_btnShowLayer3}" Executed="_btnShowLayer3_Executed"  CanExecute="_btnShowLayer3_CanExecuted"/>
+        <CommandBinding Command="{x:Static ucdr:DrawingEditControl.Cmd_btnShowLayer4}" Executed="_btnShowLayer4_Executed"  CanExecute="_btnShowLayer4_CanExecuted"/>
+        <CommandBinding Command="{x:Static ucdr:DrawingEditControl.Cmd_menuSelectOneLayerAllWall}" CanExecute="_menuSelectOneLayerAllWall_CanExecuted" />
+        <CommandBinding Command="{x:Static ucdr:DrawingEditControl.Cmd_btnMove}" Executed="_btnMove_Executed" CanExecute="_btnMove_CanExecuted"/>
+        <CommandBinding Command="{x:Static ucdr:DrawingEditControl.Cmd_btnModify}" Executed="_btnModify_Executed" CanExecute="_btnModify_CanExecuted"/>
+        <CommandBinding Command="{x:Static ucdr:DrawingEditControl.Cmd_btnDraw}" Executed="_btnDraw_Executed" CanExecute="_btnDraw_CanExecuted"/>
+        <CommandBinding Command="{x:Static ucdr:DrawingEditControl.Cmd_selectDrawLayer}" Executed="_selectDrawLayer_Executed" />
+    </UserControl.CommandBindings>
+
+    <Grid Height="870">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Name="_gridRight">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="780"/>
+            </Grid.RowDefinitions>
+            <Grid Name="_gridButtons" Grid.Row="0" Margin="0,2,0,2">
+                <!-- 2015.09.15 romee basci color change -->
+                <Border  Background="{StaticResource _brushDarkGray0}" Opacity="0.3" CornerRadius="5">
+                    <Border.Effect>
+                        <DropShadowEffect Opacity="0.3"/>
+                    </Border.Effect>
+                    <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="5" RadiusY="5"/>
+                </Border>
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text="MENU" FontSize="18" FontWeight="Bold" Margin="10,-1,0,0" Foreground="{StaticResource _brushDarkGray4}" Style="{StaticResource I2MS_TextBlockStyle2}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Button x:Name="_btnNew" ToolTip="{x:Static prop:Resources.C_SelectFile }" Style="{StaticResource I2MS_TransparentButtonStyle}" Margin="10,0,0,0" Click="_btnNew_Click">
+                        <Image Margin="4" Source="/I2MS2;component/Icons/new_16.png"/>
+                    </Button>
+                    <Button x:Name="_btnOpen"  ToolTip="{x:Static prop:Resources.C_Open}" Style="{StaticResource I2MS_TransparentButtonStyle}" Margin="10,0,0,0" Click="_btnOpen_Click">
+                        <Image Margin="4" Source="/I2MS2;component/Icons/open_16.png"/>
+                    </Button>
+                    <!--<Button x:Name="_btnSave" Content="Save" Style="{StaticResource I2MS_ButtonStyle}" Margin="10,0,0,0" Click="_btnSave_Click" />-->
+                    <Button x:Name="_btnSelect" ToolTip="{x:Static prop:Resources.M9_DrawingManager_1}" Style="{StaticResource I2MS_TransparentButtonStyle}" Margin="10,0,0,0" Click="_btnSelect_Click">
+                        <Image Margin="4" Source="/I2MS2;component/Icons/list_16.png"/>
+                    </Button>
+                    <Button x:Name="_btnUpload" ToolTip="{x:Static prop:Resources.C_Save}" Style="{StaticResource I2MS_TransparentButtonStyle}" Margin="10,0,0,0" Click="_btnUpload_Click">
+                        <Image Margin="4" Source="/I2MS2;component/Icons/upload_16.png"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="_gridMenu" Grid.Row="1" Margin="0,2,0,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <!-- 2015.09.15 romee basci color change -->
+                    <Border  Background="{StaticResource _brushDarkGray0}" Opacity="0.3" CornerRadius="5">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="5" RadiusY="5"/>
+                    </Border>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,3,30,3">
+                        <TextBlock Text="EDIT" FontSize="18" FontWeight="Bold" Margin="0,-1,0,0" Foreground="{StaticResource _brushDarkGray4}" Style="{StaticResource I2MS_TextBlockStyle2}" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                        <ToggleButton x:Name="_btnMove"  Style="{StaticResource I2MS_ToggleButtonMiniTransparentStyle}" ToolTip="{x:Static prop:Resources.M9_DrawingEditer_Select}" Margin="10,0,0,0"
+                                  Checked="_btnMove_Checked" 
+                                  Command="{x:Static ucdr:DrawingEditControl.Cmd_btnMove}" Width="25" Height="25">
+                            <ToggleButton.Content>
+                                <Grid Background="Transparent">
+                                    <Image Source="/I2MS2;component/Icons/move.png" Margin="6" />
+                                </Grid>
+                            </ToggleButton.Content>
+                        </ToggleButton>
+                        <ToggleButton x:Name="_btnDraw" Style="{StaticResource I2MS_ToggleButtonMiniTransparentStyle}" ToolTip="{x:Static prop:Resources.M9_DrawingEditer_Drawing}" Margin="2,0,0,0"
+                                  Checked="_btnDraw_Checked" VerticalAlignment="Center" 
+                                  Command="{x:Static ucdr:DrawingEditControl.Cmd_btnDraw}" Width="25" Height="25">
+                            <ToggleButton.Content>
+                                <Grid Background="Transparent">
+                                    <Image Source="/I2MS2;component/Icons/edit_16.png" Margin="6" />
+                                </Grid>
+                            </ToggleButton.Content>
+                        </ToggleButton>
+                        <ToggleButton x:Name="_btnModify"  Style="{StaticResource I2MS_ToggleButtonMiniTransparentStyle}" ToolTip="{x:Static prop:Resources.M9_Drawing_Editor}" Margin="2,0,0,0"
+                                  Checked="_btnModify_Checked" 
+                                  Command="{x:Static ucdr:DrawingEditControl.Cmd_btnModify}" Width="25" Height="25">
+                            <ToggleButton.Content>
+                                <Grid Background="Transparent">
+                                    <Image Source="/I2MS2;component/Icons/select_16.png" Margin="6" />
+                                </Grid>
+                            </ToggleButton.Content>
+                        </ToggleButton>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                            <TextBlock Text="Layer : " Style="{StaticResource I2MS_TextBlockStyle2}" VerticalAlignment="Top" Margin="5,0,0,0" />
+
+                            <RadioButton x:Name="_radioLayer1" Content="1" Style="{StaticResource I2MS_RadioButtonStyle2}" Checked="_radioLayer1_Checked"/>
+                            <RadioButton x:Name="_radioLayer2"  Content="2" Margin="10,0,0,0" Style="{StaticResource I2MS_RadioButtonStyle2}" Checked="_radioLayer2_Checked"/>
+                            <RadioButton x:Name="_radioLayer3"  Content="3" Margin="10,0,0,0" Style="{StaticResource I2MS_RadioButtonStyle2}" Checked="_radioLayer3_Checked"/>
+                            <RadioButton x:Name="_radioLayer4"  Content="4" Margin="10,0,0,0" Style="{StaticResource I2MS_RadioButtonStyle2}" Checked="_radioLayer4_Checked"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1" Margin="15,0,0,0" Width="660" >
+                    <!-- 2015.09.15 romee basci color change -->
+                    <Border  Background="{StaticResource _brushDarkGray0}" Opacity="0.3" CornerRadius="5">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="5" RadiusY="5" Margin="0,0,0,0"/>
+                    </Border>
+                    <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" >
+                        <TextBlock Text="SHOW" FontSize="18" FontWeight="Bold"  Margin="10,-1,0,0" Foreground="{StaticResource _brushDarkGray4}" Style="{StaticResource I2MS_TextBlockStyle2}" VerticalAlignment="Top" HorizontalAlignment="Center" />
+
+                        <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                            <TextBlock Text="Layer: " Style="{StaticResource I2MS_TextBlockStyle2}" VerticalAlignment="Top" Margin="0,2,0,0"/>
+                            <CheckBox x:Name="_btnShowLayer1" Content="1" Style="{StaticResource I2MS_CheckBoxStyle3}" Margin="5,0,0,0" Checked="_btnShowLayer1_Checked" Unchecked="_btnShowLayer1_Unchecked" Command="{x:Static ucdr:DrawingEditControl.Cmd_btnShowLayer1}" IsChecked="True"/>
+                            <CheckBox x:Name="_btnShowLayer2" Content="2" Style="{StaticResource I2MS_CheckBoxStyle3}" Margin="10,0,0,0" Checked="_btnShowLayer2_Checked" Unchecked="_btnShowLayer2_Unchecked" Command="{x:Static ucdr:DrawingEditControl.Cmd_btnShowLayer2}" IsChecked="True"/>
+                            <CheckBox x:Name="_btnShowLayer3" Content="3" Style="{StaticResource I2MS_CheckBoxStyle3}" Margin="10,0,0,0" Checked="_btnShowLayer3_Checked" Unchecked="_btnShowLayer3_Unchecked" Command="{x:Static ucdr:DrawingEditControl.Cmd_btnShowLayer3}" IsChecked="True"/>
+                            <CheckBox x:Name="_btnShowLayer4" Content="4" Style="{StaticResource I2MS_CheckBoxStyle3}" Margin="10,0,0,0" Checked="_btnShowLayer4_Checked" Unchecked="_btnShowLayer4_Unchecked" Command="{x:Static ucdr:DrawingEditControl.Cmd_btnShowLayer4}" IsChecked="True"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal"  >
+                            <CheckBox Name="_btnImageShow" Content="2D Image" Margin="30,0,0,0"  Style="{StaticResource I2MS_CheckBoxStyle3}" Checked="_btnImageShow_Checked" Unchecked="_btnImageShow_Unchecked"/>
+                            <CheckBox Name="_btnGridShow" Content="Guide" Margin="15,0,0,0" Style="{StaticResource I2MS_CheckBoxStyle3}" Checked="_btnGridShow_Checked" Unchecked="_btnGridShow_Unchecked"/>
+                            <Button x:Name="_btnImportImage" ToolTip="{x:Static prop:Resources.M9_DrawingEditer_ImageImport}" Margin="30,0,0,0" Style="{StaticResource I2MS_TransparentButtonStyle}" Click="_btnImportImage_Click">
+                                <Grid>
+                                    <Image Source="/I2MS2;component/Icons/image_16.png" Margin="4"/>
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+
+                        <!--<Button x:Name="_btnZoomIn" Content="+" Style="{StaticResource I2MS_ButtonStyle}" Margin="40,0,0,0"  Click="_btnZoomIn_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" FontSize="13" />
+                        <Button x:Name="_btnZoomOut" Content="-" Style="{StaticResource I2MS_ButtonStyle}"  Click="_btnZoomOut_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" FontSize="13" Margin="0,0,0,0" />-->
+
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Grid x:Name="_gridEditer" Margin="0" Grid.Row="2" >
+                <ScrollViewer Name="_sclDrawing" Height="768" Width="1024" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource I2MS_ScrollViewerStyle}" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" >
+                    <Grid x:Name="_gridDrawing" Height="768" Width="1024">
+                        <Rectangle x:Name="_rectDrawingBackground" Fill="{StaticResource _brushGray}" RadiusX="10" RadiusY="10" Opacity="0.5"/>
+                        <Image x:Name="_imgDrawingBase" Stretch="Uniform" Source="/I2MS2;component/Images/No_Image.png" />
+                        <Rectangle Fill="Black" Opacity="0.1 " RadiusX="10" RadiusY="10"/>
+                        <Grid x:Name="_gridGuide" />
+                        <Canvas x:Name="_canvasDrawing" 
+                                MouseLeftButtonDown="_canvasDrawing_MouseLeftButtonDown" 
+                                MouseMove="_canvasDrawing_MouseMove" 
+                                MouseWheel="_canvasDrawing_MouseWheel"
+                                MouseLeftButtonUp="_canvasDrawing_MouseLeftButtonUp" 
+                                MouseDown="_canvasDrawing_MouseDown" 
+                                >
+                            <Canvas.Background>
+                                <SolidColorBrush Color="White" Opacity="0.1"/>
+                            </Canvas.Background>
+                            <Canvas.ContextMenu>
+                                <ContextMenu >
+                                    <MenuItem x:Name="_menuSelectOneLayerAllWall" Header="Select All Wall in Layer" Click="_menuSelectOneLayerAllWall_Click" Command="{x:Static ucdr:DrawingEditControl.Cmd_menuSelectOneLayerAllWall}"/>
+                                </ContextMenu>
+                            </Canvas.ContextMenu>
+                            <!--<Ellipse x:Name="_spA" ToolTip="_spA" Width="10" Height="10" Fill="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Ellipse x:Name="_spB" ToolTip="_spB" Width="10" Height="10" Fill="Yellow" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Ellipse x:Name="_epA" ToolTip="_epA" Width="10" Height="10" Fill="Green" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Ellipse x:Name="_epB" ToolTip="_epB" Width="10" Height="10" Fill="Orange" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+
+                            <Ellipse x:Name="_sp" ToolTip="start" Width="10" Height="10" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Ellipse x:Name="_ep" ToolTip="end" Width="10" Height="10" Fill="Black" HorizontalAlignment="Left" VerticalAlignment="Top" />-->
+
+                            <!--<ucdr:DrawingEdit2DWall Canvas.Left="200" Canvas.Top="200"/>-->
+                        </Canvas>
+
+
+                    </Grid>
+                </ScrollViewer>
+                <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
+                    <Grid>
+                        <!-- 2015.09.15 romee basci color change -->
+                        <Border  Background="{StaticResource _brushDarkGray0}" Opacity="0.3" CornerRadius="3">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity="0.3"/>
+                            </Border.Effect>
+                            <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="3" RadiusY="3"/>
+                        </Border>
+                    </Grid>
+                </Border>
+
+            </Grid>
+
+
+        </Grid>
+
+        <Grid Name="_gridLeft" Grid.Column="1" Width="238" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--<Grid Name="_grid3DViewPosition" Grid.Row="3" Height="221">
+
+            </Grid>-->
+
+            <StackPanel Name="_stackPropertyPanel" Orientation="Vertical" Grid.Row="1" Margin="0,10,0,0" >
+                <ucdr:WallPropertyControl x:Name="_ctlWallProp" wallPropChangedEvent="WallPropertyControl_wallPropChangedEvent" Loaded="_ctlWallProp_Loaded" />
+                <ucdr:ColorSelector x:Name="_ctlColorSelector" colorChangedEvent="ColorSelector_colorChangedEvent" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+
+            </StackPanel>
+            <TextBlock Text="3D VIEW" Grid.Row="1" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Bottom" Margin="10,0,0,10"/>
+
+            <Grid Name="_grid3DView"  Margin="-652,110,10,0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" 
+              Height="760" Width="880" MouseEnter="_grid3DView_MouseEnter" MouseLeave="_grid3DView_MouseLeave" Grid.RowSpan="3" Background="Transparent" >
+                <ucdr:DrawingView3D x:Name="_ctlDrawing3D"/>
+            </Grid>
+
+
+        </Grid>
+
+        <!--<Grid Name="_grid3DView"  Margin="0,86,10,0" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Top" 
+              Height="180" Width="220" MouseEnter="_grid3DView_MouseEnter" MouseLeave="_grid3DView_MouseLeave" >
+            <ucdr:DrawingView3D x:Name="_ctlDrawing3D"/>
+        </Grid>-->
+
+
+    </Grid>
+</UserControl>

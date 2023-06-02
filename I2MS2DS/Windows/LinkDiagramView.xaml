@@ -1,0 +1,54 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+        xmlns:im="clr-namespace:I2MS2.Models" 
+        xmlns:iw="clr-namespace:I2MS2.Windows" 
+        xmlns:clr="clr-namespace:System;assembly=mscorlib"
+        xmlns:uc="clr-namespace:I2MS2.UserControls"     
+        xmlns:lib="clr-namespace:I2MS2.Library" 
+        x:Class="I2MS2.Windows.LinkDiagramView"
+        Height="950" Width="1200"
+        WindowStartupLocation="CenterOwner"
+        Title="{x:Static prop:Resources.M9_LinkDiagramViewTitle}" 
+        x:Name="_window" Style="{StaticResource I2MS_SubWindowResizeStyle}" WindowStyle="None" ShowInTaskbar="False" 
+    >
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="10,0,10,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Static prop:Resources.C_Asset_Name}" Style="{StaticResource I2MS_TextBlockStyle}" Margin="10,0,0,0"/>
+                <TextBlock Text=": " Style="{StaticResource I2MS_TextBlockStyle}"/>
+                <TextBlock x:Name="_txtAssetName" Width="200" Style="{StaticResource I2MS_TextBlockStyle}"/>
+                <TextBlock Text="{x:Static prop:Resources.M9_LinkDiagramView_1}" Style="{StaticResource I2MS_TextBlockStyle}" Margin="10,0,0,0"/>
+                <TextBlock Text=": " Style="{StaticResource I2MS_TextBlockStyle}"/>
+                <TextBlock x:Name="_txtPorts" Width="200" Style="{StaticResource I2MS_TextBlockStyle}"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1"  Background="{StaticResource _brushDarkGray2}">
+            <ListView x:Name="_lv" Style="{StaticResource I2MS_ListViewStyle}" >
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter  Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListViewItem">
+                                    <Grid >
+                                        <ContentPresenter/>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </Grid>
+
+    </Grid>
+</Window>

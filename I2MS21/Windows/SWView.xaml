@@ -1,0 +1,84 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+        xmlns:im="clr-namespace:I2MS2.Models" 
+        xmlns:iw="clr-namespace:I2MS2.Windows" 
+        xmlns:clr="clr-namespace:System;assembly=mscorlib"
+        xmlns:uc="clr-namespace:I2MS2.UserControls"     
+        xmlns:lib="clr-namespace:I2MS2.Library" 
+        x:Class="I2MS2.Windows.SWView"
+        Height="650" Width="1200"
+        WindowStartupLocation="CenterOwner"
+        Title="{x:Static prop:Resources.M9_SWViewTitle}" 
+        x:Name="_window" Style="{StaticResource I2MS_SubWindowStyle}" 
+    >
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Static prop:Resources.C_Catalog_Name}" Style="{StaticResource I2MS_TextBlockStyle}" Margin="10,0,0,0"/>
+                <TextBlock Text=": " Style="{StaticResource I2MS_TextBlockStyle}"/>
+                <TextBlock x:Name="_txtCatalogName" Width="200" Style="{StaticResource I2MS_TextBlockStyle}"/>
+                <TextBlock Text="{x:Static prop:Resources.C_SW_Name}" Style="{StaticResource I2MS_TextBlockStyle}"/>
+                <TextBlock Text=": " Style="{StaticResource I2MS_TextBlockStyle}"/>
+                <TextBlock x:Name="_txtAssetName" Width="200" Style="{StaticResource I2MS_TextBlockStyle}"/>
+            </StackPanel>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,15,0" >            
+            <Button  Content="{x:Static prop:Resources.M9_SWView_1}"  Width="120" Height="25" Margin="0,0,0,0" Style="{StaticResource I2MS_ButtonStyle}" Click="Button_Click"/>
+            <Button  Content="{x:Static prop:Resources.M9_SWView_2}"  Width="120" Height="25" Margin="20,0,0,0" Style="{StaticResource I2MS_ButtonStyle}" Click="Button_Click_1"/>
+        </StackPanel>
+
+        <!--요약-->
+        <Grid Grid.Row="1">
+            <uc:RackSW24_880Control x:Name="ucSW24_880" Width="880" Height="80" MySelectedChangeEvent="ucSW24_880_MySelectedChangeEvent" IsEnabled="False" Visibility="Hidden"/>
+            <uc:RackSW48_880Control x:Name="ucSW48_880" Width="880" Height="80" MySelectedChangeEvent="ucSW48_880_MySelectedChangeEvent" IsEnabled="False" Visibility="Hidden"/>
+        </Grid>            
+        
+        <Grid Grid.Row="2">
+            <!--카탈로그 속성-->
+            <Grid x:Name="_gridDetail" Margin="150,0,150,10" Grid.Row="1" Grid.Column="1" >
+                <!-- 2015.09.15 romee basci color change -->
+                <Border Background="{StaticResource _brushDarkGray8}" Opacity="0.4" CornerRadius="5"/>
+                <Grid x:Name="_gridRight" Margin="10,10,10,10" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <!-- 2015.09.15 romee basci color change -->
+                    <Border Background="{StaticResource _brushDarkGray8}" Opacity="0.4" CornerRadius="5" Grid.ColumnSpan="2"/>
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <TextBlock Text="{x:Static prop:Resources.M9_PPView_1}" Margin="0,0,0,0" Style="{DynamicResource I2MS_TextBlockStyle}" Foreground="{StaticResource _brushNormalLightText}"/>
+                        <TextBlock Text="{x:Static prop:Resources.M9_PPView_3}" Margin="0,10,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+                        <TextBlock Text="{x:Static prop:Resources.M9_PPView_2}" Margin="0,10,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+                        <TextBlock Text="{x:Static prop:Resources.M9_PPView_4}" Margin="0,10,0,0" Style="{DynamicResource I2MS_TextBlockStyle}" Foreground="{StaticResource _brushNormalLightText}"/>
+                        <TextBlock Text="{x:Static prop:Resources.C_Host_Name}" Margin="0,10,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+                        <TextBlock Text="{x:Static prop:Resources.C_IP_Address}" Margin="0,10,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+                        <TextBlock Text="{x:Static prop:Resources.C_MAC_Address}" Margin="0,10,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10">
+                        <TextBox  Margin="0,23,0,0" Text="{Binding cur_disp_name}" Style="{DynamicResource I2MS_TextBoxStyle}" IsEnabled="False"/>
+                        <TextBox  Margin="0,6,0,0" Text="{Binding cur_location_path}" Style="{DynamicResource I2MS_TextBoxStyle}" IsEnabled="False"/>
+                        <TextBox  Margin="0,31,0,0" Text="{Binding host_name}" Style="{DynamicResource I2MS_TextBoxStyle}" IsEnabled="False"/>
+                        <TextBox  Margin="0,6,0,0" Text="{Binding ip_addr}" Style="{DynamicResource I2MS_TextBoxStyle}" IsEnabled="False"/>
+                        <TextBox  Margin="0,6,0,0" Text="{Binding mac_addr}" Style="{DynamicResource I2MS_TextBoxStyle}" IsEnabled="False"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <uc:LinkDiagramControl Height="120" x:Name="_ucLink"/>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="I2MS2.UserControls.Drawing.DrawingView2D"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1024" Loaded="_ctlDrawingView2_Loaded"  >
+    <Grid>
+        <Grid x:Name="_gridDrawing" >
+            <Rectangle Fill="Black" Opacity="0.7"/>
+            <Grid x:Name="_gridGuide" />
+            <Canvas x:Name="_canvasDrawing" MouseLeftButtonDown="_canvasDrawing_MouseLeftButtonDown" MouseMove="_canvasDrawing_MouseMove" MouseLeftButtonUp="_canvasDrawing_MouseLeftButtonUp" >
+                <Canvas.Background>
+                    <SolidColorBrush Color="White" Opacity="0.1"/>
+                </Canvas.Background>
+            </Canvas>
+        </Grid>
+    </Grid>
+</UserControl>

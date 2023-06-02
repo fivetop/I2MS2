@@ -1,0 +1,25 @@
+var class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m =
+[
+    [ "alarm_status", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a832ce3c6b2ff9fd12902de6a9e29cca4", null ],
+    [ "cur_disp_name", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a130f5cb30bfa37f65e917d0d1ed84c0b", null ],
+    [ "cur_location_path", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a2787631286a4dfe2a8a4eb49fcbd336f", null ],
+    [ "force_changed", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a570dd8940741a8a58a8d37f452015454", null ],
+    [ "front_asset_id", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a8626170878179bad8a35be02da844f3d", null ],
+    [ "front_disp_name", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#aa77e65ad329a3b415f40a3d991ec03ac", null ],
+    [ "front_location_path", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a631545e98e2e09d8ce49174eeaa6078b", null ],
+    [ "front_port_no", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#aebc48c61335fa5ea0ce4e8b36101a7f4", null ],
+    [ "host_name", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a953c4fa574a34634134b4c60e85b667e", null ],
+    [ "ip_addr", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a8dddc6e5bbb647bdf07246283e1a6615", null ],
+    [ "ipp_asset_id", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a96de62bb36735a3346a06de9a6b760d5", null ],
+    [ "is_port_trace", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a6f465c66a016a74c912f2988edabea3d", null ],
+    [ "is_rear_cable", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a25be3bc711073b55f3e4deaafeff3781", null ],
+    [ "mac_addr", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a8a7eb937898a576cf46a3c70f52da705", null ],
+    [ "port_no", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#af84da41087dd2a962e9ddb65e36678b0", null ],
+    [ "port_status", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a9e1dcaa0cb0d162c1d92d1fa834c50d0", null ],
+    [ "rear_asset_id", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#ac51b7f6fc138cb887a4875d9c1f577e1", null ],
+    [ "rear_disp_name", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a94a1eaedc4e9180d421fb91b27013c10", null ],
+    [ "rear_location_path", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a99e6a9ed7e9066901724b4c9d6be0dda", null ],
+    [ "rear_port_no", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a34ba898dce32a2f56b5a91ca8c042028", null ],
+    [ "wo_status", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a3290879143c8fb04491c7c462028f18d", null ],
+    [ "PropertyChanged", "d0/d96/class_i2_m_s2_1_1_windows_1_1_p_p_view_v_m.html#a0cdf2af5081bed68d05530b364e26a68", null ]
+];

@@ -1,0 +1,31 @@
+﻿<Window x:Class="NmsSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NMS Simulator" Height="350" Width="700">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Height="30" Margin="0,10,0,0">
+                <Button Content="IC-101 off" Width="100" Margin="10,0,0,0"/>
+                <Button Content="IC-101 on" Width="100" Margin="10,0,0,0"/>
+                <Button Content="IPP-101 off" Width="100" Margin="10,0,0,0"/>
+                <Button Content="IPP-101 on" Width="100" Margin="10,0,0,0"/>
+            </StackPanel>
+            <TextBlock Text="---IPP-101 Ports---" Margin="10,10,0,0"/>
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10,10,0,0">
+                <CheckBox x:Name="_chkA" Content="#01/4 initial plug status" Width="220" Click="_chkA_Click"/>
+                <CheckBox x:Name="_chkB" Content="#02/4 initial plug status" Click="_chkB_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="30" Margin="0,10,0,0">
+                <Button x:Name="_btnStatus1" Content="#01/4 plug" Width="100" Margin="10,0,0,0" Click="_btnStatus1_Click"/>
+                <Button x:Name="_btnStatus2" Content="#01/4 unplug" Width="100" Margin="10,0,0,0" Click="_btnStatus2_Click"/>
+                <Button x:Name="_btnStatus3" Content="#02/4 plug" Width="100" Margin="10,0,0,0" Click="_btnStatus3_Click"/>
+                <Button x:Name="_btnStatus4" Content="#02/4 unplug" Width="100" Margin="10,0,0,0" Click="_btnStatus4_Click"/>
+                <Button Content="#03/4 plug" Width="100" Margin="10,0,0,0"/>
+                <Button Content="#03/4 unplug" Width="100" Margin="10,0,0,0"/>
+            </StackPanel>
+            <CheckBox Content="Rescan when connect from WAS" Margin="10,10,0,0"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

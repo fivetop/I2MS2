@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="I2MS2.UserControls.Drawing.ColorSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:ucdr ="clr-namespace:I2MS2.UserControls.Drawing"
+             d:DesignHeight="250" d:DesignWidth="300">
+    <UserControl.CommandBindings>
+        <CommandBinding Command="{x:Static ucdr:ColorSelector.Cmd_btnColorPick}" Executed="_btnColorPick_Executed"  CanExecute="_btnColorPick_CanExecuted"/>
+    </UserControl.CommandBindings>
+    <Grid>
+        <Grid.Resources>
+            <ItemsPanelTemplate x:Key="I2MS_WrapPanelStyle" >
+                <WrapPanel Background="{x:Null}"  />
+            </ItemsPanelTemplate>
+            <ControlTemplate x:Key="ColorListViewItemSelcted" TargetType='{x:Type ListViewItem}'>
+                <Border BorderThickness="1" BorderBrush="White" Height="17" Width="17">
+                    <Rectangle x:Name="rect" Width="16" Height="16" Fill="{Binding brush}" 
+                                       Stroke="Black" StrokeThickness="2"/>
+                </Border>
+            </ControlTemplate>
+
+
+            <Style x:Key="I2MS_ColorListViewStyle" TargetType="{x:Type ListViewItem}">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ListViewItem}">
+                            <Rectangle x:Name="rect" Width="17" Height="17" Fill="{Binding brush}" Margin="0,0,0,0"
+                                       StrokeThickness="1" Stroke="Black"/>
+
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsSelected" Value="True">
+                        <Trigger.Setters>
+                            <Setter Property="Template" Value="{StaticResource ColorListViewItemSelcted}"/>
+                        </Trigger.Setters>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        <StackPanel x:Name="_StackColor" Orientation="Vertical" Height="250">
+            <TextBlock Text="Color" Style="{StaticResource I2MS_TextBlockStyle}" Margin="10,0,0,0"/>
+            <ListView x:Name="_lvColor"
+                              UseLayoutRounding="True" 
+                		ItemContainerStyle="{StaticResource I2MS_ColorListViewStyle}"
+                		ItemsPanel="{StaticResource I2MS_WrapPanelStyle}" 
+                		ScrollViewer.HorizontalScrollBarVisibility="Disabled"  
+                		ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                		Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" 
+                		SelectionChanged="_lvColor_SelectionChanged" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+               
+                <TextBlock Text="Select Color" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                <Rectangle x:Name="_rectSelectColorShow" Width="30" Height="30" Fill="{StaticResource ResourceKey=_brushBlue}" Stroke="Black" HorizontalAlignment="Center" Margin="20,0,0,0"/>
+                <!--<Button Name="_btnColorPick" Style="{StaticResource I2MS_ButtonStyle}" Width="30" Height="30" Margin="40,0,0,0" Click="_btnColorPick_Click" >
+                    <Button.Content>
+                        <Image Source="/I2MS2;component/Icons/spoid.png" Width="20" Height="20"/>
+                    </Button.Content>
+                </Button>-->
+
+                <Button Name="_btnColorPick" Style="{StaticResource I2MS_ButtonStyle}" Width="30" Height="30" Margin="40,0,0,0"  Command="{x:Static ucdr:ColorSelector.Cmd_btnColorPick}" >
+                    <Button.Content>
+                        <Image Source="/I2MS2;component/Icons/spoid.png" Width="20" Height="20"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+            <!--<Expander Header="Custom Color Select" Style="{StaticResource I2MS_ExpanderStyle}" Margin="10" >
+                <Border BorderThickness="2" BorderBrush="Black" Width="200" Height="200">
+                    <Image x:Name="_imgPalette" Source="color-picker.png" Margin="0" MouseLeftButtonDown="Palette_MouseLeftButtonDown" />
+                </Border>
+            </Expander>-->
+        </StackPanel>
+    </Grid>
+</UserControl>

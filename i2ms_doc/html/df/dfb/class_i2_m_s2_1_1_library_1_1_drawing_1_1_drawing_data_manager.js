@@ -1,0 +1,27 @@
+var class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager =
+[
+    [ "ConvertCanvasWallToDBWall", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a0133d7415b605335d72b784bc64de60b", null ],
+    [ "ConvertDBWallDataToCanvasWall", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a5e5e7255f2151fe4a52f920b6371e1d6", null ],
+    [ "convertWallCornerCanvasToDB", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#aa9f96f13f68a27c094913ac95aeb30dd", null ],
+    [ "convertWallCornerDBto3D", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#afb080770393598947433c9afc70becdd", null ],
+    [ "convertWallCornerDBtoCanvas", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#ad43e4f77a4b8804cad4664a79df5bd0b", null ],
+    [ "get3DPoint_FromVMPoint", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a187290dcc9fd41a12678f1338db75ca7", null ],
+    [ "get3DSize_FromVMSize", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a473afe53890873c1e041c1a85329ad94", null ],
+    [ "get3DValue_FromVMValue", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a5a3c41a14843c18f4607b6f34fdb3417", null ],
+    [ "getCanvasPoint_FromVMPoint", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#ac881fa5fa999252d80831370c9c76464", null ],
+    [ "getCanvasSize_FromVMSize", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a3b1d60bdce33e751973daca16f81fd42", null ],
+    [ "getCanvasValue_FromVMValue", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#abeed20a1e00ce82d0c48ca3029ac34db", null ],
+    [ "getDefaultValue_FromVMValue", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a04bb0a4daf8808a0cf5c282b9c8c4a6a", null ],
+    [ "getRatio_byDB", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a498ab7e6dc7754191c13a899268ac675", null ],
+    [ "getRatio_byDefault", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a77494cbad7adafd51eb2f956c6c09aa0", null ],
+    [ "getVMPoint_From3DPoint", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a2c2cfecfdc7e2bb678bc327165cebffe", null ],
+    [ "getVMPoint_FromCanvasPoint", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a764218e59e1cc4ec4b619025a08943d8", null ],
+    [ "getVMValue_From3DValue", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#aef5f60e5f3d31ec8afabd5be5f150674", null ],
+    [ "getVMValue_FromCanvasValue", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#aeb3f82c19a67698262d68356d39207e4", null ],
+    [ "getVMValue_FromDefaultValue", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#ac47020acebfcae2c268702688269e7bc", null ],
+    [ "makeDBWallData", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a76484a575772a8c9358a2d00d4f730a5", null ],
+    [ "makeWallCornerDraw", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a1806334d2d6266d897b3892247809128", null ],
+    [ "makeWallVMDataFor3d", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a92b8d51464c4b050f33031c5bb234cfc", null ],
+    [ "openDrawingData", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#a3aff2b06eea62d3da1876d2160f17f1a", null ],
+    [ "saveDrawingData", "df/dfb/class_i2_m_s2_1_1_library_1_1_drawing_1_1_drawing_data_manager.html#ac308c519e9d08290278f746d56d8b5a6", null ]
+];

@@ -1,0 +1,793 @@
+﻿<UserControl 
+     x:Class="MetroDemo.Views.Dash1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+    xmlns:chart="clr-namespace:MetroChart;assembly=MetroChart"    
+    xmlns:UserControls="clr-namespace:I2MS2.UserControls" 
+    xmlns:I2MS2="clr-namespace:I2MS2" 
+    xmlns:ma="clr-namespace:I2MS2.Chart"
+    xmlns:PieG="clr-namespace:I2MS2.Chart"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"    
+      mc:Ignorable="d" 
+      d:DesignHeight="1261" d:DesignWidth="1250" Loaded="UserControl_Loaded" Unloaded="UserControl_Unloaded" GotFocus="UserControl_GotFocus" SizeChanged="UserControl_SizeChanged"
+    >
+
+    <UserControl.Resources>
+        <ControlTemplate x:Key="Grid1" TargetType="ContentControl">
+            <StackPanel Orientation="Vertical" >
+                <ContentPresenter />
+            </StackPanel>
+        </ControlTemplate>
+
+        <UserControls:Panel1WidthConverter x:Key="_Panel1WidthConverter"/>
+        <UserControls:Panel2WidthConverter x:Key="_Panel2WidthConverter"/>
+        <UserControls:Panel3WidthConverter x:Key="_Panel3WidthConverter"/>
+        <UserControls:Panel4WidthConverter x:Key="_Panel4WidthConverter"/>
+
+        <UserControls:ZoomPercentageConverter2 x:Key="ZoomPercentageConverter2"/>
+        <UserControls:ZoomPercentageConverter3 x:Key="ZoomPercentageConverter3"/>
+        <UserControls:AngleWidthConverter x:Key="_AngleWidthConverter"/>
+        <Thickness x:Key="ControlMargin">0 5 0 0</Thickness>
+
+    </UserControl.Resources>
+
+    <Grid RenderOptions.ClearTypeHint="Enabled"
+          TextOptions.TextFormattingMode="Display">
+        <Grid.ContextMenu>
+            <ContextMenu x:Name="_menu1" StaysOpen="True">
+            </ContextMenu>
+        </Grid.ContextMenu>
+
+        <!--창배경-->
+
+        <Grid x:Name="mainGrid">
+
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                <ma:AnimatedMasonryControl x:Name="_p_main" AnimationDuration="0:0:0.1" Spacing="10" AllowDrop="True" MouseLeftButtonDown="_p_main_MouseLeftButtonDown_1" Drop="_p_main_Drop_1">
+
+                    <GroupBox Header="{x:Static prop:Resources.D_Stat8}"  x:Name="_panel9" Height="260" Padding="10" MinWidth="300" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, Converter={StaticResource _Panel1WidthConverter}, ElementName=mainGrid}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.ColumnSpan="3">
+                                    <UserControls:AngleMeter2 
+                            			PointerLength="60" 
+                            			PointerThickness ="12"
+                            			PointerCapRadius="35" 
+                            			ScaleLabelForeground="#FF9C9B9B"
+                            			ScaleStartAngle="160" 
+                            			ScaleSweepAngle="220"
+                            			MinValue="0" 
+                            			MaxValue="300" 
+                            			MajorDivisionsCount="10" 
+                            			MinorDivisionsCount="5" 
+                            			CurrentValue="{Binding CurEnv.ivalue}"
+                            			OptimalRangeStartValue="30"
+                            			OptimalRangeEndValue="70" 
+                            			DialTextOffset="45" 
+                            			DialTextFontSize="24" 
+                            			DialText="{Binding CurEnv.category}" 
+                            			OptimalRangeColor="#FF2DF900"
+                                        FontSize="10"
+                                        >
+                                        <UserControls:AngleMeter2.MajorTickColor>
+                                            <MultiBinding Mode="OneWay" Converter="{StaticResource _AngleWidthConverter}">
+                                                <Binding Path="CurEnv.ivalue"/>
+                                                <Binding Path="CurEnv.imax"/>
+                                                <Binding Path="CurEnv.imin"/>
+                                            </MultiBinding>
+                                        </UserControls:AngleMeter2.MajorTickColor>
+                                    </UserControls:AngleMeter2>
+                                </Grid>
+                                <Image Source="/I2MS2;component/Icons/env/e1.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="전력량" x:Name="_panel18" Height="530" Padding="10" MinWidth="610" Controls:ControlsHelper.HeaderFontSize="24"
+                              Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel2WidthConverter}}" Controls:ControlsHelper.ContentCharacterCasing="Normal" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Grid RenderOptions.ClearTypeHint="Enabled" TextOptions.TextFormattingMode="Display">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="400"/>
+                                        <ColumnDefinition Width="1"/>
+                                        <ColumnDefinition Width="1"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="441"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="1" Grid.Column="1">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="1"/>
+                                                <RowDefinition Height="441"/>
+                                                <RowDefinition Height="1"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Width="400" Height="400" Grid.Row="1">
+                                                <PieG:PieG x:Name="_pie2" 
+                                                   ForceCursor="True" Radius="200" Rotation="180" MenuSector="180" SectorGap="0" InnerRadius="80" Gap="0" 
+                                                   BorderBrush2="{DynamicResource AccentColorBrush}" Setvalueorg="5" >
+                                                    <PieG:PieGItem Header="Item 1"/>
+                                                    <PieG:PieGItem Header="Item 2"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                    <PieG:PieGItem Header="Item 3"/>
+                                                </PieG:PieG>
+                                                <Line VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="1" Stroke="{DynamicResource AccentColorBrush}"  X1="1" X2="100" Margin="150.5,200.5,149.5,198.5" Opacity="0.2" />
+                                                <Line VerticalAlignment="Center" HorizontalAlignment="Center" Width="1" Height="100" Stroke="{DynamicResource AccentColorBrush}"  Y1="1" Y2="100" Opacity="0.2" />
+                                                <Ellipse  Width="152" Height="152" Stroke="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                <TextBlock Text="{Binding Setvalueorg, ConverterParameter=Value, Converter={StaticResource ZoomPercentageConverter2}, ElementName=_pie2}" 
+                                                           Foreground="{DynamicResource _brushBlue6}" FontSize="30" HorizontalAlignment="Center" 
+                                                           VerticalAlignment="Center" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp" 
+                                                           Margin="137,176,137,171" FontFamily="Segoe UI" FontWeight="Bold" RenderTransformOrigin="0.471,1.071" 
+                                                           Height="53" Width="126" TextAlignment="Center"  />
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                    
+                                    <Grid Grid.Row="2" Grid.ColumnSpan="5">
+                                        <Controls:TransitioningContentControl x:Name="transitioning" Content="역률 : 49.2%" Transition="Down" FontSize="18" HorizontalAlignment="Center" Margin="0,-110,0,0"/>
+                                    </Grid>
+
+                                    <Grid Grid.Row="2" Grid.ColumnSpan="5" Margin="10,-70, 10, 0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="160"/>
+                                                <ColumnDefinition Width="120"/>
+                                                <ColumnDefinition Width="160"/>
+                                                <ColumnDefinition Width="120"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="2"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0" Grid.Column="1">
+                                                <Label Content="금월 사용량" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                                            </Grid>
+                                            <Grid Grid.Row="2" Grid.Column="1">
+                                                <Label Content="금년 사용량" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                                            </Grid>
+                                            <Grid Grid.Row="0" Grid.Column="3">
+                                                <Label Content="금월 목표량" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center"  />
+                                            </Grid>
+                                            <Grid Grid.Row="2" Grid.Column="3">
+                                                <Label Content="금년 목표량" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                                            </Grid>
+                                            <TextBox Grid.Row="0" Grid.Column="2" Text="{Binding CurEnv.category9}" TextAlignment="Right" FontSize="18" Foreground="{StaticResource _brushBlue}"/>
+                                            <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding CurEnv.category10}" TextAlignment="Right" FontSize="18" Foreground="{StaticResource _brushBlue}"/>
+                                            <TextBox Grid.Row="0" Grid.Column="4" Text="{Binding CurEnv.category11}" TextAlignment="Right" FontSize="18" Foreground="{StaticResource _brushBlue}"/>
+                                            <TextBox Grid.Row="2" Grid.Column="4" Text="{Binding CurEnv.category12}" TextAlignment="Right" FontSize="18" Foreground="{StaticResource _brushBlue}"/>
+                                        </Grid>
+                                    </Grid>
+
+                                </Grid>
+
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="현재 전류"  x:Name="_pane20" Height="260" Padding="10" MinWidth="300" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, Converter={StaticResource _Panel1WidthConverter}, ElementName=mainGrid}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.ColumnSpan="3">
+                                    <UserControls:AngleMeter2 
+                            			PointerLength="60" 
+                            			PointerThickness ="12"
+                            			PointerCapRadius="35" 
+                            			ScaleLabelForeground="#FF9C9B9B"
+                            			ScaleStartAngle="160" 
+                            			ScaleSweepAngle="220"
+                            			MinValue="0" 
+                            			MaxValue="300" 
+                            			MajorDivisionsCount="10" 
+                            			MinorDivisionsCount="5" 
+                            			CurrentValue="{Binding CurEnv.ivalue2}"
+                            			OptimalRangeStartValue="30"
+                            			OptimalRangeEndValue="70" 
+                            			DialTextOffset="45" 
+                            			DialTextFontSize="24" 
+                            			DialText="{Binding CurEnv.category2}" 
+                            			OptimalRangeColor="#FF2DF900"
+                                        FontSize="10"
+                                        >
+                                        <UserControls:AngleMeter2.MajorTickColor>
+                                            <MultiBinding Mode="OneWay" Converter="{StaticResource _AngleWidthConverter}">
+                                                <Binding Path="CurEnv.ivalue2"/>
+                                                <Binding Path="CurEnv.imax2"/>
+                                                <Binding Path="CurEnv.imin2"/>
+                                            </MultiBinding>
+                                        </UserControls:AngleMeter2.MajorTickColor>
+                                    </UserControls:AngleMeter2>
+                                </Grid>
+                                <Image Source="/I2MS2;component/Icons/env/e8.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="현재 전압"  x:Name="_panel21" Height="260" Padding="10" MinWidth="300" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel1WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0" Grid.ColumnSpan="3" >
+                                    <UserControls:AngleMeter2 
+    			PointerLength="60" 
+    			PointerThickness ="12"
+    			PointerCapRadius="35" 
+    			ScaleLabelForeground="#FF9C9B9B"
+    			ScaleStartAngle="160" 
+    			ScaleSweepAngle="220"
+    			MinValue="0" 
+    			MaxValue="300" 
+    			MajorDivisionsCount="10" 
+    			MinorDivisionsCount="5" 
+    			CurrentValue="{Binding Path=CurEnv.ivalue1}"
+    			OptimalRangeStartValue="30"
+    			OptimalRangeEndValue="70" 
+    			DialTextOffset="45" 
+    			DialTextFontSize="24" 
+    			DialText="{Binding Path=CurEnv.category1}" 
+                OptimalRangeColor="#FF2DF900" 
+                                        FontSize="10"
+                                        >
+                                        <UserControls:AngleMeter2.MajorTickColor>
+                                            <MultiBinding Mode="OneWay" Converter="{StaticResource _AngleWidthConverter}">
+                                                <Binding Path="CurEnv.ivalue1"/>
+                                                <Binding Path="CurEnv.imax1"/>
+                                                <Binding Path="CurEnv.imin1"/>
+                                            </MultiBinding>
+                                        </UserControls:AngleMeter2.MajorTickColor>
+                                    </UserControls:AngleMeter2>
+
+                                </Grid>
+                                <Image Source="/I2MS2;component/Icons/env/e6.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Margin="10"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="현재 역률" x:Name="_panel22" Height="260" Padding="10" MinWidth="300" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel1WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0" Grid.ColumnSpan="3" >
+                                    <UserControls:AngleMeter2 
+    			PointerLength="60" 
+    			PointerThickness ="12"
+    			PointerCapRadius="35" 
+    			ScaleLabelForeground="#FF9C9B9B"
+    			ScaleStartAngle="160" 
+    			ScaleSweepAngle="220"
+    			MinValue="0" 
+    			MaxValue="100" 
+    			MajorDivisionsCount="10" 
+    			MinorDivisionsCount="5" 
+    			CurrentValue="{Binding Path=CurEnv.ivalue3}"
+    			OptimalRangeStartValue="30"
+    			OptimalRangeEndValue="70" 
+    			DialTextOffset="45" 
+    			DialTextFontSize="24" 
+    			DialText="{Binding Path=CurEnv.category3}" 
+                OptimalRangeColor="#FF2DF900" 
+                                        FontSize="10"
+                                       >
+                                        <UserControls:AngleMeter2.MajorTickColor>
+                                            <MultiBinding Mode="OneWay" Converter="{StaticResource _AngleWidthConverter}">
+                                                <Binding Path="CurEnv.ivalue3"/>
+                                                <Binding Path="CurEnv.imax3"/>
+                                                <Binding Path="CurEnv.imin3"/>
+                                            </MultiBinding>
+                                        </UserControls:AngleMeter2.MajorTickColor>
+                                    </UserControls:AngleMeter2>
+                                </Grid>
+                                <Image Source="/I2MS2;component/Icons/env/e7.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Margin="10"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="{x:Static prop:Resources.D_Stat9}"  x:Name="_panel10" Height="260" Padding="10" MinWidth="300" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel1WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0" Grid.ColumnSpan="3" >
+                                    <UserControls:AngleMeter2 
+    			PointerLength="60" 
+    			PointerThickness ="12"
+    			PointerCapRadius="35" 
+    			ScaleLabelForeground="#FF9C9B9B"
+    			ScaleStartAngle="160" 
+    			ScaleSweepAngle="220"
+    			MinValue="0" 
+    			MaxValue="100" 
+    			MajorDivisionsCount="10" 
+    			MinorDivisionsCount="5" 
+    			CurrentValue="{Binding Path=CurEnv.ivalue4}"
+    			OptimalRangeStartValue="30"
+    			OptimalRangeEndValue="70" 
+    			DialTextOffset="45" 
+    			DialTextFontSize="24" 
+    			DialText="{Binding Path=CurEnv.category4}" 
+                OptimalRangeColor="#FF2DF900" 
+                                        FontSize="10"
+                                        >
+                                        <UserControls:AngleMeter2.MajorTickColor>
+                                            <MultiBinding Mode="OneWay" Converter="{StaticResource _AngleWidthConverter}">
+                                                <Binding Path="CurEnv.ivalue4"/>
+                                                <Binding Path="CurEnv.imax4"/>
+                                                <Binding Path="CurEnv.imin4"/>
+                                            </MultiBinding>
+                                        </UserControls:AngleMeter2.MajorTickColor>
+                                    </UserControls:AngleMeter2>
+
+                                </Grid>
+                                <Image Source="/I2MS2;component/Icons/env/e2.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Margin="10"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="{x:Static prop:Resources.D_Stat10}" x:Name="_panel11" Height="260" Padding="10" MinWidth="300" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel1WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0" Grid.ColumnSpan="3" >
+                                    <UserControls:AngleMeter2 
+    			PointerLength="60" 
+    			PointerThickness ="12"
+    			PointerCapRadius="35" 
+    			ScaleLabelForeground="#FF9C9B9B"
+    			ScaleStartAngle="160" 
+    			ScaleSweepAngle="220"
+    			MinValue="0" 
+    			MaxValue="100" 
+    			MajorDivisionsCount="10" 
+    			MinorDivisionsCount="5" 
+    			CurrentValue="{Binding Path=CurEnv.ivalue5}"
+    			OptimalRangeStartValue="30"
+    			OptimalRangeEndValue="70" 
+    			DialTextOffset="45" 
+    			DialTextFontSize="24" 
+    			DialText="{Binding Path=CurEnv.category5}" 
+                OptimalRangeColor="#FF2DF900" 
+                                        FontSize="10"
+                                       >
+                                        <UserControls:AngleMeter2.MajorTickColor>
+                                            <MultiBinding Mode="OneWay" Converter="{StaticResource _AngleWidthConverter}">
+                                                <Binding Path="CurEnv.ivalue5"/>
+                                                <Binding Path="CurEnv.imax5"/>
+                                                <Binding Path="CurEnv.imin5"/>
+                                            </MultiBinding>
+                                        </UserControls:AngleMeter2.MajorTickColor>
+                                    </UserControls:AngleMeter2>
+                                </Grid>
+                                <Image Source="/I2MS2;component/Icons/env/e3.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Margin="10"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="{x:Static prop:Resources.D_Stat11}"  x:Name="_panel12" Height="260" Padding="10" MinWidth="300" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel1WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Grid>
+                                    <StackPanel >
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/I2MS2;component/icons/env/e4.png" Height="56" Width="56" RenderTransformOrigin="0.5,0.5"  />
+                                            <TextBlock Text="{Binding CurEnv.ivalue6}" Width="80" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Center" FontSize="24" TextAlignment="Center" Foreground="{StaticResource _brushBlue}"/>
+                                            <TextBlock Text=" EA" FontSize="24" TextTrimming="CharacterEllipsis" TextOptions.TextHintingMode="Animated" Foreground="{StaticResource _brushBlue}" Margin="0,10,0,0"/>
+                                        </StackPanel>
+                                        <Rectangle Fill="#FFC9BFBF" StrokeThickness="5" RadiusY="1" RadiusX="1" Height="2" Stroke="{StaticResource _brushDarkGray4}" Margin="0,5,0,0"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="연기 감지 알람"  x:Name="_panel23" Height="260" Padding="10" MinWidth="300" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel1WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Grid>
+                                    <StackPanel >
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="/I2MS2;component/icons/env/e5.png" Height="56" Width="56" RenderTransformOrigin="0.5,0.5"  />
+                                            <TextBlock Text="{Binding CurEnv.ivalue7}" Width="80" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Center" FontSize="24" TextAlignment="Center" Foreground="{StaticResource _brushBlue}"/>
+                                            <TextBlock Text=" EA" FontSize="24" TextTrimming="CharacterEllipsis" TextOptions.TextHintingMode="Animated" Foreground="{StaticResource _brushBlue}" Margin="0,10,0,0"/>
+                                        </StackPanel>
+                                        <Rectangle Fill="#FFC9BFBF" StrokeThickness="5" RadiusY="1" RadiusX="1" Height="2" Stroke="{StaticResource _brushDarkGray4}" Margin="0,5,0,0"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+<!--
+                    <GroupBox Header="{x:Static prop:Resources.D_Stat13}" x:Name="_panel14" Height="260" Padding="10" MinWidth="1230" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel4WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Canvas HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <TextBlock Text="{x:Static prop:Resources.C_Kwh}" Style="{StaticResource I2MS_TextBlockStyle}" TextWrapping="Wrap"/>
+                                </Canvas>
+                                <Canvas HorizontalAlignment="Right" VerticalAlignment="Bottom"  Margin="0,0,40,20">
+                                    <TextBlock Text="{x:Static prop:Resources.C_Hour}" Style="{StaticResource I2MS_TextBlockStyle}" TextWrapping="Wrap"/>
+                                </Canvas>
+                                <chart:ClusteredColumnChart 
+					            Style="{StaticResource ChartStyleVariableSize}"
+					            ChartTitle=""
+					            ChartSubTitle=""
+					            Palette="{Binding SelectedPalette.Value}"
+					            FontSize="{Binding SelectedFontSize}"
+					            IsRowColumnSwitched="{Binding IsRowColumnSwitched}"
+					            ToolTipFormat="{Binding ToolTipFormat}"
+					            Foreground="{Binding Foreground}"
+					            MaxDataPointValue="100"
+					            MaxDataPointAuto="1"
+					            MaxDataPointDevide="20"
+					            SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Height="Auto"  Width="Auto" ChartTitleVisibility="Collapsed" ChartLegendVisibility="Collapsed">
+                                    <chart:ClusteredColumnChart.Series>
+                                        <chart:ChartSeries 
+								SeriesTitle="Power"
+								DisplayMember="category"
+								ValueMember="value"
+								ItemsSource="{Binding StatPower}" />
+                                    </chart:ClusteredColumnChart.Series>
+                                </chart:ClusteredColumnChart>
+                                <Image Source="/I2MS2;component/Icons/env/e1.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="{x:Static prop:Resources.D_Stat14}" x:Name="_panel15" Height="260" Padding="10" MinWidth="1230" Controls:ControlsHelper.HeaderFontSize="24"
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel4WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Canvas HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <TextBlock Text="{x:Static prop:Resources.C_Temperature1}" Style="{StaticResource I2MS_TextBlockStyle}" TextWrapping="Wrap"/>
+                                </Canvas>
+                                <Canvas HorizontalAlignment="Right" VerticalAlignment="Bottom"  Margin="0,0,40,20">
+                                    <TextBlock Text="{x:Static prop:Resources.C_Hour}" Style="{StaticResource I2MS_TextBlockStyle}" TextWrapping="Wrap"/>
+                                </Canvas>
+                                <chart:ClusteredColumnChart 
+					            Style="{StaticResource ChartStyleVariableSize}"
+					            ChartTitle=""
+					            ChartSubTitle=""
+					            Palette="{Binding SelectedPalette.Value}"
+					            FontSize="{Binding SelectedFontSize}"
+					            IsRowColumnSwitched="{Binding IsRowColumnSwitched}"
+					            ToolTipFormat="{Binding ToolTipFormat}"
+					            Foreground="{Binding Foreground}"
+					            MaxDataPointValue="100"
+					            MaxDataPointAuto="1"
+					            MaxDataPointDevide="20"
+					            SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Height="Auto"  Width="Auto" ChartTitleVisibility="Collapsed" ChartLegendVisibility="Collapsed">
+                                    <chart:ClusteredColumnChart.Series>
+                                        <chart:ChartSeries 
+								SeriesTitle="Power"
+								DisplayMember="category"
+								ValueMember="value"
+								ItemsSource="{Binding StatTemp}" />
+                                    </chart:ClusteredColumnChart.Series>
+                                </chart:ClusteredColumnChart>
+                                <Image Source="/I2MS2;component/Icons/env/e2.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="{x:Static prop:Resources.D_Stat15}"  x:Name="_panel16" Height="260" Padding="10" MinWidth="1230" Controls:ControlsHelper.HeaderFontSize="24" 
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel4WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Canvas HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <TextBlock Text="{x:Static prop:Resources.C_Percentage1}" Style="{StaticResource I2MS_TextBlockStyle}" TextWrapping="Wrap"/>
+                                </Canvas>
+                                <Canvas HorizontalAlignment="Right" VerticalAlignment="Bottom"  Margin="0,0,40,20">
+                                    <TextBlock Text="{x:Static prop:Resources.C_Hour}" Style="{StaticResource I2MS_TextBlockStyle}" TextWrapping="Wrap"/>
+                                </Canvas>
+                                <chart:ClusteredColumnChart 
+					            Style="{StaticResource ChartStyleVariableSize}"
+					            ChartTitle=""
+					            ChartSubTitle=""
+					            Palette="{Binding SelectedPalette.Value}"
+					            FontSize="{Binding SelectedFontSize}"
+					            IsRowColumnSwitched="{Binding IsRowColumnSwitched}"
+					            ToolTipFormat="{Binding ToolTipFormat}"
+					            Foreground="{Binding Foreground}"
+					            MaxDataPointValue="100"
+					            MaxDataPointAuto="1"
+					            MaxDataPointDevide="20"
+					            SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Height="Auto"  Width="Auto" ChartTitleVisibility="Collapsed" ChartLegendVisibility="Collapsed">
+                                    <chart:ClusteredColumnChart.Series>
+                                        <chart:ChartSeries 
+								SeriesTitle="Power"
+								DisplayMember="category"
+								ValueMember="value"
+								ItemsSource="{Binding StatHumi}" />
+                                    </chart:ClusteredColumnChart.Series>
+                                </chart:ClusteredColumnChart>
+                                <Image Source="/I2MS2;component/Icons/env/e3.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="Event/Alarm Message" x:Name="_panel17" Height="260" Padding="10" MinWidth="1230" 
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel4WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <Border BorderBrush="{DynamicResource AccentColorBrush}" Margin="1" BorderThickness="1"></Border>
+                                <ListView x:Name="_lvManufacture" Margin="10" ItemContainerStyle="{StaticResource I2MS_ListViewItemContainerPrintStyle}" MouseDoubleClick="_lvManufacture_MouseDoubleClick">
+                                    <ListView.ContextMenu>
+                                        <ContextMenu>
+                                        </ContextMenu>
+                                    </ListView.ContextMenu>
+
+                                    <ListView.View>
+                                        <GridView  x:Name="_lvGridView" AllowsColumnReorder="True">
+                                            <GridViewColumn DisplayMemberBinding="{Binding event_hist_id}" Width="0">
+                                                <TextBlock Text="ID"></TextBlock>
+                                            </GridViewColumn>
+                                            <GridViewColumn DisplayMemberBinding="{Binding RowNumber}" Width="60">
+                                                <TextBlock Text="{x:Static prop:Resources.C_No}"></TextBlock>
+                                            </GridViewColumn>
+                                            <GridViewColumn DisplayMemberBinding="{Binding write_time}" Width="130">
+                                                <TextBlock Text="{x:Static prop:Resources.C_Date}"></TextBlock>
+                                            </GridViewColumn>
+                                            <GridViewColumn DisplayMemberBinding="{Binding event_type}" Width="100">
+                                                <TextBlock Text="{x:Static prop:Resources.M_Prop2_Group}"></TextBlock>
+                                            </GridViewColumn>
+                                            <GridViewColumn DisplayMemberBinding="{Binding event_text}" Width="450">
+                                                <TextBlock Text="{x:Static prop:Resources.C_Brief}"></TextBlock>
+                                            </GridViewColumn>
+                                            <GridViewColumn DisplayMemberBinding="{Binding location_id}" Width="380">
+                                                <TextBlock Text="{x:Static prop:Resources.C_Location_Name}"></TextBlock>
+                                            </GridViewColumn>
+
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                    -->
+
+                    <GroupBox Header="{x:Static prop:Resources.D_Stat12}" x:Name="_panel13" Height="260" Padding="10" MinWidth="1230" Controls:ControlsHelper.HeaderFontSize="24" 
+                                       Width="{Binding ActualWidth, ElementName=mainGrid, Converter={StaticResource _Panel4WidthConverter}}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <chart:ClusteredColumnChart 
+					            Style="{StaticResource ChartStyleVariableSize}"
+					            ChartTitle=""
+					            ChartSubTitle=""
+					            Palette="{Binding SelectedPalette.Value}"
+					            FontSize="{Binding SelectedFontSize}"
+					            IsRowColumnSwitched="{Binding IsRowColumnSwitched}"
+								ToolTipFormat="{Binding ToolTipFormat100}"
+					            Foreground="{Binding Foreground}"
+					            MaxDataPointValue="100"
+					            MaxDataPointAuto="1"
+					            MaxDataPointDevide="20"
+					            SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Height="Auto"  Width="Auto" ChartTitleVisibility="Collapsed" ChartLegendVisibility="Collapsed">
+                                    <chart:ClusteredColumnChart.Series>
+                                        <chart:ChartSeries 
+								SeriesTitle="Power"
+								DisplayMember="category"
+								ValueMember="value"
+								ItemsSource="{Binding SystemEventEnvironment}" />
+                                    </chart:ClusteredColumnChart.Series>
+                                </chart:ClusteredColumnChart>
+                                <Image Source="/I2MS2;component/Icons/env/e0.png" Height="48" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+
+                </ma:AnimatedMasonryControl>
+            </ScrollViewer>
+
+            <!-- Region // not use-->
+            <!--<Canvas  VerticalAlignment="Bottom" HorizontalAlignment="Right"  Height="145" Width="427">
+                <Button Content="Start" x:Name="s1"  Click="s1_Click" Height="30" Width="120" Canvas.Left="0"/>
+                <Button Content="Stop"  x:Name="s2"  Click="s2_Click" Height="30" Width="120" Canvas.Left="130"/>
+            </Canvas>-->
+            <!-- end region-->
+        </Grid>
+
+    </Grid>
+
+</UserControl>

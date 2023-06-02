@@ -1,0 +1,59 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR" 
+        xmlns:im="clr-namespace:I2MS2.Models" 
+        xmlns:iw="clr-namespace:I2MS2.Windows" 
+        xmlns:clr="clr-namespace:System;assembly=mscorlib"
+        xmlns:uc="clr-namespace:I2MS2.UserControls" 
+        x:Class="I2MS2.Windows.RackView"
+        Height="970" Width="1230"
+        WindowStartupLocation="CenterOwner"
+        Title="Rack View" 
+        x:Name="_window" Style="{StaticResource I2MS_SubWindowStyle}" 
+    >
+
+    <Grid Margin="10">
+            <Grid Height="910" >                
+                <!--랙 표시용-->
+                <Grid >
+                    <ListView x:Name="_lvRackSet" Style="{StaticResource I2MS_ListViewStyle}" >
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter  Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListViewItem">
+                                            <Grid Height="{Binding height}">
+                                                <uc:RackControl PixelPerUnit="{Binding pixel_4_unit}" 
+                                                                RackName="{Binding rack_name}" 
+                                                                MyItemsSource="{Binding my_source, Mode=OneWay}" 
+                                                                TotalUnit="{Binding total_units}" 
+                                                                Width="{Binding width}" 
+                                                                Height="{Binding height2}" 
+                                                                SelectedImage="{Binding selected_image, Mode=OneWay}"
+                                                                VerticalAlignment="Bottom" IsEnabled="false"/>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
+                </Grid>
+            
+                <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,30,0">                
+                    <StackPanel Orientation="Vertical" Margin="670,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                        <Button Content="+" Height="30" Margin="0,0,0,0" Width="30" Style="{StaticResource I2MS_ButtonStyle}" Click="Button_Click1"/>
+                        <Button Content="-" Height="30" Margin="0,5,0,0" Width="30" Style="{StaticResource I2MS_ButtonStyle}" Click="Button_Click2"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        <!--</ScrollViewer>-->
+    </Grid>
+</Window>

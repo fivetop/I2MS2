@@ -1,0 +1,238 @@
+﻿<Window x:Class="I2MS2.Windows.EtcViewOption"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR"
+        xmlns:ucdr="clr-namespace:I2MS2.UserControls.Drawing"
+        Title="{x:Static prop:Resources.C_Info28}" 
+        Height="800" Width="1000" Style="{StaticResource I2MS_SubWindowStyle}"
+        Name="_window" WindowStartupLocation="CenterOwner">
+    <Window.Resources>
+        <RadialGradientBrush x:Key="BigButtonOutBorderBackgroudBrush" GradientOrigin="0.506,-0.511" RadiusY="0.555" RadiusX="0.876" Center="0.502,0.36">
+            <GradientStop Color="#FF4A4A4A" Offset="0"/>
+            <GradientStop Color="#FF151515" Offset="1"/>
+            <GradientStop Color="#FF222222" Offset="0.659"/>
+        </RadialGradientBrush>
+
+        <Style x:Key="BigButtonOutBorderStyle" TargetType="{x:Type Border}">
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Background" Value="{StaticResource _brushBigButtonBackground}"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect  Opacity="0.8" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <ControlTemplate x:Key="I2MS_Drawing3DListViewItemStyleMouseOver" >
+            <Grid x:Name="Agrid1" Margin="0,1,0,0" Height="24" Width="270" >
+                <Border x:Name="outBorder" Style="{StaticResource BigButtonOutBorderStyle}">
+                    <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="1"/>
+                </Border>
+                <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="1" >
+                    <Border x:Name="inBorder" BorderBrush="{DynamicResource _brushFocusBorder1}" BorderThickness="1" Opacity="1" CornerRadius="1" >
+                        <Grid>
+                            <Rectangle RadiusX="1" RadiusY="1" Fill="{DynamicResource _brushCheckBoxFillNormal}" Opacity="1" />
+                        </Grid>
+                    </Border>
+                    <TextBlock Margin="0,0,0,0" Text="{Binding drawing_3d_name}" VerticalAlignment="Top"  Foreground="{StaticResource _brushNormalText}" FontWeight="Bold" TextAlignment="Center" />
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="I2MS_Drawing3DListViewItemStyleSelected" >
+            <Grid x:Name="Agrid1" Margin="0,1,0,0" Height="24" Width="270" >
+                <Border x:Name="outBorder" Style="{StaticResource BigButtonOutBorderStyle}">
+                    <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="1"/>
+                </Border>
+                <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="1" >
+                    <Border x:Name="inBorder" BorderBrush="{DynamicResource _brushButtonPushBackground}" BorderThickness="1" Opacity="1" CornerRadius="1" >
+                        <Grid>
+                            <Rectangle RadiusX="1" RadiusY="1" Fill="{DynamicResource _brushBlue}" Opacity="1" />
+                        </Grid>
+                    </Border>
+                    <TextBlock Margin="0,0,0,0" Text="{Binding drawing_3d_name}" VerticalAlignment="Top"  Foreground="{StaticResource _brushBlack}" FontWeight="Bold" TextAlignment="Center" />
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="I2MS_Drawing3DListViewItemStyleSelectedMouseOver" >
+            <Grid x:Name="Agrid1" Margin="0,1,0,0" Height="24" Width="270"  >
+                <Border x:Name="outBorder" Style="{StaticResource BigButtonOutBorderStyle}">
+                    <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="1"/>
+                </Border>
+                <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="1" >
+                    <Border x:Name="inBorder" BorderBrush="{DynamicResource _brushFocusBorder1}" BorderThickness="1" Opacity="1" CornerRadius="1" >
+                        <Grid>
+                            <Rectangle RadiusX="1" RadiusY="1" Fill="{DynamicResource _brushBlue}" Opacity="1" />
+                        </Grid>
+                    </Border>
+                    <TextBlock Margin="0,0,0,0" Text="{Binding drawing_3d_name}" VerticalAlignment="Top"  Foreground="{StaticResource _brushBlack}" FontWeight="Bold" TextAlignment="Center" />
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+
+        <Style x:Key="I2MS_Drawing3DListViewItemStyle" TargetType="{x:Type ListViewItem}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                        <Grid x:Name="Agrid1" Margin="0,1,0,0" Height="24" Width="270" >
+                            <Border x:Name="outBorder" Style="{StaticResource BigButtonOutBorderStyle}">
+                                <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="1"/>
+                            </Border>
+                            <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="1" >
+                                <Border x:Name="inBorder" BorderBrush="{DynamicResource _brushButtonPushBackground}" 
+            					        BorderThickness="1" Opacity="1" CornerRadius="1" >
+                                    <Grid>
+                                        <Rectangle RadiusX="1" RadiusY="1" Fill="{DynamicResource _brushCheckBoxFillNormal}" Opacity="0.5" />
+                                    </Grid>
+                                </Border>
+                                <TextBlock Margin="0,0,0,0" Text="{Binding drawing_3d_name}" VerticalAlignment="Top"  Foreground="{StaticResource _brushNormalText}" TextAlignment="Center" />
+                            </Grid>
+                        </Grid>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.Setters>
+                        <Setter Property="Template" Value="{StaticResource I2MS_Drawing3DListViewItemStyleMouseOver}"/>
+                    </Trigger.Setters>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Trigger.Setters>
+                        <Setter Property="Template" Value="{StaticResource I2MS_Drawing3DListViewItemStyleSelected}"/>
+                    </Trigger.Setters>
+                </Trigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsSelected" Value="true"/>
+                        <Condition Property="IsMouseOver" Value="true"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Template" Value="{StaticResource I2MS_Drawing3DListViewItemStyleSelectedMouseOver}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="_lvDrawing3DList" Style="{StaticResource I2MS_ListViewStyle}"
+                ItemContainerStyle="{StaticResource I2MS_Drawing3DListViewItemStyle}"
+                SelectionChanged="_lvDrawing3DList_SelectionChanged"/>
+        <Grid Grid.Column="1" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Border Grid.RowSpan="4" Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                <Border.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Border.Effect>
+                <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+            </Border>
+            <Grid Margin="5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Select Item Size" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Margin="5">
+                    <Border Grid.RowSpan="4" Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+                    <StackPanel Orientation="Vertical" Margin="10">
+                        <TextBlock Text="10 %" Style="{StaticResource I2MS_TextBlockStyle}"  HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+                            <Rectangle Width="5" Height="2.5" Fill="SkyBlue" Margin="0,0,5,0"/>
+                            <Rectangle Width="5" Height="2.5" Fill="Yellow" Margin="5,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Margin="5" Grid.Column="1">
+                    <Border Grid.RowSpan="4" Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+                    <StackPanel Orientation="Vertical"  Margin="10">
+                        <TextBlock Text="25 %" Style="{StaticResource I2MS_TextBlockStyle}"  HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,16,0,0">
+                            <Rectangle Width="10" Height="5" Fill="SkyBlue" Margin="0,0,5,0"/>
+                            <Rectangle Width="5" Height="5" Fill="Yellow" Margin="5,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Margin="5"  Grid.Column="2">
+                    <Border Background="#FF202020" Opacity="0.3" CornerRadius="10" >
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+                    <StackPanel Orientation="Vertical"  Margin="10">
+                        <TextBlock Text="50 %" Style="{StaticResource I2MS_TextBlockStyle}"  HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,12,0,0">
+                            <Rectangle Width="25" Height="12.5" Fill="SkyBlue" Margin="0,0,5,0"/>
+                            <Rectangle Width="12.5" Height="12.5" Fill="Yellow" Margin="5,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                   
+                </Grid>
+
+                <Grid Margin="5" Grid.Column="3">
+                    <Border Background="#FF202020" Opacity="0.3" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity="0.3"/>
+                        </Border.Effect>
+                        <Rectangle Stroke="{StaticResource _brushBlack}" StrokeThickness="2" RadiusX="10" RadiusY="10"/>
+                    </Border>
+                    <StackPanel Orientation="Vertical"  Margin="10">
+                        <TextBlock Text="100 %" Style="{StaticResource I2MS_TextBlockStyle}"  HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0">
+                            <Rectangle Width="50" Height="25" Fill="SkyBlue" Margin="0,0,5,0"/>
+                            <Rectangle Width="25" Height="25" Fill="Yellow" Margin="5,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <RadioButton Name="_radio10" Grid.Column="0"  Style="{StaticResource I2MS_RadioButtonStyle2}"  Checked="_radio_Checked" Margin="0,0,0,12" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <RadioButton Name="_radio25" Grid.Column="1"   Style="{StaticResource I2MS_RadioButtonStyle2}"  Checked="_radio_Checked" Margin="0,0,0,12" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <RadioButton Name="_radio50" Grid.Column="2" Style="{StaticResource I2MS_RadioButtonStyle2}"   Checked="_radio_Checked" Margin="0,0,0,12" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <RadioButton Name="_radio100" Grid.Column="3"  Style="{StaticResource I2MS_RadioButtonStyle2}"  Checked="_radio_Checked" Margin="0,0,0,12" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <!--<StackPanel Orientation="Horizontal" Grid.ColumnSpan="4" VerticalAlignment="Bottom" Margin="10,12,10,12">
+                    <RadioButton Name="_radio10"  Style="{StaticResource I2MS_RadioButtonStyle2}"  Margin="63,3,0,0" Checked="_radio_Checked"/>
+                    <RadioButton Name="_radio25"   Style="{StaticResource I2MS_RadioButtonStyle2}"  Margin="147,3,0,0" Checked="_radio_Checked"/>
+                    <RadioButton Name="_radio50" Style="{StaticResource I2MS_RadioButtonStyle2}"  Margin="150,3,0,0" Checked="_radio_Checked"/>
+                    <RadioButton Name="_radio100"  Style="{StaticResource I2MS_RadioButtonStyle2}"  Margin="150,3,0,0" Checked="_radio_Checked"/>
+                </StackPanel>-->
+            </Grid>
+            <TextBlock Grid.Row="2" Text="Drawing View" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <!--<ucdr:DrawingView2D Grid.Row="2" x:Name="_ctlDrawingView2D" Margin="5"/>-->
+            <ucdr:DrawingView3D Grid.Row="3" x:Name="_ctlDrawingView3D" Margin="5"/>
+            <StackPanel  Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="_btnSave" Content="{x:Static prop:Resources.C_Save}" Style="{StaticResource I2MS_ButtonStyle}" Margin="0,0,10,0" Click="_btnSave_Click" />
+                <Button Name="_btnCancle" Content="{x:Static prop:Resources.C_Cancel}" Style="{StaticResource I2MS_ButtonStyle}" Margin="10,0,0,0" Click="_btnCancle_Click"  />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

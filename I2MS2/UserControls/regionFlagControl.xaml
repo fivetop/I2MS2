@@ -1,0 +1,24 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+	x:Class="I2MS2.UserControls.regionFlagControl"
+	x:Name="UserControl"
+	d:DesignWidth="50" d:DesignHeight="50">
+
+	<Grid x:Name="LayoutRoot">
+        <!--<Ellipse Margin="19,26,19,22" Fill="#FFBDBBBA"/>-->
+
+        <Grid x:Name="flagGrid" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <!--<Rectangle RadiusX="2" RadiusY="1" Fill="#FFBDBBBA" StrokeThickness="0.5" Margin="24,0,24,25"/>-->
+                <Path x:Name="flagPole" Data="M0,1 C0,0.44771525 0.44771525,0 1,0 C1.5522847,0 2,0.44771525 2,1 L2,24 C2,24.552285 1.5522847,25 1,25 C0.44771525,25 0,24.552285 0,24 z" Fill="#FFBDBBBA" Margin="24,0,24,25" Stretch="Fill" StrokeThickness="0.5"/>
+                <Path x:Name="flag" Data="M27.208333,1.0081767 C27.208333,1.0081767 33.167001,3.1666667 37.833667,1.4583333 42.500334,-0.25 48.792679,1.4583333 48.792679,1.4583333 L48.792679,11.793691 C48.792679,11.793691 43.500594,9.4180112 37.79217,11.710012 32.083745,14.002012 27.292002,10.968171 27.250335,10.968171 27.208667,10.968171 27.208333,1.0081767 27.208333,1.0081767 z" Fill="#FFBDBBBA" Margin="27,1,10,37" Stretch="Fill" StrokeThickness="0.5"/>
+            <Ellipse x:Name="selectArea" Fill="White"  Opacity="0" Margin="5" MouseEnter="selectArea_MouseEnter" MouseLeave="selectArea_MouseLeave" />
+
+        </Grid>
+    
+
+    </Grid>
+</UserControl>

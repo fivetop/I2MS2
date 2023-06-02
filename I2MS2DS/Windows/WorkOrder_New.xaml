@@ -1,0 +1,68 @@
+﻿<Window x:Class="I2MS2.Windows.WorkOrder_New"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:I2MSR.Properties;assembly=I2MSR"
+        xmlns:w="clr-namespace:I2MS2.Windows"
+        xmlns:uc="clr-namespace:I2MS2.UserControls"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ucdr="clr-namespace:I2MS2.UserControls.Drawing"
+        Height="330" Width="600" 
+        Name="_window"        
+        WindowStartupLocation="CenterOwner"
+        Title="{x:Static prop:Resources.M9_WorkOrder_NewTitle}" 
+        Style="{StaticResource I2MS_SubWindowStyle}">
+
+    <Window.CommandBindings>
+        <!--<CommandBinding x:Name="_cmdSave" Command="{x:Static w:RackManager.SaveCommand}" CanExecute="_cmdSave_CanExecute" Executed="_cmdSave_Executed" />-->
+    </Window.CommandBindings>
+    <Grid  Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Border Background="#FF292929" Opacity="0.4" CornerRadius="5" Grid.ColumnSpan="2"/>
+
+        <StackPanel Orientation="Vertical" Margin="10">
+            <TextBlock Text="{x:Static prop:Resources.C_WorkOrder_Desc}" Margin="0,3,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+            <TextBlock Text="{x:Static prop:Resources.C_Remarks}" Margin="0,15,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"/>
+            <TextBlock Text="{x:Static prop:Resources.C_Reserved}" Margin="0,19,0,0" Style="{DynamicResource I2MS_TextBlockStyle}" Visibility="Hidden"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10">
+            <TextBox  x:Name="_txtWorkOrderDesc"  Margin="0,0,0,0" Height="24" Style="{DynamicResource I2MS_TextBoxStyle}" MaxLength="40" />
+            <TextBox  x:Name="_txtRemarks"  Margin="0,8,0,0" Height="24" Style="{DynamicResource I2MS_TextBoxStyle}" MaxLength="40" />
+            <StackPanel Visibility="Hidden">
+            <StackPanel Orientation="Horizontal" Margin="0,12,0,0" >
+                <RadioButton x:Name="_rdoReserved1" Content="{x:Static prop:Resources.C_Imediate}" IsChecked="True" Style="{StaticResource I2MS_RadioButtonStyle}" Width="150"/>
+                <RadioButton x:Name="_rdoReserved2" Content="{x:Static prop:Resources.C_Reserved}" Style="{StaticResource I2MS_RadioButtonStyle}" FontSize="11"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="170,15,0,0">
+                <TextBlock Text="{x:Static prop:Resources.C_Reserved_Date}" Margin="0,0,0,0" Style="{DynamicResource I2MS_TextBlockStyle}" Width="70"/>
+                <DatePicker x:Name="_dateDate" Margin="0,0,0,0" Width="120" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="170,15,0,0">
+                <TextBlock Text="{x:Static prop:Resources.C_Reserved_Time}" Margin="0,0,0,0" Style="{DynamicResource I2MS_TextBlockStyle}"  Width="70"/>
+                <TextBox  x:Name="_txtHour"  Margin="0,0,0,0" Height="19" Width="40" Style="{DynamicResource I2MS_TextBoxStyle}" />
+                <TextBlock Text=" : " Margin="0,0,0,0" Style="{DynamicResource I2MS_TextBlockStyle}" />
+                <TextBox  x:Name="_txtMinute"  Margin="0,0,0,0" Height="19" Width="40" Style="{DynamicResource I2MS_TextBoxStyle}" />
+            </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <!--아래 버튼-->
+        <StackPanel Orientation="Horizontal" Margin="100,10,10,0" Height="30" Grid.Row="1" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+            <Button x:Name="_btnStart" Content="{x:Static prop:Resources.C_Start}"  Margin="100,0,6,0" Style="{StaticResource I2MS_ButtonStyle}" Click="_btnStart_Click" />
+            <Button x:Name="_btnCancel" Content="{x:Static prop:Resources.C_Cancel}" Margin="20,0,6,0" Style="{StaticResource I2MS_ButtonStyle}" Click="_btnCancel_Click" />
+<!-- I2MS_V21
+            <Button x:Name="_btnPhone" Content="Smart Device" Margin="80,0,6,0" Style="{StaticResource I2MS_ButtonStyle}" Click="_btnPhone_Click" />
+-->
+            
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,98 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="I2MS2.UserControls.TemperatureMeterSmall"
+	x:Name="_UserControl" d:DesignWidth="90" d:DesignHeight="170" Loaded="_UserControl_Loaded">
+    <UserControl.Resources>
+        <Storyboard x:Key="Storyboard2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="_gage1">
+                <SplineDoubleKeyFrame x:Name="_sbvalue" KeyTime="0:0:1" Value="127"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard2}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock x:Name="_a1" Foreground="{Binding Fill, ElementName=_gage1}" Text="{Binding ElementName=_UserControl, Path=TempHumi}"  HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="20" TextAlignment="Right" Margin="4,0,0,0"
+                       />
+            <TextBlock x:Name="_a2" Foreground="{Binding Fill, ElementName=_gage1}" Text="{Binding ElementName=_UserControl, Path=TempHumiValue}" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="30" HorizontalAlignment="Left" Margin="44,0,0,0" />
+        </Grid>
+        <Grid Margin="0,30,0,0" Grid.RowSpan="2" >
+            <StackPanel HorizontalAlignment="Left" Margin="0,21,0,37.667">
+                <TextBlock x:Name="_a3" Foreground="{Binding Fill, ElementName=_gage1}" Text="{Binding ElementName=_UserControl, Path=TempHumiValue}" Height="30" TextWrapping="Wrap" FontSize="20" Width="30" RenderTransformOrigin="0.5,0.5" >
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock x:Name="_a4" Foreground="{Binding Fill, ElementName=_gage1}" Text="{Binding TempHumi, ElementName=_UserControl}"  Height="30" TextWrapping="Wrap"  Width="40" FontSize="20" TextAlignment="Center" RenderTransformOrigin="0.5,0.5"
+                       >
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </StackPanel>
+
+            <Path x:Name="path2" Data="M17.5,1 L22.917,1 C25.126139,1 26.917,2.7908609 26.917001,5.000001 L26.917001,100.08155 27.395657,100.27364 C34.215044,103.20923 39,110.08165 39,118.0915 39,128.7713 30.49341,137.429 20,137.429 9.5065897,137.429 1,128.7713 1,118.0915 1,109.7479 6.1920104,102.6385 13.467162,99.927391 L13.5,99.916084 13.5,5.000001 C13.5,2.7908609 15.290861,1 17.5,1 z" Fill="White" HorizontalAlignment="Center" Height="138.428" Stretch="Fill" StrokeThickness="2" VerticalAlignment="Center" Width="40" Stroke="#7F000000"/>
+            <Path x:Name="path3" HorizontalAlignment="Center" Margin="51.166,5,24.834,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="14" Data="M1.9999985,88.047997 L3.9999984,88.047997 C5.1045681,88.047997 5.9999986,88.484978 5.9999996,89.024002 5.9999986,89.563026 5.1045681,90 3.9999984,90 L1.9999985,90 C0.89542907,90 -1.4761335E-06,89.563026 1.8189894E-12,89.024002 -1.4761335E-06,88.484978 0.89542907,88.047997 1.9999985,88.047997 z M1.9999998,67.085999 L9.9999977,67.085999 C11.104567,67.085999 11.999999,67.522972 12,68.061996 11.999999,68.601028 11.104567,69.038002 9.9999977,69.038002 L1.9999998,69.038002 C0.8954308,69.038002 5.0875957E-07,68.601028 1.8189894E-12,68.061996 5.0875957E-07,67.522972 0.8954308,67.085999 1.9999998,67.085999 z M1.9999998,47.262001 L3.9999984,47.262001 C5.1045685,47.262001 5.9999986,47.698971 5.9999996,48.237999 5.9999986,48.777031 5.1045685,49.214001 3.9999984,49.214001 L1.9999998,49.214001 C0.89543074,49.214001 5.0875946E-07,48.777031 1.8189894E-12,48.237999 5.0875946E-07,47.698971 0.89543074,47.262001 1.9999998,47.262001 z M1.9999998,25.167 L3.9999984,25.167 C5.1045685,25.167 5.9999986,25.603971 5.9999996,26.143 5.9999986,26.682032 5.1045685,27.118999 3.9999984,27.118999 L1.9999998,27.118999 C0.89543074,27.118999 5.0875946E-07,26.682032 1.8189894E-12,26.143 5.0875946E-07,25.603971 0.89543074,25.167 1.9999998,25.167 z M1.9999998,0 L12,0 C13.104566,0 13.999998,0.43697006 14,0.97599953 13.999998,1.5150295 13.104566,1.9519998 12,1.9520004 L1.9999998,1.9520004 C0.8954308,1.9519998 5.0875957E-07,1.5150295 1.8189894E-12,0.97599953 5.0875957E-07,0.43697006 0.8954308,0 1.9999998,0 z" Height="90" RenderTransformOrigin="0.499999985098903,0.361130779557282" Stretch="Fill" Fill="#7FFFFFFF">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Rectangle x:Name="_gage1" Fill="{Binding ElementName=_UserControl, Path= Fills}" HorizontalAlignment="Center" Height="35" RadiusY="3" RadiusX="4" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom" Width="8" Margin="16.333,0,15.667,8.723" >
+                <Rectangle.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.LayoutTransform>
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Ellipse x:Name ="_gage" Fill="{Binding Fill, ElementName=_gage1}" Stroke="Black" StrokeThickness="0" Margin="28.583,0,28.417,4.667" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Height="33" Width="33">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,1265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39A2E2E2-0A9C-4827-ACF5-BE565ABB8C78}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>I2MS2</RootNamespace>
+    <AssemblyName>I2MS2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ExpressionBlendVersion>12.0.50320.0</ExpressionBlendVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>I2MS</ProductName>
+    <PublisherName>LS C&amp;S</PublisherName>
+    <SuiteName>SimpleWIN</SuiteName>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>2.0.0.4</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>intelligent.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D739C1C00009E4D6264ECAC7123D035B4AF977F8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>I2MS2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="3DTools, Version=1.0.2614.20437, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\3DTools.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.1.0\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Effects" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\..\Windows\assembly\GAC\Microsoft.Office.Interop.Excel\12.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\MetroDemo\bin\NET45\Debug\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Chart\AnimatedMasonryControl.cs" />
+    <Compile Include="Chart\AnimationManager.cs" />
+    <Compile Include="Chart\FishEyePanel.cs" />
+    <Compile Include="Chart\MasonryControl.cs" />
+    <Compile Include="Chart\PieG.cs" />
+    <Compile Include="Chart\PieGItem.cs" />
+    <Compile Include="Chart\PrintListProvider1.cs" />
+    <Compile Include="Chart\PrintListProvider.cs" />
+    <Compile Include="Chart\AssetPrintListProvider.cs" />
+    <Compile Include="Chart\AsyncVirtualizingCollection.cs" />
+    <Compile Include="Chart\ChartData.cs" />
+    <Compile Include="Chart\DataViewModel.cs" />
+    <Compile Include="Chart\IItemsProvider.cs" />
+    <Compile Include="Chart\ucpie.xaml.cs">
+      <DependentUpon>ucpie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Chart\VirtualizingCollection.cs" />
+    <Compile Include="Pages\P2DashBoard.xaml.cs">
+      <DependentUpon>P2DashBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dash3.xaml.cs">
+      <DependentUpon>Dash3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dash5.xaml.cs">
+      <DependentUpon>Dash5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dash2.xaml.cs">
+      <DependentUpon>Dash2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dash1.xaml.cs">
+      <DependentUpon>Dash1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Library\ColorPicker\ColorPicker.cs" />
+    <Compile Include="Library\ColorPicker\ColorPickerDialog.xaml.cs">
+      <DependentUpon>ColorPickerDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Library\ColorPicker\SupportingClasses.cs" />
+    <Compile Include="UserControls\Drawing\DrawingObjectInfoView2.xaml.cs">
+      <DependentUpon>DrawingObjectInfoView2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AssetManager.xaml.cs">
+      <DependentUpon>AssetManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BuildingManager.xaml.cs">
+      <DependentUpon>BuildingManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CatalogManager.xaml.cs">
+      <DependentUpon>CatalogManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CatalogSelector.xaml.cs">
+      <DependentUpon>CatalogSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EnviromentTarget.xaml.cs">
+      <DependentUpon>EnviromentTarget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EtcViewOption.xaml.cs">
+      <DependentUpon>EtcViewOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\FloorManager.xaml.cs">
+      <DependentUpon>FloorManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\fly.xaml.cs">
+      <DependentUpon>fly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ICMountManager.xaml.cs">
+      <DependentUpon>ICMountManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\IEMountManager.xaml.cs">
+      <DependentUpon>IEMountManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RackManager.xaml.cs">
+      <DependentUpon>RackManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RoomAndRackLayoutManager.xaml.cs">
+      <DependentUpon>RoomAndRackLayoutManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RoomManager.xaml.cs">
+      <DependentUpon>RoomManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SelectDrawing3d.xaml.cs">
+      <DependentUpon>SelectDrawing3d.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SelectImage.xaml.cs">
+      <DependentUpon>SelectImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowFloor.xaml.cs">
+      <DependentUpon>WindowFloor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Library\AssetTreeViewManagerLeftSide.cs" />
+    <Compile Include="Library\AssetTreeViewManager.cs" />
+    <Compile Include="Library\CatalogType.cs" />
+    <Compile Include="Library\ConnectionlessTreeViewManager.cs" />
+    <Compile Include="Library\Drawing\Animation3D.cs" />
+    <Compile Include="Library\Drawing\Drawing2D.cs" />
+    <Compile Include="Library\Drawing\Drawing3D.cs" />
+    <Compile Include="Library\Drawing\Drawing3DCamera.cs" />
+    <Compile Include="Library\Drawing\DrawingDataManager.cs" />
+    <Compile Include="Library\Etc.cs" />
+    <Compile Include="Library\ExportMaster.cs" />
+    <Compile Include="Library\ExcelOutClass.cs" />
+    <Compile Include="Library\FavoriteTreeViewManager.cs" />
+    <Compile Include="Library\GridViewExt.cs" />
+    <Compile Include="Library\IntelligentTreeViewManager.cs" />
+    <Compile Include="Library\LeftTreeHandler.cs" />
+    <Compile Include="Library\ConvertType.cs" />
+    <Compile Include="Library\ImageIcon.cs" />
+    <Compile Include="Library\ImageManage.cs" />
+    <Compile Include="Library\LinkDiagram.cs" />
+    <Compile Include="Library\Reg.cs" />
+    <Compile Include="Library\ScreenRatio.cs" />
+    <Compile Include="Library\ScrollableTabPanel.cs" />
+    <Compile Include="Library\SendMag.cs" />
+    <Compile Include="Library\SignalRClientClass.cs" />
+    <Compile Include="Library\SiteManage.cs" />
+    <Compile Include="Library\Stat.cs" />
+    <Compile Include="Library\TreeViewItemExtensions.cs" />
+    <Compile Include="Library\UserRight.cs" />
+    <Compile Include="Library\Utils.cs" />
+    <Compile Include="MainWindow3.xaml.cs">
+      <DependentUpon>MainWindow3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowViewModel2.cs" />
+    <Compile Include="Models\Album.cs" />
+    <Compile Include="Models\Artist.cs" />
+    <Compile Include="Models\DrawingSaveModel.cs" />
+    <Compile Include="Models\EventVM.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\RackDrawVM.cs" />
+    <Compile Include="Models\SimpleCommand.cs" />
+    <Compile Include="Models\Triangl.cs" />
+    <Compile Include="Models\WallCornerDraw.cs" />
+    <Compile Include="Models\WallDraw.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="UserControls\AnglelMeter.xaml.cs">
+      <DependentUpon>AnglelMeter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AngleMeter2.xaml.cs">
+      <DependentUpon>AngleMeter2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\ColorSelector.xaml.cs">
+      <DependentUpon>ColorSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingEdit2DWall.xaml.cs">
+      <DependentUpon>DrawingEdit2DWall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingEditControl.xaml.cs">
+      <DependentUpon>DrawingEditControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingItem2DAsset.xaml.cs">
+      <DependentUpon>DrawingItem2DAsset.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingItem2DRack.xaml.cs">
+      <DependentUpon>DrawingItem2DRack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingItem2DUserPort.xaml.cs">
+      <DependentUpon>DrawingItem2DUserPort.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingMuiltFloorView3D.xaml.cs">
+      <DependentUpon>DrawingMuiltFloorView3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingObjectInfoListView.xaml.cs">
+      <DependentUpon>DrawingObjectInfoListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingObjectInfoView.xaml.cs">
+      <DependentUpon>DrawingObjectInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingView2D.xaml.cs">
+      <DependentUpon>DrawingView2D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\DrawingView3D.xaml.cs">
+      <DependentUpon>DrawingView3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Drawing\WallPropertyControl.xaml.cs">
+      <DependentUpon>WallPropertyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TempHumi.xaml.cs">
+      <DependentUpon>TempHumi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TempControl.xaml.cs">
+      <DependentUpon>TempControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DB_Panel.xaml.cs">
+      <DependentUpon>DB_Panel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LinkDiagramControl.xaml.cs">
+      <DependentUpon>LinkDiagramControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SimpaleAnimation.cs" />
+    <Compile Include="UserControls\TextHelper.cs" />
+    <Compile Include="UserControls\TypeConverters.cs" />
+    <Compile Include="Library\ExportStatistics.cs" />
+    <Compile Include="ValueConverter\AlbumPriceIsTooMuchConverter.cs" />
+    <Compile Include="Windows\BitmapManager.xaml.cs">
+      <DependentUpon>BitmapManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DrawingEditer.xaml.cs">
+      <DependentUpon>DrawingEditer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DrawingNamming.xaml.cs">
+      <DependentUpon>DrawingNamming.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DrawingSelectDrawing3DWindow.xaml.cs">
+      <DependentUpon>DrawingSelectDrawing3DWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DrawingSelectImageWindow.xaml.cs">
+      <DependentUpon>DrawingSelectImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EnviromentManager.xaml.cs">
+      <DependentUpon>EnviromentManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EnviromentManagerSet.xaml.cs">
+      <DependentUpon>EnviromentManagerSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\IPMFloorView.xaml.cs">
+      <DependentUpon>IPMFloorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\IPMView.xaml.cs">
+      <DependentUpon>IPMView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LineLinkList.xaml.cs">
+      <DependentUpon>LineLinkList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProgressBarDialog4.xaml.cs">
+      <DependentUpon>ProgressBarDialog4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StatEnvironmentHour.xaml.cs">
+      <DependentUpon>StatEnvironmentHour.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StatEnvironmentDay.xaml.cs">
+      <DependentUpon>StatEnvironmentDay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StatEnvironmentMonth.xaml.cs">
+      <DependentUpon>StatEnvironmentMonth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StatTerminalHour.xaml.cs">
+      <DependentUpon>StatTerminalHour.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StatTerminalMonth.xaml.cs">
+      <DependentUpon>StatTerminalMonth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StatTerminalDay.xaml.cs">
+      <DependentUpon>StatTerminalDay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EnvironmentList.xaml.cs">
+      <DependentUpon>EnvironmentList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\CatalogList.xaml.cs">
+      <DependentUpon>CatalogList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AssetTreeVM.cs" />
+    <Compile Include="Models\UserTree.cs" />
+    <Compile Include="Models\CatalogGroupTree.cs" />
+    <Compile Include="Models\Converter.cs" />
+    <Compile Include="Models\EventViewList.cs" />
+    <Compile Include="Models\ipp_list.cs" />
+    <Compile Include="Models\PropertyData.cs" />
+    <Compile Include="Models\site_use_image.cs" />
+    <Compile Include="Models\TopMenuButtonData.cs" />
+    <Compile Include="Models\tree_node.cs" />
+    <Compile Include="Models\WorkCell.cs" />
+    <Compile Include="Translation\Translation.cs" />
+    <Compile Include="Models\g.cs" />
+    <Compile Include="UserControls\I2MS_BarChart.xaml.cs">
+      <DependentUpon>I2MS_BarChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\I2MS_PieChart.xaml.cs">
+      <DependentUpon>I2MS_PieChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LeftSideControl.xaml.cs">
+      <DependentUpon>LeftSideControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PortStatisticsControl.xaml.cs">
+      <DependentUpon>PortStatisticsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RightSideControl.xaml.cs">
+      <DependentUpon>RightSideControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SpinButtonControl2.xaml.cs">
+      <DependentUpon>SpinButtonControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ToggleButton4.xaml.cs">
+      <DependentUpon>ToggleButton4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProgressBarControl.xaml.cs">
+      <DependentUpon>ProgressBarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EventList.xaml.cs">
+      <DependentUpon>EventList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AssetList.xaml.cs">
+      <DependentUpon>AssetList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LocationList.xaml.cs">
+      <DependentUpon>LocationList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Login.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PopUpWindow.xaml.cs">
+      <DependentUpon>PopUpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PrintTemplateList.xaml.cs">
+      <DependentUpon>PrintTemplateList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProgressBarDialog3.xaml.cs">
+      <DependentUpon>ProgressBarDialog3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProgressBarDialog2.xaml.cs">
+      <DependentUpon>ProgressBarDialog2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PrintPreView.xaml.cs">
+      <DependentUpon>PrintPreView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ManufactureList.xaml.cs">
+      <DependentUpon>ManufactureList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SpinButtonControl.xaml.cs">
+      <DependentUpon>SpinButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserList.xaml.cs">
+      <DependentUpon>UserList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProgressBarDialog.xaml.cs">
+      <DependentUpon>ProgressBarDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WorkOrdertList.xaml.cs">
+      <DependentUpon>WorkOrdertList.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Chart\ColorDictionary2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Chart\ColorDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Chart\DictionaryChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Chart\ucpie.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\P2DashBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dash3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dash5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dash2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dash1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Library\ColorPicker\ColorPickerDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Library\ColorPicker\ColorPickerDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingObjectInfoView2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\AssetManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\BuildingManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\CatalogManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\CatalogSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\EnviromentTarget.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\EtcViewOption.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\FloorManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\fly.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ICMountManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\IEMountManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\RackManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\RoomAndRackLayoutManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\RoomManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\SelectDrawing3d.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\SelectImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\WindowFloor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Animation\SimpleAnimation.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Properties\DesignTimeResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\LinkDiagramDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AnglelMeter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\AngleMeter2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\ColorSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingEdit2DWall.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingEditControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingItem2DAsset.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingItem2DRack.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingItem2DUserPort.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingMuiltFloorView3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingObjectInfoListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingObjectInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingView2D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\DrawingView3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Drawing\WallPropertyControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TempHumi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TempControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DB_Panel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\LinkDiagramControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\BitmapManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\DrawingEditer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\DrawingNamming.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\DrawingSelectDrawing3DWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\DrawingSelectImageWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\EnviromentManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\EnviromentManagerSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\IPMFloorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\IPMView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\LineLinkList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ProgressBarDialog4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\StatEnvironmentHour.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\StatEnvironmentDay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\StatEnvironmentMonth.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\StatTerminalHour.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\StatTerminalMonth.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\StatTerminalDay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\EnvironmentList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CatalogList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DatePickerDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\MenuItemDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\TabControlDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\UIResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\WindowDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\I2MS_BarChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\I2MS_PieChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LeftSideControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PortStatisticsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RightSideControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SpinButtonControl2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ToggleButton4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProgressBarControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\AssetList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\EventList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LocationList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PopUpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PrintTemplateList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ProgressBarDialog3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ProgressBarDialog2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\PrintPreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ManufactureList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\SpinButtonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UserList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ProgressBarDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\WorkOrdertList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\asset_tree_for_treeview.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <None Include="ExcelData\export_template_en.xls" />
+    <None Include="ExcelData\export_template_ko.xls" />
+    <None Include="ExcelData\stat_eb_day_en.xls" />
+    <None Include="ExcelData\stat_eb_day_ko.xls" />
+    <None Include="ExcelData\stat_eb_hour_en.xls" />
+    <None Include="ExcelData\stat_eb_hour_ko.xls" />
+    <None Include="ExcelData\stat_eb_month_en.xls" />
+    <None Include="ExcelData\stat_eb_month_ko.xls" />
+    <None Include="ExcelData\stat_terminal_day_en.xls" />
+    <None Include="ExcelData\stat_terminal_day_ko.xls" />
+    <None Include="ExcelData\stat_terminal_hour_en.xls" />
+    <None Include="ExcelData\stat_terminal_hour_ko.xls" />
+    <None Include="ExcelData\stat_terminal_month_en.xls" />
+    <None Include="ExcelData\stat_terminal_month_ko.xls" />
+    <None Include="ExcelData\Template.xls" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\building_16.png" />
+    <Resource Include="Icons\center_16.png" />
+    <Resource Include="Icons\floor_16.png" />
+    <Resource Include="Icons\ic_16.png" />
+    <Resource Include="Icons\ipp_16.png" />
+    <Resource Include="Icons\pp_16.png" />
+    <Resource Include="Icons\rack_16.png" />
+    <Resource Include="Icons\room_16.png" />
+    <Resource Include="Icons\sw_16.png" />
+    <Resource Include="Icons\TopMenuIcon.png" />
+    <Resource Include="Icons\treeViewIcon_site16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\drark_fabric_round.png" />
+    <Resource Include="Images\skorea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WebApi\WebApiClient\WebApiClient.csproj">
+      <Project>{bdb8d27d-24c3-439c-b824-a0948ccf5764}</Project>
+      <Name>WebApiClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WebApi\WebApi\WebApi.csproj">
+      <Project>{1e488bb2-b9e8-4a23-bb5b-1d2f7ff770aa}</Project>
+      <Name>WebApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\I2MSR\I2MSR.csproj">
+      <Project>{b34c9239-2dca-49ac-9375-77dc8248c705}</Project>
+      <Name>I2MSR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MahApps.Metro.Resources\MahApps.Metro.Resources.csproj">
+      <Project>{e708ac99-605b-42a0-8d20-abca8fe42dd2}</Project>
+      <Name>MahApps.Metro.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MahApps.Metro\MahApps.Metro.NET45.csproj">
+      <Project>{942d11c4-29f5-46c4-8c14-4b976d56c637}</Project>
+      <Name>MahApps.Metro.NET45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroChart\MetroChart.csproj">
+      <Project>{4ab4b0db-780c-48b9-a642-8e527353d957}</Project>
+      <Name>MetroChart</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LSlogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon_Config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\worldmap_full_fixed_1600x1000.png" />
+    <Resource Include="Images\worldmap_full_fixed_1600x900.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\용산타워.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\용산타워2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\link\hub_80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\alert_64.png" />
+    <Resource Include="Icons\link\cp_80.png" />
+    <Resource Include="Icons\link\fp_80.png" />
+    <Resource Include="Icons\link\pp_80.png" />
+    <Resource Include="Icons\link\l2_sw_80.png" />
+    <Resource Include="Icons\link\mb_80.png" />
+    <Resource Include="Icons\link\nb_80.png" />
+    <Resource Include="Icons\link\pc_80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\link\ipp_80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\sandclock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\l2_sw_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\etc_16.png" />
+    <Resource Include="Icons\fp_16.png" />
+    <Resource Include="Icons\hub_16.png" />
+    <Resource Include="Icons\phone_16.png" />
+    <Resource Include="Icons\printer_16.png" />
+    <Resource Include="Icons\router_16.png" />
+    <Resource Include="Icons\station_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon_IPM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\null_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\pc_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\server_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\workstation_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\storage_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon2_1.png" />
+    <Resource Include="Icons\TopMenuIcon2_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon1_1.png" />
+    <Resource Include="Icons\TopMenuIcon1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon3_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon3_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon4_1.png" />
+    <Resource Include="Icons\TopMenuIcon4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon5_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon6_1.png" />
+    <Resource Include="Icons\TopMenuIcon6_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuIcon5_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuRightIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuRightIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuRight2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\TopMenuRight3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\SideTabPut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\SideTabPull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\서울시청_004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\No_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PP_880_80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SW24_880_80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SW48_880_80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\port_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\3DTools.dll" />
+    <Resource Include="Image1.png" />
+    <Resource Include="Icons\env\e5.png" />
+    <Resource Include="Icons\env\e6.png" />
+    <Resource Include="Icons\env\e7.png" />
+    <Resource Include="Icons\env\e8.png" />
+    <Resource Include="Images\gs1.png" />
+    <Resource Include="Images\gs.png" />
+    <Resource Include="Images\tile\gauge.png" />
+    <Resource Include="Images\tile\1_gauge.jpg" />
+    <Resource Include="Images\tile\Aquarium.jpg" />
+    <Resource Include="Images\tile\Ascent.jpg" />
+    <Resource Include="Images\tile\Autumn.jpg" />
+    <Resource Include="Images\tile\Azul.jpg" />
+    <Resource Include="Images\tile\Crystal.jpg" />
+    <Resource Include="Images\tile\DaVinci.jpg" />
+    <Resource Include="Images\tile\Follow.jpg" />
+    <Resource Include="Images\tile\Friend.jpg" />
+    <Resource Include="Images\tile\Home.jpg" />
+    <Resource Include="Images\tile\Moon flower.jpg" />
+    <Resource Include="Images\placeholder_person.gif" />
+    <Resource Include="Images\blank-cd.png" />
+    <Resource Include="Images\SW144_880_80.png" />
+    <Resource Include="Images\SW96_880_80.png" />
+    <Resource Include="Icons\rack_32.png" />
+    <Resource Include="Icons\connect_64.png" />
+    <Resource Include="Icons\link\fdf_80.png" />
+    <Resource Include="Icons\link\ifdf_80.png" />
+    <Resource Include="intelligent.ico" />
+    <Resource Include="logo.ico" />
+    <Resource Include="Icons\TopMenuIcon7_2.png" />
+    <Resource Include="Icons\TopMenuIcon7_1.png" />
+    <Resource Include="Icons\stat\fp_80.png" />
+    <Resource Include="Icons\stat\eb_80.png" />
+    <Resource Include="Icons\stat\etc_80.png" />
+    <Resource Include="Images\login.png" />
+    <Resource Include="Images\simplewin2_logo_220x40.png" />
+    <Resource Include="Icons\move.png" />
+    <Resource Include="Icons\link\bb_sw_80.png" />
+    <Resource Include="Icons\eb_16.png" />
+    <Resource Include="Icons\bb_sw_16.png" />
+    <Resource Include="Icons\link\etc_80.png" />
+    <Resource Include="Icons\link\ic_80.png" />
+    <Resource Include="Icons\link\phone_80.png" />
+    <Resource Include="Icons\link\printer_80.png" />
+    <Resource Include="Icons\link\router_80.png" />
+    <Resource Include="Icons\link\server_80.png" />
+    <Resource Include="Icons\link\storage_80.png" />
+    <Resource Include="Icons\link\workstation_80.png" />
+    <Resource Include="Icons\spoid.png" />
+    <Resource Include="Icons\asset_24.png" />
+    <Resource Include="Icons\cancel_24.png" />
+    <Resource Include="Icons\delete_24.png" />
+    <Resource Include="Icons\download_24.png" />
+    <Resource Include="Icons\edit_24.png" />
+    <Resource Include="Icons\exit_24.png" />
+    <Resource Include="Icons\favorite_24.png" />
+    <Resource Include="Icons\image_24.png" />
+    <Resource Include="Icons\intelligent_24.png" />
+    <Resource Include="Icons\list_24.png" />
+    <Resource Include="Icons\new_24.png" />
+    <Resource Include="Icons\no_conn_24.png" />
+    <Resource Include="Icons\ok_24.png" />
+    <Resource Include="Icons\open_24.png" />
+    <Resource Include="Icons\save_24.png" />
+    <Resource Include="Icons\search_24.png" />
+    <Resource Include="Icons\select_24.png" />
+    <Resource Include="Icons\side_pull_24.png" />
+    <Resource Include="Icons\side_put_24.png" />
+    <Resource Include="Icons\upload_24.png" />
+    <Resource Include="Icons\work_order_24.png" />
+    <Resource Include="Images\Deshboard1.PNG" />
+    <Resource Include="Icons\ipp_alarm_16.png" />
+    <Resource Include="Icons\l3_sw_16.png" />
+    <Resource Include="Icons\pc_on_16.png" />
+    <Resource Include="Icons\port_alarm_16.png" />
+    <Resource Include="Icons\port_on_16.png" />
+    <Resource Include="Icons\sw_card_16.png" />
+    <Resource Include="Icons\ipm\i4.png" />
+    <Resource Include="Icons\ipm\i3.png" />
+    <Resource Include="Icons\ipm\i1.png" />
+    <Resource Include="Icons\ipm\i2.png" />
+    <Resource Include="Icons\stat\l3_sw_80.png" />
+    <Resource Include="Icons\link\l3_sw_80.png" />
+    <Resource Include="Icons\list_16.png" />
+    <Resource Include="Icons\new_16.png" />
+    <Resource Include="Icons\open_16.png" />
+    <Resource Include="Icons\upload_16.png" />
+    <Resource Include="Icons\image_16.png" />
+    <Resource Include="Icons\edit_16.png" />
+    <Resource Include="Icons\select_16.png" />
+    <Resource Include="Icons\env\e4.png" />
+    <Resource Include="Icons\env\e2.png" />
+    <Resource Include="Icons\env\e3.png" />
+    <Resource Include="Icons\env\e1.png" />
+    <Resource Include="Icons\env\e0.png" />
+    <Resource Include="Icons\env\exl.png" />
+    <Resource Include="Icons\env\pc.png" />
+    <Resource Include="Icons\env\pow.png" />
+    <Resource Include="Icons\env\man.png" />
+    <Resource Include="Icons\env\mail.png" />
+    <Resource Include="Icons\env\mouse.png" />
+    <Resource Include="Icons\env\note.png" />
+    <Resource Include="Icons\env\pnt.png" />
+    <Resource Include="Icons\env\set.png" />
+    <Resource Include="Icons\connect_32.png" />
+    <Resource Include="Images\login2.jpg" />
+    <Resource Include="Icons\stat\ic_80.png" />
+    <Resource Include="Icons\stat\ipp_80.png" />
+    <Resource Include="Icons\stat\pp_80.png" />
+    <Resource Include="Icons\port_64.png" />
+    <Resource Include="Icons\fp_160.png" />
+    <Resource Include="Icons\mb_16.png" />
+    <Resource Include="Icons\cp_16.png" />
+    <Resource Include="Icons\mb_64.png" />
+    <Resource Include="Icons\fp_64.png" />
+    <Resource Include="Icons\cp_64.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(TargetDir)$(ProjectName).EXE
+copy $(TargetDir)$(ProjectName).EXE C:\Users\jake\Source\Workspaces\I2MS2\I2MS2\I2MS2\bin\Debug\$(ProjectName).EXE
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

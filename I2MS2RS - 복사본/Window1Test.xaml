@@ -1,0 +1,64 @@
+﻿<Window x:Class="I2MS2.Window1Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ma="clr-namespace:I2MS2.Chart"
+              xmlns:UserControls="clr-namespace:I2MS2.UserControls" 
+
+        Title="Window1Test" Height="615" Width="930" Activated="Window_Activated" Background="#FFA21616" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="test" Click="Button_Click"></Button>
+        <Grid Grid.Row="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                
+
+                <ma:AnimatedMasonryControl x:Name="aa2" AnimationDuration="0:0:0.1" Spacing="5" Background="#E3E3E3">
+                <UserControls:DB_Panel TitleName="test"  x:Name="_panel18" Height="260" MinWidth="600" CloseEvent="_panel_CloseEvent" Width="250" >
+                    <UserControls:DB_Panel.child>
+                        <Grid Margin="10"></Grid>
+                    </UserControls:DB_Panel.child>
+                </UserControls:DB_Panel>
+
+                <UserControls:DB_Panel TitleName="test"  x:Name="_panel1" Height="528" MinWidth="600" CloseEvent="_panel_CloseEvent" Width="250" >
+                    <UserControls:DB_Panel.child>
+                        <Grid Margin="10"></Grid>
+                    </UserControls:DB_Panel.child>
+                </UserControls:DB_Panel>
+                <UserControls:DB_Panel TitleName="test"  x:Name="_panel2" Height="260" MinWidth="600" CloseEvent="_panel_CloseEvent" Width="250" >
+                    <UserControls:DB_Panel.child>
+                        <Grid Margin="10"></Grid>
+                    </UserControls:DB_Panel.child>
+                </UserControls:DB_Panel>
+                <UserControls:DB_Panel TitleName="test"  x:Name="_panel3" Height="130" MinWidth="600" CloseEvent="_panel_CloseEvent" Width="250" >
+                    <UserControls:DB_Panel.child>
+                        <Grid Margin="10"></Grid>
+                    </UserControls:DB_Panel.child>
+                </UserControls:DB_Panel>
+                <UserControls:DB_Panel TitleName="test"  x:Name="_panel4" Height="130" MinWidth="600" CloseEvent="_panel_CloseEvent" Width="250" >
+                    <UserControls:DB_Panel.child>
+                        <Grid Margin="10"></Grid>
+                    </UserControls:DB_Panel.child>
+                </UserControls:DB_Panel>
+                <UserControls:DB_Panel TitleName="test"  x:Name="_panel5" Height="260" MinWidth="600" CloseEvent="_panel_CloseEvent" Width="250" >
+                    <UserControls:DB_Panel.child>
+                        <Grid Margin="10"></Grid>
+                    </UserControls:DB_Panel.child>
+                </UserControls:DB_Panel>
+                <UserControls:DB_Panel TitleName="test"  x:Name="_panel6" Height="260" MinWidth="600" CloseEvent="_panel_CloseEvent" Width="250" >
+                    <UserControls:DB_Panel.child>
+                        <Grid Margin="10"></Grid>
+                    </UserControls:DB_Panel.child>
+                </UserControls:DB_Panel>
+                <UserControls:DB_Panel TitleName="test"  x:Name="_panel7" Height="260" MinWidth="600" CloseEvent="_panel_CloseEvent" Width="250" >
+                    <UserControls:DB_Panel.child>
+                        <Grid Margin="10"></Grid>
+                    </UserControls:DB_Panel.child>
+                </UserControls:DB_Panel>
+            </ma:AnimatedMasonryControl>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="I2MS2.UserControls.Drawing.DrawingItem2DUserPort"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="20" d:DesignWidth="20">
+    <Grid>
+        <Ellipse Name="_ellUserPort" Fill="#FFF5C388" >
+            <Ellipse.OpacityMask>
+                <ImageBrush ImageSource="/I2MS2;component/Icons/port_16.png"/>
+            </Ellipse.OpacityMask>
+        </Ellipse>
+        <TextBlock Name="_txtNumber" Text="0" Style="{StaticResource I2MS_TextBlockStyle}" 
+                   FontWeight="Bold"
+                   Foreground="{StaticResource _brushDarkGray3}"
+                   VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+       
+    </Grid>
+</UserControl>

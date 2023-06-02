@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ConfigS.exe" version="1.0.0.1" publicKeyToken="af7ff824839d5de9" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ConfigS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ConfigS.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC 매니페스트 옵션
+             Windows 사용자 계정 컨트롤 수준을 변경하려면 
+             requestedExecutionLevel 노드를 다음 중 하나로 바꾸십시오.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            requestedExecutionLevel 노드를 지정하면 파일 및 레지스트리 가상화가 사용되지 않습니다.
+            이전 버전과의 호환성을 위해 파일 및 레지스트리 가상화를 사용하려면 
+            requestedExecutionLevel 노드를 삭제하십시오.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConfigS.exe" size="1252760">
+      <assemblyIdentity name="ConfigS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>wSidsT5YP5+MmIVG82xife25V6QYChNdAagYfnGApOU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ConfigS.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- 이 응용 프로그램을 사용할 수 있는 모든 Windows 버전의 목록입니다. 
+      가장 잘 호환되는 환경을 Windows가 자동으로 선택합니다.-->
+      <!-- 응용 프로그램이 Windows Vista에서 사용하도록 제작된 경우에는 다음 supportedOS 노드의 주석 처리를 제거하십시오.-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- 응용 프로그램이 Windows 7에서 사용하도록 제작된 경우에는 다음 supportedOS 코드의 주석 처리를 제거하십시오.-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- 응용 프로그램이 Windows 8에서 사용하도록 제작된 경우에는 다음 supportedOS 노드의 주석 처리를 제거하십시오.-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+      <!-- 응용 프로그램이 Windows 8.1에서 작동하도록 설계된 경우 다음 supportedOS 노드의 주석 처리를 제거하십시오.-->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=MOON\jake" issuerKeyHash="15fe7c7eed24c09756da7894ad1260478a7e1fbd" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>L728No0Zt9hfuupbLoQulRka8ZVtdjz4PP+L/nenY/E=</DigestValue></Reference></SignedInfo><SignatureValue>TewluzLvAe1Ugx8/pPY0rUFAvoIHKjK4vuYfMzafYcNNsqUVFHMDf84oIp4kUuHh3LtOthT7uB3U1yAEosJpzMlom6TUrrc8AwcIj08158yt35UvSLKO6i0fjxMkoJIGSKBEk5jo6vxlsAFWW7wrQoiwqmQOLB7CUViqarXtWW0=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>3FPLYtcnzOm+i68juyZsTfOBmh2qeVvVbqXWkKG7ZczGn3165/3qYjBsbmjW21V3t5M+Vej3dKJhQbACiN85LSQVWAOylDCaNNtydcChlZ3GBNryStWHjw36uuR+t8qDqVZlALD9zzYpS7C0ZUx4/l7bTbdnK/RNK4SzvC6aAEM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="f163a777fe8bff3cf83c766d95f11a19952e842e5beaba5fd8b7198d36bcbd2f" Description="" Url=""><as:assemblyIdentity name="ConfigS.exe" version="1.0.0.1" publicKeyToken="af7ff824839d5de9" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MOON\jake</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>3OhrEWdIPgL30/74ECDtrHh4Qv4E5L+GWY93eakgcRs=</DigestValue></Reference></SignedInfo><SignatureValue>yIzZr/laa8AeVAOuDnZioejK8tiyluswgDElZlvuaH8nmvn3xq1SUd7VEGUIpFhPCChl+M6vbbNEUaHl82X83cSl27BJQQqfLke2YAchXxH8tckjlYwJ5qr4Kygq15xfJq9g5IUztxNkkvTB5chVgGYc3R8ihhUtJ9iHOqqfGU0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>3FPLYtcnzOm+i68juyZsTfOBmh2qeVvVbqXWkKG7ZczGn3165/3qYjBsbmjW21V3t5M+Vej3dKJhQbACiN85LSQVWAOylDCaNNtydcChlZ3GBNryStWHjw36uuR+t8qDqVZlALD9zzYpS7C0ZUx4/l7bTbdnK/RNK4SzvC6aAEM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBvTCCASagAwIBAgIQVYZIdVBCjaZN6T77lAHRljANBgkqhkiG9w0BAQsFADAdMRswGQYDVQQDHhIATQBPAE8ATgBcAGoAYQBrAGUwHhcNMTUwMjA0MDU0ODMxWhcNMTYwMjA0MTE0ODMxWjAdMRswGQYDVQQDHhIATQBPAE8ATgBcAGoAYQBrAGUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANxTy2LXJ8zpvouvI7smbE3zgZodqnlb1W6l1pChu2XMxp99euf96mIwbG5o1ttVd7eTPlXo93SiYUGwAojfOS0kFVgDspQwmjTbcnXAoZWdxgTa8krVh48N+rrkfrfKg6lWZQCw/c82KUuwtGVMeP5e2023Zyv0TSuEs7wumgBDAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAUryPzDPHSrj4mdX4y5KL/LWIkLqfbSviMSEZqZiHsf8xWbdr31vzWt2KLljSXOunV5qlSOwg4JFw1EkLXpJzfWT1dmXBRYrDIB0tyO7ui9HJuPb3NRiAJC4E0D+/pfghboWJtqR5MtFaQ+IIetFjZqqhkf9Pwp0tbwcaxkv4+zQ=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

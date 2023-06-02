@@ -1,0 +1,179 @@
+﻿<UserControl x:Class="I2MS2.UserControls.Drawing.WallPropertyControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="238">
+    <UserControl.Resources>
+        <Style x:Key="I2MS_WallThinessRadioButtonStyle" TargetType="{x:Type RadioButton}">
+            <Setter Property="Foreground" Value="{StaticResource _brushDarkGray5}"/>
+            <Setter Property="Background" Value="{StaticResource _brushBlack}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <StackPanel x:Name="_st" Orientation="Horizontal">
+                            <!--<Grid Margin="6" Width="{Binding Path=ActualHeight, ElementName=_st}">-->
+                            <!--<Grid Width="13" Margin="0,2,6,0">-->
+                            <Canvas Width="24" Height="20" >
+                                <Ellipse x:Name="e1" Fill="{StaticResource _brushNormalBulet1}" Width="20" Height="20" StrokeThickness="2"/>
+                                <Ellipse x:Name="e2" Fill="{StaticResource _brushNormalBulet2}" Width="14" Height="14" Margin="3,3,0,0"/>
+                                <Ellipse x:Name="e3" Fill="{StaticResource _brushNormalBulet3}" Width="8" Height="8" Margin="6,6,0,0"/>
+                                <!--<Ellipse x:Name="e1" Fill="{StaticResource _brushNormalBulet1}" StrokeThickness="2"/>
+                            <Ellipse x:Name="e2" Fill="{StaticResource _brushNormalBulet2}" Margin="2,2,2,2"/>
+                            <Ellipse x:Name="e3" Fill="{StaticResource _brushNormalBulet3}" Margin="4,4,4,4"/>-->
+                                <!--</Grid>-->
+                            </Canvas>
+                            <!--<ContentPresenter Margin="0,2,0,0"/>-->
+                            <ContentPresenter x:Name="contentP">
+                                <ContentPresenter.ContentTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock x:Name="txt" Text="{Binding}" Width="20" VerticalAlignment="Center"/>
+                                            <Rectangle x:Name="rect"  Width="150" Height="{Binding}" Fill="{Binding ElementName=txt, Path=Foreground}" Margin="15,5,5,5" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ContentPresenter.ContentTemplate>   
+                            </ContentPresenter>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Fill" TargetName="e3" Value="{StaticResource _brushFocusBorder1}"/>
+                                <Setter Property="Foreground" Value="{StaticResource _brushFocusBorder1}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Fill" TargetName="e1" Value="{StaticResource _brushButtonMouseOverBorder}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{StaticResource _brushBlack}"/>
+                                <Setter Property="Fill" TargetName="e2" Value="{StaticResource _brushDarkGray3}"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding Path=ActualHeight, ElementName=_st}" Value="0">
+                                <Setter Property="Height" TargetName="e1" Value="0"/>
+                                <Setter Property="Height" TargetName="e2" Value="0"/>
+                                <Setter Property="Height" TargetName="e3" Value="0"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="I2MS_WallHeightRadioButtonStyle" TargetType="{x:Type RadioButton}">
+            <Setter Property="Foreground" Value="{StaticResource _brushDarkGray5}"/>
+            <Setter Property="Background" Value="{StaticResource _brushBlack}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Width" Value="24"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <StackPanel x:Name="_st" Orientation="Vertical">
+                            <ContentPresenter x:Name="contentP">
+                                <ContentPresenter.ContentTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Vertical">
+                                            <Grid Height="50">
+                                                <Rectangle x:Name="rect"  Width="5" Height="{Binding}" Fill="{Binding ElementName=txt, Path=Foreground}" Margin="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                                            </Grid>
+                                            <TextBlock x:Name="txt" Text="{Binding}" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ContentPresenter.ContentTemplate>
+                            </ContentPresenter>
+                            <Canvas Width="20" Height="20" >
+                                <Ellipse x:Name="e1" Fill="{StaticResource _brushNormalBulet1}" Width="20" Height="20" StrokeThickness="2"/>
+                                <Ellipse x:Name="e2" Fill="{StaticResource _brushNormalBulet2}" Width="14" Height="14" Margin="3,3,0,0"/>
+                                <Ellipse x:Name="e3" Fill="{StaticResource _brushNormalBulet3}" Width="8" Height="8" Margin="6,6,0,0"/>
+                            </Canvas>
+                            
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Fill" TargetName="e3" Value="{StaticResource _brushFocusBorder1}"/>
+                                <Setter Property="Foreground" Value="{StaticResource _brushFocusBorder1}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Fill" TargetName="e1" Value="{StaticResource _brushButtonMouseOverBorder}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{StaticResource _brushBlack}"/>
+                                <Setter Property="Fill" TargetName="e2" Value="{StaticResource _brushDarkGray3}"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding Path=ActualHeight, ElementName=_st}" Value="0">
+                                <Setter Property="Height" TargetName="e1" Value="0"/>
+                                <Setter Property="Height" TargetName="e2" Value="0"/>
+                                <Setter Property="Height" TargetName="e3" Value="0"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Name="_stackPropertyPanel" Orientation="Vertical" Grid.Row="3" Margin="0,10,0,0" >
+            <StackPanel x:Name="_stackThick" Orientation="Vertical" Height="160">
+                <TextBlock Text="Thickness" Style="{StaticResource I2MS_TextBlockStyle}" Margin="10,0,0,0"/>
+                <StackPanel x:Name="ThicknessSelectPanel" Orientation="Horizontal">
+                    <StackPanel x:Name="radioButtonPanel" Orientation="Vertical" Margin="20,0,40,0"  >
+                        <RadioButton Name="_radioThin1" Content=" 1"  Style="{StaticResource I2MS_WallThinessRadioButtonStyle}"  Margin="0,3,0,0" Checked="_radioThin_Checked"/>
+                        <RadioButton Name="_radioThin2" Content=" 2" Style="{StaticResource I2MS_WallThinessRadioButtonStyle}" Margin="0,3,0,0" Checked="_radioThin_Checked" />
+                        <RadioButton Name="_radioThin3" Content=" 3" Style="{StaticResource I2MS_WallThinessRadioButtonStyle}" Margin="0,3,0,0" Checked="_radioThin_Checked"/>
+                        <RadioButton Name="_radioThin5" Content=" 5" Style="{StaticResource I2MS_WallThinessRadioButtonStyle}" Margin="0,3,0,0" Checked="_radioThin_Checked"/>
+                        <!--<RadioButton Name="_radioThin15" Content=" 10" Style="{StaticResource I2MS_WallThinessRadioButtonStyle}" Margin="0,3,0,0" Checked="_radioThin_Checked"/>-->
+                        <RadioButton Name="_radioThin30" Content=" 30" Style="{StaticResource I2MS_WallThinessRadioButtonStyle}" Margin="0,3,0,0" Checked="_radioThin_Checked"/>
+                    </StackPanel>
+                   
+                </StackPanel>
+            </StackPanel>
+            <Grid Name="_gridHeightAlpha" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Name="_stackHeigh" Orientation="Vertical" Grid.Column="1" >
+                    <TextBlock Text="Height" Style="{StaticResource I2MS_TextBlockStyle}" Margin="10,0,0,0"/>
+
+                    <StackPanel x:Name="radioButtonHeightPanel" Orientation="Horizontal" Margin="20,0,0,0"  >
+                        <RadioButton Name="_radioHeight5" Content="5"  Style="{StaticResource I2MS_WallHeightRadioButtonStyle}"  Margin="0,3,0,0" Checked="_radioHeight_Checked"/>
+                        <RadioButton Name="_radioHeight10" Content="10" Style="{StaticResource I2MS_WallHeightRadioButtonStyle}" Margin="0,3,0,0" Checked="_radioHeight_Checked"/>
+                        <RadioButton Name="_radioHeight15" Content="15" Style="{StaticResource I2MS_WallHeightRadioButtonStyle}" Margin="0,3,0,0" Checked="_radioHeight_Checked" />
+                        <RadioButton Name="_radioHeight25" Content="25" Style="{StaticResource I2MS_WallHeightRadioButtonStyle}" Margin="0,3,0,0" Checked="_radioHeight_Checked"/>
+                        <RadioButton Name="_radioHeight150" Content="150" Style="{StaticResource I2MS_WallHeightRadioButtonStyle}" Margin="0,3,0,0" Checked="_radioHeight_Checked"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel x:Name="_stackAlpha" Margin="0,0,0,0" Orientation="Vertical" VerticalAlignment="Top">
+                    <TextBlock Text="Alpha" Style="{StaticResource I2MS_TextBlockStyle}" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                    <Grid Height="80" Margin="0,10,0,0" HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="10"/>
+                        </Grid.ColumnDefinitions>
+                        <Slider x:Name="AlphaSlider" Value="1" Minimum="0" Maximum="1" Style="{StaticResource I2MS_SliderStyle}"
+                        		ValueChanged="AlphaSlider_ValueChanged"  Orientation="Vertical"  HorizontalAlignment="Left" 
+                        		/>
+                        <Grid Grid.Column="1">
+                            <TextBlock Text="1" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                            <TextBlock Text="0" Style="{StaticResource I2MS_TextBlockStyle}" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                        </Grid>
+                       
+                    </Grid>
+
+                </StackPanel>
+
+            </Grid>
+            <!--<uc:ColorSelector colorChangedEvent="ColorSelector_colorChangedEvent" />-->
+
+        </StackPanel>
+    </Grid>
+</UserControl>

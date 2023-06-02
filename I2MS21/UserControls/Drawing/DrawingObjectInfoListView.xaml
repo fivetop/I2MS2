@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="I2MS2.UserControls.Drawing.DrawingObjectInfoListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="I2MS_ObjectInfoListViewStyle" TargetType="{x:Type ListViewItem}">
+                <!--<Setter Property="Background" Value="White"/>-->
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ListViewItem}">
+                            <!--<Grid  Height="30" HorizontalAlignment="Stretch" Margin="5,10,5,0">
+                                <Grid Name="Agrid" Margin="0" >
+                                    <Border x:Name="outBorder" Opacity="0.5" CornerRadius="5" BorderThickness="1" BorderBrush="Black" Background="{StaticResource _brushBigButtonBackground}">
+                                        <Border.Effect>
+                                            <DropShadowEffect Opacity="0.3" />
+                                        </Border.Effect>
+                                    </Border>
+                                    <TextBlock Margin="0" Text="{Binding disp_name}" FontSize="13"  VerticalAlignment="Center" Style="{StaticResource I2MS_TextBlockStyle}" 
+                                                            TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource _brushBigButtonTextForeground}">
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect ShadowDepth="1" BlurRadius="1" Direction="451"/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                </Grid>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="true">
+                                    <Setter TargetName="outBorder" Property="Background" Value="{StaticResource _brushBlue}"/>
+                                    <Setter TargetName="outBorder" Property="Opacity" Value="1"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter TargetName="outBorder" Property="BorderBrush" Value="{StaticResource _brushBlue}"/>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>-->
+                            <Grid>
+                                <Rectangle RadiusX="2" RadiusY="2" StrokeThickness="0" Fill="Black" Opacity="0" />
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0">
+                                    <!-- 2015.09.15 romee basci color change -->
+                                    <Border Background="{StaticResource _brushDarkGray1}" CornerRadius="4" >
+                                        <Image Name="_imgType" Margin="2" Source="{Binding image_file_path}" Width="16" Height="16"/>
+                                    </Border>
+                                    <TextBlock Name="_txtInfo" Text="{Binding disp_name}" Style="{StaticResource I2MS_TextBlockStyle}"  VerticalAlignment="Center" Margin="5,0,0,0" />
+                                </StackPanel>
+                            </Grid>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </Grid.Resources>
+        <ListView x:Name="_lvInfo" Style="{StaticResource I2MS_ListViewTransparentStyle}" ItemContainerStyle="{StaticResource I2MS_ObjectInfoListViewStyle}">
+            
+        </ListView>
+    </Grid>
+</UserControl>
