@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="16.9" version="16.9" Modules="simple" RootPath="." Language="en" Id="{119A5758-65F1-4738-BFB4-396F29481465}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DTools.dll" Value="..\I2MS2\DLL"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_EntityFramework.dll" Value="..\..\WebApi\WebApi\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_I2MS2.exe" Value="..\I2MS2\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_I2MS2.exe.config" Value="..\I2MS2\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_I2MSR.dll" Value="..\I2MS2\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_MetroChart.dll" Value="..\MetroChart\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.AspNet.SignalR.Client.dll" Value="..\packages\Microsoft.AspNet.SignalR.Client.2.1.0\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.AspNet.SignalR.Core.dll" Value="..\..\WebApi\WebApi\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Expression.Effects.dll" Value="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Expression.Interactions.dll" Value="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Owin.Cors.dll" Value="..\..\WebApi\WebApi\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Owin.Hosting.dll" Value="..\..\WebApi\WebApi\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Owin.Security.dll" Value="..\..\WebApi\WebApi\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Owin.dll" Value="..\packages\Microsoft.Owin.3.0.0\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll" Value="..\packages\Newtonsoft.Json.5.0.1\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Owin.dll" Value="..\packages\Owin.1.0\lib\net40"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Net.Http.Formatting.dll" Value="..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Web.Cors.dll" Value="..\..\WebApi\WebApi\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Web.Http.SelfHost.dll" Value="..\..\WebApi\WebApi\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Web.Http.dll" Value="..\..\WebApi\WebApi\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Windows.Controls.Input.Toolkit.dll" Value="..\packages\WPFToolkit.3.5.50211.1\lib"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll" Value="..\packages\WPFToolkit.3.5.50211.1\lib"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Windows.Interactivity.dll" Value="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_WPFToolkit.dll" Value="..\packages\WPFToolkit.3.5.50211.1\lib"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_WebApi.exe" Value="..\..\WebApi\WebApi\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_WebApiClient.exe" Value="..\..\WebApi\WebApiClient\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_log4net.dll" Value="..\packages\log4net.2.0.3\lib\net40-full"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" Value="3DTools.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.dll" Value="EntityFramework.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe" Value="I2MS2.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe.config" Value="I2MS2.exe.config"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_I2MSR.dll" Value="I2MSR.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MetroChart.dll" Value="MetroChart.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.AspNet.SignalR.Client.dll" Value="Microsoft.AspNet.SignalR.Client.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.AspNet.SignalR.Core.dll" Value="Microsoft.AspNet.SignalR.Core.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Expression.Effects.dll" Value="Microsoft.Expression.Effects.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Expression.Interactions.dll" Value="Microsoft.Expression.Interactions.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.Cors.dll" Value="Microsoft.Owin.Cors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.Hosting.dll" Value="Microsoft.Owin.Hosting.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.Security.dll" Value="Microsoft.Owin.Security.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.dll" Value="Microsoft.Owin.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll" Value="Newtonsoft.Json.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Owin.dll" Value="Owin.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Net.Http.Formatting.dll" Value="System.Net.Http.Formatting.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Web.Cors.dll" Value="System.Web.Cors.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Web.Http.SelfHost.dll" Value="System.Web.Http.SelfHost.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Web.Http.dll" Value="System.Web.Http.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Input.Toolkit.dll" Value="System.Windows.Controls.Input.Toolkit.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll" Value="System.Windows.Controls.Layout.Toolkit.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Interactivity.dll" Value="System.Windows.Interactivity.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_WPFToolkit.dll" Value="WPFToolkit.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_WebApi.exe" Value="WebApi.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_WebApiClient.exe" Value="WebApiClient.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_log4net.dll" Value="log4net.dll"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="Manufacturer" Value="SimpleWin"/>
+    <ROW Property="ProductCode" Value="1033:{E542E61D-67A5-454F-A56D-368F40653251} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="SimpleWin_Client"/>
+    <ROW Property="ProductVersion" Value="2.0.5" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{B4E86DA8-9ECD-4EF9-8863-73B94DB76A8D}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" ComponentId="{2C0E4D58-9F67-4702-8EBA-4290D25A31D0}" Directory_="APPDIR" Attributes="0" KeyPath="DTools.dll" Type="0"/>
+    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe" ComponentId="{4E327116-781E-4E62-B517-D088A0F22BC0}" Directory_="APPDIR" Attributes="0" KeyPath="I2MS2.exe"/>
+    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_System.Web.Cors.dll" ComponentId="{D0D55840-88CB-4DA9-A49F-570C1C785267}" Directory_="APPDIR" Attributes="0" KeyPath="System.Web.Cors.dll"/>
+    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Input.Toolkit.dll" ComponentId="{2E8E9F9A-9DE2-4A2E-9898-E1476CE738DE}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Controls.Input.Toolkit.dll"/>
+    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll" ComponentId="{6B40CAE3-B20E-419A-9FB3-1B44C73CA1FB}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Controls.Layout.Toolkit.dll"/>
+    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Interactivity.dll" ComponentId="{C2AC4E99-0248-49ED-A848-15B7E482A982}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Interactivity.dll"/>
+    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_WebApi.exe" ComponentId="{6642D546-6385-40D8-A679-DAF6B1452720}" Directory_="APPDIR" Attributes="0" KeyPath="WebApi.exe"/>
+    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_WebApiClient.exe" ComponentId="{955F8DEC-9479-44CD-8335-8C6655396DDC}" Directory_="APPDIR" Attributes="0" KeyPath="WebApiClient.exe"/>
+    <ROW Component="APPDIR" ComponentId="{9FC2C3F3-D252-45B1-ACEF-336C4D7E145C}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="ProductInformation" ComponentId="{88C7C970-B854-47E6-86FF-06BF5F25813F}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{D867B9CD-21C9-4757-A2E5-581D0AFDED8F}" Directory_="SHORTCUTDIR" Attributes="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="I2MS2.exe" Component_="AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_I2MS2.exe&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="I2MS2.exe.config" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="I2MS2E~1.CON|[|AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe.config]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_I2MS2.exe.config&gt;" SelfReg="false"/>
+    <ROW File="DTools.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_DTools.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DTools.dll&gt;" SelfReg="false"/>
+    <ROW File="I2MSR.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_I2MSR.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_I2MSR.dll&gt;" SelfReg="false"/>
+    <ROW File="log4net.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_log4net.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_log4net.dll&gt;" SelfReg="false"/>
+    <ROW File="MetroChart.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="METROC~1.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_MetroChart.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MetroChart.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.AspNet.SignalR.Client.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="MICROS~1.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.AspNet.SignalR.Client.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.AspNet.SignalR.Client.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Expression.Effects.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Expression.Effects.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Expression.Effects.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Expression.Interactions.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="MICROS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Expression.Interactions.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Expression.Interactions.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Owin.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="MICROS~6.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Owin.dll&gt;" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="NEWTON~1.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Newtonsoft.Json.dll&gt;" SelfReg="false"/>
+    <ROW File="Owin.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_Owin.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Owin.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Net.Http.Formatting.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="SYSTEM~1.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Net.Http.Formatting.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Net.Http.Formatting.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Windows.Controls.Input.Toolkit.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Input.Toolkit.dll" FileName="SYSTEM~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Input.Toolkit.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Windows.Controls.Input.Toolkit.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Windows.Controls.Layout.Toolkit.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll" FileName="SYSTEM~6.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Windows.Interactivity.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Interactivity.dll" FileName="SYSTEM~7.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Interactivity.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Windows.Interactivity.dll&gt;" SelfReg="false"/>
+    <ROW File="WebApi.exe" Component_="AI_PROPPATH_FILENAME_PERBUILD_WebApi.exe" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_WebApi.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_WebApi.exe&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="WebApiClient.exe" Component_="AI_PROPPATH_FILENAME_PERBUILD_WebApiClient.exe" FileName="WEBAPI~1.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_WebApiClient.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_WebApiClient.exe&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="WPFToolkit.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="WPFTOO~1.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_WPFToolkit.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_WPFToolkit.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Web.Http.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="SYSTEM~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Web.Http.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Web.Http.dll&gt;" SelfReg="false"/>
+    <ROW File="EntityFramework.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="ENTITY~1.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_EntityFramework.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Owin.Hosting.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="MICROS~7.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.Hosting.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Owin.Hosting.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Web.Http.SelfHost.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="SYSTEM~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Web.Http.SelfHost.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Web.Http.SelfHost.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.AspNet.SignalR.Core.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.AspNet.SignalR.Core.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.AspNet.SignalR.Core.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Owin.Cors.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="MICROS~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.Cors.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Owin.Cors.dll&gt;" SelfReg="false"/>
+    <ROW File="Microsoft.Owin.Security.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll" FileName="MICROS~8.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.Security.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Owin.Security.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Web.Cors.dll" Component_="AI_PROPPATH_FILENAME_PERBUILD_System.Web.Cors.dll" FileName="SYSTEM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Web.Cors.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Web.Cors.dll&gt;" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="AI_APPPATH_PERBUILD_DTools.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_DTools.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_DTools.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_EntityFramework.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_EntityFramework.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_EntityFramework.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_I2MS2.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_I2MS2.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_I2MS2.exe.config" Path="[|AI_PROPPATH_DIR_PERBUILD_I2MS2.exe.config]\[|AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe.config]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_I2MSR.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_I2MSR.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_I2MSR.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_MetroChart.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_MetroChart.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_MetroChart.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.AspNet.SignalR.Client.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.AspNet.SignalR.Client.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.AspNet.SignalR.Client.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.AspNet.SignalR.Core.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.AspNet.SignalR.Core.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.AspNet.SignalR.Core.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Expression.Effects.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Expression.Effects.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Expression.Effects.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Expression.Interactions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Expression.Interactions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Expression.Interactions.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Owin.Cors.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Owin.Cors.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.Cors.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Owin.Hosting.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Owin.Hosting.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.Hosting.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Owin.Security.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Owin.Security.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.Security.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Owin.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Owin.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Owin.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Owin.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Owin.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Owin.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Net.Http.Formatting.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Net.Http.Formatting.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Net.Http.Formatting.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Web.Cors.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Web.Cors.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Web.Cors.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Web.Http.SelfHost.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Web.Http.SelfHost.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Web.Http.SelfHost.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Web.Http.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Web.Http.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Web.Http.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Windows.Controls.Input.Toolkit.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Windows.Controls.Input.Toolkit.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Input.Toolkit.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Windows.Interactivity.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Windows.Interactivity.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Interactivity.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_WPFToolkit.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_WPFToolkit.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_WPFToolkit.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_WebApi.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_WebApi.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_WebApi.exe]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_WebApiClient.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_WebApiClient.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_WebApiClient.exe]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_log4net.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_log4net.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_log4net.dll]" Type="2" Content="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_DTools.dll"/>
+    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe"/>
+    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_System.Web.Cors.dll"/>
+    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Input.Toolkit.dll"/>
+    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Controls.Layout.Toolkit.dll"/>
+    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_System.Windows.Interactivity.dll"/>
+    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_WebApi.exe"/>
+    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_WebApiClient.exe"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="I2MS2" Directory_="SHORTCUTDIR" Name="I2MS2" Component_="AI_PROPPATH_FILENAME_PERBUILD_I2MS2.exe" Target="[#I2MS2.exe]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="PrimaryOutput" OutputFile="I2MS2.exe" OutputFileShortcut="I2MS2"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="PrimaryOutput" OutputFile="I2MS2.exe.config"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="DTools.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="I2MSR.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="log4net.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="MetroChart.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Microsoft.AspNet.SignalR.Client.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Microsoft.Expression.Effects.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Microsoft.Expression.Interactions.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Microsoft.Owin.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Newtonsoft.Json.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Owin.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="System.Net.Http.Formatting.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="System.Windows.Controls.Input.Toolkit.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="System.Windows.Controls.Layout.Toolkit.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="System.Windows.Interactivity.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="WebApi.exe"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="WebApiClient.exe"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="WPFToolkit.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="System.Web.Http.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="EntityFramework.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Microsoft.Owin.Hosting.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="System.Web.Http.SelfHost.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Microsoft.AspNet.SignalR.Core.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Microsoft.Owin.Cors.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="Microsoft.Owin.Security.dll"/>
+    <ROW ProjectId="{a7f40ded-354d-41ae-96f5-9a600bcf403a}" ProjectName="I2MS2" OutputGroup="References" OutputFile="System.Web.Cors.dll"/>
+  </COMPONENT>
+</DOCUMENT>

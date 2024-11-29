@@ -1331,9 +1331,8 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) $(TargetDir)$(ProjectName).EXE
-copy $(TargetDir)$(ProjectName).EXE C:\Users\jake\Source\Workspaces\I2MS2\I2MS2\I2MS2\bin\Debug\$(ProjectName).EXE
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
